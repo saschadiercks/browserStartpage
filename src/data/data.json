@@ -1,0 +1,29 @@
+{
+	"links": {
+		"titleOfTab-1" : [
+			{
+				"url": "",
+				"title": "",
+				"image": ""
+			},
+			{
+				"url": "",
+				"title": "",
+				"image": """"
+			}
+		],
+
+		"titleOfTab-2": [
+			{
+				"url": "",
+				"title": "",
+				"image": ""
+			},
+			{
+				"url": "",
+				"title": "",
+				"image": """"
+			}
+		]
+	}
+}

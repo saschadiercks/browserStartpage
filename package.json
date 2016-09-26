@@ -1,0 +1,31 @@
+{
+  "name": "personalboilerplate",
+  "version": "1.0.0",
+  "description": "Jumpstart Web-Development",
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "cssnano": "^3.7.1",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^1.2.0",
+    "load-grunt-tasks": "^3.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saschadiercks/personalBoilerplate.git"
+  },
+  "author": "Sascha Diercks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saschadiercks/personalBoilerplate/issues"
+  },
+  "homepage": "https://github.com/saschadiercks/personalBoilerplate#readme"
+}

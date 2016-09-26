@@ -1,0 +1,24 @@
+// ---- Content ----
+
+// Hide Tabs if JS is available, otherwise show all content
+.js main nav:not(.active) { display: none; }
+
+main {
+	nav { @include clearfix; }
+	ul {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	a {
+		display: block;
+		position: relative;		// allow postioning of child-elements
+	}
+
+	// Clip text of Description if nessecary
+	span {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+}

@@ -1,0 +1,20 @@
+// ------------ Framework ------------
+*, *:before, *:after { box-sizing: border-box; }
+
+html {
+	font-size: 100%;
+	overflow-y: auto;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	height: auto;
+	width: 100%;
+}
