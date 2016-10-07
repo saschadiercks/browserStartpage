@@ -34,7 +34,11 @@ main {
 	margin-top: 60px;
 
 	ul { width: 90%; }
-	li { width: 20%; }
+	li {
+		max-width: 258px;
+		min-width: 120px;
+		width: 20%;
+	}
 
 	a {
 		margin: 9px;
