@@ -1,0 +1,20 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "Chrome: Launch index.html (with sourcemaps)",
+            "type": "chrome",
+            "request": "launch",
+            "file": "${workspaceRoot}/htdocs/index.html",
+            "sourceMaps": true
+        },
+        {
+            "name": "Firefox: Launch index.html (with sourcemaps)",
+            "type": "firefox",
+            "request": "launch",
+            "file": "${workspaceRoot}/htdocs/index.html"
+        }
+    ]
+}
+    ]
+}
