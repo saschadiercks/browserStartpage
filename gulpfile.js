@@ -4,7 +4,6 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
-var pump = require('pump');
 
 
 
@@ -28,16 +27,16 @@ gulp.task('sass:watch', function () {
 });
 
 // JS
-gulp.task('compress', function (cb) {
+gulp.task('compress', function () {
 	var options = {
 		mangle: 'false'
 	};
 
-	pump([
-		gulp.src('./src/js/*.js'),
-		uglify(),
-		gulp.dest('./htdocs/assets/js')
-	],cb);
+	return gulp.src('./src/js/*.js')
+	.pipe(sourcemaps.init())
+	.pipe(uglify())
+	.pipe(sourcemaps.write('.'))
+	.pipe(gulp.dest('./htdocs/assets/js'));
 });
 
 gulp.task('default', function() {
