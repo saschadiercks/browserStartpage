@@ -12,8 +12,20 @@
 	<link href="assets/css/site.min.css" rel="stylesheet" type="text/css" media="screen" />
 
 	<!-- JS -->
-	<script src="assets/js/jquery-3.1.0.min.js"></script>
-	<script src="assets/js/site.min.js"></script>
+	<!--<script src="assets/js/jquery-3.1.0.min.js"></script>
+	<script src="assets/js/site.min.js"></script>-->
+
+	<script type="text/javascript">
+		function test() {
+			alert("Hallo");
+			return false;
+		}
+
+		var tabTriggerContainer = document.querySelectorAll('.tab');
+		for(var i = 0; i < tabTriggerContainer.length ; i++) {
+			tabTriggerContainer[i].addEventListener('click', test);
+		}
+	</script>
 </head>
 
 <body>
