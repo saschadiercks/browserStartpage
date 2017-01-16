@@ -10,10 +10,10 @@ var uglify = require('gulp-uglify');
 // Place Code for tasks here
 
 // SCSS
-gulp.task('sass', function () {
+gulp.task('compile:css', function () {
 	return gulp.src('./src/scss/**/*.scss')
 	.pipe(sourcemaps.init())
-	.pipe(sass().on('error', sass.logError))
+	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 	.pipe(autoprefixer({
 		browsers: ['last 2 versions','>5%'],
 		cascade: false
@@ -22,12 +22,12 @@ gulp.task('sass', function () {
 	.pipe(gulp.dest('./htdocs/assets/css'));
 });
 
-gulp.task('sass:watch', function () {
-	gulp.watch('./sass/**/*.scss', ['sass']);
+gulp.task('watch', function () {
+	gulp.watch('./sass/**/*.scss', ['compile:sass']);
 });
 
 // JS
-gulp.task('compress', function () {
+gulp.task('compile:js', function () {
 	var options = {
 		mangle: 'false'
 	};

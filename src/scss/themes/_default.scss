@@ -1,6 +1,9 @@
 
 // ----- Body -----
-body {	background-color: #f5f5f5; }
+body {
+	background-color: #f5f5f5;
+	font-family: -apple-system, sans-serif;
+}
 
 
 // ---- header ----
@@ -9,10 +12,10 @@ header {
 	box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
 	display: block;
 	padding: 9px 18px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
+//	position: fixed;
+//	top: 0;
+//	left: 0;
+//	right: 0;
 	z-index: 1;
 
 	li:not(:last-child) { margin-right: 9px; }
@@ -22,7 +25,7 @@ header {
 
 		&:hover,
 		&.active {
-			background-color: rgb(18, 139, 184);
+			background-color: #007acc;
 			border-radius: 3px;
 			color: #fff;
 		}
@@ -31,7 +34,7 @@ header {
 
 // ---- Content ----
 main {
-	margin-top: 60px;
+	margin-top: 20px;
 
 	ul { width: 90%; }
 	li {
@@ -44,11 +47,13 @@ main {
 		margin: 9px;
 		box-shadow: 2px 2px 5px rgba(0,0,0,.2);
 		border: 1px solid #ddd;
-		border-radius: 1px;
+		border-radius: 3px;
+		background-clip: padding-box;
+		overflow: hidden;
 
 		&:hover {
 			border-color: #ccc;
-			box-shadow: 1px 1px 2px rgba(0,0,0,.2);
+			box-shadow: none;
 		}
 
 		// Description
@@ -63,6 +68,24 @@ main {
 			position: absolute;
 			right: 0;
 		}
+	}
+
+	@include phone-only {
+		li {
+			max-width: none;
+			min-width: 0;
+			width: 50%;
+		}
+
+		a {
+			margin: 2px;
+			span {
+				padding: 9px;
+				position: static;
+			}
+		}
+
+		img { display: none; }
 	}
 }
 
