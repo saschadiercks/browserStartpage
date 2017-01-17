@@ -12,10 +12,6 @@ header {
 	box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
 	display: block;
 	padding: 9px 18px;
-//	position: fixed;
-//	top: 0;
-//	left: 0;
-//	right: 0;
 	z-index: 1;
 
 	li:not(:last-child) { margin-right: 9px; }
@@ -34,7 +30,7 @@ header {
 
 // ---- Content ----
 main {
-	margin-top: 20px;
+	padding-top: 2em;
 
 	ul { width: 90%; }
 	li {
@@ -88,6 +84,14 @@ main {
 		img { display: none; }
 	}
 }
+
+// separation of content if JS is disabled
+body:not(.js) main nav:not(:last-child) {
+	margin-bottom: 1.5em;
+	padding-bottom: 1.5em;
+	border-bottom: 1px dotted #ccc;
+}
+
 
 // ---- Footer ----
 footer {
