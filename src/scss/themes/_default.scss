@@ -14,17 +14,21 @@ header {
 	padding: 9px 18px;
 	z-index: 1;
 
-	li:not(:last-child) { margin-right: 9px; }
-	a {
-		padding: 9px 18px;
+	li {
 		color: #333;
 
+		&:not(:last-child) { margin-right: 9px; }
 		&:hover,
 		&.active {
 			background-color: #007acc;
 			border-radius: 3px;
 			color: #fff;
 		}
+	}
+
+	a {
+		color: inherit;
+		padding: 9px 18px;
 	}
 }
 
@@ -95,11 +99,5 @@ body:not(.js) main nav:not(:last-child) {
 
 // ---- Footer ----
 footer {
-	background-color: #fafafa;
-	border-top: 1px solid #ccc;
-	font-size: .823em;
-	color: #888;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
+	display: none;
 }

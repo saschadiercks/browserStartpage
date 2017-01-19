@@ -10,7 +10,7 @@
 
 	<!-- Favicon, CSS -->
 	<style type="text/css">
-    	*,*:before,*:after{box-sizing:border-box}html{font-size:100%;overflow-y:auto;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0;padding:0}img{height:auto;width:100%}.js main nav:not(.active){display:none}main nav:after{content:"";display:table;clear:both}main ul{margin-left:auto;margin-right:auto}main a{display:block;position:relative}main span{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}nav ul{list-style-type:none;margin-top:0;margin-bottom:0;padding-left:0}nav ul:after{content:"";display:table;clear:both}nav li{float:left}nav a{display:block;text-decoration:none}body{background-color:#f5f5f5;font-family:-apple-system, sans-serif}header{background-color:#fff;box-shadow:0 5px 5px rgba(0,0,0,0.2);display:block;padding:9px 18px;z-index:1}header li:not(:last-child){margin-right:9px}header a{padding:9px 18px;color:#333}header a:hover,header a.active{background-color:#007acc;border-radius:3px;color:#fff}main nav:not(:last-child){margin-top:30px}main ul{width:90%}main li{max-width:258px;min-width:120px;width:20%}main a{margin:9px;box-shadow:2px 2px 5px rgba(0,0,0,0.2);border:1px solid #ddd;border-radius:3px;background-clip:padding-box;overflow:hidden}main a:hover{border-color:#ccc;box-shadow:none}main a span{background-color:#fff;bottom:0;color:#aaa;font-size:.75em;left:0;display:block;padding:4px;position:absolute;right:0}@media (max-width: 670px){main li{max-width:none;min-width:0;width:50%}main a{margin:2px}main a span{padding:9px;position:static}main img{display:none}}footer{background-color:#fafafa;border-top:1px solid #ccc;font-size:.823em;color:#888;position:fixed;bottom:0;width:100%}
+    	*,*:before,*:after{box-sizing:border-box}html{font-size:100%;overflow-y:auto;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0;padding:0}img{height:auto;width:100%}.js main nav:not(.active){display:none}main nav:after{content:"";display:table;clear:both}main ul{margin-left:auto;margin-right:auto}main a{display:block;position:relative}main span{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}nav ul{list-style-type:none;margin-top:0;margin-bottom:0;padding-left:0}nav ul:after{content:"";display:table;clear:both}nav li{float:left}nav a{display:block;text-decoration:none}body{background-color:#f5f5f5;font-family:-apple-system, sans-serif}header{background-color:#fff;box-shadow:0 5px 5px rgba(0,0,0,0.2);display:block;padding:9px 18px;z-index:1}header li{color:#333}header li:not(:last-child){margin-right:9px}header li:hover,header li.active{background-color:#007acc;border-radius:3px;color:#fff}header a{padding:9px 18px}main{padding-top:1em}main ul{width:90%}main li{max-width:258px;min-width:120px;width:20%}main a{margin:9px;box-shadow:2px 2px 5px rgba(0,0,0,0.2);border:1px solid #ddd;border-radius:3px;background-clip:padding-box;overflow:hidden}main a:hover{border-color:#ccc;box-shadow:none}main a span{background-color:#fff;bottom:0;color:#aaa;font-size:.75em;left:0;display:block;padding:4px;position:absolute;right:0}@media (max-width: 670px){main li{max-width:none;min-width:0;width:50%}main a{margin:2px}main a span{padding:9px;position:static}main img{display:none}}body:not(.js) main nav:not(:last-child){margin-bottom:1.5em;padding-bottom:1.5em;border-bottom:1px dotted #ccc}footer{display:none}*,*:before,*:after{box-sizing:border-box}html{font-size:100%;overflow-y:auto;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0;padding:0}img{height:auto;width:100%}.js main nav:not(.active){display:none}main nav:after{content:"";display:table;clear:both}main ul{margin-left:auto;margin-right:auto}main a{display:block;position:relative}main span{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}nav ul{list-style-type:none;margin-top:0;margin-bottom:0;padding-left:0}nav ul:after{content:"";display:table;clear:both}nav li{float:left}nav a{display:block;text-decoration:none}body{background-color:#f5f5f5;font-family:-apple-system, sans-serif}header{background-color:#fff;box-shadow:0 5px 5px rgba(0,0,0,0.2);display:block;padding:9px 18px;z-index:1}header li{color:#333}header li:not(:last-child){margin-right:9px}header li:hover,header li.active{background-color:#007acc;border-radius:3px;color:#fff}header a{color:inherit;padding:9px 18px}main{padding-top:1em}main ul{width:90%}main li{max-width:258px;min-width:120px;width:20%}main a{margin:9px;box-shadow:2px 2px 5px rgba(0,0,0,0.2);border:1px solid #ddd;border-radius:3px;background-clip:padding-box;overflow:hidden}main a:hover{border-color:#ccc;box-shadow:none}main a span{background-color:#fff;bottom:0;color:#aaa;font-size:.75em;left:0;display:block;padding:4px;position:absolute;right:0}@media (max-width: 670px){main li{max-width:none;min-width:0;width:50%}main a{margin:2px}main a span{padding:9px;position:static}main img{display:none}}body:not(.js) main nav:not(:last-child){margin-bottom:1.5em;padding-bottom:1.5em;border-bottom:1px dotted #ccc}footer{display:none}
 	</style>
 
 	<!-- JS -->
@@ -21,18 +21,50 @@
 			// add JS to body-tag to allow CSS-Manipulation if JS is available
 			document.getElementsByTagName("body")[0].className += "js";
 
-			// Tab-handling via local Storage
-			var savedLocalStorageId = localStorage.getItem("tabbedContentId");
-			if(savedLocalStorageId !== null) {
-				console.log("localStorage is filled, restoring selected tab");
-			} else {
-				console.log("localStorage is empty, marking first tab as selected");
-				var selectedTab = document.getElementsByClassName("tab")[0].childNodes[0].className += "active";
-				localStorage.setItem("tabbedContentId", 1);
+			// initially set Element-count of tabs and tabbedContent and check consistency
+			var tabTrigger = document.getElementsByClassName("tab");
+			var tabbedContent = document.getElementsByClassName("tabbed-content");
+			if(tabTrigger.length !== tabbedContent.length) {
+				console.log("count of tabs and tabbed-contend isn't consistent");
 			}
 
-		});
+			// Tab-Handling-Function
+			// -- set Current-Tab and tabbed-content
+			var setCurrentTab = function(newTabId) {
+				markTabTrigger = document.getElementsByClassName("tab")[newTabId].classList.add("active");
+				unhideSelectedContent = document.getElementsByClassName("tabbed-content")[newTabId].classList.add("active");
+				localStorage.setItem("tabbedContentId", newTabId);
+				console.log("localStorage ID is: " + newTabId);
+			}
 
+			// -- unset Current-Tab and tabbed-conent
+			var unsetTabs = function() {
+				for(i=0; i < tabbedContent.length; i++) {
+					tabTrigger[i].classList.remove("active");
+					tabbedContent[i].classList.remove("active");
+				}
+			}
+
+			// -- if DOM is ready, check if localStorage is filled
+			var savedLocalStorageId = localStorage.getItem("tabbedContentId");
+			if(savedLocalStorageId !== null) {
+				setCurrentTab(savedLocalStorageId);
+			} else {
+				console.log("localStorag is empty, setting default");
+				setCurrentTab(0);
+			}
+
+			// -- switch tabs onClick
+			for(i=0; i < tabTrigger.length; i++) {
+				(function(index){
+					tabTrigger[i].onclick = function(){
+						unsetTabs();
+						setCurrentTab(index);
+						return false;
+					}
+				})(i);
+			}
+		});
 	</script>
 </head>
 
@@ -53,7 +85,7 @@
 	<main role="main" id="content">
 
 		<!-- Tab 1 -->
-		<nav id="tab-1">
+		<nav id="tab-1" class="tabbed-content">
 			<ul>
 				<li><a href="http://schema.org/docs/schemas.html"><img src="assets/thumbnails/schema.png" /><span class="title">Schema.org</span></a></li>
 				<li><a href="https://html.spec.whatwg.org/multipage/forms.html#autofill"><img src="assets/thumbnails/autocomplete.png" /><span class="title">Autocomplete</span></a></li>
@@ -80,7 +112,7 @@
 		</nav>
 
 		<!-- Tab 2 -->
-		<nav id="tab-2">
+		<nav id="tab-2" class="tabbed-content">
 			<ul>
 				<li><a href="https://www.mozilla.org/firefox"><img src="assets/thumbnails/firefox.png" /><span class="title">Firefox</span></a></li>
 				<li><a href="https://www.google.de/chrome/browser/desktop/"><img src="assets/thumbnails/chrome.png" /><span class="title">Chrome</span></a></li>
