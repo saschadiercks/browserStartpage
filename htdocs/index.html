@@ -15,6 +15,8 @@
 
 	<!-- JS -->
 	<script type="text/javascript">
+		// TODO: use data-target instead of elementIndex
+
 		// is the DOM ready for manipulation?
 		document.addEventListener('DOMContentLoaded', function() {
 
@@ -68,14 +70,14 @@
 	</script>
 </head>
 
-<body id="home">
+<body>
 
 	<!-- header -->
 	<header role="banner">
-		<nav role="navigation" id="nav-main">
+		<nav role="navigation" class="tabs">
 			<ul>
-				<!-- TODO: automatic output of tabs here -->
-				<!-- Example: <li><a href="#" data-target="tab-1" class="active">$Title</a></li> -->
+				<li class="tab"><a href="#tab-1" data-target="tab-1">Dev</a></li>
+				<li class="tab"><a href="#tab-2" data-target="tab-2">Browser</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -83,19 +85,48 @@
 
 	<!-- content -->
 	<main role="main" id="content">
-		<!-- TODO: automatic output of tabbed content here -->
-		<!-- Example:
-		<nav id="tab-1" class="active">
+
+		<!-- Tab 1 -->
+		<nav id="tab-1" class="tabbed-content">
 			<ul>
-				<li><a href="https://www.github.com/"><span class="title">Github</span></a></li>
+				<li><a href="http://schema.org/docs/schemas.html"><img src="assets/thumbnails/schema.png" /><span class="title">Schema.org</span></a></li>
+				<li><a href="https://html.spec.whatwg.org/multipage/forms.html#autofill"><img src="assets/thumbnails/autocomplete.png" /><span class="title">Autocomplete</span></a></li>
+				<li><a href="http://microformats.org/wiki/hcard-input-formats"><img src="assets/thumbnails/microformats.png" /><span class="title">Microformats</span></a></li>
+				<li><a href="https://github.com/"><img src="assets/thumbnails/github.png" /><span class="title">Github</span></a></li>
+				<li><a href="https://bitbucket.org/"><img src="assets/thumbnails/bitbucket.png" /><span class="title">Bitbucket</span></a></li>
+				<li><a href="https://validator.w3.org/nu/"><img src="assets/thumbnails/html-validator.png" /><span class="title">HTML-Validator</span></a></li>
+				<li><a href="https://developers.google.com/structured-data/testing-tool/"><img src="assets/thumbnails/rich-snippet.png" /><span class="title">RichSnippet-Testing</span></a></li>
+				<li><a href="https://developers.google.com/speed/pagespeed/insights/?hl=de"><img src="assets/thumbnails/pagespeed.png" /><span class="title">Google Pagespeeds</span></a></li>
+				<li><a href="https://search.google.com/search-console/mobile-friendly"><img src="assets/thumbnails/mobile-friendly.png" /><span class="title">Google Mobiltest</span></a></li>
+				<li><a href="https://www.google.com/webmasters/tools/"><img src="assets/thumbnails/webmastertools.png" /><span class="title">Google Webmaster-Tools</span></a></li>
+				<li><a href="https://analytics.google.com/"><img src="assets/thumbnails/analytics.png" /><span class="title">Analytics</span></a></li>
+				<li><a href="https://github.com/dypsilon/frontend-dev-bookmarks"><img src="assets/thumbnails/frontend-bookmarks.png" /><span class="title">Frontend Bookmarks</span></a></li>
+				<li><a href="https://developer.mozilla.org/de/"><img src="assets/thumbnails/mozilla-dev.png" /><span class="title">Mozilla (dev)</span></a></li>
+				<li><a href="https://developers.google.com/web/?hl=de"><img src="assets/thumbnails/google-dev.png" /><span class="title">Google (dev)</span></a></li>
+				<li><a href="http://codepen.io/patterns/"><img src="assets/thumbnails/codepen-patterns.png" /><span class="title">Codepen patterns</span></a></li>
+				<li><a href="http://browserl.ist/"><img src="assets/thumbnails/browserlist.png" /><span class="title">Browserlist</span></a></li>
+				<li><a href="https://www.codecademy.com"><img src="assets/thumbnails/codecademy.png" /><span class="title">Codecademy</span></a></li>
+				<li><a href="http://tools.pingdom.com/fpt/"><img src="assets/thumbnails/pingdom.png" /><span class="title">Pingdom</span></a></li>
+				<li><a href="https://dequeuniversity.com/library/"><img src="assets/thumbnails/accessibility.png" /><span class="title">Accessibility Library</span></a></li>
+				<li><a href="https://pixabay.com/de/"><img src="assets/thumbnails/pixabay.png" /><span class="title">Pixabay</span></a></li>
+				<li><a href="https://npms.io/search?term=hyperterm"><img src="assets/thumbnails/npms-io.png" /><span class="title">npms.io</span></a></li>
 			</ul>
-		</nav> -->
+		</nav>
+
+		<!-- Tab 2 -->
+		<nav id="tab-2" class="tabbed-content">
+			<ul>
+				<li><a href="https://www.mozilla.org/firefox"><img src="assets/thumbnails/firefox.png" /><span class="title">Firefox</span></a></li>
+				<li><a href="https://www.google.de/chrome/browser/desktop/"><img src="assets/thumbnails/chrome.png" /><span class="title">Chrome</span></a></li>
+			</ul>
+		</nav>
+
+
 	</main>
 
 
 	<!-- footer -->
 	<footer role="contentinfo">
-		<!-- TODO: place some content here -->
 	</footer>
 
 </body>
