@@ -16,8 +16,9 @@ header {
 
 	li {
 		color: #333;
+		float: left;
 
-		&:not(:last-child) { margin-right: 9px; }
+		&:not(:last-child) { margin-right: 5px; }
 		&:hover,
 		&.active {
 			background-color: #007acc;
@@ -69,8 +70,20 @@ main {
 			right: 0;
 		}
 	}
+}
 
-	@include phone-only {
+// Mobile view
+@include phone-only {
+	header {
+		text-align: center;
+		padding: 9px;
+
+		li {
+			display: inline-block;
+			float: none;
+		}
+	}
+	main {
 		li {
 			max-width: none;
 			min-width: 0;

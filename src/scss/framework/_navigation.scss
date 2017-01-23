@@ -7,9 +7,10 @@ nav {
 		padding-left: 0;
 		@include clearfix;
 	}
-	li { float: left; }
 	a {
 		display: block;
 		text-decoration: none;
 	}
 }
+
+main li { float: left; }
