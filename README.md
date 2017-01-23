@@ -16,3 +16,7 @@ TODO: Documentation is needed
 2. run `npm install gulp-cli -g` to install gulp
 1. run `npm install` to install gulp in your project
 2. run `gulp sass:watch` to compile SASS on the fly
+
+## htacces for caching via appcache
+add the follwoing line to your htaccess
+`AddType text/cache-manifest .appcache`
