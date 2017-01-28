@@ -67,15 +67,20 @@ main {
 		border: 1px solid $main-link-border-color;
 		border-radius: 3px;
 		background-clip: padding-box;
+		position: relative;
 		overflow: hidden;
+		transition: transform .2s;
 
 		&:hover {
 			border-color: $main-link-active-border-color;
+			transform: scale(1.1);
+			z-index: 1;
+
 			span {
-				background-color: $main-link-active-description-bg;
-				color: $main-link-active-description-color;
-				min-height: 30%;
-				opacity: .85;
+				//background-color: $main-link-active-description-bg;
+				//color: $main-link-active-description-color;
+				//min-height: 30%;
+				//opacity: .85;
 			}
 		}
 
@@ -91,7 +96,6 @@ main {
 			padding: 4px;
 			position: absolute;
 			right: 0;
-			transition: min-height .2s, opacity .2s, background-color .2s;
 		}
 	}
 }
