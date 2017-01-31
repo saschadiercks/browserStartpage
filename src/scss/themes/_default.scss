@@ -14,6 +14,9 @@ $main-link-description-color: $header-link-color;
 $main-link-active-description-bg: $header-link-active-bg;
 $main-link-active-description-color: $header-link-active-color;
 
+$footer-bg: $header-link-active-bg;
+$footer-color: $header-background-color;
+
 $no-js-separator-color: $main-link-border-color;
 
 
@@ -70,18 +73,12 @@ main {
 		position: relative;
 		overflow: hidden;
 		transition: transform .2s;
+		text-decoration: none;
 
 		&:hover {
 			border-color: $main-link-active-border-color;
 			transform: scale(1.1);
 			z-index: 1;
-
-			span {
-				//background-color: $main-link-active-description-bg;
-				//color: $main-link-active-description-color;
-				//min-height: 30%;
-				//opacity: .85;
-			}
 		}
 
 		// Description
@@ -106,10 +103,7 @@ main {
 		text-align: center;
 		padding: 9px;
 
-		li {
-			display: inline-block;
-			float: none;
-		}
+		li { display: inline-block;	}
 	}
 	main {
 		li {
@@ -140,5 +134,8 @@ body:not(.js) main nav:not(:last-child) {
 
 // ---- Footer ----
 footer {
-	display: none;
+//	background-color: $footer-bg;
+//	color: $footer-color;
+//
+//	a { color: inherit; }
 }

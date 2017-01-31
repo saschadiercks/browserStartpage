@@ -1,10 +1,7 @@
 // ---- Navigation ----
 nav {
 	ul {
-		list-style-type: none;
-		margin-top: 0;
-		margin-bottom: 0;
-		padding-left: 0;
+		@include table-reset;
 		@include clearfix;
 	}
 	a {
@@ -12,5 +9,3 @@ nav {
 		text-decoration: none;
 	}
 }
-
-main li { float: left; }
