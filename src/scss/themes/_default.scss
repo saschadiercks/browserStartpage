@@ -37,9 +37,9 @@ header {
 
 	li {
 		color: $header-link-color;
-		float: left;
+		display: inline-block;
 
-		&:not(:last-child) { margin-right: 5px; }
+		//&:not(:last-child) { margin-right: 5px; }
 		&:hover,
 		&.active {
 			background-color: $header-link-active-bg;
@@ -60,7 +60,7 @@ main {
 
 	ul { width: 90%; }
 	li {
-		max-width: 258px;
+		// max-width: 258px;
 		min-width: 120px;
 		width: 20%;
 	}
@@ -102,8 +102,6 @@ main {
 	header {
 		text-align: center;
 		padding: 9px;
-
-		li { display: inline-block;	}
 	}
 	main {
 		li {
@@ -134,8 +132,8 @@ body:not(.js) main nav:not(:last-child) {
 
 // ---- Footer ----
 footer {
-//	background-color: $footer-bg;
-//	color: $footer-color;
-//
-//	a { color: inherit; }
+	background-color: $footer-bg;
+	color: $footer-color;
+
+	a { color: inherit; }
 }

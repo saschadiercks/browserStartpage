@@ -1,7 +1,7 @@
 // ---- Navigation ----
 nav {
 	ul {
-		@include table-reset;
+		@include ul-reset;
 		@include clearfix;
 	}
 	a {
