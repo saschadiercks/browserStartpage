@@ -1,4 +1,4 @@
 // Responsive Layout
 @mixin phone-only {
-  @media (max-width: 320px) { @content; }
+  @media (max-width: 670px) { @content; }
 }

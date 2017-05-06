@@ -57,10 +57,10 @@ header {
 // ---- Content ----
 main {
 	padding-top: 1em;
+	padding-left: 9px;
+	padding-right: 9px;
 
-	ul { width: 90%; }
 	li {
-		// max-width: 258px;
 		min-width: 120px;
 		width: 20%;
 	}
@@ -108,18 +108,12 @@ main {
 		li {
 			max-width: none;
 			min-width: 0;
-			width: 50%;
 		}
 
 		a {
 			margin: 2px;
-			span {
-				padding: 9px;
-				position: static;
-			}
+			&:hover { transform: scale(1); }
 		}
-
-		img { display: none; }
 	}
 }
 
