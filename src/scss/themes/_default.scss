@@ -43,7 +43,7 @@ header {
 		&:hover,
 		&.active {
 			background-color: $header-link-active-bg;
-			border-radius: 3px;
+			border-radius: 2px;
 			color: $header-link-active-color;
 		}
 	}
@@ -56,7 +56,7 @@ main {
 	margin: $base-spacing-size;
 
 	a {
-		margin: $base-spacing-size/2;
+		margin: $base-spacing-size/4;
 		border: 1px solid $main-link-border-color;
 		border-radius: 2px;
 		background-clip: padding-box;
@@ -110,7 +110,7 @@ footer {
 // Default View
 @include default {
 	header {
-		padding: $base-spacing-size*.75 $base-spacing-size*1.5;
+		padding: $base-spacing-size*.75 $base-spacing-size*1.25;
 		a { padding: $base-spacing-size/2 $base-spacing-size; }
 	}
 	main {
