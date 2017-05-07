@@ -98,7 +98,7 @@ footer {
 @include phone-only {
 	header {
 		font-size: .75em;
-		padding: $base-spacing-size*2;
+		padding: $base-spacing-size*2 $base-spacing-size*1.25;
 
 		a { padding: $base-spacing-size $base-spacing-size*2; }
 	}
