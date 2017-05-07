@@ -2,6 +2,8 @@
 $document-font-family: -apple-system, sans-serif;
 $body-background-color: #f5f5f5;
 
+$base-spacing-size: 1vw;
+
 $header-background-color: #fff;
 $header-link-color: #333;
 $header-link-active-bg: #007acc;
@@ -30,16 +32,14 @@ body {
 // ---- header ----
 header {
 	background-color: $header-background-color;
-	box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
 	display: block;
-	padding: 9px 18px;
 	z-index: 1;
 
 	li {
 		color: $header-link-color;
 		display: inline-block;
 
-		//&:not(:last-child) { margin-right: 5px; }
 		&:hover,
 		&.active {
 			background-color: $header-link-active-bg;
@@ -48,36 +48,24 @@ header {
 		}
 	}
 
-	a {
-		color: inherit;
-		padding: 9px 18px;
-	}
+	a { color: inherit; }
 }
 
 // ---- Content ----
 main {
-	padding-top: 1em;
-	padding-left: 9px;
-	padding-right: 9px;
-
-	li {
-		min-width: 120px;
-		width: 20%;
-	}
+	margin: $base-spacing-size;
 
 	a {
-		margin: 9px;
+		margin: $base-spacing-size/2;
 		border: 1px solid $main-link-border-color;
-		border-radius: 3px;
+		border-radius: 2px;
 		background-clip: padding-box;
 		position: relative;
 		overflow: hidden;
-		transition: transform .2s;
 		text-decoration: none;
 
 		&:hover {
 			border-color: $main-link-active-border-color;
-			transform: scale(1.1);
 			z-index: 1;
 		}
 
@@ -89,47 +77,59 @@ main {
 			font-size: .75em;
 			left: 0;
 			display: block;
-			min-height: 0;
-			padding: 4px;
+			padding: $base-spacing-size/2;
 			position: absolute;
 			right: 0;
 		}
 	}
 }
 
-// Mobile view
-@include phone-only {
-	header {
-		font-size: .75em;
-		text-align: center;
-		padding: 9px;
-	}
-	main {
-		li {
-			max-width: none;
-			min-width: 0;
-			width:33%;
-		}
-
-		a {
-			margin: 2px;
-			&:hover { transform: scale(1); }
-		}
-	}
-}
-
-// separation of content if JS is disabled
-body:not(.js) main nav:not(:last-child) {
-	margin-bottom: 1.5em;
-	padding-bottom: 1.5em;
-	border-bottom: 1px dotted $no-js-separator-color;
-}
-
-
 // ---- Footer ----
 footer {
 	background-color: $footer-bg;
 	color: $footer-color;
+	display: none;
 
 	a { color: inherit; }
+}
+
+// ---- Responsive ----
+// Mobile view
+@include phone-only {
+	header {
+		font-size: .75em;
+		padding: $base-spacing-size*2;
+
+		a { padding: $base-spacing-size $base-spacing-size*2; }
+	}
+	main {
+		li { width:33%;	}
+	}
+}
+
+// Default View
+@include default {
+	header {
+		padding: $base-spacing-size*.75 $base-spacing-size*1.5;
+		a { padding: $base-spacing-size/2 $base-spacing-size; }
+	}
+	main {
+		li {
+			min-width: 120px;
+			width: 20%;
+		}
+
+		a {
+			transition: transform .2s;
+			&:hover { transform: scale(1.1); }
+		}
+	}
+}
+
+// ---- Fallbacks / special cases ----
+// separation of content if JS is disabled
+body:not(.js) main nav:not(:last-child) {
+	margin-bottom: $base-spacing-size*2;
+	padding-bottom: $base-spacing-size*2;
+	border-bottom: 1px dotted $no-js-separator-color;
 }

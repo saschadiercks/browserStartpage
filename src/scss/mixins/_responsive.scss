@@ -2,3 +2,7 @@
 @mixin phone-only {
   @media (max-width: 670px) { @content; }
 }
+
+@mixin default {
+  @media (min-width: 671px) { @content; }
+}
