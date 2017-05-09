@@ -111,7 +111,7 @@ footer {
 @include default {
 	header {
 		padding: $base-spacing-size*.75 $base-spacing-size*1.25;
-		a { padding: $base-spacing-size/2 $base-spacing-size; }
+		a { padding: $base-spacing-size*.75 $base-spacing-size; }
 	}
 	main {
 		li {
