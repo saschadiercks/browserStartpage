@@ -120,8 +120,8 @@ footer {
 		}
 
 		a {
-			transition: transform .2s;
-			&:hover { transform: scale(1.1); }
+			img { transition: transform .2s; }
+			&:hover img { transform: scale(1.1); }
 		}
 	}
 }
