@@ -16,6 +16,7 @@ main {
 	a {
 		display: block;
 		position: relative;		// allow postioning of child-elements
+		img { display: block; }		// prevent whitespace on images
 	}
 
 	// Clip text of Description if nessecary
