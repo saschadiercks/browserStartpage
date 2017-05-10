@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saschadiercks/personalBoilerplate.git"
+    "url": "git+https://github.com/saschadiercks/browserStartpage.git"
   },
   "author": "Sascha Diercks",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/saschadiercks/personalBoilerplate/issues"
+    "url": "https://github.com/saschadiercks/browserStartpage/issues"
   },
-  "homepage": "https://github.com/saschadiercks/personalBoilerplate#readme"
+  "homepage": "https://github.com/saschadiercks/browserStartpage#readme"
 }
