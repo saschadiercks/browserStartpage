@@ -11,7 +11,7 @@ $header-link-active-color: #fff;
 
 $main-link-border-color: #ddd;
 $main-link-active-border-color: $main-link-border-color;
-$main-link-description-bg: #fff;
+$main-link-description-bg: rgba(#fff,.95);
 $main-link-description-color: $header-link-color;
 $main-link-active-description-bg: $header-link-active-bg;
 $main-link-active-description-color: $header-link-active-color;
@@ -56,7 +56,7 @@ main {
 	margin: $base-spacing-size;
 
 	a {
-		margin: $base-spacing-size/4;
+		margin: $base-spacing-size/2;
 		border: 1px solid $main-link-border-color;
 		border-radius: 2px;
 		background-clip: padding-box;
@@ -121,7 +121,7 @@ footer {
 
 		a {
 			transition: transform .2s;
-			&:hover { transform: scale(1.1); }
+			&:hover { transform: translateY($base-spacing-size * -.5); }
 		}
 	}
 }
