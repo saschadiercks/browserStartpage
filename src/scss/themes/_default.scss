@@ -91,7 +91,7 @@ footer {
 	color: $footer-color;
 	width: 100%;
 	font-size: .75rem;
-	padding: $base-spacing-size;
+	padding: $base-spacing-size $base-spacing-size*1.5;
 	z-index: 1;
 
 	ul { @include ul-reset; }
@@ -107,7 +107,7 @@ footer {
 @include phone-only {
 	header {
 		font-size: .75rem;
-		padding: $base-spacing-size*2 $base-spacing-size*1.25;
+		padding: $base-spacing-size*2 $base-spacing-size*1.5;
 
 		a { padding: $base-spacing-size $base-spacing-size*2; }
 	}
@@ -119,7 +119,7 @@ footer {
 // Default View
 @include default {
 	header {
-		padding: $base-spacing-size*.75 $base-spacing-size*1.25;
+		padding: $base-spacing-size*.75 $base-spacing-size*1.5;
 		a { padding: $base-spacing-size*.75 $base-spacing-size; }
 	}
 	main {
