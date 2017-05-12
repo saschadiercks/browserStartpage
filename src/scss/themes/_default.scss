@@ -86,18 +86,27 @@ main {
 
 // ---- Footer ----
 footer {
+	@include clearfix;
 	background-color: $footer-bg;
 	color: $footer-color;
-	display: none;
+	width: 100%;
+	font-size: .75rem;
+	padding: $base-spacing-size;
+	z-index: 1;
 
+	ul { @include ul-reset; }
+	li { display: inline-block; }
 	a { color: inherit; }
+
+	div:first-of-type { float: left; }
+	.social-profiles { float: right; }
 }
 
 // ---- Responsive ----
 // Mobile view
 @include phone-only {
 	header {
-		font-size: .75em;
+		font-size: .75rem;
 		padding: $base-spacing-size*2 $base-spacing-size*1.25;
 
 		a { padding: $base-spacing-size $base-spacing-size*2; }
@@ -124,6 +133,16 @@ footer {
 			&:hover { transform: translateY($base-spacing-size * -.5); }
 		}
 	}
+
+	footer {
+		position: fixed;
+		bottom: $base-spacing-size*-2.5;
+		transition: bottom .2s;
+		opacity: .9;
+
+		&:hover { bottom: 0; }
+	}
+
 }
 
 // ---- Fallbacks / special cases ----
