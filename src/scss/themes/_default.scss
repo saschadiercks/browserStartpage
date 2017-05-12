@@ -60,6 +60,7 @@ main {
 		border: 1px solid $main-link-border-color;
 		border-radius: 2px;
 		background-clip: padding-box;
+		font-size: .75rem;
 		position: relative;
 		overflow: hidden;
 		text-decoration: none;
@@ -74,7 +75,6 @@ main {
 			background-color: $main-link-description-bg;
 			bottom: 0;
 			color: $main-link-description-color;
-			font-size: .75em;
 			left: 0;
 			display: block;
 			padding: $base-spacing-size/2;
