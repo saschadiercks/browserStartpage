@@ -1,0 +1,12 @@
+{
+  "short_name": "Startpage",
+  "name": "Browser Startpage",
+  "icons": [
+    {
+      "src": "apple-touch-icon-foto-114x114-precomposed",
+      "type": "image/png",
+      "sizes": "114x114"
+    }
+  ],
+  "start_url": "./index-dev.html/?utm_source=homescreen"
+}
