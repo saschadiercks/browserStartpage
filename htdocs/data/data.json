@@ -3,147 +3,147 @@
 		"Home" : [
 			{
 				"url" : "https://letterboxd.com",
-				"image": "assets/thumbnails/letterboxd.png",
-				"title": "Letterboxd"
+				"title": "Letterboxd",
+				"image": "assets/thumbnails/letterboxd.png"
 			},
 			{
 				"url" : "https://vue-hn.now.sh/top",
-				"image": "assets/thumbnails/hacker-news.png",
-				"title": "Hacker-News"
+				"title": "Hacker-News",
+				"image": "assets/thumbnails/hacker-news.png"
 			},
 			{
 				"url" : "http://imdb.com",
-				"image": "assets/thumbnails/imdb.png",
-				"title": "IMDB"
+				"title": "IMDB",
+				"image": "assets/thumbnails/imdb.png"
 			},
 			{
 				"url" : "https://www.ted.com/",
-				"image": "assets/thumbnails/ted.png",
-				"title": "TED"
+				"title": "TED",
+				"image": "assets/thumbnails/ted.png"
 			},
 			{
 				"url" : "http://changethis.com/",
-				"image": "assets/thumbnails/change-this.png",
-				"title": "Change This"
+				"title": "Change This",
+				"image": "assets/thumbnails/change-this.png"
 			}
 		],
 		"Shop" : [
 			{
 				"url" : "http://www.amazon.de",
-				"image": "assets/thumbnails/amazon.png",
-				"title": "Amazon"
+				"title": "Amazon",
+				"image": "assets/thumbnails/amazon.png"
 			},
 			{
 				"url" : "http://www.moleskine.de",
-				"image": "assets/thumbnails/moleskine.png",
-				"title": "Moleskine"
+				"title": "Moleskine",
+				"image": "assets/thumbnails/moleskine.png"
 			}
 		],
 		"Dev" : [
 			{
 				"url" : "http://schema.org/docs/schemas.html",
-				"image": "assets/thumbnails/schema.png",
-				"title": "Schema.org"
+				"title": "Schema.org",
+				"image": "assets/thumbnails/schema.png"
 			},
 			{
 				"url" : "https://html.spec.whatwg.org/multipage/forms.html#autofill",
-				"image": "assets/thumbnails/autocomplete.png",
-				"title": "Autocomplete"
+				"title": "Autocomplete",
+				"image": "assets/thumbnails/autocomplete.png"
 			},
 			{
 				"url" : "http://microformats.org/wiki/hcard-input-formats",
-				"image": "assets/thumbnails/microformats.png",
-				"title": "Microformats"
+				"title": "Microformats",
+				"image": "assets/thumbnails/microformats.png"
 			},
 			{
 				"url" : "https://github.com/",
-				"image": "assets/thumbnails/github.png",
-				"title": "Github"
+				"title": "Github",
+				"image": "assets/thumbnails/github.png"
 			},
 			{
 				"url" : "https://bitbucket.org/",
-				"image": "assets/thumbnails/bitbucket.png",
-				"title": "Bitbucket"
+				"title": "Bitbucket",
+				"image": "assets/thumbnails/bitbucket.png"
 			},
 			{
 				"url" : "https://validator.w3.org/nu/",
-				"image": "assets/thumbnails/html-validator.png",
-				"title": "HTML-Validator"
+				"title": "HTML-Validator",
+				"image": "assets/thumbnails/html-validator.png"
 			},
 			{
 				"url" : "https://developers.google.com/structured-data/testing-tool/",
-				"image": "assets/thumbnails/rich-snippet.png",
-				"title": "RichSnippet-Testing"
+				"title": "RichSnippet-Testing",
+				"image": "assets/thumbnails/rich-snippet.png"
 			},
 			{
 				"url" : "https://developers.google.com/speed/pagespeed/insights/?hl=de",
-				"image": "assets/thumbnails/pagespeed.png",
-				"title": "Google Pagespeeds"
+				"title": "Google Pagespeeds",
+				"image": "assets/thumbnails/pagespeed.png"
 			},
 			{
 				"url" : "https://search.google.com/search-console/mobile-friendly",
-				"image": "assets/thumbnails/mobile-friendly.png",
-				"title": "Google Mobiltest"
+				"title": "Google Mobiltest",
+				"image": "assets/thumbnails/mobile-friendly.png"
 			},
 			{
 				"url" : "https://www.google.com/webmasters/tools/",
-				"image": "assets/thumbnails/webmastertools.png",
-				"title": "Google Webmaster-Tools"
+				"title": "Google Webmaster-Tools",
+				"image": "assets/thumbnails/webmastertools.png"
 			},
 			{
 				"url" : "https://analytics.google.com/",
-				"image": "assets/thumbnails/analytics.png",
-				"title": "Analytics"
+				"title": "Analytics",
+				"image": "assets/thumbnails/analytics.png"
 			},
 			{
 				"url" : "https://github.com/dypsilon/frontend-dev-bookmarks",
-				"image": "assets/thumbnails/frontend-bookmarks.png",
-				"title": "Frontend Bookmarks"
+				"title": "Frontend Bookmarks",
+				"image": "assets/thumbnails/frontend-bookmarks.png"
 			},
 			{
 				"url" : "https://developer.mozilla.org/de/",
-				"image": "assets/thumbnails/mozilla-dev.png",
-				"title": "Mozilla (dev)"
+				"title": "Mozilla (dev)",
+				"image": "assets/thumbnails/mozilla-dev.png"
 			},
 			{
 				"url" : "https://developers.google.com/web/?hl=de",
-				"image": "assets/thumbnails/google-dev.png",
-				"title": "Google (dev)"
+				"title": "Google (dev)",
+				"image": "assets/thumbnails/google-dev.png"
 			},
 			{
 				"url" : "http://codepen.io/patterns/",
-				"image": "assets/thumbnails/codepen-patterns.png",
-				"title": "Codepen patterns"
+				"title": "Codepen patterns",
+				"image": "assets/thumbnails/codepen-patterns.png"
 			},
 			{
 				"url" : "http://browserl.ist/",
-				"image": "assets/thumbnails/browserlist.png",
-				"title": "Browserlist"
+				"title": "Browserlist",
+				"image": "assets/thumbnails/browserlist.png"
 			},
 			{
 				"url" : "https://www.codecademy.com",
-				"image": "assets/thumbnails/codecademy.png",
-				"title": "Codecademy"
+				"title": "Codecademy",
+				"image": "assets/thumbnails/codecademy.png"
 			},
 			{
 				"url" : "http://tools.pingdom.com/fpt/",
-				"image": "assets/thumbnails/pingdom.png",
-				"title": "Pingdom"
+				"title": "Pingdom",
+				"image": "assets/thumbnails/pingdom.png"
 			},
 			{
 				"url" : "https://dequeuniversity.com/library/",
-				"image": "assets/thumbnails/accessibility.png",
-				"title": "Accessibility Library"
+				"title": "Accessibility Library",
+				"image": "assets/thumbnails/accessibility.png"
 			},
 			{
 				"url" : "https://pixabay.com/de/",
-				"image": "assets/thumbnails/pixabay.png",
-				"title": "Pixabay"
+				"title": "Pixabay",
+				"image": "assets/thumbnails/pixabay.png"
 			},
 			{
 				"url" : "https://npms.io/",
-				"image": "assets/thumbnails/npms-io.png",
-				"title": "npms.io"
+				"title": "npms.io",
+				"image": "assets/thumbnails/npms-io.png"
 			}
 		]
 	},
