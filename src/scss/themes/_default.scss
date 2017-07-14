@@ -127,9 +127,12 @@ footer {
 			width: 20%;
 		}
 
-		a {
-			transition: transform .2s;
-			&:hover { transform: translateY($base-spacing-size * -.5); }
+		.title {
+			opacity: 0;
+			transition: opacity .5s;
+		}
+		a:hover .title {
+			opacity: 1;
 		}
 	}
 
