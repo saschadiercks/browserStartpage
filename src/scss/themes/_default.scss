@@ -60,7 +60,6 @@ main {
 	margin: $base-spacing-size;
 
 	a {
-
 		background-color: $main-link-background-color;
 		background-image: $main-link-background-image;
 		background-clip: padding-box;
@@ -119,7 +118,7 @@ footer {
 		a { padding: $base-spacing-size $base-spacing-size*2; }
 	}
 	main {
-		li { width:33%;	}
+		li { width:50%;	}
 	}
 }
 
@@ -154,6 +153,13 @@ footer {
 	}
 
 }
+
+
+// Improve Image-Rendering ob bigger Screens
+@media (min-width: 1600px) {
+	main img { image-rendering: pixelated; }
+}
+
 
 // ---- Fallbacks / special cases ----
 // separation of content if JS is disabled / not loaded
