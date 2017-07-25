@@ -11,11 +11,11 @@
 	$content = $json['content'];				// Get content-array directly
 	$footer = $json['footer'];					// Get footer-array
 
-	// Countervalues to start with. Every block get's it's own value, so we don't need to unset it
+	// Countervalues to start with. Every block gets it's own value, so we don't need to unset it
 	// The important thing is, header and content must use the same startValue!
 	$headerCount = $counterStartvalue;
 	$contentCount = $counterStartvalue;
-	$tileCount = $counterStartvalue
+	$tileCount = $counterStartvalue;	// currently unused
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +25,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="de" />
 	<meta name="MSSmartTagsPreventParsing" content="TRUE" />
-	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="viewport" content="width=device-width; initial-scale=1;">
 
 	<!-- Short Names -->
@@ -50,7 +49,7 @@
 
 	<!-- header -->
 	<header>
-		<nav role="navigation" class="tabs">
+		<nav class="tabs">
 			<ul>
 				<?php foreach($header as $key): ?>
 					<li class="tab">
@@ -58,18 +57,21 @@
 					</li>
 				<?php endforeach; ?>
 			</ul>
+		</nav>
 	</header>
 
 	<!-- content -->
-	<main role="main" id="content">
+	<main id="content">
 		<?php foreach($content as $key): ?>
 			<div id="tab-<?= $counterStartvalue++ ?>" class="tabbed-content">
 				<ul>
 					<?php foreach($key as $contentItem): ?>
-						<a href="<?= $contentItem['url'] ?>" rel="noopener">
-							<img src="<?= $contentItem['image'] ?>" alt="<?= $contentItem['title'] ?>"/>
-							<span class="title"><?= $contentItem['title'] ?></span>
-						</a>
+						<li>
+							<a href="<?= $contentItem['url'] ?>" rel="noopener">
+								<img src="<?= $contentItem['image'] ?>" alt="<?= $contentItem['title'] ?>"/>
+								<span class="title"><?= $contentItem['title'] ?></span>
+							</a>
+						</li>
 					<?php endforeach; ?>
 				</ul>
 			</div>
@@ -77,7 +79,7 @@
 	</main>
 
 	<!-- footer -->
-	<footer role="contentinfo">
+	<footer>
 		<div class="description"><a href="https://github.com/saschadiercks/browserStartpage">Fork me on Github</a></div>
 		<div class="social-profiles">
 			<ul>
