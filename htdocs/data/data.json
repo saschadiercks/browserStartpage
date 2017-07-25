@@ -1,0 +1,156 @@
+{
+	"content": {
+		"Browser" : [
+			{
+				"url":   "https://www.mozilla.org/firefox",
+				"title": "Firefox",
+				"image": "assets/thumbnails/firefox.png"
+			},
+			{
+				"url":   "https://www.google.de/chrome/browser/desktop/",
+				"title": "Chrome",
+				"image": "assets/thumbnails/chrome.png"
+			},
+			{
+				"url":   "https://vivaldi.com",
+				"title": "Vivaldi",
+				"image": "assets/thumbnails/vivaldi.png"
+			},
+			{
+				"url":   "https://developer.apple.com/safari/technology-preview/",
+				"title": "Safari (TP)",
+				"image": "assets/thumbnails/safari-tp.png"
+			},
+			{
+				"url":   "https://www.mozilla.org/de/firefox/developer/",
+				"title": "Firefox (Dev)",
+				"image": "assets/thumbnails/firefox-dev.png"
+			}
+		],
+		"Dev" : [
+			{
+				"url":   "http://schema.org/docs/schemas.html",
+				"title": "Schema.org",
+				"image": "assets/thumbnails/schema.png"
+			},
+			{
+				"url":   "https://html.spec.whatwg.org/multipage/forms.html#autofill",
+				"title": "Autocomplete",
+				"image": "assets/thumbnails/autocomplete.png"
+			},
+			{
+				"url":   "http://microformats.org/wiki/hcard-input-formats",
+				"title": "Microformats",
+				"image": "assets/thumbnails/microformats.png"
+			},
+			{
+				"url":   "https://github.com/",
+				"title": "Github",
+				"image": "assets/thumbnails/github.png"
+			},
+			{
+				"url":   "https://bitbucket.org/",
+				"title": "Bitbucket",
+				"image": "assets/thumbnails/bitbucket.png"
+			},
+			{
+				"url":   "https://validator.w3.org/nu/",
+				"title": "HTML-Validator",
+				"image": "assets/thumbnails/html-validator.png"
+			},
+			{
+				"url":   "https://developers.google.com/structured-data/testing-tool/",
+				"title": "RichSnippet-Testing",
+				"image": "assets/thumbnails/rich-snippet.png"
+			},
+			{
+				"url":   "https://developers.google.com/speed/pagespeed/insights/?hl=de",
+				"title": "Google Pagespeeds",
+				"image": "assets/thumbnails/pagespeed.png"
+			},
+			{
+				"url":   "https://search.google.com/search-console/mobile-friendly",
+				"title": "Google Mobiltest",
+				"image": "assets/thumbnails/mobile-friendly.png"
+			},
+			{
+				"url":   "https://www.google.com/webmasters/tools/",
+				"title": "Google Webmaster-Tools",
+				"image": "assets/thumbnails/webmastertools.png"
+			},
+			{
+				"url":   "https://analytics.google.com/",
+				"title": "Analytics",
+				"image": "assets/thumbnails/analytics.png"
+			},
+			{
+				"url":   "https://github.com/dypsilon/frontend-dev-bookmarks",
+				"title": "Frontend Bookmarks",
+				"image": "assets/thumbnails/frontend-bookmarks.png"
+			},
+			{
+				"url":   "https://developer.mozilla.org/de/",
+				"title": "Mozilla (dev)",
+				"image": "assets/thumbnails/mozilla-dev.png"
+			},
+			{
+				"url":   "https://developers.google.com/web/?hl=de",
+				"title": "Google (dev)",
+				"image": "assets/thumbnails/google-dev.png"
+			},
+			{
+				"url":   "http://codepen.io/patterns/",
+				"title": "Codepen patterns",
+				"image": "assets/thumbnails/codepen-patterns.png"
+			},
+			{
+				"url":   "http://browserl.ist/",
+				"title": "Browserlist",
+				"image": "assets/thumbnails/browserlist.png"
+			},
+			{
+				"url":   "https://www.codecademy.com",
+				"title": "Codecademy",
+				"image": "assets/thumbnails/codecademy.png"
+			},
+			{
+				"url":   "http://tools.pingdom.com/fpt/",
+				"title": "Pingdom",
+				"image": "assets/thumbnails/pingdom.png"
+			},
+			{
+				"url":   "https://dequeuniversity.com/library/",
+				"title": "Accessibility Library",
+				"image": "assets/thumbnails/accessibility.png"
+			},
+			{
+				"url":   "https://pixabay.com/de/",
+				"title": "Pixabay",
+				"image": "assets/thumbnails/pixabay.png"
+			},
+			{
+				"url":   "https://npms.io/search?term=hyperterm",
+				"title": "npms.io",
+				"image": "assets/thumbnails/npms-io.png"
+			},
+			{
+				"url":   "https://developer.microsoft.com/en-us/microsoft-edge/tools/",
+				"title": "Modern IE",
+				"image": "assets/thumbnails/modern-ie.png"
+			}
+		]
+	},
+	"footer" : {
+		"links" : [
+			{
+				"url":   "https://github.com/saschadiercks",
+				"title": "Github"
+			},
+			{
+				"url":   "https://m.twitter.com/saschadiercks",
+				"title": "Twitter"
+			}
+		]
+	}
+
+}
