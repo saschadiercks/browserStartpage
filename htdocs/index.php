@@ -68,7 +68,7 @@
 					<?php foreach($key as $contentItem): ?>
 						<a href="<?= $contentItem['url'] ?>" rel="noopener">
 							<img src="<?= $contentItem['image'] ?>" alt="<?= $contentItem['title'] ?>"/>
-							<span><?= $contentItem['title'] ?></span>
+							<span class="title"><?= $contentItem['title'] ?></span>
 						</a>
 					<?php endforeach; ?>
 				</ul>
