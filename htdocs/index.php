@@ -21,15 +21,9 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="de">
 <head>
-	<title>__title__</title>
+	<title>Browser Startpage</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="__description__" />
-	<meta name="keywords" content="__keywords__" />
 	<meta name="language" content="de" />
-	<meta name="page-topic" content="__page-topic__" />
-	<meta name="Robots" content="index,follow" />
-	<meta name="author" content="Sascha Diercks" />
-	<meta name="publisher" content="Sascha Diercks" />
 	<meta name="MSSmartTagsPreventParsing" content="TRUE" />
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="viewport" content="width=device-width; initial-scale=1;">
