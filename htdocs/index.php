@@ -19,7 +19,7 @@
 ?>
 
 <!DOCTYPE html>
-<html dir="ltr" lang="de" manifest="startpage.manifest">
+<html dir="ltr" lang="de" manifest="startpage.manifest.php">
 <head>
 	<title>Browser Startpage</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
