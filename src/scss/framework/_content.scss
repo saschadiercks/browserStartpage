@@ -6,8 +6,6 @@
 main {
 	div { @include clearfix; }
 	ul {
-		display: flex;
-		flex-wrap: wrap;
 		margin-left: auto;
 		margin-right: auto;
 		@include ul-reset;
