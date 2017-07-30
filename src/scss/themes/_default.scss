@@ -59,6 +59,11 @@ header {
 main {
 	margin: $base-spacing-size;
 
+	ul {
+		display: grid;
+		grid-gap: $base-spacing-size;
+	}
+
 	a {
 		background-color: $main-link-background-color;
 		background-image: $main-link-background-image;
@@ -66,7 +71,7 @@ main {
 		border: 1px solid $main-link-border-color;
 		border-radius: 2px;
 		font-size: .75rem;
-		margin: $base-spacing-size/2;
+		// margin: $base-spacing-size/2;
 		position: relative;
 		text-align: center;
 		text-decoration: none;
@@ -119,21 +124,19 @@ footer {
 		a { padding: $base-spacing-size $base-spacing-size*2; }
 	}
 	main {
-		li { width:50%;	}
+		ul { grid-template-columns: repeat(2,1fr); }
+
 	}
 }
 
 // Default View
 @include default {
 	header {
-		padding: $base-spacing-size*.75 $base-spacing-size*1.5;
+		padding: $base-spacing-size*.75 $base-spacing-size;
 		a { padding: $base-spacing-size*.75 $base-spacing-size; }
 	}
 	main {
-		li {
-			min-width: 120px;
-			width: 20%;
-		}
+		ul { grid-template-columns: repeat(5,1fr); }
 
 		.title {
 			opacity: 0;
