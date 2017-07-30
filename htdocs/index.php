@@ -5,6 +5,8 @@
 	$content = file_get_contents($dataUrl);		// Get the data
 	$json = json_decode($content, true);		// (true) returns the json as array-structure
 	$counterStartvalue = 1;						// Set the Number the counters start with (no change nesseccary)
+	$cssUrl = "assets/css/site.css";			// Set the url to retreive the css from
+	$jsUrl = "assets/js/script.js";				// Set the url to retrieve the js from
 
 	// Array-Konstrukte aufbauen
 	$header = array_keys($json['content']);		// Build header-array (keys of first layer only, because we only need the keys as title)
@@ -36,12 +38,16 @@
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<!-- CSS -->
-	<link href="assets/css/site.css" type="text/css" rel="stylesheet"/>
+	<style type="text/css">
+		<?php require_once($cssUrl); ?>
+	</style>
 
 	<!-- JS -->
-	<script src="assets/js/script.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		<?php require_once($jsUrl); ?>
+	</script>
 
-	<!-- Manifest -->
+	<!-- Mobile Manifest -->
 	<link rel="manifest" href="manifest.json" />
 </head>
 

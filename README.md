@@ -2,10 +2,7 @@
 Build your own cross-browser speed-dial to sync via iCloud, Dropbox or your own solution.
 
 ## Roadmap
-- store link-data in json || xml
 - parse link-data and render to index.html (required for thirdParty-Hosting)
-- build php-framework to host your Startpage on your own webspace
-- optimize self-hosting to speed up loading-times (e.g. via localStorage and push)
 - automatic rendering of screenshots
 
 ## Usage
