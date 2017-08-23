@@ -27,6 +27,11 @@
 				"image": "assets/thumbnails/vivaldi.png"
 			},
 			{
+				"url":   "https://blisk.io/",
+				"title": "Blisk",
+				"image": "assets/thumbnails/blisk.png"
+			},
+			{
 				"url":   "https://developer.microsoft.com/en-us/microsoft-edge/tools/",
 				"title": "Modern IE",
 				"image": "assets/thumbnails/modern-ie.png"
