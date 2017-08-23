@@ -30,12 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	}
 
-	// -- if DOM is ready, check if localStorage is filled
+	// -- if DOM is ready, check if localStorage is filled and stored Id is still available
 	var savedLocalStorageId = localStorage.getItem("tabbedContentId");
-	if(savedLocalStorageId !== null) {
+	if(savedLocalStorageId !== null && tabTrigger.length >= savedLocalStorageId) {
 		setCurrentTab(savedLocalStorageId);
 	} else {
-		console.log("localStorag is empty, setting default");
+		console.log("localStorage is empty or stored Id is no longer present - setting default");
 		setCurrentTab(0);
 	}
 
