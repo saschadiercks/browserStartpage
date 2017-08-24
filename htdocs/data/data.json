@@ -143,6 +143,43 @@
 				"title": "npms.io",
 				"image": "assets/thumbnails/npms-io.png"
 			}
+		],
+		"Design" : [
+			{
+				"url"  : "https://www.microsoft.com/en-us/design",
+				"image": "assets/thumbnails/design-microsoft.png",
+				"title": "Microsoft Design"
+			},
+			{
+				"url"  : "https://design.google/resources/",
+				"image": "assets/thumbnails/design-google.png",
+				"title": "Google Design"
+			},
+			{
+				"url"  : "http://facebook.design",
+				"image": "assets/thumbnails/design-facebook.png",
+				"title": "Facebook Design"
+			},
+			{
+				"url"  : "https://airbnb.design",
+				"image": "assets/thumbnails/design-airbnb.png",
+				"title": "airbnb Design"
+			},
+			{
+				"url"  : "https://github.com/showcases/design-essentials",
+				"image": "assets/thumbnails/github.png",
+				"title": "Github Design Essentials"
+			},
+			{
+				"url"  : "https://www.designbetter.co",
+				"image": "assets/thumbnails/design-invision.png",
+				"title": "Design better"
+			},
+			{
+				"url"  : "http://magicmockups.com/",
+				"image": "assets/thumbnails/magic-mockups.png",
+				"title": "Magic Mockups"
+			}
 		]
 	},
 	"footer" : {
