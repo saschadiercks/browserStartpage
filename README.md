@@ -14,7 +14,7 @@ The browserStartpage comes with a default list of links, to show you how it work
 
 ## Features
 - easy confiurable via json
-- only requires php on our server
+- only requires php on your server
 - uses vanillaJS
 - uses apllicationCache to minimize traffic
 - uses localStorage to store last opened tab
