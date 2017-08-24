@@ -1,13 +1,15 @@
 # browserStartpage
 Do you schwitch browser often? Are you tired, that every browser uses it's own speeddial and you can't import that in your new browser?
-
-You host your own speeddial with this repo!
+Host your own speeddial with this repo!
 
 ## How does it work?
 Just place the folder `/htdocs` on your own webserver. Make sure it supports *php* - this is the only requirement.
 
 ### Want a demo?
 [http://www.metafolio.de/fragments/startpage/](http://www.metafolio.de/fragments/startpage/)
+Read more about it here (in german): [http://metaideen.de/artikel/freizeitprojekt-browserstartpage-das-speeddial-fuer-alle-browser/](http://metaideen.de/artikel/freizeitprojekt-browserstartpage-das-speeddial-fuer-alle-browser/)
+
+[[https://github.com/saschadiercks/browserStartpage/blob/master/.screenshots/startpage-macbook-iphone.jpg|alt=Screenshot]]
 
 ### Setup your own links
 The browserStartpage comes with a default list of links, to show you how it works. It shows up with a list of popular browser and some development-Ressources. You change that. Just head over to '/htdocs/data/data.json` and play with that file. You can edit the tabs and links to your own liking. Just play with it - it's quite self explanatory. All you need to do is to create images for your links and place them on your server too. Usually here '/htdocs/assets/thumbnails'
