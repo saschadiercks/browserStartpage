@@ -7,6 +7,7 @@ Just place the folder `/htdocs` on your own webserver. Make sure it supports *ph
 
 ### Want a demo?
 [http://www.metafolio.de/fragments/startpage/](http://www.metafolio.de/fragments/startpage/)
+
 Read more about it here (in german): [http://metaideen.de/artikel/freizeitprojekt-browserstartpage-das-speeddial-fuer-alle-browser/](http://metaideen.de/artikel/freizeitprojekt-browserstartpage-das-speeddial-fuer-alle-browser/)
 
 ![Screenshot](/.screenshots/startpage-macbook-iphone.jpg)
