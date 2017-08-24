@@ -9,7 +9,7 @@ Just place the folder `/htdocs` on your own webserver. Make sure it supports *ph
 [http://www.metafolio.de/fragments/startpage/](http://www.metafolio.de/fragments/startpage/)
 Read more about it here (in german): [http://metaideen.de/artikel/freizeitprojekt-browserstartpage-das-speeddial-fuer-alle-browser/](http://metaideen.de/artikel/freizeitprojekt-browserstartpage-das-speeddial-fuer-alle-browser/)
 
-[[https://github.com/saschadiercks/browserStartpage/blob/master/.screenshots/startpage-macbook-iphone.jpg|alt=Screenshot]]
+![Screenshot](/.screenshots/startpage-macbook-iphone.jpg)
 
 ### Setup your own links
 The browserStartpage comes with a default list of links, to show you how it works. It shows up with a list of popular browser and some development-Ressources. You change that. Just head over to '/htdocs/data/data.json` and play with that file. You can edit the tabs and links to your own liking. Just play with it - it's quite self explanatory. All you need to do is to create images for your links and place them on your server too. Usually here '/htdocs/assets/thumbnails'
