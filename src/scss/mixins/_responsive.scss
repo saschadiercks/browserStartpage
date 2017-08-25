@@ -3,6 +3,14 @@
 	@media (max-width: 670px) { @content; }
 }
 
+@mixin tablet-portrait {
+	@media (min-width: 671px) and (max-width:1023px) { @content; }
+}
+
+@mixin tablet-landscape-up {
+	@media (min-width: 1024px) { @content; }
+}
+
 @mixin default {
 	@media (min-width: 671px) { @content; }
 }

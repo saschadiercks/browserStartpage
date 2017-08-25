@@ -129,6 +129,20 @@ footer {
 	}
 }
 
+// Tablet portrait
+@include tablet-portrait {
+	main {
+		ul { grid-template-columns: repeat(4,1fr); }
+	}
+}
+
+// Tablet portrait
+@include tablet-landscape-up {
+	main {
+		ul { grid-template-columns: repeat(5,1fr); }
+	}
+}
+
 // Default View
 @include default {
 	header {
@@ -136,8 +150,6 @@ footer {
 		a { padding: $base-spacing-size*.75 $base-spacing-size; }
 	}
 	main {
-		ul { grid-template-columns: repeat(5,1fr); }
-
 		.title {
 			opacity: 0;
 			transition: opacity $base-animation-speed;
