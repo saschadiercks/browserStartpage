@@ -171,6 +171,16 @@
 				"title": "Github Design Essentials"
 			},
 			{
+				"url"  : "https://www.uber.design",
+				"image": "assets/thumbnails/design-uber.png",
+				"title": "Uber design"
+			},
+			{
+				"url"  : "https://atlassian.design",
+				"image": "assets/thumbnails/design-atlassian.png",
+				"title": "Atlassian Design"
+			},
+			{
 				"url"  : "https://www.designbetter.co",
 				"image": "assets/thumbnails/design-invision.png",
 				"title": "Design better"
@@ -179,6 +189,11 @@
 				"url"  : "http://magicmockups.com/",
 				"image": "assets/thumbnails/magic-mockups.png",
 				"title": "Magic Mockups"
+			},
+			{
+				"url"  : "http://smartmockups.com/",
+				"image": "assets/thumbnails/smartmockups.png",
+				"title": "Smart Mockups"
 			}
 		]
 	},
