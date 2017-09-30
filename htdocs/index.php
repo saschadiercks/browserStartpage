@@ -1,6 +1,13 @@
 <?php
 
+	// Project Title
+	$projectTitle = "Browser Startpage";
+	$projectdescription = "Your unified startpage to use in every browser";
+	$applicationName = "startpage";
+	$applicationNameShort = $applicationName;
+
 	// Set Environemt
+	$manifestUrl = "startpage.manifest.php";	// This is the name of the manifest-file
 	$dataUrl = "data/data.json";				// Set the url to retrieve the data from
 	$content = file_get_contents($dataUrl);		// Get the data
 	$json = json_decode($content, true);		// (true) returns the json as array-structure
@@ -21,21 +28,22 @@
 ?>
 
 <!DOCTYPE html>
-<html dir="ltr" lang="de" manifest="startpage.manifest.php">
+<html dir="ltr" lang="de" manifest="<?php echo($manifestUrl) ?>">
 <head>
-	<title>Browser Startpage</title>
+	<title><?php echo($projectTitle); ?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="<?php echo($projectdescription); ?>" />
 	<meta name="language" content="de" />
 	<meta name="MSSmartTagsPreventParsing" content="TRUE" />
-	<meta name="viewport" content="width=device-width; initial-scale=1;">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Short Names -->
-	<meta name="apple-mobile-web-app-title" content="Startpage">
-	<meta name="application-name" content="Startpage">
+	<meta name="apple-mobile-web-app-title" content="<?php echo($applicationName); ?>" />
+	<meta name="application-name" content="<?php echo($applicationNameShort); ?>" />
 
 	<!-- Icons -->
-	<link rel="apple-touch-icon" href="apple-touch-icon-foto-114x114-precomposed.png">
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="apple-touch-icon-foto-114x114-precomposed.png" />
+	<link rel="shortcut icon" href="favicon.ico" />
 
 	<!-- CSS -->
 	<style type="text/css">
