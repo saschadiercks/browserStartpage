@@ -1,19 +1,14 @@
 <?php
 
-	// Project Title
-	$projectTitle = "Browser Startpage";
-	$projectdescription = "Your unified startpage to use in every browser";
-	$applicationName = "startpage";
-	$applicationNameShort = $applicationName;
+	// Setup
+	$projectConfigUrl = "config/config.php";
+	require_once($projectConfigUrl);
 
-	// Set Environemt
-	$manifestUrl = "startpage.manifest.php";	// This is the name of the manifest-file
+	// Data Environemt
 	$dataUrl = "data/data.json";				// Set the url to retrieve the data from
 	$content = file_get_contents($dataUrl);		// Get the data
 	$json = json_decode($content, true);		// (true) returns the json as array-structure
 	$counterStartvalue = 1;						// Set the Number the counters start with (no change nesseccary)
-	$cssUrl = "assets/css/site.css";			// Set the url to retreive the css from
-	$jsUrl = "assets/js/script.js";				// Set the url to retrieve the js from
 
 	// Array-Konstrukte aufbauen
 	$header = array_keys($json['content']);		// Build header-array (keys of first layer only, because we only need the keys as title)
@@ -24,7 +19,6 @@
 	// The important thing is, header and content must use the same startValue!
 	$headerCount = $counterStartvalue;
 	$contentCount = $counterStartvalue;
-	$tileCount = $counterStartvalue;	// currently unused
 ?>
 
 <!DOCTYPE html>
