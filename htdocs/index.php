@@ -1,42 +1,50 @@
 <?php
+	header('Content-type: text/html; charset=utf-8');
 
 	// Setup
-	$projectConfigUrl = "config/config.php";
+	$projectConfigUrl ='config/config.php';
 	require_once($projectConfigUrl);
-
-	// Data Environemt
-	$dataUrl = "data/data.json";				// Set the url to retrieve the data from
-	$content = file_get_contents($dataUrl);		// Get the data
-	$json = json_decode($content, true);		// (true) returns the json as array-structure
-	$counterStartvalue = 1;						// Set the Number the counters start with (no change nesseccary)
-
-	// Array-Konstrukte aufbauen
-	$header = array_keys($json['content']);		// Build header-array (keys of first layer only, because we only need the keys as title)
-	$content = $json['content'];				// Get content-array directly
-	$footer = $json['footer'];					// Get footer-array
-
-	// Countervalues to start with. Every block gets it's own value, so we don't need to unset it
-	// The important thing is, header and content must use the same startValue!
-	$headerCount = $counterStartvalue;
-	$contentCount = $counterStartvalue;
 ?>
 
 <!DOCTYPE html>
-<html dir="ltr" lang="de" manifest="<?php echo($manifestUrl) ?>">
+<html <?php
+	echo isset($projectLanguage) ? 'lang="'.$projectLanguage.'"' : FALSE;
+	echo isset($projectDirection) ? 'dir="'.$projectDirection.'"' : FALSE;
+	echo isset($manifestUrl)? 'manifest="'.$manifestUrl.'"' : FALSE;
+	echo isset($theme)? 'class="'.$theme.'"' : FALSE;
+?>>
 <head>
-	<title><?php echo($projectTitle); ?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="<?php echo($projectdescription); ?>" />
-	<meta name="language" content="de" />
+	<?php
+		echo isset($projectTitle) ? '<title>'.$projectTitle.'</title>' : FALSE;
+		echo isset($projectDescription) ? '<meta name="description" content="'.$projectDescription.'"/>' : FALSE;
+		echo isset($projectKeywords) ? '<meta name="keywords" content="'.$projectKeywords.'"/>' : FALSE;
+		echo isset($projectLanguage) ? '<meta name="language" content="'.$projectLanguage.'"/>' : FALSE;
+	?>
+
+	<!-- mobile scaling -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+
+	<!-- IE-Stuff -->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 	<meta name="MSSmartTagsPreventParsing" content="TRUE" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Short Names -->
-	<meta name="apple-mobile-web-app-title" content="<?php echo($applicationName); ?>" />
-	<meta name="application-name" content="<?php echo($applicationNameShort); ?>" />
+	<?php if($serveAsApplication === TRUE) { ?>
+		<!-- Website as app -->
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+		<!-- Short Names -->
+		<meta name="apple-mobile-web-app-title" content="<?php echo($applicationName); ?>" />
+		<meta name="application-name" content="<?php echo($applicationNameShort); ?>" />
+
+		<!-- Mobile Manifest -->
+		<link rel="manifest" href="manifest.json" />
+	<?php } ?>
 
 	<!-- Icons -->
-	<link rel="apple-touch-icon" href="apple-touch-icon-foto-114x114-precomposed.png" />
+	<link rel="apple-touch-icon" href="apple-touch-icon-foto-192x192-precomposed.png" />
 	<link rel="shortcut icon" href="favicon.ico" />
 
 	<!-- CSS -->
@@ -48,12 +56,9 @@
 	<script type="text/javascript">
 		<?php require_once($jsUrl); ?>
 	</script>
-
-	<!-- Mobile Manifest -->
-	<link rel="manifest" href="manifest.json" />
 </head>
 
-<body id="home">
+<body>
 
 	<!-- header -->
 	<header>
