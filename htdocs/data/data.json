@@ -195,6 +195,28 @@
 				"image": "assets/thumbnails/smartmockups.png",
 				"title": "Smart Mockups"
 			}
+		],
+		"SDI" : [
+			{
+				"url"  : "http://www.metafolio.de/",
+				"image": "assets/thumbnails/sdi-homepage.png",
+				"title": "About me"
+			},
+			{
+				"url"  : "http://www.metaideen.de/",
+				"image": "assets/thumbnails/sdi-blog.png",
+				"title": "Blog (german)"
+			},
+			{
+				"url"  : "http://www.metafolio.de/side-projects/personalnews",
+				"image": "assets/thumbnails/sdi-personalnews.png",
+				"title": "personalNews"
+			},
+			{
+				"url"  : "http://www.metafolio.de/side-projects/startpage",
+				"image": "assets/thumbnails/sdi-startpage.png",
+				"title": "Browser Startpage (this)"
+			}
 		]
 	},
 	"footer" : {
