@@ -3,12 +3,14 @@
 
 html {
 	font-size: 100%;
-	overflow-y: auto;
+	height: 100%;
+	overflow-y: scroll;		// we're assuming that there's always enought content to scroll / this makes fixing the content a little bit easier
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
 
 body {
+	height: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -17,3 +19,12 @@ img {
 	height: auto;
 	max-width: 100%;
 }
+
+// ---- Font-Smoothing
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// ---- sticky-Element
+.sticky { position: fixed; }

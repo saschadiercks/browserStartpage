@@ -4,7 +4,20 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 	// add JS to body-tag to allow CSS-Manipulation if JS is available
-	document.getElementsByTagName("body")[0].className += "js";
+	function setJs() {
+		document.getElementsByTagName("body")[0].className += "js";
+	}
+
+	// make element sticky (via position in css)
+	function stickyElement(stickyId,compensateId) {
+		stickyElement = document.getElementById(stickyId);
+		stickyElement.classList.add('sticky');
+		stickyHeight = stickyElement.clientHeight + 'px';
+
+		//add Element-Height as margin-top to desired element
+		scrollElement = document.getElementById(compensateId);
+		scrollElement.style.paddingTop = stickyHeight;
+	}
 
 	// initially set Element-count of tabs and tabbedContent and check consistency
 	var tabTrigger = document.getElementsByClassName("tab");
@@ -49,4 +62,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		})(i);
 	}
+
+	// ---- initialize ----
+		// set Js on body if JS is available
+		setJs();
+
+		//sticky header (item to fix, item with margin to compensate fix)
+		stickyElement('application-head','content');
 });
