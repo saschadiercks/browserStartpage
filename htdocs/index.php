@@ -44,7 +44,7 @@
 	<?php } ?>
 
 	<!-- Icons -->
-	<link rel="apple-touch-icon" href="apple-touch-icon-foto-220x220-precomposed.png" />
+	<link rel="apple-touch-icon" href="apple-touch-icon-foto-228x228-precomposed.png" sizes="228x228" />
 	<link rel="shortcut icon" href="favicon.ico" />
 
 	<!-- CSS -->
