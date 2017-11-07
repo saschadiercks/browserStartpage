@@ -2,6 +2,11 @@
 	"content": {
 		"Browser" : [
 			{
+				"url":   "https://github.com/saschadiercks/browserStartpage",
+				"title": "Fork me on github",
+				"image": "assets/thumbnails/forkme.png"
+			},
+			{
 				"url":   "https://www.google.de/chrome/browser/desktop/",
 				"title": "Chrome",
 				"image": "assets/thumbnails/chrome.png"
