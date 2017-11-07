@@ -9,14 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	// make element sticky (via position in css)
-	function stickyElement(stickyId,compensateId) {
+	function stickyElement(stickyId,compensateId,compensateProperty) {
 		stickyElement = document.getElementById(stickyId);
 		stickyElement.classList.add('sticky');
 		stickyHeight = stickyElement.clientHeight + 'px';
 
-		//add Element-Height as margin-top to desired element
-		scrollElement = document.getElementById(compensateId);
-		scrollElement.style.paddingTop = stickyHeight;
+		//add Element-Height as defined property to desired element
+		document.getElementById(compensateId).style.setProperty(compensateProperty,stickyHeight);
 	}
 
 	// initially set Element-count of tabs and tabbedContent and check consistency
@@ -68,5 +67,5 @@ document.addEventListener('DOMContentLoaded', function() {
 		setJs();
 
 		//sticky header (item to fix, item with margin to compensate fix)
-		stickyElement('application-head','content');
+		stickyElement('application-head','content','padding-top');
 });
