@@ -4,7 +4,7 @@
 	$projectTitle = 'Browser Startpage';
 	$projectTitleSub = 'Your unified startpage to use in every browser';
 	$projectDescription = $projectTitle . ' | ' . $projectTitleSub;
-	$projectKeywords = 'Frontend, SASS, CSS, HTML, jQuery, javascript, PHP, Gulp, Vagrant';
+	$projectKeywords = 'Bookmark, Speeddial, Startpage, Tiles, Launchpad';
 	$projectLanguage = 'de';					// langugage of your content (see: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
 	$projectDirection = 'ltr';					// Reading direction ltr || rtl
 
