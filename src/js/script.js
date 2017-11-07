@@ -66,6 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		// set Js on body if JS is available
 		setJs();
 
-		//sticky header (item to fix, item with margin to compensate fix)
+		//sticky header (item(Id) to fix, item(Id) with property to compensate fix)
 		stickyElement('application-head','content','padding-top');
 });
