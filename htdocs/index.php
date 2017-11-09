@@ -60,7 +60,7 @@
 <body>
 
 	<!-- header -->
-	<header id="application-head">
+	<header id="application-header">
 		<nav class="tabs">
 			<ul>
 				<?php foreach($header as $key): ?>
