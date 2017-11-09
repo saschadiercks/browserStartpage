@@ -4,13 +4,12 @@
 html {
 	font-size: 100%;
 	height: 100%;
-	overflow-y: scroll;		// we're assuming that there's always enought content to scroll / this makes fixing the content a little bit easier
+	overflow-y: auto;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
 
 body {
-	height: 100%;
 	margin: 0;
 	padding: 0;
 }
