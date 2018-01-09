@@ -18,7 +18,7 @@ gulp.task('compile:css', function () {
 		browsers: ['last 2 versions','>5%'],
 		cascade: false
 	}))
-	.pipe(sourcemaps.write('.'))
+	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('./htdocs/assets/css'));
 });
 
