@@ -38,9 +38,10 @@ header {
 	background-color: $header-background-color;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
 	display: block;
-	top: 0;
 	width: 100%;
 	z-index: 2;
+
+	&.sticky { top: 0; }
 
 	li {
 		color: $header-link-color;
@@ -103,10 +104,12 @@ footer {
 	@include clearfix;
 	background-color: $footer-bg;
 	color: $footer-color;
-	width: 100%;
 	font-size: .75rem;
 	padding: $base-spacing-size $base-spacing-size*1.5;
+	width: 100%;
 	z-index: 1;
+
+	&.sticky { bottom: 0; }
 
 	ul { @include ul-reset; }
 	li { display: inline-block; }
@@ -171,15 +174,6 @@ footer {
 		a:hover {
 			.title { opacity: 1; }
 		}
-	}
-
-	footer {
-		position: fixed;
-		bottom: $base-spacing-size*-2.5;
-		transition: bottom $base-animation-speed;
-		opacity: .9;
-
-		&:hover { bottom: 0; }
 	}
 }
 

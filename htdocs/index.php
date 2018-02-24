@@ -10,7 +10,7 @@
 <html <?php
 	echo isset($projectLanguage) ? 'lang="'.$projectLanguage.'"' : FALSE;
 	echo isset($projectDirection) ? 'dir="'.$projectDirection.'"' : FALSE;
-	echo isset($manifestUrl)? 'manifest="'.$manifestUrl.'"' : FALSE;
+	//echo isset($manifestUrl)? 'manifest="'.$manifestUrl.'"' : FALSE;
 	echo isset($theme)? 'class="'.$theme.'"' : FALSE;
 ?>>
 <head>
@@ -93,7 +93,7 @@
 	</main>
 
 	<!-- footer -->
-	<footer>
+	<footer id="application-footer">
 		<div class="description"><a href="https://github.com/saschadiercks/browserStartpage">Fork me on Github</a></div>
 		<div class="social-profiles">
 			<ul>

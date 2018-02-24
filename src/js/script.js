@@ -10,12 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// make element sticky (via position in css)
 	function stickyElement(stickyId,compensateId,compensateProperty) {
-		stickyElement = document.getElementById(stickyId);
+		var compensateElement = document.getElementById(compensateId);
+		var stickyElement = document.getElementById(stickyId);
+		var stickyHeight = stickyElement.clientHeight + 'px';
 		stickyElement.classList.add('sticky');
-		stickyHeight = stickyElement.clientHeight + 'px';
 
 		//add Element-Height as defined property to desired element
-		document.getElementById(compensateId).style.setProperty(compensateProperty,stickyHeight);
+		compensateElement.style.setProperty(compensateProperty,stickyHeight);
 	}
 
 	// initially set Element-count of tabs and tabbedContent and check consistency
@@ -68,4 +69,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		//sticky header (item(Id) to fix, item(Id) with property to compensate fix)
 		stickyElement('application-header','content','padding-top');
+		stickyElement('application-footer','content','padding-bottom');
 });
