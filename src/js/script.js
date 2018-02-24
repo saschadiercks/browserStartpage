@@ -68,6 +68,11 @@ document.addEventListener('DOMContentLoaded', function() {
 		setJs();
 
 		//sticky header (item(Id) to fix, item(Id) with property to compensate fix)
-		stickyElement('application-header','content','padding-top');
-		stickyElement('application-footer','content','padding-bottom');
+		function stickyElements() {
+			stickyElement('application-header','content','padding-top');
+			stickyElement('application-footer','content','padding-bottom');
+		}
+
+		stickyElements();
+		window.onresize = stickyElements;
 });
