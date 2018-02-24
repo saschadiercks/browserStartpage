@@ -61,6 +61,8 @@
 
 	<!-- header -->
 	<header id="application-header">
+		<label for="menu-toggle">&#9776;</label>
+		<input type="checkbox" id="menu-toggle" />
 		<nav class="tabs">
 			<ul>
 				<?php foreach($header as $key): ?>

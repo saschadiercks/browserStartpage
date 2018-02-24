@@ -120,15 +120,22 @@ footer {
 // Mobile view
 @include phone-only {
 	header {
-		font-size: .75rem;
 		padding: $base-spacing-size*2 $base-spacing-size*1.5;
-
-		a { padding: $base-spacing-size $base-spacing-size*2; }
+		a,
+		label { padding: $base-spacing-size $base-spacing-size*2; }
 	}
 	main {
 		ul { grid-template-columns: repeat(2,1fr); }
-
 	}
+
+	// Toggle menu/tabs
+	header {
+		label,
+		.tabs li { display: block; }
+	}
+	#menu-toggle,
+	#menu-toggle+nav{ display: none; }
+	#menu-toggle:checked+nav { display: block;}
 }
 
 // Tablet portrait
@@ -150,6 +157,11 @@ footer {
 	header {
 		padding: $base-spacing-size*.75 $base-spacing-size;
 		a { padding: $base-spacing-size*.75 $base-spacing-size; }
+
+		// show tabs without toggle
+		label,
+		input { display: none; }
+		nav { display: block; }
 	}
 	main {
 		.title {
