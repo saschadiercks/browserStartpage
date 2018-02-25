@@ -6,7 +6,7 @@ Host your own speeddial with this repo!
 Just place the folder `/htdocs` on your own webserver. Make sure it supports *php* - this is the only requirement.
 
 ### Want a demo?
-[http://www.metafolio.de/fragments/startpage/](http://www.metafolio.de/fragments/startpage/)
+[http://www.metafolio.de/side-projects/startpage/](http://www.metafolio.de/side-projects/startpage/)
 
 Read more about it here (in german): [http://metaideen.de/artikel/freizeitprojekt-browserstartpage-das-speeddial-fuer-alle-browser/](http://metaideen.de/artikel/freizeitprojekt-browserstartpage-das-speeddial-fuer-alle-browser/)
 
