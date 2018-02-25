@@ -3,6 +3,7 @@ $document-font-family: -apple-system, sans-serif;
 $body-background-color: #fdfdfd;
 
 $base-spacing-size: 1vw;
+$base-spacing-size-px: 9px;
 $base-animation-speed: .5s;
 
 $header-background-color: #fdfdfd;
@@ -105,7 +106,9 @@ footer {
 	background-color: $footer-bg;
 	color: $footer-color;
 	font-size: .75rem;
-	padding: $base-spacing-size $base-spacing-size*1.5;
+	padding-left: $base-spacing-size;
+	padding-right: $base-spacing-size;
+	//padding: $base-spacing-size $base-spacing-size*1.5;
 	width: 100%;
 	z-index: 1;
 
@@ -113,7 +116,12 @@ footer {
 
 	ul { @include ul-reset; }
 	li { display: inline-block; }
-	a { color: inherit; }
+	a {
+		color: inherit;
+		display: inline-block;
+		padding-top: $base-spacing-size-px;
+		padding-bottom: $base-spacing-size-px;
+	}
 
 	div:first-of-type { float: left; }
 	.social-profiles { float: right; }
