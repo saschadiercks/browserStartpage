@@ -1,5 +1,5 @@
 // ---- overlay ----
 .overlay {
-	display: none;
-	&.active { display: block; }
+	display: block;
+	&.js-hidden { display: none; }
 }

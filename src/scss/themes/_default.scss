@@ -178,7 +178,7 @@ footer {
 	#menu-toggle+nav{ display: none; }
 	#menu-toggle:checked+nav { display: block; }
 
-	#bookmark-toggle-container {
+	#bookmarks-toggle-container {
 		@include align-vertical;
 		right: $base-spacing-size*2;
 	}
@@ -219,7 +219,7 @@ footer {
 		}
 	}
 
-	#bookmark-toggle-container {
+	#bookmarks-toggle-container {
 		@include align-vertical;
 		right: $base-spacing-size*.75;
 	}

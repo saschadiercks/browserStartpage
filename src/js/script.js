@@ -19,8 +19,19 @@ document.addEventListener('DOMContentLoaded', function() {
 		compensateElement.style.setProperty(compensateProperty,stickyHeight);
 	}
 
-	// get count of overlays
-	var overlayContent = document.getElementsByClassName("overlay");
+	// toggle Element
+	function toggleElement(elementId,targetElementId) {
+		toggleElement = document.getElementById(elementId);
+		toggleElement.onclick = function() {
+			targetElement = document.getElementById(targetElementId);
+			if(targetElement.classList.contains('js-hidden')) {
+				targetElement.classList.remove('js-hidden');
+			} else {
+				targetElement.classList.add('js-hidden');
+			}
+			event.preventDefault();
+		}
+	}
 
 	// initially set Element-count of tabs and tabbedContent and check consistency
 	var tabTrigger = document.getElementsByClassName("tab");
@@ -79,4 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		stickyElements();
 		window.onresize = stickyElements;
+
+		toggleElement('bookmarks-toggle','bookmarks');
+		toggleElement('bookmarks-close','bookmarks');
 });

@@ -73,9 +73,9 @@
 				<?php endforeach; ?>
 			</ul>
 		</nav>
-		<div id="bookmark-toggle-container">
-			<label for="bookmark-toggle">&#9733;</label>
-			<input type="checkbox" id="bookmark-toggle" />
+		<div id="bookmarks-toggle-container">
+			<label for="bookmarks-toggle">&#9733;</label>
+			<input type="checkbox" id="bookmarks-toggle" />
 		</div>
 	</header>
 
@@ -98,7 +98,8 @@
 	</main>
 
 	<?php if(count($bookmarks) > 0) { ?>
-		<aside id="bookmarks" class="overlay">
+		<aside id="bookmarks" class="overlay js-hidden">
+			<button id="bookmarks-close">&times;</button>
 			<nav>
 				<ul>
 					<?php foreach($bookmarks[links] as $contentItem): ?>
