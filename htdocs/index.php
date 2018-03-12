@@ -10,7 +10,7 @@
 <html <?php
 	echo isset($projectLanguage) ? 'lang="'.$projectLanguage.'"' : FALSE;
 	echo isset($projectDirection) ? 'dir="'.$projectDirection.'"' : FALSE;
-	echo isset($manifestUrl)? 'manifest="'.$manifestUrl.'"' : FALSE;
+	//echo isset($manifestUrl)? 'manifest="'.$manifestUrl.'"' : FALSE;
 	echo isset($theme)? 'class="'.$theme.'"' : FALSE;
 ?>>
 <head>
@@ -63,6 +63,7 @@
 	<header id="application-header">
 		<label for="menu-toggle">&#9776;</label>
 		<input type="checkbox" id="menu-toggle" />
+
 		<nav class="tabs">
 			<ul>
 				<?php foreach($header as $key): ?>
@@ -72,6 +73,10 @@
 				<?php endforeach; ?>
 			</ul>
 		</nav>
+		<div id="bookmark-toggle-container">
+			<label for="bookmark-toggle">&#9733;</label>
+			<input type="checkbox" id="bookmark-toggle" />
+		</div>
 	</header>
 
 	<!-- content -->
@@ -91,6 +96,18 @@
 			</div>
 		<?php endforeach; ?>
 	</main>
+
+	<?php if(count($bookmarks) > 0) { ?>
+		<aside id="bookmarks" class="overlay">
+			<nav>
+				<ul>
+					<?php foreach($bookmarks[links] as $contentItem): ?>
+						<li><a href="<?= $contentItem['title'] ?>"><?= $contentItem['url'] ?></a></li>
+					<?php endforeach; ?>
+				</ul>
+			</nav>
+		</aside>
+	<?php } ?>
 
 	<!-- footer -->
 	<footer id="application-footer">

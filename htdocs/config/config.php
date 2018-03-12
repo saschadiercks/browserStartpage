@@ -33,5 +33,6 @@
 
 	$header = array_keys($json['content']);		// Build header-array (keys of first layer only, because we only need the keys as title)
 	$content = $json['content'];				// Get content-array directly
+	$bookmarks = $json['bookmarks'];			// Get bookmarks-array
 	$footer = $json['footer'];					// Get footer-array
 ?>

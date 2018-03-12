@@ -224,6 +224,18 @@
 			}
 		]
 	},
+	"bookmarks" : {
+		"links" : [
+			{
+				"url":   "https://github.com/saschadiercks",
+				"title": "Github"
+			},
+			{
+				"url":   "https://m.twitter.com/saschadiercks",
+				"title": "Twitter"
+			}
+		]
+	},
 	"footer" : {
 		"links" : [
 			{

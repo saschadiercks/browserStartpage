@@ -1,13 +1,15 @@
 // ----- Setup -----
 $document-font-family: -apple-system, sans-serif;
 $body-background-color: #fdfdfd;
+$body-color: #333;
+$box-shadow-default: 0 2px 2px rgba(0, 0, 0, .2);
 
 $base-spacing-size: 1vw;
 $base-spacing-size-px: 9px;
 $base-animation-speed: .5s;
 
-$header-background-color: #fdfdfd;
-$header-link-color: #333;
+$header-background-color: $body-background-color;
+$header-link-color: $body-color;
 $header-link-active-bg: #007acc;
 $header-link-active-color: #fff;
 
@@ -20,6 +22,9 @@ $main-link-description-bg: rgba($main-link-border-color,.95);
 $main-link-description-color: $header-link-color;
 $main-link-active-description-bg: $header-link-active-bg;
 $main-link-active-description-color: $header-link-active-color;
+
+$overlay-background-color: $body-background-color;
+$overlay-color: $body-color;
 
 $footer-bg: $header-link-active-bg;
 $footer-color: $header-background-color;
@@ -37,7 +42,7 @@ body {
 // ---- header ----
 header {
 	background-color: $header-background-color;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+	box-shadow: $box-shadow-default;
 	display: block;
 	width: 100%;
 	z-index: 2;
@@ -57,6 +62,8 @@ header {
 	}
 
 	a { color: inherit; }
+
+	input { display: none; }
 }
 
 // ---- Content ----
@@ -97,6 +104,29 @@ main {
 			position: absolute;
 			right: 0;
 		}
+	}
+}
+
+// ---- Bookmarks ----
+#bookmarks {
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 2;
+
+	background-color: $overlay-background-color;
+	box-shadow: $box-shadow-default;
+	color: $overlay-color;
+	height: 100vh;
+	padding: $base-spacing-size;
+	max-width: 320px;
+	width: 100%;
+
+	ul { @include ul-reset; }
+
+	a {
+		color: inherit;
+		&:hover { text-decoration: underline; }
 	}
 }
 
@@ -146,7 +176,12 @@ footer {
 	}
 	#menu-toggle,
 	#menu-toggle+nav{ display: none; }
-	#menu-toggle:checked+nav { display: block;}
+	#menu-toggle:checked+nav { display: block; }
+
+	#bookmark-toggle-container {
+		@include align-vertical;
+		right: $base-spacing-size*2;
+	}
 }
 
 // Tablet portrait
@@ -167,11 +202,11 @@ footer {
 @include default {
 	header {
 		padding: $base-spacing-size*.75 $base-spacing-size;
-		a { padding: $base-spacing-size*.75 $base-spacing-size; }
+		a,
+		label { padding: $base-spacing-size*.75 $base-spacing-size; }
 
 		// show tabs without toggle
-		label,
-		input { display: none; }
+		label[for=menu-toggle] { display: none; }
 		nav { display: block; }
 	}
 	main {
@@ -182,6 +217,11 @@ footer {
 		a:hover {
 			.title { opacity: 1; }
 		}
+	}
+
+	#bookmark-toggle-container {
+		@include align-vertical;
+		right: $base-spacing-size*.75;
 	}
 }
 

@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		compensateElement.style.setProperty(compensateProperty,stickyHeight);
 	}
 
+	// get count of overlays
+	var overlayContent = document.getElementsByClassName("overlay");
+
 	// initially set Element-count of tabs and tabbedContent and check consistency
 	var tabTrigger = document.getElementsByClassName("tab");
 	var tabbedContent = document.getElementsByClassName("tabbed-content");
@@ -62,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		})(i);
 	}
+
 
 	// ---- initialize ----
 		// set Js on body if JS is available
