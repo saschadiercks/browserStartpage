@@ -227,12 +227,16 @@
 	"bookmarks" : {
 		"links" : [
 			{
-				"url":   "https://github.com/saschadiercks",
-				"title": "Github"
+				"url":   "http://scrumguides.org/",
+				"title": "Scrum Guides"
 			},
 			{
-				"url":   "https://m.twitter.com/saschadiercks",
-				"title": "Twitter"
+				"url":   "https://learn.jquery.com",
+				"title": "Learn jQuery"
+			},
+			{
+				"url":   "https://cssguidelin.es/",
+				"title": "CSS Guidelines"
 			}
 		]
 	},

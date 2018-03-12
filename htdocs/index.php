@@ -103,7 +103,7 @@
 			<nav>
 				<ul>
 					<?php foreach($bookmarks[links] as $contentItem): ?>
-						<li><a href="<?= $contentItem['title'] ?>"><?= $contentItem['url'] ?></a></li>
+						<li><a href="<?= $contentItem['url'] ?>"><?= $contentItem['title'] ?></a></li>
 					<?php endforeach; ?>
 				</ul>
 			</nav>
