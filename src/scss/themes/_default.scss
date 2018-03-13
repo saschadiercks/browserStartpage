@@ -8,6 +8,8 @@ $base-spacing-size: 1vw;
 $base-spacing-size-px: 9px;
 $base-animation-speed: .5s;
 
+$button-background-color: transparent;
+
 $header-background-color: $body-background-color;
 $header-link-color: $body-color;
 $header-link-active-bg: #007acc;
@@ -38,6 +40,12 @@ body {
 	font-family: $document-font-family;
 }
 
+// ---- Elements ----
+button {
+	background-color: $button-background-color;
+	border-width: 0;
+}
+
 
 // ---- header ----
 header {
@@ -64,6 +72,8 @@ header {
 	a { color: inherit; }
 
 	input { display: none; }
+
+	.overlay-trigger { float: right; }
 }
 
 // ---- Content ----
@@ -120,13 +130,21 @@ main {
 	height: 100vh;
 	padding: $base-spacing-size;
 	max-width: 320px;
+	overflow-y: auto;
 	width: 100%;
 
 	ul { @include ul-reset; }
 
 	a {
 		color: inherit;
+		padding: 2px 0;
 		&:hover { text-decoration: underline; }
+	}
+	button {
+		font-weight: 600;
+		position: absolute;
+		right: 0;
+		top: 0;
 	}
 }
 
@@ -160,6 +178,8 @@ footer {
 // ---- Responsive ----
 // Mobile view
 @include phone-only {
+	button { padding: $base-spacing-size $base-spacing-size*2; }
+
 	header {
 		padding: $base-spacing-size*2 $base-spacing-size*1.5;
 		a,
@@ -171,17 +191,11 @@ footer {
 
 	// Toggle menu/tabs
 	header {
-		label,
 		.tabs li { display: block; }
 	}
 	#menu-toggle,
 	#menu-toggle+nav{ display: none; }
 	#menu-toggle:checked+nav { display: block; }
-
-	#bookmarks-toggle-container {
-		@include align-vertical;
-		right: $base-spacing-size*2;
-	}
 }
 
 // Tablet portrait
@@ -200,6 +214,8 @@ footer {
 
 // Default View
 @include default {
+	button { padding: $base-spacing-size*.75 $base-spacing-size; }
+
 	header {
 		padding: $base-spacing-size*.75 $base-spacing-size;
 		a,
@@ -217,11 +233,6 @@ footer {
 		a:hover {
 			.title { opacity: 1; }
 		}
-	}
-
-	#bookmarks-toggle-container {
-		@include align-vertical;
-		right: $base-spacing-size*.75;
 	}
 }
 

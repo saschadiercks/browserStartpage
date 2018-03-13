@@ -61,6 +61,8 @@
 
 	<!-- header -->
 	<header id="application-header">
+		<button class="overlay-trigger" data-target="bookmarks">&#9733;</button>
+
 		<label for="menu-toggle">&#9776;</label>
 		<input type="checkbox" id="menu-toggle" />
 
@@ -73,9 +75,6 @@
 				<?php endforeach; ?>
 			</ul>
 		</nav>
-		<div id="bookmarks-toggle-container">
-			<button id="bookmarks-toggle" class="overlay-trigger" data-target="bookmarks">&#9733;</button>
-		</div>
 	</header>
 
 	<!-- content -->
