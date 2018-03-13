@@ -28,6 +28,8 @@ $main-link-active-description-color: $header-link-active-color;
 $overlay-background-color: $body-background-color;
 $overlay-color: $body-color;
 
+$bookmarks-max-width: 400px;
+
 $footer-bg: $header-link-active-bg;
 $footer-color: $header-background-color;
 
@@ -129,14 +131,23 @@ main {
 	color: $overlay-color;
 	height: 100vh;
 	padding: $base-spacing-size;
-	max-width: 320px;
+	max-width: $bookmarks-max-width;
 	overflow-y: auto;
 	width: 100%;
+
+	transition: all .2s linear;
+	display: block;
+	opacity: 1;
+	&.js-hidden {
+		opacity: 0;
+		transform: translateX($bookmarks-max-width);
+	}
 
 	ul { @include ul-reset; }
 
 	a {
 		color: inherit;
+		font-size: .875rem;	/* 14px / 16px */
 		padding: 2px 0;
 		&:hover { text-decoration: underline; }
 	}
