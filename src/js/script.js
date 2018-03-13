@@ -40,6 +40,26 @@ document.addEventListener('DOMContentLoaded', function() {
 		console.log("count of tabs and tabbed-contend isn't consistent");
 	}
 
+	// Overlay umschalten
+	function handleOverlayTriggers(elementClassName) {
+		var elements = document.getElementsByClassName(elementClassName);
+		for(i=0; i < elements.length; i++) {
+			elements[i].onclick = function(event) {
+				var target = this.getAttribute('data-target');
+				toggleOverlay(target,event);
+			}
+		}
+	}
+	function toggleOverlay(elementId,event) {
+		var targetElement = document.getElementById(elementId);
+		if(targetElement.classList.contains('js-hidden')) {
+			targetElement.classList.remove('js-hidden');
+		} else {
+			targetElement.classList.add('js-hidden');
+		}
+		event.preventDefault();
+	}
+
 	// Tab-Handling-Function
 	// -- set Current-Tab and tabbed-content
 	var setCurrentTab = function(newTabId) {
@@ -91,25 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		stickyElements();
 		window.onresize = stickyElements;
 
-		function handleTriggers(elementClassName) {
-			var elements = document.getElementsByClassName(elementClassName);
-			for(i=0; i < elements.length; i++) {
-				elements[i].onclick = function(event) {
-					var target = this.getAttribute('data-target');
-					toggleTarget(target,event);
-				}
-			}
-		}
-
-		function toggleTarget(elementId,event) {
-			var targetElement = document.getElementById(elementId);
-			if(targetElement.classList.contains('js-hidden')) {
-				targetElement.classList.remove('js-hidden');
-			} else {
-				targetElement.classList.add('js-hidden');
-			}
-			event.preventDefault();
-		}
-
-		handleTriggers('overlay-trigger');
+		// Overlays ein/ausblenden
+		handleOverlayTriggers('overlay-trigger');
 });
