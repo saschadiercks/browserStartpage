@@ -91,6 +91,25 @@ document.addEventListener('DOMContentLoaded', function() {
 		stickyElements();
 		window.onresize = stickyElements;
 
-		toggleElement('bookmarks-toggle','bookmarks');
-		toggleElement('bookmarks-close','bookmarks');
+		function handleTriggers(elementClassName) {
+			var elements = document.getElementsByClassName(elementClassName);
+			for(i=0; i < elements.length; i++) {
+				elements[i].onclick = function(event) {
+					var target = this.getAttribute('data-target');
+					toggleTarget(target,event);
+				}
+			}
+		}
+
+		function toggleTarget(elementId,event) {
+			var targetElement = document.getElementById(elementId);
+			if(targetElement.classList.contains('js-hidden')) {
+				targetElement.classList.remove('js-hidden');
+			} else {
+				targetElement.classList.add('js-hidden');
+			}
+			event.preventDefault();
+		}
+
+		handleTriggers('overlay-trigger');
 });

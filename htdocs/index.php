@@ -74,8 +74,7 @@
 			</ul>
 		</nav>
 		<div id="bookmarks-toggle-container">
-			<label for="bookmarks-toggle">&#9733;</label>
-			<input type="checkbox" id="bookmarks-toggle" />
+			<button id="bookmarks-toggle" class="overlay-trigger" data-target="bookmarks">&#9733;</button>
 		</div>
 	</header>
 
@@ -99,7 +98,7 @@
 
 	<?php if(count($bookmarks) > 0) { ?>
 		<aside id="bookmarks" class="overlay js-hidden">
-			<button id="bookmarks-close">&times;</button>
+			<button id="bookmarks-close"  class="overlay-trigger" data-target="bookmarks">&times;</button>
 			<nav>
 				<ul>
 					<?php foreach($bookmarks[links] as $contentItem): ?>
