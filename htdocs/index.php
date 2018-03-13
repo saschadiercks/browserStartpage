@@ -61,7 +61,9 @@
 
 	<!-- header -->
 	<header id="application-header">
-		<button class="overlay-trigger" data-target="bookmarks">&#9733;</button>
+		<?php if(count($bookmarks) > 0) { ?>
+			<button class="overlay-trigger" data-target="bookmarks">&#9733;</button>
+		<?php } ?>
 
 		<label for="menu-toggle">&#9776;</label>
 		<input type="checkbox" id="menu-toggle" />
