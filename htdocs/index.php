@@ -62,7 +62,7 @@
 	<!-- header -->
 	<header id="application-header">
 		<?php if(count($bookmarks) > 0) { ?>
-			<button class="overlay-trigger" data-target="bookmarks">&#9733;</button>
+			<button class="overlay-trigger" data-target="bookmarks">&#10070;</button>
 		<?php } ?>
 
 		<label for="menu-toggle">&#9776;</label>
@@ -100,6 +100,7 @@
 	<?php if(count($bookmarks) > 0) { ?>
 		<aside id="bookmarks" class="overlay js-hidden">
 			<button class="overlay-trigger close" data-target="bookmarks">&times;</button>
+			<h2 class="title">Bookmarks</h2>
 			<nav>
 				<ul>
 					<?php foreach($bookmarks[links] as $contentItem): ?>
