@@ -140,7 +140,7 @@ main {
 	opacity: 1;
 	&.js-hidden {
 		opacity: 0;
-		transform: translateX($bookmarks-max-width);
+		transform: translateX(100%);
 	}
 
 	ul { @include ul-reset; }
