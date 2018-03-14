@@ -114,13 +114,15 @@
 	<!-- footer -->
 	<footer id="application-footer">
 		<div class="description"><a href="https://github.com/saschadiercks/browserStartpage">Fork me on Github</a></div>
-		<div class="social-profiles">
-			<ul>
-				<li><a href="http://metafolio.de">home</a></li>
-				<li><a href="https://github.com/saschadiercks">github</a></li>
-				<li><a href="https://twitter.com/saschadiercks">twitter</a></li>
-			</ul>
-		</div>
+		<?php if(count($footer) > 0) { ?>
+			<div class="social-profiles">
+				<ul>
+					<?php foreach($footer[links] as $contentItem): ?>
+						<li><a href="<?= $contentItem['url'] ?>"><?= $contentItem['title'] ?></a></li>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+		<?php } ?>
 	</footer>
 </body>
 </html>

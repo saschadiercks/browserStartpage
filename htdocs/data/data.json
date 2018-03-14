@@ -243,14 +243,17 @@
 	"footer" : {
 		"links" : [
 			{
+				"url":   "http://metafolio.de",
+				"title": "home"
+			},
+			{
 				"url":   "https://github.com/saschadiercks",
-				"title": "Github"
+				"title": "github"
 			},
 			{
 				"url":   "https://m.twitter.com/saschadiercks",
-				"title": "Twitter"
+				"title": "twitter"
 			}
 		]
 	}
-
 }
