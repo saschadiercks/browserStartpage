@@ -99,7 +99,7 @@
 
 	<?php if(count($bookmarks) > 0) { ?>
 		<aside id="bookmarks" class="overlay js-hidden">
-			<button id="bookmarks-close"  class="overlay-trigger" data-target="bookmarks">&times;</button>
+			<button class="overlay-trigger close" data-target="bookmarks">&times;</button>
 			<nav>
 				<ul>
 					<?php foreach($bookmarks[links] as $contentItem): ?>

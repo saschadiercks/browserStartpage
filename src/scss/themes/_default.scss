@@ -46,6 +46,7 @@ body {
 button {
 	background-color: $button-background-color;
 	border-width: 0;
+	font-size: inherit;
 }
 
 
@@ -130,7 +131,6 @@ main {
 	box-shadow: $box-shadow-default;
 	color: $overlay-color;
 	height: 100vh;
-	padding: $base-spacing-size;
 	max-width: $bookmarks-max-width;
 	overflow-y: auto;
 	width: 100%;
@@ -150,12 +150,6 @@ main {
 		font-size: .875rem;	/* 14px / 16px */
 		padding: 2px 0;
 		&:hover { text-decoration: underline; }
-	}
-	button {
-		font-weight: 600;
-		position: absolute;
-		right: 0;
-		top: 0;
 	}
 }
 
@@ -190,6 +184,9 @@ footer {
 // Mobile view
 @include phone-only {
 	button { padding: $base-spacing-size $base-spacing-size*2; }
+
+	header,
+	.overlay { padding: $base-spacing-size*2 $base-spacing-size*1.5; }
 
 	header {
 		padding: $base-spacing-size*2 $base-spacing-size*1.5;
@@ -227,8 +224,10 @@ footer {
 @include default {
 	button { padding: $base-spacing-size*.75 $base-spacing-size; }
 
+	header,
+	.overlay { padding: $base-spacing-size*.75 $base-spacing-size; }
+
 	header {
-		padding: $base-spacing-size*.75 $base-spacing-size;
 		a,
 		label { padding: $base-spacing-size*.75 $base-spacing-size; }
 

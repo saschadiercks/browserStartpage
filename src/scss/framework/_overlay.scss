@@ -2,4 +2,9 @@
 .overlay {
 	display: block;
 	&.js-hidden { display: none; }
+
+	.close {
+		float: right;
+		font-weight: 600;
+	}
 }
