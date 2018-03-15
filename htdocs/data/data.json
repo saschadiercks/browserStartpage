@@ -233,10 +233,20 @@
 			{
 				"url":   "https://learn.jquery.com",
 				"title": "Learn jQuery"
+			}
+		],
+		"frontend" : [
+			{
+				"url":   "https://cssreference.io",
+				"title": "CSS Reference"
 			},
 			{
 				"url":   "https://cssguidelin.es/",
 				"title": "CSS Guidelines"
+			},
+			{
+				"url":   "https://github.com/bendc/frontend-guidelines",
+				"title": "Frontend Guidelines"
 			}
 		]
 	},

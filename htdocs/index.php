@@ -100,14 +100,14 @@
 	<?php if(count($bookmarks) > 0) { ?>
 		<aside id="bookmarks" class="overlay js-hidden">
 			<button class="overlay-trigger close" data-target="bookmarks">&times;</button>
-			<h2 class="title">Bookmarks</h2>
-			<nav>
+			<?php foreach($bookmarks as $key => $contentItems): ?>
+				<h3 class="title"><?= $key ?></h3>
 				<ul>
-					<?php foreach($bookmarks[links] as $contentItem): ?>
+					<?php foreach($contentItems as $contentItem): ?>
 						<li><a href="<?= $contentItem['url'] ?>"><?= $contentItem['title'] ?></a></li>
 					<?php endforeach; ?>
 				</ul>
-			</nav>
+			<?php endforeach; ?>
 		</aside>
 	<?php } ?>
 
