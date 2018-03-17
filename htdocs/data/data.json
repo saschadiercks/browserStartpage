@@ -248,6 +248,60 @@
 				"url":   "https://github.com/bendc/frontend-guidelines",
 				"title": "Frontend Guidelines"
 			}
+		],
+		"styleguides" : [
+			{
+				"url" : "https://saijogeorge.com/brand-style-guide-examples/",
+				"title" : "Styleguide Examples"
+			},
+			{
+				"url" : "http://www.theuxbookmark.com/2010/08/interaction-design/a-monster-list-of-ui-guidelines-style-guides",
+				"title" : "UX-Bookmark: Styleguides"
+			},
+			{
+				"url" : "https://www.lightningdesignsystem.com/",
+				"title" : "Lightning Design System"
+			}
+		],
+		"patterns" : [
+			{
+				"url" : "http://codepen.io/patterns/",
+				"title" : "Patterns @codepen"
+			},
+			{
+				"url" : "http://patternlab.io/",
+				"title" : "Patternlab"
+			},
+			{
+				"url" : "http://ux.mailchimp.com/patterns",
+				"title" : "Mailchimp UX"
+			},
+			{
+				"url" : "http://patterntap.com/patterntap",
+				"title" : "Patterns by Zurb"
+			},
+			{
+				"url" : "http://ui-patterns.com/",
+				"title" : "UI-Patterns"
+			},
+			{
+				"url" : "http://www.goodui.org/",
+				"title" : "Good UI"
+			},
+			{
+				"url" : "http://ui-patterns.com/blog/How-to-get-better-at-UI-design",
+				"title" : "Get better at UI"
+			}
+		],
+		"frameworks" : [
+			{
+				"url" : "https://getbootstrap.com/",
+				"title": "Bootstrap"
+			},
+			{
+				"url" : "https://foundation.zurb.com",
+				"title": "Foundation"
+			}
 		]
 	},
 	"footer" : {
