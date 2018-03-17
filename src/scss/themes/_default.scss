@@ -8,18 +8,23 @@ $base-spacing-size: 1vw;
 $base-spacing-size-px: 9px;
 $base-animation-speed: .5s;
 
+$base-border-color: #f5f5f5;
+$base-border-color-hover: #ddd;
+
 $button-background-color: transparent;
+
+$folddown-border: 1px solid $base-border-color-hover;
 
 $header-background-color: $body-background-color;
 $header-link-color: $body-color;
 $header-link-active-bg: #007acc;
 $header-link-active-color: #fff;
 
-$main-link-border-color: #f5f5f5;
+$main-link-border-color:$base-border-color;
 $main-link-background-color: #f5f5f5;
 $main-link-background-image: linear-gradient(to bottom,$body-background-color, $main-link-background-color);
 $main-link-background-image-hover: linear-gradient(to top,$body-background-color, $main-link-background-color);
-$main-link-active-border-color: #ddd;
+$main-link-active-border-color: $base-border-color-hover;
 $main-link-description-bg: rgba($main-link-border-color,.95);
 $main-link-description-color: $header-link-color;
 $main-link-active-description-bg: $header-link-active-bg;
@@ -49,6 +54,12 @@ button {
 	font-size: inherit;
 }
 .close { font-weight: 600; }
+
+.folddown {
+	border-top: $folddown-border;
+	&:last-child { border-bottom: $folddown-border}
+}
+.folddown-main ul { padding-bottom: $base-spacing-size *.75; }
 
 
 // ---- header ----
@@ -189,11 +200,13 @@ footer {
 	header,
 	.overlay { padding: $base-spacing-size*2 $base-spacing-size*1.5; }
 
-	header {
-		padding: $base-spacing-size*2 $base-spacing-size*1.5;
-		a,
-		label { padding: $base-spacing-size $base-spacing-size*2; }
+	header a,
+	header label  { padding: $base-spacing-size $base-spacing-size*2; }
+	.overlay-title {
+		padding-top: $base-spacing-size;
+		padding-bottom: $base-spacing-size
 	}
+
 	main {
 		ul { grid-template-columns: repeat(2,1fr); }
 	}
@@ -228,14 +241,20 @@ footer {
 	header,
 	.overlay { padding: $base-spacing-size*.75 $base-spacing-size; }
 
-	header {
-		a,
-		label { padding: $base-spacing-size*.75 $base-spacing-size; }
+	header	a,
+	header label { padding: $base-spacing-size*.75 $base-spacing-size; }
+	.overlay-title,
+	.collapse a {
+		padding-top: $base-spacing-size*.75;
+		padding-bottom: $base-spacing-size*.75;
+	}
 
-		// show tabs without toggle
+	// show tabs without toggle
+	header {
 		label[for=menu-toggle] { display: none; }
 		nav { display: block; }
 	}
+
 	main {
 		.title {
 			opacity: 0;
