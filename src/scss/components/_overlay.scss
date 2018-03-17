@@ -1,6 +1,7 @@
 // ---- overlay ----
 .overlay {
 	display: block;
+	transition: all .2s ease;
 	&.js-hidden { display: none; }
 }
 
