@@ -10,7 +10,10 @@
 @import 'framework/_footer';
 @import 'framework/_content';
 @import 'framework/_navigation';
-@import 'framework/_overlay';
+
+// Components
+@import 'components/_folddown';
+@import 'components/_overlay';
 
 // Themes
 @import 'themes/_default';

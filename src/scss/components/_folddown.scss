@@ -1,0 +1,40 @@
+// ---- overlay ----
+.folddown {
+	display: block;
+	&.js-closed {
+		.folddown-icon { transform: rotate(45deg); }
+		.folddown-main { max-height: 0; }
+	}
+
+	a { font-size: .875rem;	/* 14px / 16px */ }
+}
+
+.folddown-title {
+	font-size: inherit;
+	font-weight: 600;
+	margin: 0;
+	padding-top: inherit;
+	text-transform: capitalize;
+
+	.collapse-trigger {
+		cursor: pointer;
+		display: block;
+		padding-left: 0;
+		padding-right: 0;
+		text-align: left;
+		width: 100%;
+	}
+}
+
+.folddown-icon {
+	display: inline-block;
+	position: relative;
+	top: -1px;
+	transition: transform .2s linear;
+}
+
+.folddown-main {
+	max-height: 100vh;
+	overflow: hidden;
+	transition: max-height .5s ease-out;
+}

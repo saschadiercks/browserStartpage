@@ -1,0 +1,15 @@
+// ---- overlay ----
+.overlay {
+	display: block;
+	&.js-hidden { display: none; }
+}
+
+.overlay-close { float: right; }
+
+.overlay-title {
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0;
+	padding-top: inherit;
+	text-transform: capitalize;
+}

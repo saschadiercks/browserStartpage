@@ -99,14 +99,22 @@
 
 	<?php if(count($bookmarks) > 0) { ?>
 		<aside id="bookmarks" class="overlay js-hidden">
-			<button class="overlay-trigger close" data-target="bookmarks">&times;</button>
+			<button class="overlay-trigger overlay-close close" data-target="bookmarks">&times;</button>
+			<h2 class="overlay-title">Bookmarks</h2>
+
 			<?php foreach($bookmarks as $key => $contentItems): ?>
-				<h3 class="title"><?= $key ?></h3>
-				<ul>
-					<?php foreach($contentItems as $contentItem): ?>
-						<li><a href="<?= $contentItem['url'] ?>"><?= $contentItem['title'] ?></a></li>
-					<?php endforeach; ?>
-				</ul>
+				<div class="folddown js-closed" id="collapse-<?= $key ?>">
+					<div class="folddown-header">
+						<h3 class="folddown-title"><button class="collapse-trigger" data-target="collapse-<?= $key ?>"><span class="folddown-icon">&times;</span> <?= $key ?></button></h3>
+					</div>
+					<div class="folddown-main collapse">
+						<ul>
+							<?php foreach($contentItems as $contentItem): ?>
+								<li><a href="<?= $contentItem['url'] ?>"><?= $contentItem['title'] ?></a></li>
+							<?php endforeach; ?>
+						</ul>
+					</div>
+				</div>
 			<?php endforeach; ?>
 		</aside>
 	<?php } ?>

@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		console.log("count of tabs and tabbed-contend isn't consistent");
 	}
 
-	// Overlay umschalten
+	// Overlay-Handling
 	function handleOverlayTriggers(elementClassName) {
 		var elements = document.getElementsByClassName(elementClassName);
 		for(i=0; i < elements.length; i++) {
@@ -56,6 +56,26 @@ document.addEventListener('DOMContentLoaded', function() {
 			targetElement.classList.remove('js-hidden');
 		} else {
 			targetElement.classList.add('js-hidden');
+		}
+		event.preventDefault();
+	}
+
+	// Collapse-Handling
+	function handleCollapseTriggers(elementClassName) {
+		var elements = document.getElementsByClassName(elementClassName);
+		for(i=0; i < elements.length; i++) {
+			elements[i].onclick = function(event) {
+				var target = this.getAttribute('data-target');
+				toggleCollapse(target,event);
+			}
+		}
+	}
+	function toggleCollapse(elementId,event) {
+		var targetElement = document.getElementById(elementId);
+		if(targetElement.classList.contains('js-closed')) {
+			targetElement.classList.remove('js-closed');
+		} else {
+			targetElement.classList.add('js-closed');
 		}
 		event.preventDefault();
 	}
@@ -111,6 +131,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		stickyElements();
 		window.onresize = stickyElements;
 
-		// Overlays ein/ausblenden
+		// Collapse
+		handleCollapseTriggers('collapse-trigger');
+
+		// Overlays
 		handleOverlayTriggers('overlay-trigger');
 });

@@ -48,6 +48,7 @@ button {
 	border-width: 0;
 	font-size: inherit;
 }
+.close { font-weight: 600; }
 
 
 // ---- header ----
@@ -76,7 +77,6 @@ header {
 
 	input { display: none; }
 
-	label { float: left; }
 	.overlay-trigger { float: right; }
 }
 
@@ -144,14 +144,10 @@ main {
 		transform: translateX(100%);
 	}
 
-	ul {
-		@include ul-reset;
-		padding-bottom: inherit;
-	}
+	ul { @include ul-reset; }
 
 	a {
 		color: inherit;
-		font-size: .875rem;	/* 14px / 16px */
 		padding: 2px 0;
 		text-decoration: none;
 		&:hover { text-decoration: underline; }
