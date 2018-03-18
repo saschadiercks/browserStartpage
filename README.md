@@ -16,7 +16,8 @@ Read more about it here (in german): [http://metaideen.de/artikel/freizeitprojek
 The browserStartpage comes with a default list of links, to show you how it works. It shows up with a list of popular browser and some development-Ressources. You change that. Just head over to '/htdocs/data/data.json` and play with that file. You can edit the tabs and links to your own liking. Just play with it - it's quite self explanatory. All you need to do is to create images for your links and place them on your server too. Usually here '/htdocs/assets/thumbnails'
 
 ## Features
-- easy confiurable via json
+- easy confiurable Speeddial via json
+- easily add bookmarks via json
 - only requires php on your server
 - uses vanillaJS
 - uses apllicationCache to minimize traffic
@@ -25,7 +26,6 @@ The browserStartpage comes with a default list of links, to show you how it work
 ### Planned Features
 - allow theming
 - allow onsite-editing so you don't have to fiddle with the json-file
-- automatic rendering of screenshots/images
 - allow static export of content to sync via Dropbox, iCloud or wathever
 
 ## Further insights (want to help building this?)
