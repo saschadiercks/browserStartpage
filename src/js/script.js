@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
 		document.getElementsByTagName("body")[0].className += "js";
 	}
 
+	// scroll to desired position
+	function scrollToTarget(x,y) {
+		window.scrollTo(x,y);
+	}
+
 	// make element sticky (via position in css)
 	function stickyElement(stickyId,compensateId,compensateProperty) {
 		var compensateElement = document.getElementById(compensateId);
@@ -57,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		} else {
 			targetElement.classList.add('js-hidden');
 		}
+		fixElement("content");
 		event.preventDefault();
 	}
 
@@ -115,6 +121,23 @@ document.addEventListener('DOMContentLoaded', function() {
 				return false;
 			}
 		})(i);
+	}
+
+	// ---- fix element to current position
+	function fixElement(elementId) {
+		elementToFix = document.getElementById(elementId);
+		scrollY = window.pageYOffset;
+
+		if(elementToFix.classList.contains('js-fixed')) {
+			elementToFix.classList.remove('js-fixed');
+			elementToFix.style.top = '';
+			scrollToTarget(0,scrollYMem);
+		} else {
+			elementToFix.classList.add('js-fixed');
+			elementToFix.style.top = '-' + scrollY + 'px';
+			scrollYMem = scrollY;
+		}
+		console.log(scrollYMem);
 	}
 
 

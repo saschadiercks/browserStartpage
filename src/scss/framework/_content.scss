@@ -4,6 +4,10 @@
 .js main .tabbed-content:not(.active) { display: none; }
 
 main {
+	// we need to set the width via CSS to avoid jumping, when position:fixed is added
+	left: 0;
+	right: 0;
+
 	div { @include clearfix; }
 	ul {
 		@include ul-reset;
@@ -24,3 +28,5 @@ main {
 		text-overflow: ellipsis;
 	}
 }
+
+.js-fixed { position: fixed; }
