@@ -49,5 +49,8 @@ The browserStartpage comes with a default list of links, to show you how it work
 ### Usage of gulp
 1. Make sure, you have node.js installed on your computer (https://nodejs.org/en/)
 2. run `npm install gulp-cli -g` to install gulp
-1. run `npm install` to install gulp in your project
-2. run `gulp sass:watch` to compile SASS on the fly
+3. run `npm install` to install gulp in your project
+4. run `gulp sass:watch` to compile SASS on the fly
+5. use `gulp compile:css` to compile the css for dev (including sourcemaps)
+6. use `gulp compile:js` to compile the Javascript for dev (including sourcemaps)
+7. use `gulp build` to compile the css and minify Javascript for production (without sourcemaps)
