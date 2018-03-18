@@ -225,7 +225,7 @@
 		]
 	},
 	"bookmarks" : {
-		"links" : [
+		"Links" : [
 			{
 				"url":   "http://scrumguides.org/",
 				"title": "Scrum Guides"
@@ -235,7 +235,7 @@
 				"title": "Learn jQuery"
 			}
 		],
-		"frontend" : [
+		"Frontend" : [
 			{
 				"url":   "https://cssreference.io",
 				"title": "CSS Reference"
@@ -249,7 +249,7 @@
 				"title": "Frontend Guidelines"
 			}
 		],
-		"styleguides" : [
+		"Styleguides" : [
 			{
 				"url" : "https://saijogeorge.com/brand-style-guide-examples/",
 				"title" : "Styleguide Examples"
@@ -263,7 +263,7 @@
 				"title" : "Lightning Design System"
 			}
 		],
-		"patterns" : [
+		"Patterns" : [
 			{
 				"url" : "http://codepen.io/patterns/",
 				"title" : "Patterns @codepen"
@@ -293,7 +293,7 @@
 				"title" : "Get better at UI"
 			}
 		],
-		"frameworks" : [
+		"Frameworks" : [
 			{
 				"url" : "https://getbootstrap.com/",
 				"title": "Bootstrap"

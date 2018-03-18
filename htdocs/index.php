@@ -103,9 +103,9 @@
 			<h2 class="overlay-title">Bookmarks</h2>
 
 			<?php foreach($bookmarks as $key => $contentItems): ?>
-				<div class="folddown js-closed" id="collapse-<?= $key ?>">
+				<div class="folddown js-closed" id="collapse-<?= strtolower($key) ?>">
 					<div class="folddown-header">
-						<h3 class="folddown-title"><button class="collapse-trigger" data-target="collapse-<?= $key ?>"><span class="folddown-icon">&times;</span> <?= $key ?></button></h3>
+						<h3 class="folddown-title"><button class="collapse-trigger" data-target="collapse-<?= strtolower($key) ?>"><span class="folddown-icon">&times;</span> <?= $key ?></button></h3>
 					</div>
 					<div class="folddown-main collapse">
 						<ul>
