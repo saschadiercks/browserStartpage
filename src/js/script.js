@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		var compensateElement = document.getElementById(compensateId);
 		var stickyElement = document.getElementById(stickyId);
 		var stickyHeight = stickyElement.clientHeight + 'px';
-		stickyElement.classList.add('sticky');
+		stickyElement.classList.add('js-sticky');
 
 		//add Element-Height as defined property to desired element
 		compensateElement.style.setProperty(compensateProperty,stickyHeight);

@@ -70,7 +70,7 @@ header {
 	width: 100%;
 	z-index: 2;
 
-	&.sticky { top: 0; }
+	&.js-sticky { top: 0; }
 
 	li {
 		color: $header-link-color;
@@ -176,7 +176,7 @@ footer {
 	width: 100%;
 	z-index: 1;
 
-	&.sticky { bottom: 0; }
+	&.js-sticky { bottom: 0; }
 
 	ul { @include ul-reset; }
 	li { display: inline-block; }
