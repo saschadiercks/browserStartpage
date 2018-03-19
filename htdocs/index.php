@@ -74,7 +74,7 @@
 				<ul>
 					<?php foreach($header as $key): ?>
 						<li class="tab">
-							<a href="#tab-<?= $counterStartvalue ?>" data-target="tab-<?= $counterStartvalue++ ?>"><?= $key ?></a>
+							<a href="#tab-<?= $counterStartvalue ?>" class="tab-trigger" data-target="tab-<?= $counterStartvalue++ ?>"><?= $key ?></a>
 						</li>
 					<?php endforeach; ?>
 				</ul>

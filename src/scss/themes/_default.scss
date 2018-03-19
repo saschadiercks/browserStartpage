@@ -70,10 +70,13 @@ header {
 	z-index: 2;
 
 	&.js-sticky { top: 0; }
+}
 
-	li {
+nav {
+	li { display: inline-block; }
+
+	a {
 		color: $header-link-color;
-		display: inline-block;
 
 		&:hover,
 		&.active {
@@ -82,9 +85,6 @@ header {
 			color: $header-link-active-color;
 		}
 	}
-
-	a { color: inherit; }
-
 }
 
 // ---- Content ----
@@ -103,7 +103,6 @@ main {
 		border: 1px solid $main-link-border-color;
 		border-radius: 2px;
 		font-size: .75rem;
-		// margin: $base-spacing-size/2;
 		position: relative;
 		text-align: center;
 		text-decoration: none;

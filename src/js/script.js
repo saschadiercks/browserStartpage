@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	// initially set Element-count of tabs and tabbedContent and check consistency
-	var tabTrigger = document.getElementsByClassName("tab");
+	var tabTrigger = document.getElementsByClassName("tab-trigger");
 	var tabbedContent = document.getElementsByClassName("tabbed-content");
 	if(tabTrigger.length !== tabbedContent.length) {
 		console.log("count of tabs and tabbed-contend isn't consistent");
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Tab-Handling-Function
 	// -- set Current-Tab and tabbed-content
 	var setCurrentTab = function(newTabId) {
-		markTabTrigger = document.getElementsByClassName("tab")[newTabId].classList.add("active");
+		markTabTrigger = document.getElementsByClassName("tab-trigger")[newTabId].classList.add("active");
 		unhideSelectedContent = document.getElementsByClassName("tabbed-content")[newTabId].classList.add("active");
 		localStorage.setItem("tabbedContentId", newTabId);
 		console.log("localStorage ID is: " + newTabId);
