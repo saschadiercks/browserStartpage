@@ -29,10 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		toggleElement = document.getElementById(elementId);
 		toggleElement.onclick = function() {
 			targetElement = document.getElementById(targetElementId);
-			if(targetElement.classList.contains('js-hidden')) {
-				targetElement.classList.remove('js-hidden');
-			} else {
+			if(targetElement.classList.contains('js-visible')) {
 				targetElement.classList.add('js-hidden');
+				targetElement.classList.remove('js-visible');
+			} else {
+				targetElement.classList.remove('js-hidden');
+				targetElement.classList.add('js-visible');
 			}
 			event.preventDefault();
 		}
@@ -57,10 +59,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function toggleOverlay(elementId,event) {
 		var targetElement = document.getElementById(elementId);
-		if(targetElement.classList.contains('js-hidden')) {
-			targetElement.classList.remove('js-hidden');
-		} else {
+		if(targetElement.classList.contains('js-visible')) {
 			targetElement.classList.add('js-hidden');
+			targetElement.classList.remove('js-visible');
+		} else {
+			targetElement.classList.remove('js-hidden');
+			targetElement.classList.add('js-visible');
 		}
 		fixElement("content");
 		event.preventDefault();

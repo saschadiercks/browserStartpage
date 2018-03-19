@@ -1,32 +1,8 @@
-// ---- Content ----
+// ---- Header ----
 
-// Hide Tabs if JS is available, otherwise show all content
-.js main .tabbed-content:not(.active) { display: none; }
-
-main {
-	// we need to set the width via CSS to avoid jumping, when position:fixed is added
-	left: 0;
-	right: 0;
-
-	div { @include clearfix; }
-	ul {
-		@include ul-reset;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	a {
-		display: block;
-		position: relative;		// allow postioning of child-elements
-		img { display: inline-block; }		// prevent whitespace on images
-	}
-
-	// Clip text of Description if nessecary
-	span {
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
+#header-nav-toggle {
+	position: relative;
+	top: -4px;
 }
 
-.js-fixed { position: fixed; }
+#bookmarks-toggle { float: right; }

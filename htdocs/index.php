@@ -61,22 +61,25 @@
 
 	<!-- header -->
 	<header id="application-header">
-		<?php if(count($bookmarks) > 0) { ?>
-			<button class="overlay-trigger" data-target="bookmarks">&#10070;</button>
+		<?php if(count($header) > 0) { ?>
+			<button id="header-nav-toggle" class="overlay-trigger" data-target="header-nav">&#9776;</button>
 		<?php } ?>
 
-		<label for="menu-toggle">&#9776;</label>
-		<input type="checkbox" id="menu-toggle" />
+		<?php if(count($bookmarks) > 0) { ?>
+			<button id="bookmarks-toggle" class="overlay-trigger" data-target="bookmarks">&#10070;</button>
+		<?php } ?>
 
-		<nav class="tabs">
-			<ul>
-				<?php foreach($header as $key): ?>
-					<li class="tab">
-						<a href="#tab-<?= $counterStartvalue ?>" data-target="tab-<?= $counterStartvalue++ ?>"><?= $key ?></a>
-					</li>
-				<?php endforeach; ?>
-			</ul>
-		</nav>
+		<?php if(count($header) > 0) { ?>
+			<nav id="header-nav" class="tabs">
+				<ul>
+					<?php foreach($header as $key): ?>
+						<li class="tab">
+							<a href="#tab-<?= $counterStartvalue ?>" data-target="tab-<?= $counterStartvalue++ ?>"><?= $key ?></a>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+			</nav>
+		<?php } ?>
 	</header>
 
 	<!-- content -->

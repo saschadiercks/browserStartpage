@@ -66,7 +66,6 @@ button {
 header {
 	background-color: $header-background-color;
 	box-shadow: $box-shadow-default;
-	display: block;
 	width: 100%;
 	z-index: 2;
 
@@ -86,9 +85,6 @@ header {
 
 	a { color: inherit; }
 
-	input { display: none; }
-
-	.overlay-trigger { float: right; }
 }
 
 // ---- Content ----
@@ -199,24 +195,31 @@ footer {
 	header,
 	.overlay { padding: $base-spacing-size*2 $base-spacing-size*1.5; }
 
-	header a,
-	header label  { padding: $base-spacing-size $base-spacing-size*2; }
+	header a { padding: $base-spacing-size $base-spacing-size*2; }
 	.overlay-title {
 		padding-top: $base-spacing-size;
 		padding-bottom: $base-spacing-size
+	}
+
+	header {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 	main {
 		ul { grid-template-columns: repeat(2,1fr); }
 	}
 
-	// Toggle menu/tabs
-	header {
-		.tabs li { display: block; }
+	#bookmarks-toggle { justify-self: end; }
+	#header-nav-toggle { justify-self: start; }
+	#header-nav {
+		display: none;
+		grid-column-start: 1;
+		grid-column-end: span 2;
+		&.js-visible { display: block; }
+
+		li { display: block; }
 	}
-	#menu-toggle,
-	#menu-toggle+nav{ display: none; }
-	#menu-toggle:checked+nav { display: block; }
 }
 
 // Tablet portrait
@@ -240,18 +243,11 @@ footer {
 	header,
 	.overlay { padding: $base-spacing-size*.75 $base-spacing-size; }
 
-	header	a,
-	header label { padding: $base-spacing-size*.75 $base-spacing-size; }
+	header	a { padding: $base-spacing-size*.75 $base-spacing-size; }
 	.overlay-title,
 	.collapse a {
 		padding-top: $base-spacing-size*.75;
 		padding-bottom: $base-spacing-size*.75;
-	}
-
-	// show tabs without toggle
-	header {
-		label[for=menu-toggle] { display: none; }
-		nav { display: block; }
 	}
 
 	main {
@@ -263,6 +259,8 @@ footer {
 			.title { opacity: 1; }
 		}
 	}
+
+	button[data-target*="nav"] { display: none; }
 }
 
 
