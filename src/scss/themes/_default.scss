@@ -142,6 +142,7 @@ main {
 	background-color: $overlay-background-color;
 	box-shadow: $box-shadow-default;
 	color: $overlay-color;
+	display: block;
 	height: 100vh;
 	max-width: $bookmarks-max-width;
 	overflow-y: auto;
