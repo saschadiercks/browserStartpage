@@ -62,7 +62,7 @@
 	<!-- header -->
 	<header id="application-header">
 		<?php if(count($header) > 0) { ?>
-			<button id="header-nav-toggle" class="overlay-trigger" data-target="header-nav">&#9776;</button>
+			<button id="header-nav-toggle" class="collapse-trigger" data-target="header-nav">&#9776;</button>
 		<?php } ?>
 
 		<?php if(count($bookmarks) > 0) { ?>
@@ -70,7 +70,7 @@
 		<?php } ?>
 
 		<?php if(count($header) > 0) { ?>
-			<nav id="header-nav" class="tabs">
+			<nav id="header-nav" class="collapse tabs">
 				<ul>
 					<?php foreach($header as $key): ?>
 						<li class="tab">

@@ -75,24 +75,26 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function toggleCollapse(elementId,event) {
 		var targetElement = document.getElementById(elementId);
-		if(targetElement.classList.contains('js-closed')) {
-			targetElement.classList.remove('js-closed');
-		} else {
+		if(targetElement.classList.contains('js-opened')) {
 			targetElement.classList.add('js-closed');
+			targetElement.classList.remove('js-opened');
+		} else {
+			targetElement.classList.remove('js-closed');
+			targetElement.classList.add('js-opened');
 		}
 		event.preventDefault();
 	}
 
 	// Tab-Handling-Function
 	// initially set Element-count of tabs and tabbedContent and check consistency
-	var tabTrigger = document.getElementsByClassName("tab");
+	var tabTrigger = document.getElementsByClassName("tab-trigger");
 	var tabbedContent = document.getElementsByClassName("tabbed-content");
 	if(tabTrigger.length !== tabbedContent.length) {
 		console.log("count of tabs and tabbed-contend isn't consistent");
 	}
 	// -- set Current-Tab and tabbed-content
 	var setCurrentTab = function(newTabId) {
-		markTabTrigger = document.getElementsByClassName("tab")[newTabId].classList.add("active");
+		markTabTrigger = document.getElementsByClassName("tab-trigger")[newTabId].classList.add("active");
 		unhideSelectedContent = document.getElementsByClassName("tabbed-content")[newTabId].classList.add("active");
 		localStorage.setItem("tabbedContentId", newTabId);
 		console.log("localStorage ID is: " + newTabId);

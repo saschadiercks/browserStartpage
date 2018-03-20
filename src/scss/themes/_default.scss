@@ -212,10 +212,12 @@ footer {
 	#bookmarks-toggle { justify-self: end; }
 	#header-nav-toggle { justify-self: start; }
 	#header-nav {
-		display: none;
 		grid-column-start: 1;
 		grid-column-end: span 2;
-		&.js-visible { display: block; }
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height .5s ease;
+		&.js-opened { max-height: 100vh; }
 
 		li { display: block; }
 	}
