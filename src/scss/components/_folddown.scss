@@ -20,7 +20,6 @@
 		display: block;
 		outline: none;
 		padding-left: 0;
-		padding-right: 0;
 		text-align: left;
 		width: 100%;
 	}
@@ -28,8 +27,9 @@
 
 .folddown-icon {
 	display: inline-block;
+	float: right;
 	position: relative;
-	top: -1px;
+	top: -2px;
 	transition: transform .2s ease;
 }
 
