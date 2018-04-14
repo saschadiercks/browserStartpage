@@ -225,17 +225,23 @@
 		]
 	},
 	"bookmarks" : {
-		"Links" : [
+		"Frontend" : [
 			{
-				"url":   "http://scrumguides.org/",
-				"title": "Scrum Guides"
+				"url":   "https://github.com/dypsilon/frontend-dev-bookmarks",
+				"title": "Frontend Dev Bookmarks"
 			},
 			{
-				"url":   "https://learn.jquery.com",
-				"title": "Learn jQuery"
-			}
-		],
-		"Frontend" : [
+				"url":   "https://github.com/thedaviddias/Front-End-Checklist",
+				"title": "Frontend Checklist"
+			},
+			{
+				"url":   "https://github.com/bendc/frontend-guidelines",
+				"title": "Frontend Guidelines"
+			},
+			{
+				"url":   "http://codeguide.co/",
+				"title": "Codeguide by @mdo"
+			},
 			{
 				"url":   "https://cssreference.io",
 				"title": "CSS Reference"
@@ -245,32 +251,98 @@
 				"title": "CSS Guidelines"
 			},
 			{
-				"url":   "https://github.com/bendc/frontend-guidelines",
-				"title": "Frontend Guidelines"
-			}
-		],
-		"Styleguides" : [
-			{
-				"url" : "https://saijogeorge.com/brand-style-guide-examples/",
-				"title" : "Styleguide Examples"
+				"url":   "https://bundlephobia.com/",
+				"title": "Bundlephobia"
 			},
 			{
-				"url" : "http://www.theuxbookmark.com/2010/08/interaction-design/a-monster-list-of-ui-guidelines-style-guides",
-				"title" : "UX-Bookmark: Styleguides"
+				"url":   "https://ausi.github.io/respimagelint/",
+				"title": "ImageLint for responsive Images"
+			},
+			{
+				"url":   "https://uitest.com/de/",
+				"title": "UI-Test"
+			},
+			{
+				"url":   "https://whatdoesmysitecost.com/",
+				"title": "What does my site cost"
+			},
+			{
+				"url":   "https://www.campaignmonitor.com/css/",
+				"title": "CSS in eMails"
+			},
+			{
+				"url":   "https://webfieldmanual.com/",
+				"title": "Webfield manual"
+			},
+			{
+				"url":   "https://docs.google.com/spreadsheets/d/1tZYPnzLG0y51QinLxrV97Xflzr2MbTqwWNvaHYN04BE/edit#gid=0",
+				"title": "Styleguide/Boilerplate patterns"
+			},
+			{
+				"url":   "https://www.filamentgroup.com/lab/font-events.html",
+				"title": "Font Loading via API"
+			},
+			{
+				"url" : "https://developer.apple.com",
+				"title" : "Developer @Apple"
+			},
+			{
+				"url" : "https://www.interaction-design.org",
+				"title" : "Interaction Design"
+			},
+			{
+				"url" : "https://www.barrierefreies-webdesign.de/knowhow/",
+				"title" : "Barrierefreies Webdesign"
+			},
+			{
+				"url" : "http://webkrauts.de/",
+				"title" : "Webkrauts"
+			},
+			{
+				"url" : "https://a11yproject.com/",
+				"title" : "A11Y"
+			},
+			{
+				"url" : "https://www.w3.org/WAI/beta/",
+				"title" : "WAI"
+			}
+		],
+		"Frameworks" : [
+			{
+				"url" : "https://bulma.io/",
+				"title": "Bulma"
+			},
+			{
+				"url" : "https://getbootstrap.com/",
+				"title": "Bootstrap"
+			},
+			{
+				"url" : "https://foundation.zurb.com",
+				"title": "Foundation"
+			},
+			{
+				"url" : "https://jquery.com/",
+				"title": "jQuery"
+			}
+		],
+		"Design Systems" : [
+			{
+				"url" : "https://designsystemsrepo.com/",
+				"title" : "Design Systems Repo"
 			},
 			{
 				"url" : "https://www.lightningdesignsystem.com/",
 				"title" : "Lightning Design System"
+			},
+			{
+				"url" : "http://patternlab.io/",
+				"title" : "Patternlab"
 			}
 		],
 		"Patterns" : [
 			{
 				"url" : "http://codepen.io/patterns/",
 				"title" : "Patterns @codepen"
-			},
-			{
-				"url" : "http://patternlab.io/",
-				"title" : "Patternlab"
 			},
 			{
 				"url" : "http://ux.mailchimp.com/patterns",
@@ -293,14 +365,92 @@
 				"title" : "Get better at UI"
 			}
 		],
-		"Frameworks" : [
+		"Styleguides" : [
 			{
-				"url" : "https://getbootstrap.com/",
-				"title": "Bootstrap"
+				"url" : "https://www.designtagebuch.de/wiki/corporate-design-manuals/",
+				"title" : "Corporate Design manuals"
 			},
 			{
-				"url" : "https://foundation.zurb.com",
-				"title": "Foundation"
+				"url" : "https://www.designtagebuch.de/wiki/",
+				"title" : "Designtagebuch Wiki"
+			},
+			{
+				"url" : "https://saijogeorge.com/brand-style-guide-examples/",
+				"title" : "Styleguide Examples"
+			},
+			{
+				"url" : "http://www.theuxbookmark.com/2010/08/interaction-design/a-monster-list-of-ui-guidelines-style-guides",
+				"title" : "UX-Bookmark: Styleguides"
+			}
+		],
+		"Design" : [
+			{
+				"url":   "http://makersandfounders.com/DIETER-RAMS",
+				"title": "Dieter Rams"
+			},
+			{
+				"url" : "https://www.customspaces.com/",
+				"title": "Custom spaces"
+			},
+			{
+				"url" : "https://startupsthisishowdesignworks.com/",
+				"title": "this is how design works"
+			}
+		],
+		"Helpers" : [
+			{
+				"url":   "http://scrumguides.org/",
+				"title": "Scrum Guides"
+			},
+			{
+				"url":   "https://support.apple.com/de-de/HT205655",
+				"title": "Ergonomie @Apple"
+			},
+			{
+				"url":   "http://makerbook.net/",
+				"title": "Makerbook"
+			},
+			{
+				"url":   "https://www.paypalobjects.com/en_AU/vhelp/paypalmanager_help/credit_card_numbers.htm",
+				"title": "Test Creditcard Numbers"
+			},
+			{
+				"url":   "https://sizecalc.com",
+				"title": "Size Calculator"
+			},
+			{
+				"url":   "https://www.flickr.com/photos/jasontravis/sets/72157603258446753/",
+				"title": "Persona (Flickr)"
+			},
+			{
+				"url":   "https://randomuser.me/",
+				"title": "Random User Generator"
+			},
+			{
+				"url":   "http://sneakpeekit.com",
+				"title": "Sketch Sheets for Webdesingers"
+			},
+			{
+				"url":   "http://ctamagazine.unbounce.com/",
+				"title": "Call to Action Magazine"
+			}
+		],
+		"eBooks" : [
+			{
+				"url":   "https://adaptivewebdesign.info/1st-edition/read/",
+				"title": "Adaptive Webdesign"
+			},
+			{
+				"url":   "http://eloquentjavascript.net/",
+				"title": "eloquent Javascipt"
+			},
+			{
+				"url":   "https://resilientwebdesign.com/",
+				"title": "resilient webdesign"
+			},
+			{
+				"url":   "http://www.thebookoflife.org/",
+				"title": "The book of life"
 			}
 		]
 	},
