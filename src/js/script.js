@@ -3,6 +3,19 @@
 // is the DOM ready for manipulation?
 document.addEventListener('DOMContentLoaded', function() {
 
+	toggleKeyCode = 18;		// set key ot use for toggling the save to localStorage
+	modifierSet = false;
+	document.addEventListener('keydown',function(event) {
+		 if(toggleKeyCode == event.keyCode) {
+			modifierSet = true;
+		 } else {
+			 modifierSet = false;
+		 }
+	});
+	document.addEventListener('keyup',function(event) {
+		modifierSet = false;
+	});
+
 	// add JS to body-tag to allow CSS-Manipulation if JS is available
 	function setJs() {
 		document.getElementsByTagName("body")[0].className += "js";
@@ -96,8 +109,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	var setCurrentTab = function(newTabId) {
 		markTabTrigger = document.getElementsByClassName("tab-trigger")[newTabId].classList.add("active");
 		unhideSelectedContent = document.getElementsByClassName("tabbed-content")[newTabId].classList.add("active");
-		localStorage.setItem("tabbedContentId", newTabId);
-		console.log("localStorage ID is: " + newTabId);
+		if(modifierSet != true) {
+			localStorage.setItem("tabbedContentId", newTabId);
+			console.log("localStorage ID is: " + newTabId);
+		} else {
+			console.log("localStorage not updated");
+		}
+
 	}
 
 	// -- unset Current-Tab and tabbed-conent
