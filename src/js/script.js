@@ -3,6 +3,9 @@
 // is the DOM ready for manipulation?
 document.addEventListener('DOMContentLoaded', function() {
 
+	// per default localStorage is updated, when tabs are switched
+	updateLocalStorageOnTabSwitch = true;
+
 	// add JS to body-tag to allow CSS-Manipulation if JS is available
 	function setJs() {
 		document.getElementsByTagName("body")[0].className += "js";
@@ -96,8 +99,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	var setCurrentTab = function(newTabId) {
 		markTabTrigger = document.getElementsByClassName("tab-trigger")[newTabId].classList.add("active");
 		unhideSelectedContent = document.getElementsByClassName("tabbed-content")[newTabId].classList.add("active");
-		localStorage.setItem("tabbedContentId", newTabId);
-		console.log("localStorage ID is: " + newTabId);
+		if(updateLocalStorageOnTabSwitch === false) {
+			console.log("localStorage not updated");
+		} else {
+			localStorage.setItem("tabbedContentId", newTabId);
+			console.log("localStorage ID is: " + newTabId);
+		}
+
 	}
 
 	// -- unset Current-Tab and tabbed-conent
@@ -120,9 +128,14 @@ document.addEventListener('DOMContentLoaded', function() {
 	// -- switch tabs onClick
 	for(i=0; i < tabTrigger.length; i++) {
 		(function(index){
-			tabTrigger[i].onclick = function(){
+			tabTrigger[i].onclick = function(event){
+				if(event.altKey === true) {
+					updateLocalStorageOnTabSwitch = false;
+				} else {
+					updateLocalStorageOnTabSwitch = true;
+				}
 				unsetTabs();
-				setCurrentTab(index);
+				setCurrentTab(index,updateLocalStorageOnTabSwitch);
 				return false;
 			}
 		})(i);
