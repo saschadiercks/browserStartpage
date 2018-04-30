@@ -3,6 +3,18 @@
 // is the DOM ready for manipulation?
 document.addEventListener('DOMContentLoaded', function() {
 
+	// show notification on keydown and hide it on keyup
+	document.addEventListener('keydown', function() {
+		var targetElement = 'notification';
+		document.getElementById(targetElement).classList.add('js-visible');
+		document.getElementById(targetElement).classList.remove('js-hidden');
+	});
+	document.addEventListener('keyup', function() {
+		var targetElement = 'notification';
+		document.getElementById(targetElement).classList.add('js-hidden');
+		document.getElementById(targetElement).classList.remove('js-visible');
+	});
+
 	// per default localStorage is updated, when tabs are switched
 	updateLocalStorageOnTabSwitch = true;
 

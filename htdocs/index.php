@@ -135,5 +135,9 @@
 			</div>
 		<?php } ?>
 	</footer>
+
+	<div id="notification" class="js-hidden">
+		press [alt] to open a tab and prevent remembering it
+	</div>
 </body>
 </html>
