@@ -33,6 +33,9 @@ $main-link-active-description-color: $header-link-active-color;
 $overlay-background-color: $body-background-color;
 $overlay-color: $body-color;
 
+$notification-background-color: $body-background-color;
+$notification-color: $body-color;
+
 $bookmarks-max-width: 400px;
 
 $footer-bg: $header-link-active-bg;
@@ -158,6 +161,24 @@ main {
 		text-decoration: none;
 		&:hover { text-decoration: underline; }
 	}
+}
+
+// ---- Notification ----
+#notification {
+	background-color: $notification-background-color;
+	box-shadow: $box-shadow-default;
+	color: $notification-color;
+	padding: $base-spacing-size;
+	position: fixed;
+	right: 0;
+	bottom: $base-spacing-size*3;
+	z-index: 99;
+
+	// Animation
+	display: block;	// overwrite hidden-class
+	transition: all .2s;
+	&.js-hidden { margin-right: -100%; }
+	&.js-visible { margin-right: $base-spacing-size; }
 }
 
 // ---- Footer ----
