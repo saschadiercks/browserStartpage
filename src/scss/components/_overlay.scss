@@ -1,7 +1,8 @@
 // ---- overlay ----
 .overlay {
 	display: block;
-	transition: all .2s ease;
+	position: fixed;
+	z-index: 2;
 }
 
 .overlay-close { float: right; }
@@ -11,4 +12,19 @@
 	font-weight: 600;
 	margin-top: 0;
 	padding-top: inherit;
+}
+
+.overlay-content {
+	height: 100vh;
+	overflow-y: auto;
+	transition: all .4s ease;
+	width: 100%;
+}
+
+.overlay-backdrop {
+	height: 100vh;
+	position: absolute;
+	transition: all .4s ease;
+	width: 100vw;
+	z-index: -1;
 }

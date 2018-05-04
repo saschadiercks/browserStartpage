@@ -101,25 +101,28 @@
 	</main>
 
 	<?php if(count($bookmarks) > 0) { ?>
-		<aside id="bookmarks" class="overlay js-hidden">
-			<button class="overlay-trigger overlay-close close" data-target="bookmarks">&times;</button>
-			<h2 class="overlay-title">Bookmarks</h2>
+		<div id="bookmarks" class="overlay js-hidden">
+			<div class="overlay-content">
+				<button class="overlay-trigger overlay-close close" data-target="bookmarks">&times;</button>
+				<h2 class="overlay-title">Bookmarks</h2>
 
-			<?php foreach($bookmarks as $key => $contentItems): ?>
-				<div class="folddown js-closed" id="collapse-<?= strtolower($key) ?>">
-					<div class="folddown-header">
-						<h3 class="folddown-title"><button class="collapse-trigger" data-target="collapse-<?= strtolower($key) ?>"><span class="folddown-icon">&times;</span> <?= $key ?></button></h3>
+				<?php foreach($bookmarks as $key => $contentItems): ?>
+					<div class="folddown js-closed" id="collapse-<?= strtolower($key) ?>">
+						<div class="folddown-header">
+							<h3 class="folddown-title"><button class="collapse-trigger" data-target="collapse-<?= strtolower($key) ?>"><span class="folddown-icon">&times;</span> <?= $key ?></button></h3>
+						</div>
+						<div class="folddown-main collapse">
+							<ul>
+								<?php foreach($contentItems as $contentItem): ?>
+									<li><a href="<?= $contentItem['url'] ?>"><?= $contentItem['title'] ?></a></li>
+								<?php endforeach; ?>
+							</ul>
+						</div>
 					</div>
-					<div class="folddown-main collapse">
-						<ul>
-							<?php foreach($contentItems as $contentItem): ?>
-								<li><a href="<?= $contentItem['url'] ?>"><?= $contentItem['title'] ?></a></li>
-							<?php endforeach; ?>
-						</ul>
-					</div>
-				</div>
-			<?php endforeach; ?>
-		</aside>
+				<?php endforeach; ?>
+			</div><!-- /.overlay -->
+			<div class="overlay-backdrop overlay-trigger" data-target="bookmarks"></div>
+		</div>
 	<?php } ?>
 
 	<!-- footer -->

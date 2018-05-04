@@ -32,6 +32,7 @@ $main-link-active-description-color: $header-link-active-color;
 
 $overlay-background-color: $body-background-color;
 $overlay-color: $body-color;
+$overlay-backdrop-color: rgba($body-background-color, .7);
 
 $notification-background-color: $body-background-color;
 $notification-color: $body-color;
@@ -63,6 +64,29 @@ button {
 	&:last-child { border-bottom: $folddown-border}
 }
 .folddown-main ul { padding-bottom: $base-spacing-size *.75; }
+
+.overlay {
+	height: 100vh;
+	width: 100%;
+}
+.overlay-content {
+	background-color: $overlay-background-color;
+	box-shadow: $box-shadow-default;
+	color: $overlay-color;
+}
+.overlay-backdrop {
+	background-color: $overlay-backdrop-color;
+	backdrop-filter: blur(5px);
+}
+
+.js-hidden {
+	.overlay-content { transform: translateX(100%);	}
+	.overlay-backdrop { opacity: 0; }
+}
+.js-visible {
+	.overlay-content { transform: translateX(0); }
+	.overlay-backdrop { opacity: 1; }
+}
 
 
 // ---- header ----
@@ -132,25 +156,12 @@ main {
 
 // ---- Bookmarks ----
 #bookmarks {
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 2;
 
-	background-color: $overlay-background-color;
-	box-shadow: $box-shadow-default;
-	color: $overlay-color;
-	display: block;
-	height: 100vh;
-	max-width: $bookmarks-max-width;
-	overflow-y: auto;
-	width: 100%;
-
-	display: block;
-	opacity: 1;
-	&.js-hidden {
-		opacity: 0;
-		transform: translateX(100%);
+	.overlay-content {
+		max-width: $bookmarks-max-width;
+		position: fixed;
+		top: 0;
+		right: 0;
 	}
 
 	ul { @include ul-reset; }
@@ -213,7 +224,7 @@ footer {
 	button { padding: $base-spacing-size $base-spacing-size*2; }
 
 	header,
-	.overlay { padding: $base-spacing-size*2 $base-spacing-size*1.5; }
+	.overlay-content { padding: $base-spacing-size*2 $base-spacing-size*1.5; }
 
 	header a { padding: $base-spacing-size $base-spacing-size*2; }
 	.overlay-title {
@@ -263,7 +274,7 @@ footer {
 	button { padding: $base-spacing-size*.75 $base-spacing-size; }
 
 	header,
-	.overlay { padding: $base-spacing-size*.75 $base-spacing-size; }
+	.overlay-content { padding: $base-spacing-size*.75 $base-spacing-size; }
 
 	header	a { padding: $base-spacing-size*.75 $base-spacing-size; }
 	.overlay-title,
