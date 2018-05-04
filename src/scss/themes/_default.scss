@@ -81,7 +81,10 @@ button {
 
 .js-hidden {
 	.overlay-content { transform: translateX(100%);	}
-	.overlay-backdrop { opacity: 0; }
+	.overlay-backdrop {
+		height: 0;
+		opacity: 0;
+	}
 }
 .js-visible {
 	.overlay-content { transform: translateX(0); }
