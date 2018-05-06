@@ -183,16 +183,19 @@ main {
 	box-shadow: $box-shadow-default;
 	color: $notification-color;
 	padding: $base-spacing-size;
-	position: fixed;
 	right: 0;
+	position: fixed;
 	bottom: $base-spacing-size*3;
 	z-index: 99;
 
 	// Animation
 	display: block;	// overwrite hidden-class
 	transition: all .2s;
-	&.js-hidden { margin-right: -100%; }
-	&.js-visible { margin-right: $base-spacing-size; }
+	&.js-hidden { transform: translateX(100%); }
+	&.js-visible {
+		right: $base-spacing-size;
+		transform: translateX(0%);
+	}
 }
 
 // ---- Footer ----
