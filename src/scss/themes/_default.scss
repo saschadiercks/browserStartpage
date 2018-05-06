@@ -13,7 +13,7 @@ $base-border-color-hover: #ddd;
 
 $button-background-color: transparent;
 
-$folddown-border: 1px solid $base-border-color-hover;
+$collapse-border: 1px solid $base-border-color-hover;
 
 $header-background-color: $body-background-color;
 $header-link-color: $body-color;
@@ -59,11 +59,11 @@ button {
 }
 .close { font-weight: 600; }
 
-.folddown {
-	border-top: $folddown-border;
-	&:last-child { border-bottom: $folddown-border}
+.collapse {
+	border-top: $collapse-border;
+	//&:last-child { border-bottom: $collapse-border}
 }
-.folddown-main ul { padding-bottom: $base-spacing-size *.75; }
+.collapse-main ul { padding-bottom: $base-spacing-size *.75; }
 
 .overlay {
 	height: 100vh;
@@ -100,6 +100,8 @@ header {
 	z-index: 2;
 
 	&.js-sticky { top: 0; }
+
+	.collapse { border-width: 0; }
 }
 
 nav {
@@ -171,6 +173,7 @@ main {
 
 	a {
 		color: inherit;
+		font-size: .875rem;	/* 14px / 16px */
 		padding: 2px 0;
 		text-decoration: none;
 		&:hover { text-decoration: underline; }
@@ -183,16 +186,19 @@ main {
 	box-shadow: $box-shadow-default;
 	color: $notification-color;
 	padding: $base-spacing-size;
-	position: fixed;
 	right: 0;
+	position: fixed;
 	bottom: $base-spacing-size*3;
 	z-index: 99;
 
 	// Animation
 	display: block;	// overwrite hidden-class
 	transition: all .2s;
-	&.js-hidden { margin-right: -100%; }
-	&.js-visible { margin-right: $base-spacing-size; }
+	&.js-hidden { transform: translateX(100%); }
+	&.js-visible {
+		right: $base-spacing-size;
+		transform: translateX(0%);
+	}
 }
 
 // ---- Footer ----
@@ -279,7 +285,13 @@ footer {
 	header,
 	.overlay-content { padding: $base-spacing-size*.75 $base-spacing-size; }
 
-	header	a { padding: $base-spacing-size*.75 $base-spacing-size; }
+	header{
+		a { padding: $base-spacing-size*.75 $base-spacing-size; }
+
+		// overwrite collapse-styles
+		.collapse-main { overflow: visible; }
+	}
+
 	.overlay-title,
 	.collapse a {
 		padding-top: $base-spacing-size*.75;

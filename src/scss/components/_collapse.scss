@@ -1,21 +1,19 @@
 // ---- overlay ----
-.folddown {
+.collapse {
 	display: block;
 	&.js-closed {
-		.folddown-icon { transform: rotate(45deg); }
-		.folddown-main { max-height: 0; }
+		.collapse-icon { transform: rotate(45deg); }
+		.collapse-main { max-height: 0; }
 	}
-
-	a { font-size: .875rem;	/* 14px / 16px */ }
 }
 
-.folddown-title {
+.collapse-title {
 	font-size: inherit;
 	font-weight: 600;
 	margin: 0;
 	padding-top: inherit;
 
-	.collapse-trigger {
+	.js-collapse-toggle {
 		cursor: pointer;
 		display: block;
 		outline: none;
@@ -25,7 +23,7 @@
 	}
 }
 
-.folddown-icon {
+.collapse-icon {
 	display: inline-block;
 	float: right;
 	position: relative;
@@ -33,7 +31,7 @@
 	transition: transform .2s ease;
 }
 
-.folddown-main {
+.collapse-main {
 	max-height: 100vh;
 	overflow: hidden;
 	transition: max-height .5s ease;
