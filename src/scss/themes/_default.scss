@@ -128,7 +128,6 @@ main {
 		display: grid;
 		grid-gap: $base-spacing-size;
 		grid-template-columns: repeat(auto-fit,minmax(256px, 1fr));
-		grid-template-rows: repeat(auto-fit,minmax(150px, 1fr));
 	}
 
 	a {
@@ -137,6 +136,7 @@ main {
 		background-clip: padding-box;
 		border: 1px solid $main-link-border-color;
 		border-radius: 2px;
+		display: flex;
 		font-size: .75rem;
 		position: relative;
 		text-align: center;
@@ -160,6 +160,8 @@ main {
 			right: 0;
 		}
 	}
+
+	img { margin: auto; }	// center images when parent-item has display: flex;
 }
 
 // ---- Bookmarks ----
