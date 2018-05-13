@@ -127,6 +127,8 @@ main {
 	ul {
 		display: grid;
 		grid-gap: $base-spacing-size;
+		grid-template-columns: repeat(auto-fit,minmax(256px, 1fr));
+		grid-template-rows: repeat(auto-fit,minmax(150px, 1fr));
 	}
 
 	a {
@@ -247,10 +249,6 @@ footer {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	main {
-		ul { grid-template-columns: repeat(2,1fr); }
-	}
-
 	#bookmarks-toggle { justify-self: end; }
 	#header-nav-toggle { justify-self: start; }
 	#header-nav {
@@ -267,16 +265,10 @@ footer {
 
 // Tablet portrait
 @include tablet-portrait {
-	main {
-		ul { grid-template-columns: repeat(4,1fr); }
-	}
 }
 
-// Tablet portrait
+// Tablet landscape
 @include tablet-landscape-up {
-	main {
-		ul { grid-template-columns: repeat(5,1fr); }
-	}
 }
 
 // Default View
