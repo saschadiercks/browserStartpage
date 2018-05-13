@@ -161,14 +161,24 @@
 				"title": "Google Design"
 			},
 			{
+				"url"  : "https://material.io/",
+				"image": "assets/thumbnails/design-material.png",
+				"title": "Material Design"
+			},
+			{
+				"url"  : "https://design.firefox.com/",
+				"image": "assets/thumbnails/design-firefox.png",
+				"title": "Firefox Design"
+			},
+			{
 				"url"  : "http://facebook.design",
 				"image": "assets/thumbnails/design-facebook.png",
 				"title": "Facebook Design"
 			},
 			{
-				"url"  : "https://airbnb.design",
-				"image": "assets/thumbnails/design-airbnb.png",
-				"title": "airbnb Design"
+				"url"  : "https://design.trello.com/",
+				"image": "assets/thumbnails/trello.png",
+				"title": "Trello Design"
 			},
 			{
 				"url"  : "https://github.com/showcases/design-essentials",
@@ -181,14 +191,20 @@
 				"title": "Uber design"
 			},
 			{
+				"url"  : "https://airbnb.design",
+				"image": "assets/thumbnails/design-airbnb.png",
+				"title": "airbnb Design"
+			},
+			{
 				"url"  : "https://atlassian.design",
 				"image": "assets/thumbnails/design-atlassian.png",
 				"title": "Atlassian Design"
 			},
+
 			{
-				"url"  : "https://www.designbetter.co",
-				"image": "assets/thumbnails/design-invision.png",
-				"title": "Design better"
+				"url"  : "https://unsplash.com/search/photos/macbook",
+				"image": "assets/thumbnails/design-unsplash.png",
+				"title": "Unsplash"
 			},
 			{
 				"url"  : "http://magicmockups.com/",
@@ -199,6 +215,11 @@
 				"url"  : "http://smartmockups.com/",
 				"image": "assets/thumbnails/smartmockups.png",
 				"title": "Smart Mockups"
+			},
+			{
+				"url"  : "https://www.designbetter.co",
+				"image": "assets/thumbnails/design-invision.png",
+				"title": "Design better"
 			}
 		],
 		"SDI" : [
