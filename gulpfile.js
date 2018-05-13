@@ -1,13 +1,24 @@
 // Dependencies
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var uglify = require('gulp-uglify');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+const uglify = require('gulp-uglify');
+const imagemin = require('gulp-imagemin');
 
 
 
 // Place Code for tasks here
+// ---- images ---
+gulp.task('imagemin', function () {
+	return gulp.src('./htdocs/assets/thumbnails/*.{jpg,png}')
+		.pipe(imagemin([
+			imagemin.jpegtran({progressive: true}),
+    		imagemin.optipng({optimizationLevel: 5}),
+		]))
+		.pipe(gulp.dest('./htdocs/assets/thumbnails/'));
+});
+
 // ---- SCSS  ----
 
 	// dev
@@ -61,4 +72,6 @@ var uglify = require('gulp-uglify');
 		.pipe(gulp.dest('./htdocs/assets/js'));
 	});
 
-gulp.task('build', ['build:css', 'build:js']);
+
+// --- build ----
+gulp.task('build', ['build:css', 'build:js', 'imagemin']);
