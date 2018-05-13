@@ -19,7 +19,7 @@ var uglify = require('gulp-uglify');
 			browsers: ['last 2 versions','>5%'],
 			cascade: false
 		}))
-		.pipe(sourcemaps.write())
+		.pipe(sourcemaps.write({includeContent: true, sourceRoot: '.'}))		// use inline sourcemaps to avoid the need of deleting them - when using the build parameter
 		.pipe(gulp.dest('./htdocs/assets/css'));
 	});
 
@@ -46,7 +46,7 @@ var uglify = require('gulp-uglify');
 		return gulp.src('./src/js/*.js')
 		.pipe(sourcemaps.init())
 		.pipe(uglify())
-		.pipe(sourcemaps.write('.'))
+		.pipe(sourcemaps.write({includeContent: true, sourceRoot: '.'}))		// use inline sourcemaps to avoid the need of deleting them - when using the build parameter
 		.pipe(gulp.dest('./htdocs/assets/js'));
 	});
 
