@@ -130,6 +130,11 @@ main {
 		grid-template-columns: repeat(auto-fit,minmax(256px, 1fr));
 	}
 
+	li {
+		display: flex;
+		height: 156px;
+	}
+
 	a {
 		background-color: $main-link-background-color;
 		background-image: $main-link-background-image;
