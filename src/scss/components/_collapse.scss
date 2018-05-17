@@ -2,7 +2,7 @@
 .collapse {
 	display: block;
 	&.js-closed {
-		.collapse-icon { transform: rotate(45deg); }
+		.collapse-icon { transform: rotate(-45deg); }
 		.collapse-main { max-height: 0; }
 	}
 }
