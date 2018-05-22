@@ -102,14 +102,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Tab-Handling-Function
 	// initially set Element-count of tabs and tabbedContent and check consistency
-	var tabTrigger = document.getElementsByClassName("tab-trigger");
+	var tabTrigger = document.getElementsByClassName("js-tab-trigger");
 	var tabbedContent = document.getElementsByClassName("tabbed-content");
 	if(tabTrigger.length !== tabbedContent.length) {
 		console.log("count of tabs and tabbed-contend isn't consistent");
 	}
 	// -- set Current-Tab and tabbed-content
 	var setCurrentTab = function(newTabId) {
-		markTabTrigger = document.getElementsByClassName("tab-trigger")[newTabId].classList.add("active");
+		markTabTrigger = document.getElementsByClassName("js-tab-trigger")[newTabId].classList.add("active");
 		unhideSelectedContent = document.getElementsByClassName("tabbed-content")[newTabId].classList.add("active");
 		if(updateLocalStorageOnTabSwitch === false) {
 			console.log("localStorage not updated");

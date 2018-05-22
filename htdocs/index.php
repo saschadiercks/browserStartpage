@@ -71,10 +71,10 @@
 
 		<?php if(count($header) > 0) { ?>
 			<nav id="header-nav" class="collapse tabs">
-				<ul class="collapse-main">
+				<ul class="collapse-main tablist">
 					<?php foreach($header as $key): ?>
-						<li class="tab">
-							<a href="#tab-<?= $counterStartvalue ?>" class="tab-trigger" data-target="tab-<?= $counterStartvalue++ ?>"><?= $key ?></a>
+						<li class="tablist__item<?php if(count($header) == $counterStartvalue) { echo " tablist__item--last-child"; } ?>">
+							<a href="#tab-<?= $counterStartvalue ?>" class="js-tab-trigger" data-target="tab-<?= $counterStartvalue++ ?>"><?= $key ?></a>
 						</li>
 					<?php endforeach; ?>
 				</ul>
@@ -86,7 +86,7 @@
 	<main id="content">
 		<?php foreach($content as $key): ?>
 			<div id="tab-<?= $counterStartvalue++ ?>" class="tabbed-content">
-				<ul>
+				<ul class="tabs">
 					<?php foreach($key as $contentItem): ?>
 						<li>
 							<a href="<?= $contentItem['url'] ?>" rel="noopener">
@@ -112,9 +112,9 @@
 							<h3 class="collapse-title"><button class="js-collapse-toggle" data-target="collapse-<?= strtolower($key) ?>"><span class="collapse-icon">&times;</span> <?= $key ?></button></h3>
 						</div>
 						<div class="collapse-main">
-							<ul>
+							<ul class="content-list">
 								<?php foreach($contentItems as $contentItem): ?>
-									<li><a href="<?= $contentItem['url'] ?>"><?= $contentItem['title'] ?></a></li>
+									<li class="content-list__item"><a href="<?= $contentItem['url'] ?>"><?= $contentItem['title'] ?></a></li>
 								<?php endforeach; ?>
 							</ul>
 						</div>
