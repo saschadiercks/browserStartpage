@@ -1,0 +1,2 @@
+// Hide Tabs if JS is available, otherwise show all content
+.js .tabbed-content:not(.active) { display: none; }

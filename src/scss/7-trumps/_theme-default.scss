@@ -5,18 +5,7 @@ body {
 }
 
 // ---- Elements ----
-button {
-	background-color: $button-background-color;
-	border-width: 0;
-	font-size: inherit;
-}
-.close { font-weight: 600; }
-
-.collapse {
-	border-top: $collapse-border;
-	//&:last-child { border-bottom: $collapse-border}
-}
-.collapse-main ul { padding-bottom: $base-spacing-size *.75; }
+.collapse {	border-top: $collapse-border; }
 
 .overlay {
 	height: 100vh;
@@ -73,54 +62,49 @@ nav {
 }
 
 // ---- Content ----
-main {
-	margin: $base-spacing-size;
-
-	ul {
-		display: grid;
-		grid-gap: $base-spacing-size;
-		grid-template-columns: repeat(auto-fit,minmax(256px, 1fr));
-	}
+.list-tiles {
+	display: grid;
+	grid-gap: $base-spacing-size;
+	grid-template-columns: repeat(auto-fit,minmax(256px, 1fr));
 
 	li {
 		display: flex;
 		height: 156px;
 	}
-
-	a {
-		background-color: $main-link-background-color;
-		background-image: $main-link-background-image;
-		background-clip: padding-box;
-		border: 1px solid $main-link-border-color;
-		border-radius: 2px;
-		display: flex;
-		font-size: .75rem;
-		position: relative;
-		text-align: center;
-		text-decoration: none;
-		width: 100%;
-
-		&:hover {
-			border-color: $main-link-active-border-color;
-			background-image: $main-link-background-image-hover;
-			z-index: 1;
-		}
-
-		// Description
-		span {
-			background-color: $main-link-description-bg;
-			bottom: 0;
-			color: $main-link-description-color;
-			left: 0;
-			display: block;
-			padding: $base-spacing-size/2;
-			position: absolute;
-			right: 0;
-		}
-	}
-
-	img { margin: auto; }	// center images when parent-item has display: flex;
 }
+
+.tile {
+	background-color: $main-link-background-color;
+	background-image: $main-link-background-image;
+	background-clip: padding-box;
+	border: 1px solid $main-link-border-color;
+	border-radius: 2px;
+	display: flex;
+	font-size: .75rem;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+
+	&:hover {
+		border-color: $main-link-active-border-color;
+		background-image: $main-link-background-image-hover;
+		z-index: 1;
+	}
+}
+
+.tile-title {
+	background-color: $main-link-description-bg;
+	bottom: 0;
+	color: $main-link-description-color;
+	left: 0;
+	display: block;
+	padding: $base-spacing-size/2;
+	position: absolute;
+	right: 0;
+}
+
+.tile-image { margin: auto; }	// center images when parent-item has display: flex;
 
 // ---- Bookmarks ----
 #bookmarks {
@@ -144,7 +128,7 @@ main {
 }
 
 // ---- Notification ----
-#notification {
+.notification {
 	background-color: $notification-background-color;
 	box-shadow: $box-shadow-default;
 	color: $notification-color;
@@ -153,20 +137,10 @@ main {
 	position: fixed;
 	bottom: $base-spacing-size*3;
 	z-index: 99;
-
-	// Animation
-	display: block;	// overwrite hidden-class
-	transition: all .2s;
-	&.js-hidden { transform: translateX(100%); }
-	&.js-visible {
-		right: $base-spacing-size;
-		transform: translateX(0%);
-	}
 }
 
 // ---- Footer ----
 footer {
-	@include clearfix;
 	background-color: $footer-bg;
 	color: $footer-color;
 	font-size: .75rem;
@@ -177,8 +151,6 @@ footer {
 
 	&.js-sticky { bottom: 0; }
 
-	ul { @include ul-reset; }
-	li { display: inline-block; }
 	a {
 		color: inherit;
 		display: inline-block;
@@ -186,7 +158,7 @@ footer {
 		padding-bottom: $base-spacing-size-px;
 	}
 
-	div:first-of-type { float: left; }
+	.description { float: left; }
 	.social-profiles { float: right; }
 }
 
@@ -251,14 +223,12 @@ footer {
 		padding-bottom: $base-spacing-size*.75;
 	}
 
-	main {
-		.title {
-			opacity: 0;
-			transition: opacity $base-animation-speed;
-		}
-		a:hover {
-			.title { opacity: 1; }
-		}
+	.tile-title {
+		opacity: 0;
+		transition: opacity $base-animation-speed;
+	}
+	.tile:hover {
+		.tile-title { opacity: 1; }
 	}
 
 	button[data-target*="nav"] { display: none; }

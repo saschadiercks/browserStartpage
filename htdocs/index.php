@@ -86,12 +86,12 @@
 	<main id="content">
 		<?php foreach($content as $key): ?>
 			<div id="tab-<?= $counterStartvalue++ ?>" class="tabbed-content">
-				<ul class="tabs">
+				<ul class="list-tiles">
 					<?php foreach($key as $contentItem): ?>
 						<li>
-							<a href="<?= $contentItem['url'] ?>" rel="noopener">
-								<img src="<?= $contentItem['image'] ?>" alt="<?= $contentItem['title'] ?>"/>
-								<span class="title"><?= $contentItem['title'] ?></span>
+							<a href="<?= $contentItem['url'] ?>" rel="noopener" class="tile">
+								<img src="<?= $contentItem['image'] ?>" alt="<?= $contentItem['title'] ?>" class="tile-image"/>
+								<span class="tile-title"><?= $contentItem['title'] ?></span>
 							</a>
 						</li>
 					<?php endforeach; ?>
@@ -112,9 +112,9 @@
 							<h3 class="collapse-title"><button class="js-collapse-toggle" data-target="collapse-<?= strtolower($key) ?>"><span class="collapse-icon">&times;</span> <?= $key ?></button></h3>
 						</div>
 						<div class="collapse-main">
-							<ul class="content-list">
+							<ul class="list-vertical">
 								<?php foreach($contentItems as $contentItem): ?>
-									<li class="content-list__item"><a href="<?= $contentItem['url'] ?>"><?= $contentItem['title'] ?></a></li>
+									<li class="list-vertical__item"><a href="<?= $contentItem['url'] ?>"><?= $contentItem['title'] ?></a></li>
 								<?php endforeach; ?>
 							</ul>
 						</div>
@@ -130,7 +130,7 @@
 		<div class="description"><a href="https://github.com/saschadiercks/browserStartpage">Fork me on Github</a></div>
 		<?php if(count($footer) > 0) { ?>
 			<div class="social-profiles">
-				<ul>
+				<ul class="list-horizontal">
 					<?php foreach($footer[links] as $contentItem): ?>
 						<li><a href="<?= $contentItem['url'] ?>"><?= $contentItem['title'] ?></a></li>
 					<?php endforeach; ?>
@@ -139,7 +139,7 @@
 		<?php } ?>
 	</footer>
 
-	<div id="notification" class="js-hidden">
+	<div id="notification" class="notification js-hidden">
 		press [alt] to open a tab and prevent remembering it
 	</div>
 </body>

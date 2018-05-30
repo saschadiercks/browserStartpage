@@ -1,0 +1,14 @@
+.tile {
+	display: block;
+	position: relative;		// allow postioning of child-elements
+}
+
+// prevent whitespace on images
+.tile-image { display: inline-block; }
+
+// Clip text of Description if nessecary
+.tile-title {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

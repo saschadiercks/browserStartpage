@@ -1,0 +1,6 @@
+/*
+	The class js-hidden is used to hide the notification
+	this class uses display:none. To be able to animate the notification via css,
+	we need to overwrite that class
+*/
+#notification { display: block !important; }
