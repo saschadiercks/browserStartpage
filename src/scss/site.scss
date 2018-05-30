@@ -1,21 +1,20 @@
-// Mixins
-@import 'mixins/_clearfix';
-@import 'mixins/_responsive';
-@import 'mixins/_ul-reset';
-@import 'mixins/_align-vertical';
-@import 'mixins/_align-centered';
+@import '1-settings/globals';
 
-// Defaults
-@import 'framework/_reset';
-@import 'framework/_header';
-@import 'framework/_content';
-@import 'framework/_footer';
-@import 'framework/_navigation';
+@import '2-tools/clearfix';
+@import '2-tools/responsive';
+@import '2-tools/ul-reset';
+@import '2-tools/align-vertical';
+@import '2-tools/align-centered';
 
-// Components
-@import 'components/_collapse';
-@import 'components/_js-utilities';
-@import 'components/_overlay';
+@import '3-generic/reset';
 
-// Themes
-@import 'themes/_default';
+@import '4-elements/header';
+@import '4-elements/content';
+@import '4-elements/footer';
+@import '4-elements/navigation';
+
+@import '6-components/collapse';
+@import '6-components/overlay';
+
+@import '7-trumps/js-utilities';
+@import '7-trumps/theme-default';

@@ -9,7 +9,7 @@
 	$projectDirection = 'ltr';					// Reading direction ltr || rtl
 
 	// Application-Settings (mobile)
-	$serveAsApplication = TRUE;					// allow running as standalone application (TRUE || FALSE)
+	$serveAsApplication = FALSE;					// allow running as standalone application (TRUE || FALSE)
 	$applicationName = 'Startpage';
 	$applicationNameShort = $applicationName;
 
