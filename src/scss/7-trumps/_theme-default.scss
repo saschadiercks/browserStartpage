@@ -38,8 +38,6 @@ body {
 header {
 	background-color: $header-background-color;
 	box-shadow: $box-shadow-default;
-	width: 100%;
-	z-index: 2;
 
 	&.js-sticky { top: 0; }
 
@@ -216,6 +214,8 @@ footer {
 		// overwrite collapse-styles
 		.collapse-main { overflow: visible; }
 	}
+
+	#bookmarks-toggle { float: right; }
 
 	.overlay-title,
 	.collapse a {
