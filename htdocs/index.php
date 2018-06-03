@@ -89,10 +89,17 @@
 				<ul class="list-tiles">
 					<?php foreach($key as $contentItem): ?>
 						<li>
-							<a href="<?= $contentItem['url'] ?>" rel="noopener" class="tile">
-								<img src="<?= $contentItem['image'] ?>" alt="<?= $contentItem['title'] ?>" class="tile-image"/>
-								<span class="tile-title"><?= $contentItem['title'] ?></span>
-							</a>
+							<?php if(count($contentItem['modal']) > 0) { ?>
+								<a href="<?= $contentItem['url'] ?>" rel="noopener" class="tile js-modal-toggle" data-target="<?= strtolower($contentItem['title']) ?>">
+									<img src="<?= $contentItem['image'] ?>" alt="<?= $contentItem['title'] ?>" class="tile-image"/>
+									<span class="tile-title"><?= $contentItem['title'] ?></span>
+								</a>
+							<?php } else { ?>
+								<a href="<?= $contentItem['url'] ?>" rel="noopener" class="tile">
+									<img src="<?= $contentItem['image'] ?>" alt="<?= $contentItem['title'] ?>" class="tile-image"/>
+									<span class="tile-title"><?= $contentItem['title'] ?></span>
+								</a>
+							<?php } ?>
 						</li>
 					<?php endforeach; ?>
 				</ul>
@@ -100,7 +107,7 @@
 		<?php endforeach; ?>
 	</main>
 
-	<!-- bookmakrs -->
+	<!-- bookmarks -->
 	<?php if(count($bookmarks) > 0) { ?>
 		<div id="bookmarks" class="overlay js-hidden">
 			<div class="overlay-content">
@@ -127,14 +134,22 @@
 	<?php } ?>
 
 	<!-- modals -->
-	<div id="modal" class="modal js-hidden">
-		<div class="modal-content">
-			<ul class="list-vertical">
-				<li class="list-vertical__item"><a href="#" class="list-vertical__link">list-vertical__item</a></li>
-			</ul>
-		</div><!-- /.modal-content -->
-		<div class="backdrop js-modal-toggle" data-target="modal"></div>
-	</div>
+	<?php foreach($content as $key): ?>
+		<?php foreach($key as $contentItem): ?>
+			<?php if(count($contentItem['modal']) > 0) { ?>
+				<div id="<?= strtolower($contentItem['title']) ?>" class="modal js-hidden">
+					<div class="modal-content">
+						<ul class="list-vertical">
+							<?php foreach($contentItem['modal'] as $contentModalLink): ?>
+								<li class="list-vertical__item"><a href="<?= $contentModalLink['url'] ?>" class="list-vertical__link"><?= $contentModalLink['title'] ?></a></li>
+							<?php endforeach; ?>
+						</ul>
+					</div><!-- /.modal-content -->
+					<div class="backdrop js-modal-toggle" data-target="<?= strtolower($contentItem['title']) ?>"></div>
+				</div>
+			<?php } ?>
+		<?php endforeach; ?>
+	<?php endforeach; ?>
 
 	<!-- footer -->
 	<footer id="application-footer">

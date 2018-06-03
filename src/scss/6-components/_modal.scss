@@ -8,5 +8,6 @@
 
 .modal-content {
 	@include align-centered;
+	overflow-y: auto;
 	position: fixed;
 }

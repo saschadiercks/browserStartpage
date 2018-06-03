@@ -7,6 +7,41 @@
 				"image": "assets/thumbnails/forkme.png"
 			},
 			{
+				"url":   "https://github.com/saschadiercks/browserStartpage",
+				"title": "Links as modal",
+				"image": "assets/thumbnails/sdi-blog.png",
+				"modal"	: [
+					{
+						"url":   "https://www.google.de/chrome/browser/desktop/",
+						"title": "Chrome"
+					},
+					{
+						"url":   "https://www.mozilla.org/firefox",
+						"title": "Firefox"
+					},
+					{
+						"url":   "https://www.mozilla.org/de/firefox/developer/",
+						"title": "Firefox (Dev)"
+					},
+					{
+						"url":   "https://developer.apple.com/safari/technology-preview/",
+						"title": "Safari (TP)"
+					},
+					{
+						"url":   "https://vivaldi.com",
+						"title": "Vivaldi"
+					},
+					{
+						"url":   "https://blisk.io/",
+						"title": "Blisk"
+					},
+					{
+						"url":   "https://developer.microsoft.com/en-us/microsoft-edge/tools/",
+						"title": "Modern IE"
+					}
+				]
+			},
+			{
 				"url":   "https://www.google.de/chrome/browser/desktop/",
 				"title": "Chrome",
 				"image": "assets/thumbnails/chrome.png"
