@@ -12,6 +12,7 @@
 
 @import '4-elements/buttons';
 @import '4-elements/header';
+@import '4-elements/links';
 @import '4-elements/main';
 @import '4-elements/footer';
 @import '4-elements/navigation';
@@ -21,7 +22,9 @@
 @import '5-objects/list-horizontal';
 @import '5-objects/tabbed-content';
 
+@import '6-components/backdrop';
 @import '6-components/collapse';
+@import '6-components/modal';
 @import '6-components/notification';
 @import '6-components/overlay';
 @import '6-components/tile';

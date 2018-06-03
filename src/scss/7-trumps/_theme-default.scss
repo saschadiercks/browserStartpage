@@ -5,7 +5,22 @@ body {
 }
 
 // ---- Elements ----
+.backdrop {
+	background-color: $backdrop-color;
+	backdrop-filter: blur(5px);
+}
+
 .collapse {	border-top: $collapse-border; }
+
+.modal-content {
+	background-color: $modal-content-background-color;
+	box-shadow: $box-shadow-default;
+	color: $modal-content-color;
+	max-height: $modal-content-max-height;
+	height: $modal-content-height;
+	max-width: $modal-content-max-width;
+	width: $modal-content-width;
+}
 
 .overlay {
 	height: 100vh;
@@ -16,21 +31,17 @@ body {
 	box-shadow: $box-shadow-default;
 	color: $overlay-color;
 }
-.overlay-backdrop {
-	background-color: $overlay-backdrop-color;
-	backdrop-filter: blur(5px);
-}
 
 .js-hidden {
-	.overlay-content { transform: translateX(100%);	}
-	.overlay-backdrop {
+	.backdrop {
 		height: 0;
 		opacity: 0;
 	}
+	.overlay-content { transform: translateX(100%);	}
 }
 .js-visible {
+	.backdrop { opacity: 1; }
 	.overlay-content { transform: translateX(0); }
-	.overlay-backdrop { opacity: 1; }
 }
 
 
@@ -117,11 +128,8 @@ nav {
 	ul { @include ul-reset; }
 
 	a {
-		color: inherit;
 		font-size: .875rem;	/* 14px / 16px */
 		padding: 2px 0;
-		text-decoration: none;
-		&:hover { text-decoration: underline; }
 	}
 }
 
@@ -166,6 +174,7 @@ footer {
 	button { padding: $base-spacing-size $base-spacing-size*2; }
 
 	header,
+	.modal-content,
 	.overlay-content { padding: $base-spacing-size*2 $base-spacing-size*1.5; }
 
 	header a { padding: $base-spacing-size $base-spacing-size*2; }
@@ -206,6 +215,7 @@ footer {
 	button { padding: $base-spacing-size*.75 $base-spacing-size; }
 
 	header,
+	.modal-content,
 	.overlay-content { padding: $base-spacing-size*.75 $base-spacing-size; }
 
 	header{

@@ -30,9 +30,17 @@ $main-link-description-color: $header-link-color !default;
 $main-link-active-description-bg: $header-link-active-bg !default;
 $main-link-active-description-color: $header-link-active-color !default;
 
+$backdrop-color: rgba($body-background-color, .7) !default;
+
+$modal-content-background-color: $body-background-color !default;
+$modal-content-color: $body-color !default;
+$modal-content-max-height: 300px;
+$modal-content-height: 100%;
+$modal-content-max-width: 500px;
+$modal-content-width: 100%;
+
 $overlay-background-color: $body-background-color !default;
 $overlay-color: $body-color !default;
-$overlay-backdrop-color: rgba($body-background-color, .7) !default;
 
 $notification-background-color: $body-background-color !default;
 $notification-color: $body-color !default;

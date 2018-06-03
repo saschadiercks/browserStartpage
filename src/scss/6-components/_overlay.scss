@@ -20,11 +20,3 @@
 	transition: all .4s ease;
 	width: 100%;
 }
-
-.overlay-backdrop {
-	height: 100vh;
-	position: absolute;
-	transition: opacity .4s ease;
-	width: 100vw;
-	z-index: -1;
-}

@@ -100,6 +100,7 @@
 		<?php endforeach; ?>
 	</main>
 
+	<!-- bookmakrs -->
 	<?php if(count($bookmarks) > 0) { ?>
 		<div id="bookmarks" class="overlay js-hidden">
 			<div class="overlay-content">
@@ -114,16 +115,26 @@
 						<div class="collapse-main">
 							<ul class="list-vertical">
 								<?php foreach($contentItems as $contentItem): ?>
-									<li class="list-vertical__item"><a href="<?= $contentItem['url'] ?>"><?= $contentItem['title'] ?></a></li>
+									<li class="list-vertical__item"><a href="<?= $contentItem['url'] ?>" class="list-vertical__link"><?= $contentItem['title'] ?></a></li>
 								<?php endforeach; ?>
 							</ul>
 						</div>
 					</div>
 				<?php endforeach; ?>
 			</div><!-- /.overlay -->
-			<div class="overlay-backdrop js-overlay-toggle" data-target="bookmarks"></div>
+			<div class="backdrop js-overlay-toggle" data-target="bookmarks"></div>
 		</div>
 	<?php } ?>
+
+	<!-- modals -->
+	<div id="modal" class="modal js-hidden">
+		<div class="modal-content">
+			<ul class="list-vertical">
+				<li class="list-vertical__item"><a href="#" class="list-vertical__link">list-vertical__item</a></li>
+			</ul>
+		</div><!-- /.modal-content -->
+		<div class="backdrop js-modal-toggle" data-target="modal"></div>
+	</div>
 
 	<!-- footer -->
 	<footer id="application-footer">

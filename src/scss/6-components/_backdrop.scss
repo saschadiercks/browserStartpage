@@ -1,0 +1,9 @@
+// ---- backdrop ----
+.backdrop {
+	height: 100vh;
+	position: absolute;
+	transition: opacity .4s ease;
+	top: 0;
+	width: 100vw;
+	z-index: -1;
+}
