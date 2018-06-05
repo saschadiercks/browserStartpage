@@ -14,7 +14,7 @@ body {
 
 .modal-content {
 	background-color: $modal-content-background-color;
-	box-shadow: $box-shadow-default;
+	box-shadow: $box-shadow-heavy;
 	color: $modal-content-color;
 	max-height: $modal-content-max-height;
 	height: $modal-content-height;
@@ -28,7 +28,7 @@ body {
 }
 .overlay-content {
 	background-color: $overlay-background-color;
-	box-shadow: $box-shadow-default;
+	box-shadow: $box-shadow-heavy;
 	color: $overlay-color;
 }
 
@@ -37,10 +37,12 @@ body {
 		height: 0;
 		opacity: 0;
 	}
+	.modal-content { display: none; }
 	.overlay-content { transform: translateX(100%);	}
 }
 .js-visible {
 	.backdrop { opacity: 1; }
+	.modal-content { display: block; }
 	.overlay-content { transform: translateX(0); }
 }
 
@@ -136,7 +138,7 @@ nav {
 // ---- Notification ----
 .notification {
 	background-color: $notification-background-color;
-	box-shadow: $box-shadow-default;
+	box-shadow: $box-shadow-heavy;
 	color: $notification-color;
 	padding: $base-spacing-size;
 	right: 0;
