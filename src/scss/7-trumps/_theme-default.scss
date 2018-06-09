@@ -15,7 +15,7 @@ body {
 .modal-overlay {
 	background-color: $modal-content-background-color;
 	color: $modal-content-color;
-	padding: $base-spacing-size / 2;
+	padding: $base-spacing-size-px;
 	box-shadow: $box-shadow-heavy;
 	max-height: $modal-content-max-height;
 	height: $modal-content-height;
@@ -26,8 +26,8 @@ body {
 .modal-header {
 	background-color: $modal-header-background-color;
 	color: $modal-header-color;
-	padding: $base-spacing-size $base-spacing-size/2;
-	margin-bottom: $base-spacing-size / 2;
+	padding: $base-spacing-size-px;
+	margin-bottom: $base-spacing-size-px;
 }
 
 .overlay {

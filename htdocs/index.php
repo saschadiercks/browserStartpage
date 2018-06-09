@@ -144,7 +144,10 @@
 			<?php if(count($contentItem['modal']) > 0) { ?>
 				<div id="<?= generateId($contentItem['title']) ?>" class="modal js-hidden">
 					<div class="modal-overlay">
-						<div class="modal-header"><?= $contentItem['title'] ?></div>
+						<div class="modal-header">
+							<?= $contentItem['title'] ?>
+							<button class="modal-header__close js-modal-toggle" data-target="<?= generateId($contentItem['title']) ?>">&times;</button>
+						</div>
 						<div class="modal-content">
 							<ul class="modal-list">
 								<?php foreach($contentItem['modal'] as $contentModalLink): ?>
