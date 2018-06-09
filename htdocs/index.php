@@ -4,6 +4,11 @@
 	// Setup
 	$projectConfigUrl ='config/config.php';
 	require_once($projectConfigUrl);
+
+	function generateId($value) {
+		$result = strtolower(str_replace(' ', '', $value));
+		return $result;
+	}
 ?>
 
 <!DOCTYPE html>
@@ -90,7 +95,7 @@
 					<?php foreach($key as $contentItem): ?>
 						<li>
 							<?php if(count($contentItem['modal']) > 0) { ?>
-								<a href="<?= $contentItem['url'] ?>" rel="noopener" class="tile js-modal-toggle" data-target="<?= strtolower($contentItem['title']) ?>">
+								<a href="<?= $contentItem['url'] ?>" rel="noopener" class="tile js-modal-toggle" data-target="<?= generateId($contentItem['title']) ?>">
 									<img src="<?= $contentItem['image'] ?>" alt="<?= $contentItem['title'] ?>" class="tile-image"/>
 									<span class="tile-title"><?= $contentItem['title'] ?></span>
 								</a>
@@ -137,7 +142,7 @@
 	<?php foreach($content as $key): ?>
 		<?php foreach($key as $contentItem): ?>
 			<?php if(count($contentItem['modal']) > 0) { ?>
-				<div id="<?= strtolower($contentItem['title']) ?>" class="modal js-hidden">
+				<div id="<?= generateId($contentItem['title']) ?>" class="modal js-hidden">
 					<div class="modal-content">
 						<ul class="modal-list">
 							<?php foreach($contentItem['modal'] as $contentModalLink): ?>
@@ -145,7 +150,7 @@
 							<?php endforeach; ?>
 						</ul>
 					</div><!-- /.modal-content -->
-					<div class="backdrop js-modal-toggle" data-target="<?= strtolower($contentItem['title']) ?>"></div>
+					<div class="backdrop js-modal-toggle" data-target="<?= generateId($contentItem['title']) ?>"></div>
 				</div>
 			<?php } ?>
 		<?php endforeach; ?>
