@@ -7,7 +7,6 @@
 }
 
 .modal-content {
-	@include align-centered;
+	@include align-centered--fixed;
 	overflow-y: auto;
-	position: fixed;
 }
