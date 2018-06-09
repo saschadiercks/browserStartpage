@@ -6,7 +6,7 @@
 	require_once($projectConfigUrl);
 
 	function generateId($value) {
-		$result = strtolower(str_replace(' ', '', $value));
+		$result = strtolower(htmlentities(str_replace(' ', '', $value)));
 		return $result;
 	}
 ?>
