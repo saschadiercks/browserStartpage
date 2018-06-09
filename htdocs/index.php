@@ -139,9 +139,9 @@
 			<?php if(count($contentItem['modal']) > 0) { ?>
 				<div id="<?= strtolower($contentItem['title']) ?>" class="modal js-hidden">
 					<div class="modal-content">
-						<ul class="list-vertical">
+						<ul class="modal-list">
 							<?php foreach($contentItem['modal'] as $contentModalLink): ?>
-								<li class="list-vertical__item"><a href="<?= $contentModalLink['url'] ?>" class="list-vertical__link"><?= $contentModalLink['title'] ?></a></li>
+								<li class="modal-list__item"><a href="<?= $contentModalLink['url'] ?>" class="modal-list__link"><?= $contentModalLink['title'] ?></a></li>
 							<?php endforeach; ?>
 						</ul>
 					</div><!-- /.modal-content -->
