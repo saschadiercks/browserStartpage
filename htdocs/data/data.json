@@ -119,7 +119,7 @@
 				"image": "assets/thumbnails/pagespeed.png"
 			},
 			{
-				"url":   "https://search.google.com/search-console/mobile-friendly",
+				"url":   "https://search.google.com/test/mobile-friendly",
 				"title": "Google Mobiltest",
 				"image": "assets/thumbnails/mobile-friendly.png"
 			},
