@@ -7,9 +7,17 @@
 }
 
 .modal-overlay {
-	@include align-centered--fixed;
+	@include align-centered(fixed);
 }
 
 
-.modal-header { font-weight: 600; }
+.modal-header {
+	font-weight: 600;
+	position: relative;
+}
 .modal-content { overflow-y: auto; }
+
+.modal-header__close {
+	@include align-vertical;
+	right: 0;
+}

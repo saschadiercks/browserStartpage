@@ -1,5 +1,9 @@
-@mixin align-centered {
-	position: absolute;
+@mixin align-centered($position: absolute) {
+	@if $position == "absolute" {
+		position: absolute;
+	} @else {
+		position: $position;
+	}
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%,-50%);
