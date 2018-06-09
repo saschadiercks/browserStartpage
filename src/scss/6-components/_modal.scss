@@ -6,7 +6,10 @@
 	z-index: 2;
 }
 
-.modal-content {
+.modal-overlay {
 	@include align-centered--fixed;
-	overflow-y: auto;
 }
+
+
+.modal-header { font-weight: 600; }
+.modal-content { overflow-y: auto; }

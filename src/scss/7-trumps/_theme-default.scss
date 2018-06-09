@@ -12,14 +12,22 @@ body {
 
 .collapse {	border-top: $collapse-border; }
 
-.modal-content {
+.modal-overlay {
 	background-color: $modal-content-background-color;
-	box-shadow: $box-shadow-heavy;
 	color: $modal-content-color;
+	padding: $base-spacing-size / 2;
+	box-shadow: $box-shadow-heavy;
 	max-height: $modal-content-max-height;
 	height: $modal-content-height;
 	max-width: $modal-content-max-width;
 	width: $modal-content-width;
+}
+
+.modal-header {
+	background-color: $modal-header-background-color;
+	color: $modal-header-color;
+	padding: $base-spacing-size $base-spacing-size/2;
+	margin-bottom: $base-spacing-size / 2;
 }
 
 .overlay {
@@ -37,7 +45,7 @@ body {
 		height: 0;
 		opacity: 0;
 	}
-	.modal-content { display: none; }
+	.modal-overlay { display: none; }
 	.overlay-content { transform: translateX(100%);	}
 }
 .js-visible {
@@ -176,7 +184,6 @@ footer {
 	button { padding: $base-spacing-size $base-spacing-size*2; }
 
 	header,
-	.modal-content,
 	.overlay-content { padding: $base-spacing-size*2 $base-spacing-size*1.5; }
 
 	header a { padding: $base-spacing-size $base-spacing-size*2; }
@@ -217,7 +224,6 @@ footer {
 	button { padding: $base-spacing-size*.75 $base-spacing-size; }
 
 	header,
-	.modal-content,
 	.overlay-content { padding: $base-spacing-size*.75 $base-spacing-size; }
 
 	header{

@@ -143,13 +143,16 @@
 		<?php foreach($key as $contentItem): ?>
 			<?php if(count($contentItem['modal']) > 0) { ?>
 				<div id="<?= generateId($contentItem['title']) ?>" class="modal js-hidden">
-					<div class="modal-content">
-						<ul class="modal-list">
-							<?php foreach($contentItem['modal'] as $contentModalLink): ?>
-								<li class="modal-list__item"><a href="<?= $contentModalLink['url'] ?>" class="modal-list__link"><?= $contentModalLink['title'] ?></a></li>
-							<?php endforeach; ?>
-						</ul>
-					</div><!-- /.modal-content -->
+					<div class="modal-overlay">
+						<div class="modal-header"><?= $contentItem['title'] ?></div>
+						<div class="modal-content">
+							<ul class="modal-list">
+								<?php foreach($contentItem['modal'] as $contentModalLink): ?>
+									<li class="modal-list__item"><a href="<?= $contentModalLink['url'] ?>" class="modal-list__link"><?= $contentModalLink['title'] ?></a></li>
+								<?php endforeach; ?>
+							</ul>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-overlay -->
 					<div class="backdrop js-modal-toggle" data-target="<?= generateId($contentItem['title']) ?>"></div>
 				</div>
 			<?php } ?>
