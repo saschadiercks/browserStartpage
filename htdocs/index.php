@@ -71,7 +71,7 @@
 		<?php } ?>
 
 		<?php if(count($bookmarks) > 0) { ?>
-			<button id="bookmarks-toggle" class="js-overlay-toggle" data-target="bookmarks">&#10070;</button>
+			<button id="bookmarks-toggle" class="js-overlay-toggle" data-target="bookmarks">&#9733;</button>
 		<?php } ?>
 
 		<?php if(count($header) > 0) { ?>
