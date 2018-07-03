@@ -67,12 +67,15 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function toggleOverlay(elementId,event) {
 		var targetElement = document.getElementById(elementId);
+		var effectClassApplyTo = document.getElementsByTagName("body")[0];
 		if(targetElement.classList.contains('js-visible')) {
 			targetElement.classList.add('js-hidden');
 			targetElement.classList.remove('js-visible');
+			toggleClass(effectClassApplyTo,'js-fx','remove');
 		} else {
 			targetElement.classList.remove('js-hidden');
 			targetElement.classList.add('js-visible');
+			toggleClass(effectClassApplyTo,'js-fx','add');
 		}
 		fixElement("content");
 		event.preventDefault();
@@ -170,6 +173,14 @@ document.addEventListener('DOMContentLoaded', function() {
 		console.log(scrollYMem);
 	}
 
+	// ---- apply class if overlay is shown
+	function toggleClass(element,className,toggleState) {
+		if(toggleState == 'add') {
+			element.classList.add(className);
+		} else {
+			element.classList.remove(className);
+		}
+	}
 
 	// ---- initialize ----
 		// set Js on body if JS is available
