@@ -33,8 +33,11 @@ $main-link-active-description-color: $header-link-active-color !default;
 
 $backdrop-color: rgba($body-background-color, .7) !default;
 
-$modal-header-background-color:$main-link-background-color !default;
+$modal-border: none !default;
+$modal-border-radius: 4px !default;
+$modal-header-background-color: transparent !default;
 $modal-header-color: $body-color !default;
+$modal-header-border: 2px solid $header-link-active-bg;
 $modal-content-background-color: $body-background-color !default;
 $modal-content-color: $body-color !default;
 $modal-content-max-height: 300px !default;

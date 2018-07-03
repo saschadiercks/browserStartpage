@@ -14,8 +14,8 @@ body {
 
 .modal-overlay {
 	background-color: $modal-content-background-color;
+	border-radius: $modal-border-radius;
 	color: $modal-content-color;
-	padding: $base-spacing-size-px;
 	box-shadow: $box-shadow-heavy;
 	max-height: $modal-content-max-height;
 	height: $modal-content-height;
@@ -25,10 +25,13 @@ body {
 
 .modal-header {
 	background-color: $modal-header-background-color;
+	border-bottom: $modal-header-border;
 	color: $modal-header-color;
-	padding: $base-spacing-size-px;
+	padding: $base-spacing-size-px * 2;
 	margin-bottom: $base-spacing-size-px;
 }
+
+.modal-content { padding: $base-spacing-size-px; }
 
 .overlay {
 	height: 100vh;
