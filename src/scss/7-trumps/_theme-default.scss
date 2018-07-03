@@ -178,6 +178,14 @@ footer {
 	.social-profiles { float: right; }
 }
 
+// ---- fx when overlays are visible ----
+.js-fx {
+	header,
+	main,
+	footer { filter: blur(4px); }
+}
+
+
 // ---- Responsive ----
 // Mobile view
 @include phone-only {
