@@ -7,7 +7,7 @@
 }
 
 .modal-overlay {
-	@include align-centered(fixed);
+	@include align-centered(fixed,0);
 }
 
 

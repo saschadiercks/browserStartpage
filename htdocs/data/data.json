@@ -9,7 +9,7 @@
 			{
 				"url":   "https://github.com/saschadiercks/browserStartpage",
 				"title": "Links as modal",
-				"image": "assets/thumbnails/sdi-blog.png",
+				"image": "assets/thumbnails/modal.png",
 				"modal"	: [
 					{
 						"url":   "https://www.google.de/chrome/browser/desktop/",

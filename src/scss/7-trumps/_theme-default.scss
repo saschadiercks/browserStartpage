@@ -8,6 +8,7 @@ body {
 .collapse {	border-top: $collapse-border; }
 
 .modal-overlay {
+	@include align-centered($scale:0,$position:fixed);
 	background-color: $modal-content-background-color;
 	border-radius: $modal-border-radius;
 	color: $modal-content-color;
@@ -16,6 +17,11 @@ body {
 	height: $modal-content-height;
 	max-width: $modal-content-max-width;
 	width: $modal-content-width;
+	transition: all $base-animation-speed ease-in-out;
+}
+
+.js-visible .modal-overlay {
+	@include align-centered($scale:1,$position:fixed);
 }
 
 .modal-header {
@@ -43,12 +49,10 @@ body {
 		height: 0;
 		opacity: 0;
 	}
-	.modal-overlay { display: none; }
 	.overlay-content { transform: translateX(100%);	}
 }
 .js-visible {
 	.backdrop { opacity: 1; }
-	.modal-content { display: block; }
 	.overlay-content { transform: translateX(0); }
 }
 
@@ -182,7 +186,9 @@ footer {
 	main,
 	footer { filter: blur(4px); }
 }
-
+header,
+main,
+footer { transition: filter $base-animation-speed ease; }
 
 // ---- Responsive ----
 // Mobile view
