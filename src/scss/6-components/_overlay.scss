@@ -17,6 +17,6 @@
 .overlay-content {
 	height: 100vh;
 	overflow-y: auto;
-	transition: all .4s ease;
+	transition: all $base-animation-speed ease;
 	width: 100%;
 }
