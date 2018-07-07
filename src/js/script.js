@@ -3,37 +3,46 @@
 // is the DOM ready for manipulation?
 document.addEventListener('DOMContentLoaded', function() {
 
+	// helper: change classes
+	function addClass(element,className) {
+		element.classList.add(className);
+	}
+	function removeClass(element,className) {
+		element.classList.remove(className);
+	}
+
+	// helper: scroll to desired position
+	function scrollToTarget(x,y) {
+		window.scrollTo(x,y);
+	}
+
+	// add JS to body-tag to allow CSS-Manipulation if JS is available
+	function setJs() {
+		var body = document.getElementsByTagName("body")[0];
+		addClass(body,'js');
+	}
+
 	// show notification on keydown and hide it on keyup
 	document.addEventListener('keydown', function() {
-		var targetElement = 'notification';
-		document.getElementById(targetElement).classList.add('js-visible');
-		document.getElementById(targetElement).classList.remove('js-hidden');
+		var targetElement = document.getElementById('notification');
+		addClass(targetElement,'js-visible');
+		removeClass(targetElement,'js-hidden');
 	});
 	document.addEventListener('keyup', function() {
-		var targetElement = 'notification';
-		document.getElementById(targetElement).classList.add('js-hidden');
-		document.getElementById(targetElement).classList.remove('js-visible');
+		var targetElement = document.getElementById('notification');
+		addClass(targetElement,'js-hidden');
+		removeClass(targetElement,'js-visible');
 	});
 
 	// per default localStorage is updated, when tabs are switched
 	updateLocalStorageOnTabSwitch = true;
-
-	// add JS to body-tag to allow CSS-Manipulation if JS is available
-	function setJs() {
-		document.getElementsByTagName("body")[0].className += "js";
-	}
-
-	// scroll to desired position
-	function scrollToTarget(x,y) {
-		window.scrollTo(x,y);
-	}
 
 	// make element sticky (via position in css)
 	function stickyElement(stickyId,compensateId,compensateProperty) {
 		var compensateElement = document.getElementById(compensateId);
 		var stickyElement = document.getElementById(stickyId);
 		var stickyHeight = stickyElement.clientHeight + 'px';
-		stickyElement.classList.add('js-sticky');
+		addClass(stickyElement,'js-sticky');
 
 		//add Element-Height as defined property to desired element
 		compensateElement.style.setProperty(compensateProperty,stickyHeight);
@@ -45,11 +54,11 @@ document.addEventListener('DOMContentLoaded', function() {
 		toggleElement.onclick = function() {
 			targetElement = document.getElementById(targetElementId);
 			if(targetElement.classList.contains('js-visible')) {
-				targetElement.classList.add('js-hidden');
-				targetElement.classList.remove('js-visible');
+				addClass(targetElement,'js-hidden');
+				removeClass(targetElement,'js-visible');
 			} else {
-				targetElement.classList.remove('js-hidden');
-				targetElement.classList.add('js-visible');
+				removeClass('js-hidden');
+				addClass('js-visible');
 			}
 			event.preventDefault();
 		}
@@ -69,13 +78,13 @@ document.addEventListener('DOMContentLoaded', function() {
 		var targetElement = document.getElementById(elementId);
 		var effectClassApplyTo = document.getElementsByTagName("body")[0];
 		if(targetElement.classList.contains('js-visible')) {
-			targetElement.classList.add('js-hidden');
-			targetElement.classList.remove('js-visible');
-			toggleClass(effectClassApplyTo,'js-fx','remove');
+			addClass(targetElement,'js-hidden');
+			removeClass(targetElement,'js-visible');
+			removeClass(effectClassApplyTo,'js-fx');
 		} else {
-			targetElement.classList.remove('js-hidden');
-			targetElement.classList.add('js-visible');
-			toggleClass(effectClassApplyTo,'js-fx','add');
+			removeClass(targetElement,'js-hidden');
+			addClass(targetElement,'js-visible');
+			addClass(effectClassApplyTo,'js-fx');
 		}
 		fixElement("content");
 		event.preventDefault();
@@ -94,11 +103,11 @@ document.addEventListener('DOMContentLoaded', function() {
 	function toggleCollapse(elementId,event) {
 		var targetElement = document.getElementById(elementId);
 		if(targetElement.classList.contains('js-opened')) {
-			targetElement.classList.add('js-closed');
-			targetElement.classList.remove('js-opened');
+			addClass(targetElement,'js-closed');
+			removeClass(targetElement,'js-opened');
 		} else {
-			targetElement.classList.remove('js-closed');
-			targetElement.classList.add('js-opened');
+			removeClass(targetElement,'js-closed');
+			addClass(targetElement,'js-opened');
 		}
 		event.preventDefault();
 	}
@@ -126,8 +135,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	// -- unset Current-Tab and tabbed-conent
 	var unsetTabs = function() {
 		for(i=0; i < tabbedContent.length; i++) {
-			tabTrigger[i].classList.remove("active");
-			tabbedContent[i].classList.remove("active");
+			removeClass(tabTrigger[i],'active');
+			removeClass(tabbedContent[i],'active');
 		}
 	}
 
@@ -162,24 +171,15 @@ document.addEventListener('DOMContentLoaded', function() {
 		scrollY = window.pageYOffset;
 
 		if(elementToFix.classList.contains('js-fixed')) {
-			elementToFix.classList.remove('js-fixed');
+			removeClass(elementToFix,'js-fixed');
 			elementToFix.style.top = '';
 			scrollToTarget(0,scrollYMem);
 		} else {
-			elementToFix.classList.add('js-fixed');
+			addClass(elementToFix,'js-fixed');
 			elementToFix.style.top = '-' + scrollY + 'px';
 			scrollYMem = scrollY;
 		}
 		console.log(scrollYMem);
-	}
-
-	// ---- apply class if overlay is shown
-	function toggleClass(element,className,toggleState) {
-		if(toggleState == 'add') {
-			element.classList.add(className);
-		} else {
-			element.classList.remove(className);
-		}
 	}
 
 	// ---- initialize ----
