@@ -3,6 +3,7 @@
 	display: block;
 	position: fixed;
 	z-index: 2;
+	&.js-hidden { height: 0; }
 }
 
 .overlay-close { float: right; }
