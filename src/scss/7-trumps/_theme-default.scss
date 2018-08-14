@@ -186,9 +186,6 @@ footer {
 	main,
 	footer { filter: blur(4px); }
 }
-header,
-main,
-footer { transition: filter $base-animation-speed ease; }
 
 // ---- Responsive ----
 // Mobile view
