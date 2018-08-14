@@ -17,7 +17,7 @@ body {
 	height: $modal-content-height;
 	max-width: $modal-content-max-width;
 	width: $modal-content-width;
-	transition: all $base-animation-speed ease-in-out;
+	transition: transform $base-animation-speed ease-in-out;
 }
 
 .js-visible .modal-overlay {
