@@ -3,7 +3,7 @@
 	background-color: $backdrop-color;
 	height: 100vh;
 	position: absolute;
-	transition: opacity $base-animation-speed ease;
+	transition: opacity 0 ease;
 	top: 0;
 	width: 100vw;
 	z-index: -1;
