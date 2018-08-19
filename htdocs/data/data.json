@@ -383,12 +383,24 @@
 		],
 		"Design Systems" : [
 			{
+				"url" : "https://www.designsystems.com/",
+				"title" : "Design Systems (by figma)"
+			},
+			{
 				"url" : "https://designsystemsrepo.com/",
 				"title" : "Design Systems Repo"
 			},
 			{
 				"url" : "https://www.lightningdesignsystem.com/",
 				"title" : "Lightning Design System"
+			},
+			{
+				"url" : "http://ux.mailchimp.com/patterns",
+				"title" : "Mailchimp UX"
+			},
+			{
+				"url" : "https://www.otto.de/pattern-library/",
+				"title" : "Otto Pattern Library"
 			},
 			{
 				"url" : "http://patternlab.io/",
@@ -401,8 +413,8 @@
 				"title" : "Patterns @codepen"
 			},
 			{
-				"url" : "http://ux.mailchimp.com/patterns",
-				"title" : "Mailchimp UX"
+				"url" : "https://inclusive-components.design/",
+				"title" : "Inclusive components"
 			},
 			{
 				"url" : "http://patterntap.com/patterntap",
