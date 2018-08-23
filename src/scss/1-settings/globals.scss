@@ -3,7 +3,7 @@ $document-font-family: -apple-system, sans-serif !default;
 $body-background-color: #fdfdfd !default;
 $body-color: #333 !default;
 $box-shadow-default: 0 2px 2px rgba(0, 0, 0, .2) !default;
-$box-shadow-heavy: 0 2px 15px rgba(0, 0, 0, .2) !default;
+$box-shadow-heavy: 0 2px 4px rgba(0, 0, 0, .2) !default;
 
 $base-spacing-size: 1vw !default;
 $base-spacing-size-px: 9px !default;
@@ -31,7 +31,8 @@ $main-link-description-color: $header-link-color !default;
 $main-link-active-description-bg: $header-link-active-bg !default;
 $main-link-active-description-color: $header-link-active-color !default;
 
-$backdrop-color: rgba($body-background-color, .7) !default;
+$backdrop-color: rgba(0,0,0,.2) !default;
+$background-blur-setting: 1px;
 
 $modal-border: none !default;
 $modal-border-radius: 4px !default;
