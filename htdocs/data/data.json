@@ -262,21 +262,25 @@
 			{
 				"url"  : "http://www.metafolio.de/",
 				"image": "assets/thumbnails/sdi-homepage.png",
+				"imageQr": "assets/qr-codes/metafolio-de.png",
 				"title": "About me"
 			},
 			{
 				"url"  : "http://www.metaideen.de/",
 				"image": "assets/thumbnails/sdi-blog.png",
+				"imageQr": "assets/qr-codes/metaideen-de.png",
 				"title": "Blog (german)"
 			},
 			{
 				"url"  : "http://www.metafolio.de/side-projects/personalnews",
 				"image": "assets/thumbnails/sdi-personalnews.png",
+				"imageQr": "assets/qr-codes/personalnews-landing.png",
 				"title": "personalNews"
 			},
 			{
 				"url"  : "http://www.metafolio.de/side-projects/startpage",
 				"image": "assets/thumbnails/sdi-startpage.png",
+				"imageQr": "assets/qr-codes/startpage-demo.png",
 				"title": "Browser Startpage (this)"
 			}
 		]
