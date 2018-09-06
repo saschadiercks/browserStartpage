@@ -87,11 +87,12 @@ nav {
 	display: grid;
 	grid-gap: $base-spacing-size;
 	grid-template-columns: repeat(auto-fit,minmax(256px, 1fr));
+}
 
-	li {
-		display: flex;
-		height: 156px;
-	}
+.tile-container {
+	display: flex;
+	height: 156px;
+	position: relative;
 }
 
 .tile {
@@ -123,6 +124,15 @@ nav {
 	padding: $base-spacing-size/2;
 	position: absolute;
 	right: 0;
+}
+
+.tile__button {
+	color: $tile-button-color;
+	left: 1px;
+	padding: $tile-button-padding;
+	position: absolute;
+	top: 1px;
+	z-index: 1;
 }
 
 .tile-image { margin: auto; }	// center images when parent-item has display: flex;

@@ -4,7 +4,8 @@
 			{
 				"url":   "https://github.com/saschadiercks/browserStartpage",
 				"title": "Fork me on github",
-				"image": "assets/thumbnails/forkme.png"
+				"image": "assets/thumbnails/forkme.png",
+				"imageQr": "assets/qr-codes/github-project.png"
 			},
 			{
 				"url":   "https://github.com/saschadiercks/browserStartpage",
