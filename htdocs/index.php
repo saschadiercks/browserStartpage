@@ -61,11 +61,6 @@
 	<style type="text/css">
 		<?php require_once($cssUrl); ?>
 	</style>
-
-	<!-- JS -->
-	<script type="text/javascript">
-		<?php require_once($jsUrl); ?>
-	</script>
 </head>
 
 <body>
@@ -175,7 +170,7 @@
 							<button class="modal-header__close js-modal-toggle" data-target="<?= generateId($contentItem['imageQr']) ?>">&times;</button>
 						</div>
 						<div class="modal-content modal-content--qr">
-							<img src="<?= $contentItem['imageQr'] ?>" />
+							<img src="<?= $contentItem['imageQr'] ?>" alt="<?= $contentItem['title'] ?>"/>
 						</div><!-- /.modal-content -->
 					</div><!-- /.modal-overlay -->
 					<div class="backdrop js-modal-toggle" data-target="<?= generateId($contentItem['imageQr']) ?>"></div>
@@ -201,5 +196,10 @@
 	<div id="notification" class="notification js-hidden">
 		press [alt] to open a tab and prevent remembering it
 	</div>
+
+	<!-- JS -->
+	<script type="text/javascript">
+		<?php require_once($jsUrl); ?>
+	</script>
 </body>
 </html>
