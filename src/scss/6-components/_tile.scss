@@ -4,7 +4,12 @@
 }
 
 // prevent whitespace on images
-.tile-image { display: inline-block; }
+.tile-image {
+	display: inline-block;
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: contain
+}
 
 // Clip text of Description if nessecary
 .tile-title {
