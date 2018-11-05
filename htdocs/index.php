@@ -16,6 +16,13 @@
 			echo '<button class="tile__button js-modal-toggle" data-target="' . generateId($contentItem['imageQr']) . '">&#9635;</button>';
 		}
 	}
+
+	// define linktarget if isset and filled otherwise use default
+	if(isset($linktarget) && !empty($linktarget)) {
+		$linktarget = $linktarget;
+	} else {
+		$linktarget = "_self";
+	}
 ?>
 
 <!DOCTYPE html>
@@ -103,7 +110,7 @@
 								</a>
 								<?php renderQrModalTrigger($contentItem); ?>
 							<?php } else { ?>
-								<a href="<?= $contentItem['url'] ?>" rel="noopener" class="tile">
+								<a href="<?= $contentItem['url'] ?>" target="<?= $linktarget ?>" rel="noopener" class="tile">
 									<img src="<?= $contentItem['image'] ?>" alt="<?= $contentItem['title'] ?>" class="tile-image"/>
 									<span class="tile-title"><?= $contentItem['title'] ?></span>
 								</a>
@@ -131,7 +138,9 @@
 						<div class="collapse-main">
 							<ul class="list-vertical">
 								<?php foreach($contentItems as $contentItem): ?>
-									<li class="list-vertical__item"><a href="<?= $contentItem['url'] ?>" class="list-vertical__link"><?= $contentItem['title'] ?></a></li>
+									<li class="list-vertical__item">
+										<a href="<?= $contentItem['url'] ?>" target="<?= $linktarget ?>" class="list-vertical__link"><?= $contentItem['title'] ?></a>
+									</li>
 								<?php endforeach; ?>
 							</ul>
 						</div>
@@ -155,7 +164,9 @@
 						<div class="modal-content">
 							<ul class="modal-list">
 								<?php foreach($contentItem['modal'] as $contentModalLink): ?>
-									<li class="modal-list__item"><a href="<?= $contentModalLink['url'] ?>" class="modal-list__link"><?= $contentModalLink['title'] ?></a></li>
+									<li class="modal-list__item">
+										<a href="<?= $contentModalLink['url'] ?>" target="<?= $linktarget ?>" class="modal-list__link"><?= $contentModalLink['title'] ?></a>
+									</li>
 								<?php endforeach; ?>
 							</ul>
 						</div><!-- /.modal-content -->
@@ -187,7 +198,7 @@
 			<div class="social-profiles">
 				<ul class="list-horizontal">
 					<?php foreach($footer[links] as $contentItem): ?>
-						<li><a href="<?= $contentItem['url'] ?>"><?= $contentItem['title'] ?></a></li>
+						<li><a href="<?= $contentItem['url'] ?>" target="<?= $linktarget ?>"><?= $contentItem['title'] ?></a></li>
 					<?php endforeach; ?>
 				</ul>
 			</div>

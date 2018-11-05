@@ -35,4 +35,5 @@
 	$content = $json['content'];				// Get content-array directly
 	$bookmarks = $json['bookmarks'];			// Get bookmarks-array
 	$footer = $json['footer'];					// Get footer-array
+	$linktarget = $json['linktarget'];			// Set linkTarget
 ?>
