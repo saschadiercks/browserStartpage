@@ -83,10 +83,28 @@ nav {
 }
 
 // ---- Content ----
-.list-tiles {
-	display: grid;
-	grid-gap: $base-spacing-size;
-	grid-template-columns: repeat(auto-fit,minmax(256px, 1fr));
+	// fallback for older browsers
+	.list-tiles {
+		align-items: stretch;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.tile-container {
+		padding: $base-spacing-size / 2;
+		width: 25%;
+	}
+	// /fallback for older browsers
+
+@supports(display:grid) {
+	.list-tiles {
+		display: grid;
+		grid-gap: $base-spacing-size;
+		grid-template-columns: repeat(auto-fit,minmax(256px, 1fr));
+	}
+	.tile-container {
+		padding: 0;
+		width:auto;
+	}
 }
 
 .tile-container {
