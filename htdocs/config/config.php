@@ -16,7 +16,7 @@
 	// Set Environemt
 	$cssUrl = 'assets/css/site.css';				// Set the url to retreive the css from
 	$jsUrl = 'assets/js/script.js';					// Set the url to retrieve the js from
-	$manifestUrl = 'application.manifest.php';		// This is the name of the manifest-file
+	//$manifestUrl = 'application.manifest.php';		// This is the name of the manifest-file
 
 	// Set php requirements
 	// none
@@ -35,4 +35,5 @@
 	$content = $json['content'];				// Get content-array directly
 	$bookmarks = $json['bookmarks'];			// Get bookmarks-array
 	$footer = $json['footer'];					// Get footer-array
+	$linktarget = $json['linktarget'];			// Set linkTarget
 ?>
