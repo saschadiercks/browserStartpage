@@ -12,7 +12,7 @@
 	}
 
 	function renderQrModalTrigger($contentItem) {
-		if(count($contentItem['imageQr']) > 0) {
+		if(isset($contentItem['imageQr']) && count($contentItem['imageQr']) > 0) {
 			echo '<button class="tile__button js-modal-toggle" data-target="' . generateId($contentItem['imageQr']) . '">&#9635;</button>';
 		}
 	}
@@ -103,7 +103,7 @@
 				<ul class="list-tiles">
 					<?php foreach($key as $contentItem): ?>
 						<li class="tile-container">
-							<?php if(count($contentItem['modal']) > 0) { ?>
+							<?php if(isset($contentItem['modal']) && count($contentItem['modal']) > 0) { ?>
 								<a href="<?= $contentItem['url'] ?>" rel="noopener" class="tile js-modal-toggle" data-target="<?= generateId($contentItem['title']) ?>">
 									<img src="<?= $contentItem['image'] ?>" alt="<?= $contentItem['title'] ?>" class="tile-image"/>
 									<span class="tile-title"><?= $contentItem['title'] ?></span>
@@ -154,7 +154,7 @@
 	<!-- modals -->
 	<?php foreach($content as $key): ?>
 		<?php foreach($key as $contentItem): ?>
-			<?php if(count($contentItem['modal']) > 0) { ?>
+			<?php if(isset($contentItem['modal']) && count($contentItem['modal']) > 0) { ?>
 				<div id="<?= generateId($contentItem['title']) ?>" class="modal js-hidden">
 					<div class="modal-overlay">
 						<div class="modal-header">
@@ -174,7 +174,7 @@
 					<div class="backdrop js-modal-toggle" data-target="<?= generateId($contentItem['title']) ?>"></div>
 				</div>
 			<?php } ?>
-			<?php if(count($contentItem['imageQr']) > 0)  { ?>
+			<?php if(isset($contentItem['imageQr']) && count($contentItem['imageQr']) > 0)  { ?>
 				<div id="<?= generateId($contentItem['imageQr']) ?>" class="modal js-hidden">
 					<div class="modal-overlay">
 						<div class="modal-header">
