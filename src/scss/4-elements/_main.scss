@@ -1,4 +1,6 @@
 main {
+	display: block; // fix for IE11
+	
 	// we need to set the width via CSS to avoid jumping, when position:fixed is added
 	left: 0;
 	right: 0;
