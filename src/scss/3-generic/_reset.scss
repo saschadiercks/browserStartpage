@@ -15,3 +15,9 @@ img {
 	height: auto;
 	max-width: 100%;
 }
+
+
+/* HTML 5 fixes */
+header,
+main,
+footer { display: block; }
