@@ -5,6 +5,13 @@ body {
 }
 
 // ---- Elements ----
+#wallpaper {
+	background-image: $wallpaper-image;
+	/*background-size: cover;*/
+	background-position: center center;
+	filter: $wallpaper-filter;
+}
+
 .collapse {	border-top: $collapse-border; }
 
 .modal-overlay {
@@ -83,10 +90,28 @@ nav {
 }
 
 // ---- Content ----
-.list-tiles {
-	display: grid;
-	grid-gap: $base-spacing-size;
-	grid-template-columns: repeat(auto-fit,minmax(256px, 1fr));
+	// fallback for older browsers
+	.list-tiles {
+		align-items: stretch;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.tile-container {
+		padding: $base-spacing-size / 2;
+		width: 25%;
+	}
+	// /fallback for older browsers
+
+@supports(display:grid) {
+	.list-tiles {
+		display: grid;
+		grid-gap: $base-spacing-size;
+		grid-template-columns: repeat(auto-fit,minmax(256px, 1fr));
+	}
+	.tile-container {
+		padding: 0;
+		width:auto;
+	}
 }
 
 .tile-container {
@@ -96,10 +121,11 @@ nav {
 }
 
 .tile {
-	background-color: $main-link-background-color;
+	/*background-color: rgba($main-link-background-color,.9);*/
 	background-image: $main-link-background-image;
 	background-clip: padding-box;
 	border: 1px solid $main-link-border-color;
+	box-shadow: $box-shadow-default;
 	border-radius: 2px;
 	display: flex;
 	font-size: .75rem;
@@ -111,7 +137,7 @@ nav {
 	&:hover {
 		border-color: $main-link-active-border-color;
 		background-image: $main-link-background-image-hover;
-		z-index: 1;
+		z-index: 2;
 	}
 }
 
@@ -132,7 +158,7 @@ nav {
 	padding: $tile-button-padding;
 	position: absolute;
 	top: 1px;
-	z-index: 1;
+	z-index: 2;
 }
 
 .tile-image { margin: auto; }	// center images when parent-item has display: flex;
@@ -175,7 +201,7 @@ footer {
 	padding-left: $base-spacing-size;
 	padding-right: $base-spacing-size;
 	width: 100%;
-	z-index: 1;
+	z-index: 2;
 
 	&.js-sticky { bottom: 0; }
 

@@ -1,8 +1,19 @@
 // ---- modal-list ----
 .modal-list {
 	@include ul-reset;
-	display: grid;
-	grid-template-columns: 50% auto;
+}
+
+.modal-list__item {
+	display: inline-block;
+	width: 49%;
+}
+
+@supports(display:grid) {
+	.modal-list {
+		display: grid;
+		grid-template-columns: 50% auto;
+	}
+	.modal-list__item { width: 100%; }
 }
 
 .modal-list__link {

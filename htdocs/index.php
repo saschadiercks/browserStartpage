@@ -63,11 +63,6 @@
 	<!-- Icons -->
 	<link rel="apple-touch-icon" href="apple-touch-icon-foto-228x228-precomposed.png" sizes="228x228" />
 	<link rel="shortcut icon" href="favicon.ico" />
-
-	<!-- CSS -->
-	<style type="text/css">
-		<?php require_once($cssUrl); ?>
-	</style>
 </head>
 
 <body>
@@ -207,6 +202,13 @@
 	<div id="notification" class="notification js-hidden">
 		press [alt] to open a tab and prevent remembering it
 	</div>
+
+	<div id="wallpaper"></div>
+
+	<!-- CSS -->
+	<style type="text/css">
+		<?php require_once($cssUrl); ?>
+	</style>
 
 	<!-- JS -->
 	<script type="text/javascript">

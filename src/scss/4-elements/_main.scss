@@ -4,4 +4,6 @@ main {
 	right: 0;
 
 	margin: $base-spacing-size;
+	position: relative;
+	z-index: 1;
 }
