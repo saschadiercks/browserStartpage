@@ -36,4 +36,5 @@
 	$bookmarks = $json['bookmarks'];			// Get bookmarks-array
 	$footer = $json['footer'];					// Get footer-array
 	$linktarget = $json['linktarget'];			// Set linkTarget
+	$wallpaper = $json['wallpaper'];			// Set Wallpaper
 ?>

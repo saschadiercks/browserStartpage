@@ -1,5 +1,6 @@
 {
 	"linktarget" : "_self",
+	"wallpaper" : "assets/wallpaper/default.png",
 	"content": {
 		"Browser" : [
 			{
