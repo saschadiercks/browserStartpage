@@ -203,7 +203,9 @@
 		press [alt] to open a tab and prevent remembering it
 	</div>
 
-	<div id="wallpaper"></div>
+	<?php if(isset($wallpaper) && !empty($wallpaper)) { ?>
+		<div id="wallpaper" style="background-image:url('<?= $wallpaper ?>')"></div>
+	<?php } ?>
 
 	<!-- CSS -->
 	<style type="text/css">
