@@ -6,16 +6,8 @@ body {
 
 // ---- Elements ----
 #wallpaper {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
 	background-image: $wallpaper-image;
-	background-size: cover;
-	background-position: center center;
 	filter: $wallpaper-filter;
-	z-index: -1;
 }
 
 .collapse {	border-top: $collapse-border; }
@@ -143,7 +135,7 @@ nav {
 	&:hover {
 		border-color: $main-link-active-border-color;
 		background-image: $main-link-background-image-hover;
-		z-index: 1;
+		z-index: 2;
 	}
 }
 
@@ -164,7 +156,7 @@ nav {
 	padding: $tile-button-padding;
 	position: absolute;
 	top: 1px;
-	z-index: 1;
+	z-index: 2;
 }
 
 .tile-image { margin: auto; }	// center images when parent-item has display: flex;
@@ -207,7 +199,7 @@ footer {
 	padding-left: $base-spacing-size;
 	padding-right: $base-spacing-size;
 	width: 100%;
-	z-index: 1;
+	z-index: 2;
 
 	&.js-sticky { bottom: 0; }
 
