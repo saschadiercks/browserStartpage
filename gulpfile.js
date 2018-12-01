@@ -11,12 +11,12 @@ const imagemin = require('gulp-imagemin');
 // Place Code for tasks here
 // ---- images ---
 gulp.task('imagemin', function () {
-	return gulp.src('./htdocs/assets/thumbnails/*.{jpg,png}')
+	return gulp.src('./htdocs/assets/**/*.{jpg,png}')
 		.pipe(imagemin([
 			imagemin.jpegtran({progressive: true}),
     		imagemin.optipng({optimizationLevel: 5}),
 		]))
-		.pipe(gulp.dest('./htdocs/assets/thumbnails/'));
+		.pipe(gulp.dest('./htdocs/assets/'));
 });
 
 // ---- SCSS  ----

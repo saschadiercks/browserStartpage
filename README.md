@@ -24,7 +24,7 @@ The browserStartpage comes with a default list of links, to show you how it work
 - uses localStorage to store last opened tab
 
 ### Planned Features
-- allow theming
+- allow theming (currently via scss)
 - allow onsite-editing so you don't have to fiddle with the json-file
 - allow static export of content to sync via Dropbox, iCloud or wathever
 
@@ -54,3 +54,6 @@ The browserStartpage comes with a default list of links, to show you how it work
 5. use `gulp compile:css` to compile the css for dev (including sourcemaps)
 6. use `gulp compile:js` to compile the Javascript for dev (including sourcemaps)
 7. use `gulp build` to compile the css and minify Javascript for production (without sourcemaps)
+
+## Sources
+Wallpaper: Photo by [Yang Shuo](https://unsplash.com/photos/K-grIkdM91M) on [Unsplash](https://unsplash.com/collections/331219/clean-and-minimal)
