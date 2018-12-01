@@ -219,7 +219,8 @@ footer {
 .js-fx {
 	header,
 	main,
-	footer { filter: blur($background-blur-setting); }
+	footer,
+	#wallpaper { filter: blur($background-blur-setting); }
 }
 
 // ---- Responsive ----
