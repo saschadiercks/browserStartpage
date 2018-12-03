@@ -60,6 +60,11 @@
 		<link rel="manifest" href="manifest.json" />
 	<?php } ?>
 
+	<!-- CSS -->
+	<style type="text/css">
+		<?php require_once($cssUrl); ?>
+	</style>
+
 	<!-- Icons -->
 	<link rel="apple-touch-icon" href="apple-touch-icon-foto-228x228-precomposed.png" sizes="228x228" />
 	<link rel="shortcut icon" href="favicon.ico" />
@@ -206,11 +211,6 @@
 	<?php if(isset($wallpaper) && !empty($wallpaper)) { ?>
 		<div id="wallpaper" style="background-image:url('<?= $wallpaper ?>')"></div>
 	<?php } ?>
-
-	<!-- CSS -->
-	<style type="text/css">
-		<?php require_once($cssUrl); ?>
-	</style>
 
 	<!-- JS -->
 	<script type="text/javascript">
