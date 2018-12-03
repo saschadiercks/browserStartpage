@@ -196,7 +196,7 @@
 		<?php if(count($footer) > 0) { ?>
 			<div class="social-profiles">
 				<ul class="list-horizontal">
-					<?php foreach($footer[links] as $contentItem): ?>
+					<?php foreach($footer['links'] as $contentItem): ?>
 						<li><a href="<?= $contentItem['url'] ?>" target="<?= $linktarget ?>"><?= $contentItem['title'] ?></a></li>
 					<?php endforeach; ?>
 				</ul>
