@@ -44,7 +44,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- IE-Stuff -->
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta name="MSSmartTagsPreventParsing" content="TRUE" />
 
 	<?php if($serveAsApplication === TRUE) { ?>
@@ -61,7 +61,7 @@
 	<?php } ?>
 
 	<!-- CSS -->
-	<style type="text/css">
+	<style>
 		<?php require_once($cssUrl); ?>
 	</style>
 
@@ -130,9 +130,9 @@
 				<h2 class="overlay-title">Bookmarks</h2>
 
 				<?php foreach($bookmarks as $key => $contentItems): ?>
-					<div class="collapse js-closed" id="collapse-<?= strtolower($key) ?>">
+					<div class="collapse js-closed" id="collapse-<?= strtolower(generateId($key)) ?>">
 						<div class="collapse-header">
-							<h3 class="collapse-title"><button class="js-collapse-toggle" data-target="collapse-<?= strtolower($key) ?>"><span class="collapse-icon">&times;</span> <?= $key ?></button></h3>
+							<h3 class="collapse-title"><button class="js-collapse-toggle" data-target="collapse-<?= strtolower(generateId($key)) ?>"><span class="collapse-icon">&times;</span> <?= $key ?></button></h3>
 						</div>
 						<div class="collapse-main">
 							<ul class="list-vertical">
@@ -213,7 +213,7 @@
 	<?php } ?>
 
 	<!-- JS -->
-	<script type="text/javascript">
+	<script>
 		<?php require_once($jsUrl); ?>
 	</script>
 </body>
