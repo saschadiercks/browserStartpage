@@ -530,6 +530,12 @@
 		]
 	},
 	"footer" : {
+		"description" : [
+			{
+				"url":   "https://github.com/saschadiercks/browserStartpage",
+				"title": "Fork me on Github"
+			}
+		],
 		"links" : [
 			{
 				"url":   "http://metafolio.de",

@@ -192,8 +192,10 @@
 
 	<!-- footer -->
 	<footer id="application-footer">
-		<div class="description"><a href="https://github.com/saschadiercks/browserStartpage">Fork me on Github</a></div>
 		<?php if(count($footer) > 0) { ?>
+			<?php foreach($footer['description'] as $contentItem): ?>
+				<div class="description"><a href="<?= $contentItem['url'] ?>" target="<?= $linktarget ?>"><?= $contentItem['title'] ?></a></div>
+			<?php endforeach; ?>
 			<div class="social-profiles">
 				<ul class="list-horizontal">
 					<?php foreach($footer['links'] as $contentItem): ?>
