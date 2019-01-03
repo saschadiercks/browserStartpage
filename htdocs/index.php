@@ -11,7 +11,7 @@
 	}
 
 	function renderQrModalTrigger($contentItem) {
-		if(isset($contentItem['imageQr']) && count($contentItem['imageQr']) > 0) {
+		if(isset($contentItem['imageQr']) && !empty($contentItem['imageQr']) > 0) {
 			echo '<button class="tile__button js-modal-toggle" data-target="' . generateId($contentItem['imageQr']) . '">&#9635;</button>';
 		}
 	}
@@ -173,7 +173,7 @@
 					<div class="backdrop js-modal-toggle" data-target="<?= generateId($contentItem['title']) ?>"></div>
 				</div>
 			<?php } ?>
-			<?php if(isset($contentItem['imageQr']) && count($contentItem['imageQr']) > 0)  { ?>
+			<?php if(isset($contentItem['imageQr']) && !empty($contentItem['imageQr']))  { ?>
 				<div id="<?= generateId($contentItem['imageQr']) ?>" class="modal js-hidden">
 					<div class="modal-overlay">
 						<div class="modal-header">
