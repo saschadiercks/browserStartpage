@@ -262,25 +262,25 @@
 		],
 		"SDI" : [
 			{
-				"url"  : "http://www.metafolio.de/",
+				"url"  : "https://www.saschadiercks.de/",
 				"image": "assets/thumbnails/sdi-homepage.png",
 				"imageQr": "assets/qr-codes/metafolio-de.png",
 				"title": "About me"
 			},
 			{
-				"url"  : "http://www.metaideen.de/",
+				"url"  : "https://www.metaideen.de/",
 				"image": "assets/thumbnails/sdi-blog.png",
 				"imageQr": "assets/qr-codes/metaideen-de.png",
 				"title": "Blog (german)"
 			},
 			{
-				"url"  : "http://www.metafolio.de/side-projects/personalnews",
+				"url"  : "https://www.saschadiercks.de/side-projects/personalnews",
 				"image": "assets/thumbnails/sdi-personalnews.png",
 				"imageQr": "assets/qr-codes/personalnews-landing.png",
 				"title": "personalNews"
 			},
 			{
-				"url"  : "http://www.metafolio.de/side-projects/startpage",
+				"url"  : "https://www.saschadiercks.de/side-projects/startpage",
 				"image": "assets/thumbnails/sdi-startpage.png",
 				"imageQr": "assets/qr-codes/startpage-demo.png",
 				"title": "Browser Startpage (this)"
@@ -538,7 +538,7 @@
 		],
 		"links" : [
 			{
-				"url":   "http://metafolio.de",
+				"url":   "https://saschadiercks.de",
 				"title": "home"
 			},
 			{
