@@ -5,10 +5,22 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
+const del = require('del');
 
-
+// Settings
+const srcDir = './src';
+const buildDir = './htdocs';
+const buildAssetsDir = 'assets';
 
 // Place Code for tasks here
+// ---- clean ----
+gulp.task('clean', function () {
+	return del([
+	  buildDir + '/' + buildAssetsDir + '/css/**/*',
+	  buildDir + '/' + buildAssetsDir + '/js/**/*'
+	]);
+});
+
 // ---- images ---
 gulp.task('imagemin', function () {
 	return gulp.src('./htdocs/assets/**/*.{jpg,png}')
