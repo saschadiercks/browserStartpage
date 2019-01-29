@@ -86,4 +86,4 @@ gulp.task('imagemin', function () {
 
 
 // --- build ----
-gulp.task('build', gulp.series(['build:css', 'build:js', 'imagemin']));
+gulp.task('build', gulp.series(['clean','build:css', 'build:js', 'imagemin']));
