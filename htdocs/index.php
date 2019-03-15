@@ -60,6 +60,10 @@
 		<link rel="manifest" href="manifest.json" />
 	<?php } ?>
 
+	<?php if(isset($wallpaper) && !empty($wallpaper)) { ?>
+		<link rel="preload" href="<?= $wallpaper ?>" as="image"/>
+	<?php } ?>
+
 	<!-- CSS -->
 	<style>
 		<?php require_once($cssUrl); ?>
