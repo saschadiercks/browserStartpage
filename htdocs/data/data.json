@@ -268,10 +268,10 @@
 				"title": "About me"
 			},
 			{
-				"url"  : "https://www.metaideen.de/",
+				"url"  : "https://design.saschadiercks/",
 				"image": "assets/thumbnails/sdi-blog.png",
-				"imageQr": "assets/qr-codes/metaideen-de.png",
-				"title": "Blog (german)"
+				"imageQr": "assets/qr-codes/design-system.png",
+				"title": "SDI Design System"
 			},
 			{
 				"url"  : "https://www.saschadiercks.de/side-projects/personalnews",
