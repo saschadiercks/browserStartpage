@@ -274,13 +274,19 @@
 				"title": "SDI Design System"
 			},
 			{
-				"url"  : "https://www.saschadiercks.de/side-projects/personalnews",
+				"url"  : "https://demo.saschadiercks.de/personalnews/",
 				"image": "assets/thumbnails/sdi-personalnews.png",
 				"imageQr": "assets/qr-codes/personalnews-landing.png",
 				"title": "personalNews"
 			},
 			{
-				"url"  : "https://www.saschadiercks.de/side-projects/startpage",
+				"url"  : "https://demo.saschadiercks.de/little-helpers/",
+				"image": "assets/thumbnails/sdi-little-helpers.png",
+				"imageQr": "assets/qr-codes/little-helpers.png",
+				"title": "Little Helpers"
+			},
+			{
+				"url"  : "https://demo.saschadiercks.de/startpage/",
 				"image": "assets/thumbnails/sdi-startpage.png",
 				"imageQr": "assets/qr-codes/startpage-demo.png",
 				"title": "Browser Startpage (this)"
