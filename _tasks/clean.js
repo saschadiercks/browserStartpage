@@ -6,8 +6,8 @@ const del = require('del')
 /* ################# */
 /* ##### Tasks ##### */
 /* ################# */
-gulp.task('clean:build', function () {
+gulp.task('clean:scripts', function () {
 	return del([
-		config.assetDist + '/**'
+		config.assetDist + '/js/**'
 	]);
 });

@@ -11,6 +11,7 @@
     "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^1.9.1",
+    "gulp-stylelint": "^8.0.0",
     "gulp-uglify": "^2.0.0",
     "require-dir": "^1.2.0",
     "stylelint": "^9.10.1",
