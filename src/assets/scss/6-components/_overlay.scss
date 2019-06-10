@@ -2,7 +2,7 @@
 .overlay {
 	display: block;
 	position: fixed;
-	z-index: 2;
+	z-index: 3;
 	&.js-hidden { height: 0; }
 }
 
