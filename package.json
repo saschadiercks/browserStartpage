@@ -11,7 +11,12 @@
     "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^1.9.1",
-    "gulp-uglify": "^2.0.0"
+    "gulp-uglify": "^2.0.0",
+    "require-dir": "^1.2.0",
+    "stylelint": "^9.10.1",
+    "stylelint-order": "^2.0.0",
+    "webpack": "^4.33.0",
+    "webpack-stream": "^4.0.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
