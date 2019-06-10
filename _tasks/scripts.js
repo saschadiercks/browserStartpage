@@ -8,8 +8,7 @@ const webpackStream = require('webpack-stream')
 const webpackConfig = {
 	entry: {
 		site: [
-			`./${config.assetSrc}/js/site.js`,
-			`./${config.assetSrc}/3rdparty/prism/prism.js`
+			`./${config.assetSrc}/js/site.js`
 		]
 	},
 	output: {
