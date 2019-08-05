@@ -1,3 +1,5 @@
-export default function removeClass(element,className) {
-	element.classList.remove(className);
+export default function removeClass(elements,className) {
+	elements.forEach(function(element){
+		element.classList.remove(className);
+	});
 }

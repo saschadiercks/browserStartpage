@@ -21,7 +21,9 @@ const webpackConfig = {
 /* ################# */
 gulp.task('scripts:build', function () {
 	return gulp.src(config.assetSrc + '/js/site.js')
-	.pipe(webpackStream(webpackConfig))
-	.pipe(uglify())
+	.pipe(webpackStream({
+		config: webpackConfig
+	}))
+	//.pipe(uglify())
 	.pipe(gulp.dest(config.assetDist + '/js'));
 });

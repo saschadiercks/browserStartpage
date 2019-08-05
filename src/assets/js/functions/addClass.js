@@ -1,3 +1,5 @@
-export default function addClass(element,className) {
-	element.classList.add(className);
+export default function addClass(elements, className) {
+	elements.forEach(function(element){
+		element.classList.add(className);
+	});
 }
