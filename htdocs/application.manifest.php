@@ -16,6 +16,9 @@ $hashes = "";
 
 
 function create_manifest($folder) {
+	// set manifestURL as global var
+	global $manifestUrl;
+
 	$dir = new RecursiveDirectoryIterator($folder);
 	// Iterate through all the files/folders in the current directory
 	foreach (new RecursiveIteratorIterator($dir) as $file) {
