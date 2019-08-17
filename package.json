@@ -1,5 +1,5 @@
 {
-  "name": "browserStartpage",
+  "name": "browserstartpage",
   "version": "1.0.0",
   "description": "Crossbrowser Speeddial and bookmarks",
   "main": "gulpfile.js",
