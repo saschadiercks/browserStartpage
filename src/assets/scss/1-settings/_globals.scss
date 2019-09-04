@@ -25,10 +25,10 @@ $header-link-active-color: #fff !default;
 
 $main-link-border-color: $base-border-color !default;
 $main-link-background-color: #f5f5f5 !default;
-$main-link-background-image: 	 linear-gradient(to bottom,rgba($body-background-color,.9), rgba($main-link-background-color,.97)) !default;
-$main-link-background-image-hover: 	linear-gradient(to top,rgba($body-background-color,.9), rgba($main-link-background-color,.97)) !default;
+$main-link-background-image: linear-gradient(to bottom, rgba($body-background-color, .9), rgba($main-link-background-color, .97)) !default;
+$main-link-background-image-hover: linear-gradient(to top, rgba($body-background-color, .9), rgba($main-link-background-color, .97)) !default;
 $main-link-active-border-color: $base-border-color-hover !default;
-$main-link-description-bg: rgba($main-link-border-color,.3) !default;
+$main-link-description-bg: rgba($main-link-border-color, .3) !default;
 $main-link-description-color: $header-link-color !default;
 $main-link-active-description-bg: $header-link-active-bg !default;
 $main-link-active-description-color: $header-link-active-color !default;
@@ -36,7 +36,7 @@ $main-link-active-description-color: $header-link-active-color !default;
 $tile-button-padding: $base-spacing-size/2 !default;
 $tile-button-color: inherit;
 
-$backdrop-color: rgba(8, 34, 63, 0.6) !default;
+$backdrop-color: rgba(8, 34, 63, .6) !default;
 $background-blur-setting: 1px;
 
 $modal-border: none !default;
