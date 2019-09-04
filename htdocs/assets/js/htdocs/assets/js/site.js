@@ -107,13 +107,16 @@ document.addEventListener('DOMContentLoaded', function() {
 	Object(__WEBPACK_IMPORTED_MODULE_3__functions_removeClass_js__["a" /* default */])(Object(__WEBPACK_IMPORTED_MODULE_1__functions_find_js__["a" /* default */])(selector__applyJsTo),'no-js');
 
 	// ##### handle localeStorage
-	// get Id from first tab to save as backup
+	// get Id from first tab to save as fallback
 	const id__firstTab = '#' + Object(__WEBPACK_IMPORTED_MODULE_1__functions_find_js__["a" /* default */])(selector__tabContent)[0].id;
 
+	// show saved tab
 	if(Object(__WEBPACK_IMPORTED_MODULE_2__functions_localStorage_js__["a" /* default */])(localStorage__idTab) === null) {
+		// show first tab
 		Object(__WEBPACK_IMPORTED_MODULE_2__functions_localStorage_js__["a" /* default */])(localStorage__idTab, id__firstTab);
 		Object(__WEBPACK_IMPORTED_MODULE_0__functions_addClass_js__["a" /* default */])(Object(__WEBPACK_IMPORTED_MODULE_1__functions_find_js__["a" /* default */])(id__firstTab), class__isActive);
 	} else {
+		//show saved tab
 		Object(__WEBPACK_IMPORTED_MODULE_0__functions_addClass_js__["a" /* default */])(Object(__WEBPACK_IMPORTED_MODULE_1__functions_find_js__["a" /* default */])(Object(__WEBPACK_IMPORTED_MODULE_2__functions_localStorage_js__["a" /* default */])(localStorage__idTab)), class__isActive);
 	}
 });
