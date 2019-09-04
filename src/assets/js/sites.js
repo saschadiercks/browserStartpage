@@ -3,6 +3,25 @@
 // is the DOM ready for manipulation?
 document.addEventListener('DOMContentLoaded', function() {
 
+	// helper: change classes
+	function addClass(element,className) {
+		element.classList.add(className);
+	}
+	function removeClass(element,className) {
+		element.classList.remove(className);
+	}
+
+	// helper: scroll to desired position
+	function scrollToTarget(x,y) {
+		window.scrollTo(x,y);
+	}
+
+	// add JS to body-tag to allow CSS-Manipulation if JS is available
+	function setJs() {
+		var body = document.getElementsByTagName("body")[0];
+		addClass(body,'js');
+	}
+
 	// show notification on keydown and hide it on keyup
 	document.addEventListener('keydown', function() {
 		var targetElement = document.getElementById('notification');
@@ -164,6 +183,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	// ---- initialize ----
+		// set Js on body if JS is available
+		setJs();
 
 		//sticky header (item(Id) to fix, item(Id) with property to compensate fix)
 		function stickyElements() {
