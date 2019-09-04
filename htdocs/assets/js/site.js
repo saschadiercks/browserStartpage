@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	function setJs() {
 		var body = document.getElementsByTagName("body")[0];
 		addClass(body,'js');
+		removeClass(body,'no-js');
 	}
 
 	// show notification on keydown and hide it on keyup

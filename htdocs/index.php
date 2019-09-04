@@ -26,10 +26,10 @@
 
 <!DOCTYPE html>
 <html <?php
-	echo isset($projectLanguage) ? 'lang="'.$projectLanguage.'"' : FALSE;
-	echo isset($projectDirection) ? 'dir="'.$projectDirection.'"' : FALSE;
-	echo isset($manifestUrl)? 'manifest="'.$manifestUrl.'"' : FALSE;
-	echo isset($theme)? 'class="'.$theme.'"' : FALSE;
+	echo isset($projectLanguage) ? 'lang="'.$projectLanguage.'" ' : FALSE;
+	echo isset($projectDirection) ? 'dir="'.$projectDirection.'" ' : FALSE;
+	echo isset($manifestUrl)? 'manifest="'.$manifestUrl.'" ' : FALSE;
+	echo isset($theme)? 'class="'.$theme.'" ' : FALSE;
 ?>>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -74,7 +74,7 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 </head>
 
-<body>
+<body class="no-js">
 
 	<!-- header -->
 	<header id="application-header">
