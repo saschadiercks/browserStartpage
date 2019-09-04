@@ -1,10 +1,6 @@
 // ---- collapse ----
 .collapse {
 	display: block;
-	&.js-closed {
-		.collapse-icon { transform: rotate(-45deg); }
-		.collapse-main { max-height: 0; }
-	}
 }
 
 .collapse-title {
@@ -35,4 +31,9 @@
 	max-height: 100vh;
 	overflow: hidden;
 	transition: max-height .5s ease;
+}
+
+.js-closed {
+	.collapse-icon { transform: rotate(-45deg); }
+	.collapse-main { max-height: 0; }
 }

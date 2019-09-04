@@ -6,24 +6,24 @@ body {
 
 // ---- Elements ----
 #wallpaper {
-	background-size: cover;
 	background-position: center center;
+	background-size: cover;
 	filter: $wallpaper-filter;
 }
 
-.collapse {	border-top: $collapse-border; }
+.collapse { border-top: $collapse-border; }
 
 .modal-overlay {
 	@include align-centered($scale:0,$position:fixed);
 	background-color: $modal-content-background-color;
 	border-radius: $modal-border-radius;
-	color: $modal-content-color;
 	box-shadow: $box-shadow-heavy;
-	max-height: $modal-content-max-height;
+	color: $modal-content-color;
 	height: $modal-content-height;
+	max-height: $modal-content-max-height;
 	max-width: $modal-content-max-width;
-	width: $modal-content-width;
 	transition: transform $base-animation-speed ease-in-out;
+	width: $modal-content-width;
 }
 
 .js-visible .modal-overlay {
@@ -34,8 +34,8 @@ body {
 	background-color: $modal-header-background-color;
 	border-bottom: $modal-header-border;
 	color: $modal-header-color;
-	padding: $base-spacing-size-px * 2;
 	margin-bottom: $base-spacing-size-px;
+	padding: $base-spacing-size-px * 2;
 }
 
 .modal-content { padding: $base-spacing-size-px; }
@@ -44,6 +44,7 @@ body {
 	height: 100vh;
 	width: 100%;
 }
+
 .overlay-content {
 	background-color: $overlay-background-color;
 	box-shadow: $box-shadow-heavy;
@@ -57,11 +58,11 @@ body {
 	}
 	.overlay-content { transform: translateX(100%);	}
 }
+
 .js-visible {
 	.backdrop { opacity: 1; }
 	.overlay-content { transform: translateX(0); }
 }
-
 
 // ---- header ----
 header {
@@ -73,59 +74,42 @@ header {
 	.collapse { border-width: 0; }
 }
 
-nav {
-	li { display: inline-block; }
-
-	a {
-		color: $header-link-color;
-
-		&:hover,
-		&.active {
-			background-color: $header-link-active-bg;
-			border-radius: 2px;
-			color: $header-link-active-color;
-		}
-	}
-}
-
 // ---- Content ----
-	// fallback for older browsers
-	.list-tiles {
-		align-items: stretch;
-		display: flex;
-		flex-wrap: wrap;
-	}
-	.tile-container {
-		padding: $base-spacing-size / 2;
-		width: 25%;
-	}
-	// /fallback for older browsers
-
-@supports(display:grid) {
-	.list-tiles {
-		display: grid;
-		grid-gap: $base-spacing-size;
-		grid-template-columns: repeat(auto-fit,minmax(256px, 1fr));
-	}
-	.tile-container {
-		padding: 0;
-		width:auto;
-	}
+// fallback for older browsers
+.list-tiles {
+	align-items: stretch;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .tile-container {
 	display: flex;
 	height: 156px;
+	padding: $base-spacing-size / 2;
 	position: relative;
+	width: 25%;
+}
+
+// modern browsers
+@supports (display:grid) {
+	.list-tiles {
+		display: grid;
+		grid-gap: $base-spacing-size;
+		grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+	}
+
+	.tile-container {
+		padding: 0;
+		width: auto;
+	}
 }
 
 .tile {
-	/*background-color: rgba($main-link-background-color,.9);*/
-	background-image: $main-link-background-image;
 	background-clip: padding-box;
+	background-image: $main-link-background-image;
 	border: 1px solid $main-link-border-color;
-	box-shadow: $box-shadow-default;
 	border-radius: 2px;
+	box-shadow: $box-shadow-default;
 	display: flex;
 	font-size: .75rem;
 	position: relative;
@@ -134,8 +118,8 @@ nav {
 	width: 100%;
 
 	&:hover {
-		border-color: $main-link-active-border-color;
 		background-image: $main-link-background-image-hover;
+		border-color: $main-link-active-border-color;
 		z-index: 2;
 	}
 }
@@ -144,8 +128,8 @@ nav {
 	background-color: $main-link-description-bg;
 	bottom: 0;
 	color: $main-link-description-color;
-	left: 0;
 	display: block;
+	left: 0;
 	padding: $base-spacing-size/2;
 	position: absolute;
 	right: 0;
@@ -160,35 +144,18 @@ nav {
 	z-index: 2;
 }
 
-.tile-image { margin: auto; }	// center images when parent-item has display: flex;
-
-// ---- Bookmarks ----
-#bookmarks {
-
-	.overlay-content {
-		max-width: $bookmarks-max-width;
-		position: fixed;
-		top: 0;
-		right: 0;
-	}
-
-	ul { @include ul-reset; }
-
-	a {
-		font-size: .875rem;	/* 14px / 16px */
-		padding: 2px 0;
-	}
-}
+// center images when parent-item has display: flex;
+.tile-image { margin: auto; }
 
 // ---- Notification ----
 .notification {
 	background-color: $notification-background-color;
+	bottom: $base-spacing-size*3;
 	box-shadow: $box-shadow-heavy;
 	color: $notification-color;
 	padding: $base-spacing-size;
-	right: 0;
 	position: fixed;
-	bottom: $base-spacing-size*3;
+	right: 0;
 	z-index: 99;
 }
 
@@ -207,12 +174,47 @@ footer {
 	a {
 		color: inherit;
 		display: inline-block;
-		padding-top: $base-spacing-size-px;
 		padding-bottom: $base-spacing-size-px;
+		padding-top: $base-spacing-size-px;
 	}
 
 	.description { float: left; }
 	.social-profiles { float: right; }
+}
+
+// -- navigation
+nav {
+	li { display: inline-block; }
+
+	a {
+		color: $header-link-color;
+
+		&:hover,
+		&.active {
+			background-color: $header-link-active-bg;
+			border-radius: 2px;
+			color: $header-link-active-color;
+		}
+	}
+}
+
+// ---- Bookmarks ----
+#bookmarks {
+	.overlay-content {
+		max-width: $bookmarks-max-width;
+		position: fixed;
+		right: 0;
+		top: 0;
+	}
+
+	ul {
+		@include ul-reset;
+	}
+
+	a {
+		font-size: .875rem;	/* 14px / 16px */
+		padding: 2px 0;
+	}
 }
 
 // ---- fx when overlays are visible ----
@@ -232,9 +234,10 @@ footer {
 	.overlay-content { padding: $base-spacing-size*2 $base-spacing-size*1.5; }
 
 	header a { padding: $base-spacing-size $base-spacing-size*2; }
+
 	.overlay-title {
+		padding-bottom: $base-spacing-size;
 		padding-top: $base-spacing-size;
-		padding-bottom: $base-spacing-size
 	}
 
 	header {
@@ -242,11 +245,16 @@ footer {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	#bookmarks-toggle { justify-self: end; }
-	#header-nav-toggle { justify-self: start; }
+	#bookmarks-toggle {
+		justify-self: end;
+	}
+
+	#header-nav-toggle {
+		justify-self: start;
+	}
+
 	#header-nav {
-		grid-column-start: 1;
-		grid-column-end: span 2;
+		grid-column: 1 / span 2;
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height .5s ease;
@@ -256,14 +264,6 @@ footer {
 	}
 }
 
-// Tablet portrait
-@include tablet-portrait {
-}
-
-// Tablet landscape
-@include tablet-landscape-up {
-}
-
 // Default View
 @include default {
 	button { padding: $base-spacing-size*.75 $base-spacing-size; }
@@ -271,7 +271,7 @@ footer {
 	header,
 	.overlay-content { padding: $base-spacing-size*.75 $base-spacing-size; }
 
-	header{
+	header {
 		a { padding: $base-spacing-size*.75 $base-spacing-size; }
 
 		// overwrite collapse-styles
@@ -282,14 +282,15 @@ footer {
 
 	.overlay-title,
 	.collapse a {
-		padding-top: $base-spacing-size*.75;
 		padding-bottom: $base-spacing-size*.75;
+		padding-top: $base-spacing-size*.75;
 	}
 
 	.tile-title {
 		opacity: 0;
 		transition: opacity $base-animation-speed;
 	}
+
 	.tile:hover {
 		.tile-title { opacity: 1; }
 	}
@@ -297,11 +298,10 @@ footer {
 	button[data-target*="nav"] { display: none; }
 }
 
-
 // ---- Fallbacks / special cases ----
 // separation of content if JS is disabled / not loaded
-body:not(.js) main nav:not(:last-child) {
-	margin-bottom: $base-spacing-size*2;
-	padding-bottom: $base-spacing-size*2;
-	border-bottom: 1px dotted $no-js-separator-color;
-}
+// body.no-js main nav:not(:last-child) {
+// 	border-bottom: 1px dotted $no-js-separator-color;
+// 	margin-bottom: $base-spacing-size*2;
+// 	padding-bottom: $base-spacing-size*2;
+// }

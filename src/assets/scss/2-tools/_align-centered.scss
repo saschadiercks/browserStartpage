@@ -1,11 +1,11 @@
 @mixin align-centered($scale, $position:absolute) {
 	@if $scale {
-		transform: translate(-50%,-50%) scale(#{$scale});
+		transform: translate(-50%, -50%) scale(#{$scale});
 	} @else {
-		transform: translate(-50%,-50%);
+		transform: translate(-50%, -50%);
 	}
 
-	position: #{$position};
 	left: 50%;
+	position: #{$position};
 	top: 50%;
 }

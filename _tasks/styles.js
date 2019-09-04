@@ -22,6 +22,7 @@ gulp.task('compile:css', function () {
 gulp.task('lint:css', function () {
 	return gulp.src(config.assetSrc + '/scss/**/*.scss')
 	.pipe(gulpStylelint({
+		fix: true,
 		reporters: [
 			{ formatter: 'string', console: true },
 		]

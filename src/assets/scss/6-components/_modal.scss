@@ -10,11 +10,11 @@
 	@include align-centered($scale:0,$position:fixed);
 }
 
-
 .modal-header {
 	font-weight: 600;
 	position: relative;
 }
+
 .modal-content { overflow-y: auto; }
 
 .modal-header__close {

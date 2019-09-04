@@ -25,7 +25,7 @@
 		"selector-type-no-unknown": true,
 		"media-feature-name-no-unknown": true,
 		"at-rule-no-unknown": [ true,
-			{ "ignoreAtRules": ["mixin", "each", "include", "if", "extend"] }
+			{ "ignoreAtRules": ["mixin", "each", "include", "if", "extend", "else"] }
 		],
 		"comment-no-empty": true,
 		"no-descending-specificity": true,
@@ -83,7 +83,7 @@
 		"selector-max-universal": 1,
 		"selector-nested-pattern": null,
 		"selector-no-qualifying-type": [ true,
-			{ "ignore": ["attribute"] }
+			{ "ignore": ["attribute","class"] }
 		],
 		"selector-no-vendor-prefix": true,
 		"selector-pseudo-class-blacklist": null,
