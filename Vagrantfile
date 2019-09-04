@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "ubuntu/trusty64"
-  config.vm.post_up_message = "Box up and running"
+  config.vm.post_up_message = "Box up and running (http://localhost:8080)"
 
   forward_port = ->(guest, host = guest) do
     config.vm.network :forwarded_port,

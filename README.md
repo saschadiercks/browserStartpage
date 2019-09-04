@@ -54,6 +54,9 @@ The browserStartpage comes with a default list of links, to show you how it work
 5. use `gulp compile:css` to compile the css for dev (including sourcemaps)
 6. use `gulp compile:js` to compile the Javascript for dev (including sourcemaps)
 7. use `gulp build` to compile the css and minify Javascript for production (without sourcemaps)
+8. use `gulp serve` start the server for local development (localhost:8080)
+8. use `gulp stop` stop the server
+9. use `gulp reboot` restart the server and build assets
 
 ### Hints & Tips
 - Change the Wallpaper by changing the value of variable `wallpaper` in `/data/data.json` (at the top of the document)
