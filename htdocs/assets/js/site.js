@@ -60,227 +60,179 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = __webpack_require__(1);
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = addClass;
+function addClass(elements, className) {
+	elements.forEach(function(element){
+		element.classList.add(className);
+	});
+}
 
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// TODO: use data-target instead of elementIndex
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = removeClass;
+function removeClass(elements,className) {
+	elements.forEach(function(element){
+		element.classList.remove(className);
+	});
+}
 
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(3);
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_addClass_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__functions_find_js__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__functions_localStorage_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__functions_removeClass_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__functions_scrollToPos_js__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_tabHandling_js__ = __webpack_require__(8);
+// ###### import ######
+
+
+
+
+
+
+
+
+
+
+// ####################
+// ##### settings #####
+// ####################
+const selector__applyJsClassTo = "body";
+const localStorage__idTab = "currentTab";
+const selector__tabContent = ".tabbed-content";
+const class__isActive = "sdi-js-active";
+
+// ###### script ######
 // is the DOM ready for manipulation?
 document.addEventListener('DOMContentLoaded', function() {
 
-	// helper: change classes
-	function addClass(element,className) {
-		element.classList.add(className);
-	}
-	function removeClass(element,className) {
-		element.classList.remove(className);
-	}
+	// ##### Toggle HTML
+	Object(__WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability__["a" /* default */])(selector__applyJsClassTo);
 
-	// helper: scroll to desired position
-	function scrollToTarget(x,y) {
-		window.scrollTo(x,y);
-	}
+	// // ##### handle localeStorage
+	// // get Id from first tab to save as fallback
+	// const id__firstTab = '#' + find(selector__tabContent)[0].id;
 
-	// add JS to body-tag to allow CSS-Manipulation if JS is available
-	function setJs() {
-		var body = document.getElementsByTagName("body")[0];
-		addClass(body,'js');
-		removeClass(body,'no-js');
-	}
-
-	// show notification on keydown and hide it on keyup
-	document.addEventListener('keydown', function() {
-		var targetElement = document.getElementById('notification');
-		addClass(targetElement,'js-visible');
-		removeClass(targetElement,'js-hidden');
-	});
-	document.addEventListener('keyup', function() {
-		var targetElement = document.getElementById('notification');
-		addClass(targetElement,'js-hidden');
-		removeClass(targetElement,'js-visible');
-	});
-
-	// per default localStorage is updated, when tabs are switched
-	updateLocalStorageOnTabSwitch = true;
-
-	// make element sticky (via position in css)
-	function stickyElement(stickyId,compensateId,compensateProperty) {
-		var compensateElement = document.getElementById(compensateId);
-		var stickyElement = document.getElementById(stickyId);
-		var stickyHeight = stickyElement.clientHeight + 'px';
-		addClass(stickyElement,'js-sticky');
-
-		//add Element-Height as defined property to desired element
-		compensateElement.style.setProperty(compensateProperty,stickyHeight);
-	}
-
-	// toggle Element
-	function toggleElement(elementId,targetElementId) {
-		toggleElement = document.getElementById(elementId);
-		toggleElement.onclick = function() {
-			targetElement = document.getElementById(targetElementId);
-			if(targetElement.classList.contains('js-visible')) {
-				addClass(targetElement,'js-hidden');
-				removeClass(targetElement,'js-visible');
-			} else {
-				removeClass('js-hidden');
-				addClass('js-visible');
-			}
-			event.preventDefault();
-		}
-	}
-
-	// Overlay-Handling
-	function handleOverlayTriggers(elementClassName) {
-		var elements = document.getElementsByClassName(elementClassName);
-		for(i=0; i < elements.length; i++) {
-			elements[i].onclick = function(event) {
-				var target = this.getAttribute('data-target');
-				toggleOverlay(target,event);
-			}
-		}
-	}
-	function toggleOverlay(elementId,event) {
-		var targetElement = document.getElementById(elementId);
-		var effectClassApplyTo = document.getElementsByTagName("body")[0];
-		if(targetElement.classList.contains('js-visible')) {
-			addClass(targetElement,'js-hidden');
-			removeClass(targetElement,'js-visible');
-			removeClass(effectClassApplyTo,'js-fx');
-		} else {
-			removeClass(targetElement,'js-hidden');
-			addClass(targetElement,'js-visible');
-			addClass(effectClassApplyTo,'js-fx');
-		}
-		fixElement("content");
-		event.preventDefault();
-	}
-
-	// Collapse-Handling
-	function handleCollapseTriggers(elementClassName) {
-		var elements = document.getElementsByClassName(elementClassName);
-		for(i=0; i < elements.length; i++) {
-			elements[i].onclick = function(event) {
-				var target = this.getAttribute('data-target');
-				toggleCollapse(target,event);
-			}
-		}
-	}
-	function toggleCollapse(elementId,event) {
-		var targetElement = document.getElementById(elementId);
-		if(targetElement.classList.contains('js-opened')) {
-			addClass(targetElement,'js-closed');
-			removeClass(targetElement,'js-opened');
-		} else {
-			removeClass(targetElement,'js-closed');
-			addClass(targetElement,'js-opened');
-		}
-		event.preventDefault();
-	}
-
-	// Tab-Handling-Function
-	// initially set Element-count of tabs and tabbedContent and check consistency
-	var tabTrigger = document.getElementsByClassName("js-tab-trigger");
-	var tabbedContent = document.getElementsByClassName("tabbed-content");
-	if(tabTrigger.length !== tabbedContent.length) {
-		console.log("count of tabs and tabbed-contend isn't consistent");
-	}
-	// -- set Current-Tab and tabbed-content
-	var setCurrentTab = function(newTabId) {
-		markTabTrigger = document.getElementsByClassName("js-tab-trigger")[newTabId].classList.add("active");
-		unhideSelectedContent = document.getElementsByClassName("tabbed-content")[newTabId].classList.add("active");
-		if(updateLocalStorageOnTabSwitch === false) {
-			console.log("localStorage not updated");
-		} else {
-			localStorage.setItem("tabbedContentId", newTabId);
-			console.log("localStorage ID is: " + newTabId);
-		}
-
-	}
-
-	// -- unset Current-Tab and tabbed-conent
-	var unsetTabs = function() {
-		for(i=0; i < tabbedContent.length; i++) {
-			removeClass(tabTrigger[i],'active');
-			removeClass(tabbedContent[i],'active');
-		}
-	}
-
-	// -- if DOM is ready, check if localStorage is filled and stored Id is still available
-	var savedLocalStorageId = localStorage.getItem("tabbedContentId");
-	if(savedLocalStorageId !== null && tabTrigger.length >= savedLocalStorageId) {
-		setCurrentTab(savedLocalStorageId);
-	} else {
-		console.log("localStorage is empty or stored Id is no longer present - setting default");
-		setCurrentTab(0);
-	}
-
-	// -- switch tabs onClick
-	for(i=0; i < tabTrigger.length; i++) {
-		(function(index){
-			tabTrigger[i].onclick = function(event){
-				if(event.altKey === true) {
-					updateLocalStorageOnTabSwitch = false;
-				} else {
-					updateLocalStorageOnTabSwitch = true;
-				}
-				unsetTabs();
-				setCurrentTab(index,updateLocalStorageOnTabSwitch);
-				return false;
-			}
-		})(i);
-	}
-
-	// ---- fix element to current position
-	function fixElement(elementId) {
-		elementToFix = document.getElementById(elementId);
-		scrollY = window.pageYOffset;
-
-		if(elementToFix.classList.contains('js-fixed')) {
-			removeClass(elementToFix,'js-fixed');
-			elementToFix.style.top = '';
-			scrollToTarget(0,scrollYMem);
-		} else {
-			addClass(elementToFix,'js-fixed');
-			elementToFix.style.top = '-' + scrollY + 'px';
-			scrollYMem = scrollY;
-		}
-		console.log(scrollYMem);
-	}
-
-	// ---- initialize ----
-		// set Js on body if JS is available
-		setJs();
-
-		//sticky header (item(Id) to fix, item(Id) with property to compensate fix)
-		function stickyElements() {
-			stickyElement('application-header','content','padding-top');
-			stickyElement('application-footer','content','padding-bottom');
-		}
-
-		stickyElements();
-		window.onresize = stickyElements;
-
-		// Collapse
-		handleCollapseTriggers('js-collapse-toggle');
-
-		// Overlays
-		handleOverlayTriggers('js-overlay-toggle');
-
-		// Modals
-		handleOverlayTriggers('js-modal-toggle');
+	// // show saved tab
+	// if(doLocalStorage(localStorage__idTab) === null) {
+	// 	// show first tab
+	// 	doLocalStorage(localStorage__idTab, id__firstTab);
+	// 	addClass(find(id__firstTab), class__isActive);
+	// } else {
+	// 	//show saved tab
+	// 	addClass(find(doLocalStorage(localStorage__idTab)), class__isActive);
+	// }
 });
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = setJsAvailability;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__functions_addClass_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_removeClass_js__ = __webpack_require__(1);
+// ###### import ######
+
+
+
+// ####################
+// ##### settings #####
+// ####################
+const class__jsIsAvailable = 'js';
+const class__jsIsNotAvailable = 'no-js';
+
+// ###### script ######
+function setJsAvailability(selector) {
+	var selector = document.querySelectorAll(selector);
+	selector.forEach(function() {
+		Object(__WEBPACK_IMPORTED_MODULE_0__functions_addClass_js__["a" /* default */])(selector, class__jsIsAvailable);
+		Object(__WEBPACK_IMPORTED_MODULE_1__functions_removeClass_js__["a" /* default */])(selector, class__jsIsNotAvailable);
+	});
+}
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export default */
+function find(selector) {
+	return document.querySelectorAll(selector);
+}
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export default */
+function doLocalStorage(item,value) {
+	if(value) {
+		localStorage.setItem(item,value);
+	} else {
+		return localStorage.getItem(item);
+	}
+}
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export default */
+function scrollToPos(x,y) {
+	window.scrollTo(x,y);
+}
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export default */
+function tabHandling() {
+
+	//Handle localStorage
+	const tabPosition = "tabbedContentId";
+	if (localStorage.getItem(tabPosition) === null) {
+		console.log("localStorage is empty");
+	} else {
+		console.log("localStorage is set");
+	};
+
+}
 
 
 /***/ })
