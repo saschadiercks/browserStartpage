@@ -61,4 +61,4 @@ The browserStartpage comes with a default list of links, to show you how it work
 ### Hints & Tips
 - Change the Wallpaper by changing the value of variable `wallpaper` in `/data/data.json` (at the top of the document)
 - Do you want every link to be opened in a new tab? Change the value of `linktarget` in /data/data.json to a desired value. e.g. `_blank`
-- if you want to change the look of the page, you can find more information in `src/scss/7-trumps/your-theme.scss`
+- if you want to change the look of the page, you can find more information in `src/scss/7-utilities/your-theme.scss`
