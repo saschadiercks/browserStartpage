@@ -1,3 +1,10 @@
+// ###### import ######
+
+// ####################
+// ##### settings #####
+// ####################
+
+// ###### script ######
 export default function doLocalStorage(item,value) {
 	if(value) {
 		localStorage.setItem(item,value);

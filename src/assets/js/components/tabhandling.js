@@ -1,3 +1,10 @@
+// ###### import ######
+
+// ####################
+// ##### settings #####
+// ####################
+
+// ###### script ######
 export default function tabHandling() {
 
 	//Handle localStorage
