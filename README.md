@@ -50,13 +50,13 @@ The browserStartpage comes with a default list of links, to show you how it work
 1. Make sure, you have node.js installed on your computer (https://nodejs.org/en/)
 2. run `npm install gulp-cli -g` to install gulp
 3. run `npm install` to install gulp in your project
-4. run `gulp sass:watch` to compile SASS on the fly
-5. use `gulp compile:css` to compile the css for dev (including sourcemaps)
-6. use `gulp compile:js` to compile the Javascript for dev (including sourcemaps)
-7. use `gulp build` to compile the css and minify Javascript for production (without sourcemaps)
-8. use `gulp serve` start the server for local development (localhost:8080)
-8. use `gulp stop` stop the server
-9. use `gulp reboot` restart the server and build assets
+4. use `gulp build` to compile the css and minify Javascript for production (without sourcemaps) and imagemin
+5. use `gulp update` to compile the css and Javascript for development
+6. use `gulp serve` start the server for local development (localhost:8080)
+7. use `gulp stop` stop the server
+8. use `gulp reboot` restart the server and build assets
+
+Aöways run `gulp build`before deploying assets
 
 ### Hints & Tips
 - Change the Wallpaper by changing the value of variable `wallpaper` in `/data/data.json` (at the top of the document)
