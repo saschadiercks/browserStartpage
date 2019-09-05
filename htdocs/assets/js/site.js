@@ -178,6 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// handle triggers
 	Object(__WEBPACK_IMPORTED_MODULE_3__functions_handleTriggers_js__["a" /* default */])('.js-flyout-trigger', false);
+	Object(__WEBPACK_IMPORTED_MODULE_3__functions_handleTriggers_js__["a" /* default */])('.js-collapse-trigger', false);
 
 	// // ##### handle localeStorage
 	// // get Id from first tab to save as fallback

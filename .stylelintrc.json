@@ -72,7 +72,7 @@
 		"selector-combinator-whitelist": null,
 		"selector-id-pattern": null,
 		"selector-max-attribute": 1,
-		"selector-max-class": 2,
+		"selector-max-class": 3,
 		"selector-max-combinators": 1,
 		"selector-max-compound-selectors": 2,
 		"selector-max-empty-lines": 0,

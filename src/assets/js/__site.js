@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		window.onresize = stickyElements;
 
 		// Collapse
-		handleCollapseTriggers('js-collapse-toggle');
+		handleCollapseTriggers('js-collapse-trigger');
 
 		// Overlays
 		handleOverlayTriggers('js-overlay-toggle');

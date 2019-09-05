@@ -79,7 +79,7 @@
 	<!-- header -->
 	<header id="application-header">
 		<?php if(count($header) > 0) { ?>
-			<button id="header-nav-toggle" class="js-collapse-toggle" data-target="header-nav">&#9776;</button>
+			<button id="header-nav-toggle" class="js-collapse-trigger" data-target="header-nav">&#9776;</button>
 		<?php } ?>
 
 		<?php if(count($bookmarks) > 0) { ?>
@@ -134,9 +134,9 @@
 				<h2 class="flyout-title">Bookmarks</h2>
 
 				<?php foreach($bookmarks as $key => $contentItems): ?>
-					<div class="collapse js-closed" id="collapse-<?= strtolower(generateId($key)) ?>">
+					<div class="collapse" id="collapse-<?= strtolower(generateId($key)) ?>">
 						<div class="collapse-header">
-							<h3 class="collapse-title"><button class="js-collapse-toggle" data-target="collapse-<?= strtolower(generateId($key)) ?>"><span class="collapse-icon">&times;</span> <?= $key ?></button></h3>
+							<h3 class="collapse-title"><button class="js-collapse-trigger" data-target="collapse-<?= strtolower(generateId($key)) ?>"><span class="collapse-icon">&times;</span> <?= $key ?></button></h3>
 						</div>
 						<div class="collapse-main">
 							<ul class="list-vertical">

@@ -9,7 +9,7 @@
 	margin: 0;
 	padding-top: inherit;
 
-	.js-collapse-toggle {
+	.js-collapse-trigger {
 		cursor: pointer;
 		display: block;
 		outline: none;
@@ -24,16 +24,17 @@
 	float: right;
 	position: relative;
 	top: -2px;
+	transform: rotate(-45deg);
 	transition: transform .2s ease;
 }
 
 .collapse-main {
-	max-height: 100vh;
+	max-height: 0;
 	overflow: hidden;
 	transition: max-height .5s ease;
 }
 
-.js-closed {
-	.collapse-icon { transform: rotate(-45deg); }
-	.collapse-main { max-height: 0; }
+.collapse.js-is-active {
+	.collapse-icon { transform: rotate(0); }
+	.collapse-main { max-height: 100vh; }
 }
