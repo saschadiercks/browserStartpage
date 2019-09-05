@@ -137,7 +137,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability_js__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_notificationKeydown_js__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__functions_stickyElement_js__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__functions_handleTriggers_js__ = __webpack_require__(8);
 // ###### import ######
+
 
 
 
@@ -173,6 +175,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	// -- make elements sticky
 	Object(__WEBPACK_IMPORTED_MODULE_2__functions_stickyElement_js__["a" /* default */])('#application-header','#content','padding-top');
 	Object(__WEBPACK_IMPORTED_MODULE_2__functions_stickyElement_js__["a" /* default */])('#application-footer','#content','padding-bottom');
+
+	// handle triggers
+	Object(__WEBPACK_IMPORTED_MODULE_3__functions_handleTriggers_js__["a" /* default */])('.js-flyout-trigger', false);
 
 	// // ##### handle localeStorage
 	// // get Id from first tab to save as fallback
@@ -213,6 +218,7 @@ const class__jsIsNotAvailable = 'no-js';
 // ###### script ######
 function setJsAvailability(selector) {
 	var selector = Object(__WEBPACK_IMPORTED_MODULE_0__functions_find_js__["a" /* default */])(selector);
+
 	selector.forEach(function() {
 		Object(__WEBPACK_IMPORTED_MODULE_1__functions_addClass_js__["a" /* default */])(selector, class__jsIsAvailable);
 		Object(__WEBPACK_IMPORTED_MODULE_2__functions_removeClass_js__["a" /* default */])(selector, class__jsIsNotAvailable);
@@ -284,6 +290,64 @@ function stickyElement(selectorSticky, selectorCompensate, propertyCompensate) {
 	Object(__WEBPACK_IMPORTED_MODULE_0__functions_addClass_js__["a" /* default */])(stickyElement, class__sticky);
 
 	document.querySelector(selectorCompensate).style.setProperty(propertyCompensate,stickyHeight);
+}
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = handleTriggers;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__functions_find_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_toggleClass_js__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__functions_removeClass_js__ = __webpack_require__(2);
+// ###### import ######
+
+
+
+
+// ####################
+// ##### settings #####
+// ####################
+const class__isActive = 'js-is-active';
+
+// ###### script ######
+function handleTriggers(selector, callback) {
+	var targetElements = Object(__WEBPACK_IMPORTED_MODULE_0__functions_find_js__["a" /* default */])(selector);
+
+	targetElements.forEach(function(element) {
+		element.addEventListener('click', function() {
+			var selectorTarget = Object(__WEBPACK_IMPORTED_MODULE_0__functions_find_js__["a" /* default */])('#' + this.getAttribute('data-target'));
+			Object(__WEBPACK_IMPORTED_MODULE_1__functions_toggleClass_js__["a" /* default */])(selectorTarget, class__isActive);
+		});
+	})
+
+	if(callback === false) {
+		event.preventDefault();
+	} else {
+		callback();
+	}
+}
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = toggleClass;
+// ###### import ######
+
+// ####################
+// ##### settings #####
+// ####################
+
+// ###### script ######
+function toggleClass(elements, className) {
+	elements.forEach(function(element){
+		element.classList.toggle(className);
+	});
 }
 
 

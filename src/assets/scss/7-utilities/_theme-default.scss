@@ -198,25 +198,6 @@ nav {
 	}
 }
 
-// ---- Bookmarks ----
-#bookmarks {
-	.overlay-content {
-		max-width: $bookmarks-max-width;
-		position: fixed;
-		right: 0;
-		top: 0;
-	}
-
-	ul {
-		@include ul-reset;
-	}
-
-	a {
-		font-size: .875rem;	/* 14px / 16px */
-		padding: 2px 0;
-	}
-}
-
 // ---- fx when overlays are visible ----
 .js-fx {
 	header,

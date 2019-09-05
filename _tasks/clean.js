@@ -8,6 +8,7 @@ const del = require('del')
 /* ################# */
 gulp.task('clean:scripts', function () {
 	return del([
-		config.assetDist + '/js/**'
+		config.assetDist + '/js/**',
+		config.assetDist + '/css/**'
 	]);
 });

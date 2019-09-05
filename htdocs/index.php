@@ -83,7 +83,7 @@
 		<?php } ?>
 
 		<?php if(count($bookmarks) > 0) { ?>
-			<button id="bookmarks-toggle" class="js-overlay-toggle" data-target="bookmarks">&#128278;</button>
+			<button id="bookmarks-toggle" class="js-flyout-trigger" data-target="bookmarks">&#128278;</button>
 		<?php } ?>
 
 		<?php if(count($header) > 0) { ?>
@@ -128,10 +128,10 @@
 
 	<!-- bookmarks -->
 	<?php if(count($bookmarks) > 0) { ?>
-		<div id="bookmarks" class="overlay js-hidden">
-			<div class="overlay-content">
-				<button class="js-overlay-toggle overlay-close" data-target="bookmarks">&times;</button>
-				<h2 class="overlay-title">Bookmarks</h2>
+		<div id="bookmarks" class="flyout">
+			<div class="flyout-content">
+				<button class="js-flyout-trigger flyout-close" data-target="bookmarks">&times;</button>
+				<h2 class="flyout-title">Bookmarks</h2>
 
 				<?php foreach($bookmarks as $key => $contentItems): ?>
 					<div class="collapse js-closed" id="collapse-<?= strtolower(generateId($key)) ?>">
@@ -150,7 +150,7 @@
 					</div>
 				<?php endforeach; ?>
 			</div><!-- /.overlay -->
-			<div class="backdrop js-overlay-toggle" data-target="bookmarks"></div>
+			<div class="backdrop flyout-backdrop js-flyout-trigger" data-target="bookmarks"></div>
 		</div>
 	<?php } ?>
 

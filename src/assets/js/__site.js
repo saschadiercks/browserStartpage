@@ -3,48 +3,48 @@
 // is the DOM ready for manipulation?
 document.addEventListener('DOMContentLoaded', function() {
 
-	// helper: change classes
-	function addClass(element,className) {
-		element.classList.add(className);
-	}
-	function removeClass(element,className) {
-		element.classList.remove(className);
-	}
+	// // helper: change classes
+	// function addClass(element,className) {
+	// 	element.classList.add(className);
+	// }
+	// function removeClass(element,className) {
+	// 	element.classList.remove(className);
+	// }
 
-	// helper: scroll to desired position
-	function scrollToTarget(x,y) {
-		window.scrollTo(x,y);
-	}
+	// // helper: scroll to desired position
+	// function scrollToTarget(x,y) {
+	// 	window.scrollTo(x,y);
+	// }
 
-	// add JS to body-tag to allow CSS-Manipulation if JS is available
-	function setJs() {
-		var body = document.getElementsByTagName("body")[0];
-		addClass(body,'js');
-		removeClass(body,'no-js');
-	}
+	// // add JS to body-tag to allow CSS-Manipulation if JS is available
+	// function setJs() {
+	// 	var body = document.getElementsByTagName("body")[0];
+	// 	addClass(body,'js');
+	// 	removeClass(body,'no-js');
+	// }
 
-	// show notification on keydown and hide it on keyup
-	document.addEventListener('keydown', function() {
-		var targetElement = document.getElementById('notification');
-		addClass(targetElement,'js-visible');
-		removeClass(targetElement,'js-hidden');
-	});
-	document.addEventListener('keyup', function() {
-		var targetElement = document.getElementById('notification');
-		addClass(targetElement,'js-hidden');
-		removeClass(targetElement,'js-visible');
-	});
+	// // show notification on keydown and hide it on keyup
+	// document.addEventListener('keydown', function() {
+	// 	var targetElement = document.getElementById('notification');
+	// 	addClass(targetElement,'js-visible');
+	// 	removeClass(targetElement,'js-hidden');
+	// });
+	// document.addEventListener('keyup', function() {
+	// 	var targetElement = document.getElementById('notification');
+	// 	addClass(targetElement,'js-hidden');
+	// 	removeClass(targetElement,'js-visible');
+	// });
 
-	// make element sticky (via position in css)
-	function stickyElement(stickyId,compensateId,compensateProperty) {
-		var compensateElement = document.getElementById(compensateId);
-		var stickyElement = document.getElementById(stickyId);
-		var stickyHeight = stickyElement.clientHeight + 'px';
-		addClass(stickyElement,'js-sticky');
+	// // make element sticky (via position in css)
+	// function stickyElement(stickyId,compensateId,compensateProperty) {
+	// 	var compensateElement = document.getElementById(compensateId);
+	// 	var stickyElement = document.getElementById(stickyId);
+	// 	var stickyHeight = stickyElement.clientHeight + 'px';
+	// 	addClass(stickyElement,'js-sticky');
 
-		//add Element-Height as defined property to desired element
-		compensateElement.style.setProperty(compensateProperty,stickyHeight);
-	}
+	// 	//add Element-Height as defined property to desired element
+	// 	compensateElement.style.setProperty(compensateProperty,stickyHeight);
+	// }
 
 	// toggle Element
 	function toggleElement(elementId,targetElementId) {

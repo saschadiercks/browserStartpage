@@ -3,6 +3,7 @@ import setJsAvailability from "./components/setJsAvailability.js";
 import notificationKeydown from "./components/notificationKeydown.js";
 
 import stickyElement from "./functions/stickyElement.js";
+import handleTriggers from "./functions/handleTriggers.js";
 
 
 //import addClass from "./functions/addClass.js";
@@ -34,6 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	// -- make elements sticky
 	stickyElement('#application-header','#content','padding-top');
 	stickyElement('#application-footer','#content','padding-bottom');
+
+	// handle triggers
+	handleTriggers('.js-flyout-trigger', false);
 
 	// // ##### handle localeStorage
 	// // get Id from first tab to save as fallback
