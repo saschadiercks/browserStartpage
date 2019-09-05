@@ -35,9 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		removeClass(targetElement,'js-visible');
 	});
 
-	// per default localStorage is updated, when tabs are switched
-	updateLocalStorageOnTabSwitch = true;
-
 	// make element sticky (via position in css)
 	function stickyElement(stickyId,compensateId,compensateProperty) {
 		var compensateElement = document.getElementById(compensateId);
@@ -112,6 +109,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 		event.preventDefault();
 	}
+
+	// per default localStorage is updated, when tabs are switched
+	updateLocalStorageOnTabSwitch = true;
 
 	// Tab-Handling-Function
 	// initially set Element-count of tabs and tabbedContent and check consistency

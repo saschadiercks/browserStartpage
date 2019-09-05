@@ -136,12 +136,7 @@ module.exports = __webpack_require__(4);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability_js__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_notificationKeydown_js__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__functions_addClass_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__functions_find_js__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__functions_localStorage_js__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__functions_removeClass_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__functions_scrollToPos_js__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_tabHandling_js__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__functions_stickyElement_js__ = __webpack_require__(7);
 // ###### import ######
 
 
@@ -149,29 +144,35 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-
-
-
-
+//import addClass from "./functions/addClass.js";
+//import find from "./functions/find.js";
+//import doLocalStorage from "./functions/localStorage.js";
+//import removeClass from "./functions/removeClass.js";
+//import scrollToPos from "./functions/scrollToPos.js";
+//import tabHandling from "./components/tabHandling.js";
 
 // ####################
 // ##### settings #####
 // ####################
-const selector__applyJsClassTo = "body";
-const selector__notification = ".notification";
-const localStorage__idTab = "currentTab";
-const selector__tabContent = ".tabbed-content";
-const class__isActive = "sdi-js-active";
+// const selector__applyJsClassTo = "body";
+// const selector__notification = ".notification";
+// const localStorage__idTab = "currentTab";
+// const selector__tabContent = ".tabbed-content";
+// const class__isActive = "sdi-js-active";
 
 // ###### script ######
 // is the DOM ready for manipulation?
 document.addEventListener('DOMContentLoaded', function() {
 
 	// --- Toggle JS Availability
-	Object(__WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability_js__["a" /* default */])(selector__applyJsClassTo);
+	Object(__WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability_js__["a" /* default */])("body");
 
 	// --- Show/hide notification
-	Object(__WEBPACK_IMPORTED_MODULE_1__components_notificationKeydown_js__["a" /* default */])(selector__notification);
+	Object(__WEBPACK_IMPORTED_MODULE_1__components_notificationKeydown_js__["a" /* default */])(".notification");
+
+	// -- make elements sticky
+	Object(__WEBPACK_IMPORTED_MODULE_2__functions_stickyElement_js__["a" /* default */])('#application-header','#content','padding-top');
+	Object(__WEBPACK_IMPORTED_MODULE_2__functions_stickyElement_js__["a" /* default */])('#application-footer','#content','padding-bottom');
 
 	// // ##### handle localeStorage
 	// // get Id from first tab to save as fallback
@@ -264,68 +265,25 @@ function notificationKeyDown(selector) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export default */
+/* harmony export (immutable) */ __webpack_exports__["a"] = stickyElement;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__functions_addClass_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_find_js__ = __webpack_require__(0);
 // ###### import ######
+
+
 
 // ####################
 // ##### settings #####
 // ####################
+const class__sticky = 'js-sticky';
 
 // ###### script ######
-function doLocalStorage(item,value) {
-	if(value) {
-		localStorage.setItem(item,value);
-	} else {
-		return localStorage.getItem(item);
-	}
-}
+function stickyElement(selectorSticky, selectorCompensate, propertyCompensate) {
+	var stickyElement = Object(__WEBPACK_IMPORTED_MODULE_1__functions_find_js__["a" /* default */])(selectorSticky);
+	var stickyHeight = stickyElement.clientHeight + 'px';
+	Object(__WEBPACK_IMPORTED_MODULE_0__functions_addClass_js__["a" /* default */])(stickyElement, class__sticky);
 
-
-/***/ }),
-/* 8 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export default */
-// ###### import ######
-
-// ####################
-// ##### settings #####
-// ####################
-
-// ###### script ######
-function scrollToPos(x,y) {
-	window.scroll({
-		top: y,
-		left: x,
-		behavior: 'smooth'
-	});
-}
-
-
-/***/ }),
-/* 9 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export default */
-// ###### import ######
-
-// ####################
-// ##### settings #####
-// ####################
-
-// ###### script ######
-function tabHandling() {
-
-	//Handle localStorage
-	const tabPosition = "tabbedContentId";
-	if (localStorage.getItem(tabPosition) === null) {
-		console.log("localStorage is empty");
-	} else {
-		console.log("localStorage is set");
-	};
-
+	document.querySelector(selectorCompensate).style.setProperty(propertyCompensate,stickyHeight);
 }
 
 
