@@ -69,6 +69,13 @@
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = find;
+// ###### import ######
+
+// ####################
+// ##### settings #####
+// ####################
+
+// ###### script ######
 function find(selector) {
 	return document.querySelectorAll(selector);
 }
@@ -80,6 +87,13 @@ function find(selector) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = addClass;
+// ###### import ######
+
+// ####################
+// ##### settings #####
+// ####################
+
+// ###### script ######
 function addClass(elements, className) {
 	elements.forEach(function(element){
 		element.classList.add(className);
@@ -93,6 +107,13 @@ function addClass(elements, className) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = removeClass;
+// ###### import ######
+
+// ####################
+// ##### settings #####
+// ####################
+
+// ###### script ######
 function removeClass(elements,className) {
 	elements.forEach(function(element){
 		element.classList.remove(className);
@@ -113,14 +134,16 @@ module.exports = __webpack_require__(4);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_addClass_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__functions_find_js__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__functions_localStorage_js__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__functions_removeClass_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__functions_scrollToPos_js__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_tabHandling_js__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability_js__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_notificationKeydown_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__functions_addClass_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__functions_find_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__functions_localStorage_js__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__functions_removeClass_js__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__functions_scrollToPos_js__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_tabHandling_js__ = __webpack_require__(9);
 // ###### import ######
+
 
 
 
@@ -135,6 +158,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // ##### settings #####
 // ####################
 const selector__applyJsClassTo = "body";
+const selector__notification = ".notification";
 const localStorage__idTab = "currentTab";
 const selector__tabContent = ".tabbed-content";
 const class__isActive = "sdi-js-active";
@@ -143,8 +167,11 @@ const class__isActive = "sdi-js-active";
 // is the DOM ready for manipulation?
 document.addEventListener('DOMContentLoaded', function() {
 
-	// ##### Toggle HTML
-	Object(__WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability__["a" /* default */])(selector__applyJsClassTo);
+	// --- Toggle JS Availability
+	Object(__WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability_js__["a" /* default */])(selector__applyJsClassTo);
+
+	// --- Show/hide notification
+	Object(__WEBPACK_IMPORTED_MODULE_1__components_notificationKeydown_js__["a" /* default */])(selector__notification);
 
 	// // ##### handle localeStorage
 	// // get Id from first tab to save as fallback
@@ -197,7 +224,54 @@ function setJsAvailability(selector) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = notificationKeyDown;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__functions_find_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_addClass_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__functions_removeClass_js__ = __webpack_require__(2);
+// ###### import ######
+
+
+
+
+// ####################
+// ##### settings #####
+// ####################
+const class__isHidden = 'js-hidden';
+const class__isVisible = 'js-visible';
+
+// ###### script ######
+function notificationKeyDown(selector) {
+	var targetElement = Object(__WEBPACK_IMPORTED_MODULE_0__functions_find_js__["a" /* default */])(selector);
+
+	document.addEventListener('keydown', function() {
+		targetElement.forEach( function() {
+			Object(__WEBPACK_IMPORTED_MODULE_1__functions_addClass_js__["a" /* default */])(targetElement, class__isVisible);
+			Object(__WEBPACK_IMPORTED_MODULE_2__functions_removeClass_js__["a" /* default */])(targetElement, class__isHidden);
+		});
+	});
+
+	document.addEventListener('keyup', function() {
+		targetElement.forEach( function() {
+			Object(__WEBPACK_IMPORTED_MODULE_1__functions_addClass_js__["a" /* default */])(targetElement, class__isHidden);
+			Object(__WEBPACK_IMPORTED_MODULE_2__functions_removeClass_js__["a" /* default */])(targetElement, class__isVisible);
+		});
+	});
+}
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* unused harmony export default */
+// ###### import ######
+
+// ####################
+// ##### settings #####
+// ####################
+
+// ###### script ######
 function doLocalStorage(item,value) {
 	if(value) {
 		localStorage.setItem(item,value);
@@ -208,22 +282,40 @@ function doLocalStorage(item,value) {
 
 
 /***/ }),
-/* 7 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export default */
-function scrollToPos(x,y) {
-	window.scrollTo(x,y);
-}
-
-
-/***/ }),
 /* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export default */
+// ###### import ######
+
+// ####################
+// ##### settings #####
+// ####################
+
+// ###### script ######
+function scrollToPos(x,y) {
+	window.scroll({
+		top: y,
+		left: x,
+		behavior: 'smooth'
+	});
+}
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export default */
+// ###### import ######
+
+// ####################
+// ##### settings #####
+// ####################
+
+// ###### script ######
 function tabHandling() {
 
 	//Handle localStorage

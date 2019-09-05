@@ -1,5 +1,6 @@
 // ###### import ######
-import setJsAvailability from "./components/setJsAvailability";
+import setJsAvailability from "./components/setJsAvailability.js";
+import notificationKeydown from "./components/notificationKeydown.js";
 
 
 import addClass from "./functions/addClass.js";
@@ -13,6 +14,7 @@ import tabHandling from "./components/tabHandling.js";
 // ##### settings #####
 // ####################
 const selector__applyJsClassTo = "body";
+const selector__notification = ".notification";
 const localStorage__idTab = "currentTab";
 const selector__tabContent = ".tabbed-content";
 const class__isActive = "sdi-js-active";
@@ -21,8 +23,11 @@ const class__isActive = "sdi-js-active";
 // is the DOM ready for manipulation?
 document.addEventListener('DOMContentLoaded', function() {
 
-	// ##### Toggle HTML
+	// --- Toggle JS Availability
 	setJsAvailability(selector__applyJsClassTo);
+
+	// --- Show/hide notification
+	notificationKeydown(selector__notification);
 
 	// // ##### handle localeStorage
 	// // get Id from first tab to save as fallback
