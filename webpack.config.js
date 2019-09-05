@@ -11,6 +11,6 @@ module.exports = {
 		]
 	},
 	output: {
-		filename: `./${config.assetDist}/js/[name].js`,
+		filename: `./${config.assetDist}/js/[name].js`
 	}
 };
