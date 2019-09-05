@@ -13,7 +13,7 @@ gulp.task('scripts:build', function () {
 	.pipe(webpack({
 		config : require('../webpack.config.js')
 	}))
-	.pipe(gulpif(process.env.NODE_ENV === 'production' ,
+	.pipe(gulpif(process.env.NODE_ENV === config.envProduction ,
 		terser()
 	))
 	.pipe(gulp.dest('.'));
