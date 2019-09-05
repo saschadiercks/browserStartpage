@@ -46,21 +46,21 @@ document.addEventListener('DOMContentLoaded', function() {
 	// 	compensateElement.style.setProperty(compensateProperty,stickyHeight);
 	// }
 
-	// toggle Element
-	function toggleElement(elementId,targetElementId) {
-		toggleElement = document.getElementById(elementId);
-		toggleElement.onclick = function() {
-			targetElement = document.getElementById(targetElementId);
-			if(targetElement.classList.contains('js-visible')) {
-				addClass(targetElement,'js-hidden');
-				removeClass(targetElement,'js-visible');
-			} else {
-				removeClass('js-hidden');
-				addClass('js-visible');
-			}
-			event.preventDefault();
-		}
-	}
+	// // toggle Element
+	// function toggleElement(elementId,targetElementId) {
+	// 	toggleElement = document.getElementById(elementId);
+	// 	toggleElement.onclick = function() {
+	// 		targetElement = document.getElementById(targetElementId);
+	// 		if(targetElement.classList.contains('js-visible')) {
+	// 			addClass(targetElement,'js-hidden');
+	// 			removeClass(targetElement,'js-visible');
+	// 		} else {
+	// 			removeClass('js-hidden');
+	// 			addClass('js-visible');
+	// 		}
+	// 		event.preventDefault();
+	// 	}
+	// }
 
 	// Overlay-Handling
 	function handleOverlayTriggers(elementClassName) {
@@ -88,27 +88,27 @@ document.addEventListener('DOMContentLoaded', function() {
 		event.preventDefault();
 	}
 
-	// Collapse-Handling
-	function handleCollapseTriggers(elementClassName) {
-		var elements = document.getElementsByClassName(elementClassName);
-		for(i=0; i < elements.length; i++) {
-			elements[i].onclick = function(event) {
-				var target = this.getAttribute('data-target');
-				toggleCollapse(target,event);
-			}
-		}
-	}
-	function toggleCollapse(elementId,event) {
-		var targetElement = document.getElementById(elementId);
-		if(targetElement.classList.contains('js-opened')) {
-			addClass(targetElement,'js-closed');
-			removeClass(targetElement,'js-opened');
-		} else {
-			removeClass(targetElement,'js-closed');
-			addClass(targetElement,'js-opened');
-		}
-		event.preventDefault();
-	}
+	// // Collapse-Handling
+	// function handleCollapseTriggers(elementClassName) {
+	// 	var elements = document.getElementsByClassName(elementClassName);
+	// 	for(i=0; i < elements.length; i++) {
+	// 		elements[i].onclick = function(event) {
+	// 			var target = this.getAttribute('data-target');
+	// 			toggleCollapse(target,event);
+	// 		}
+	// 	}
+	// }
+	// function toggleCollapse(elementId,event) {
+	// 	var targetElement = document.getElementById(elementId);
+	// 	if(targetElement.classList.contains('js-opened')) {
+	// 		addClass(targetElement,'js-closed');
+	// 		removeClass(targetElement,'js-opened');
+	// 	} else {
+	// 		removeClass(targetElement,'js-closed');
+	// 		addClass(targetElement,'js-opened');
+	// 	}
+	// 	event.preventDefault();
+	// }
 
 	// per default localStorage is updated, when tabs are switched
 	updateLocalStorageOnTabSwitch = true;
