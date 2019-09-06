@@ -5,6 +5,14 @@
 	$projectConfigUrl ='config/config.php';
 	require_once($projectConfigUrl);
 
+	$localhost = array(
+		'127.0.0.1',
+		'::1'
+	);
+	if(in_array($_SERVER['REMOTE_ADDR'], $localhost)){
+		$isLocalHost = true;
+	};
+
 	function generateId($value) {
 		$needles = array(' ','/','.','#');
 		$result = strtolower(htmlentities(str_replace($needles, '', $value)));
@@ -29,7 +37,7 @@
 <html <?php
 	echo isset($projectLanguage) ? 'lang="'.$projectLanguage.'" ' : FALSE;
 	echo isset($projectDirection) ? 'dir="'.$projectDirection.'" ' : FALSE;
-	echo isset($manifestUrl)? 'manifest="'.$manifestUrl.'" ' : FALSE;
+	echo isset($manifestUrl) && isset($isLocalHost) ? 'manifest="'.$manifestUrl.'" ' : FALSE;
 	echo isset($theme)? 'class="'.$theme.'" ' : FALSE;
 ?>>
 <head>
