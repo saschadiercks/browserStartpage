@@ -203,5 +203,5 @@ document.addEventListener('DOMContentLoaded', function() {
 		handleOverlayTriggers('js-overlay-toggle');
 
 		// Modals
-		handleOverlayTriggers('js-modal-toggle');
+		handleOverlayTriggers('js-modal-trigger');
 });

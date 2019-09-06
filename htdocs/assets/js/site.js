@@ -197,6 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	// handle triggers
 	Object(__WEBPACK_IMPORTED_MODULE_4__functions_handleTriggers_js__["a" /* default */])('.js-flyout-trigger', false);
 	Object(__WEBPACK_IMPORTED_MODULE_4__functions_handleTriggers_js__["a" /* default */])('.js-collapse-trigger', false);
+	Object(__WEBPACK_IMPORTED_MODULE_4__functions_handleTriggers_js__["a" /* default */])('.js-modal-trigger', false);
 
 	// -- make elements sticky
 	Object(__WEBPACK_IMPORTED_MODULE_3__functions_stickyElement_js__["a" /* default */])('#application-header','#content','padding-top');
@@ -349,8 +350,11 @@ function tabHandling(selectorTrigger,selectorContent) {
 			// show clicked button
 			this.classList.add(class__isActive);
 
-			// save to local storage
-			localStorage.setItem(key__localStorage, this.getAttribute('data-target'));
+			// save to local storage, when key is not pressed
+			if(event.altKey !== true) {
+				localStorage.setItem(key__localStorage, this.getAttribute('data-target'));
+			}
+
 		});
 	});
 }

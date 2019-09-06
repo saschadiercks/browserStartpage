@@ -12,7 +12,7 @@
 
 	function renderQrModalTrigger($contentItem) {
 		if(isset($contentItem['imageQr']) && !empty($contentItem['imageQr']) > 0) {
-			echo '<button class="tile__button js-modal-toggle" data-target="' . generateId($contentItem['imageQr']) . '">&#9635;</button>';
+			echo '<button class="tile__button js-modal-trigger" data-target="' . generateId($contentItem['imageQr']) . '">&#9635;</button>';
 		}
 	}
 
@@ -110,7 +110,7 @@
 					<?php foreach($key as $contentItem): ?>
 						<li class="tile-container">
 							<?php if(isset($contentItem['modal']) && count($contentItem['modal']) > 0) { ?>
-								<a href="<?= $contentItem['url'] ?>" rel="noopener" class="tile js-modal-toggle" data-target="<?= generateId($contentItem['title']) ?>">
+								<a href="<?= $contentItem['url'] ?>" rel="noopener" class="tile js-modal-trigger" data-target="<?= generateId($contentItem['title']) ?>">
 									<img src="<?= $contentItem['image'] ?>" alt="<?= $contentItem['title'] ?>" class="tile-image"/>
 									<span class="tile-title"><?= $contentItem['title'] ?></span>
 								</a>
@@ -165,7 +165,7 @@
 					<div class="modal-overlay">
 						<div class="modal-header">
 							<?= $contentItem['title'] ?>
-							<button class="modal-header__close js-modal-toggle" data-target="<?= generateId($contentItem['title']) ?>">&times;</button>
+							<button class="modal-header__close js-modal-trigger" data-target="<?= generateId($contentItem['title']) ?>">&times;</button>
 						</div>
 						<div class="modal-content">
 							<ul class="modal-list">
@@ -177,7 +177,7 @@
 							</ul>
 						</div><!-- /.modal-content -->
 					</div><!-- /.modal-overlay -->
-					<div class="backdrop js-modal-toggle" data-target="<?= generateId($contentItem['title']) ?>"></div>
+					<div class="backdrop js-modal-trigger" data-target="<?= generateId($contentItem['title']) ?>"></div>
 				</div>
 			<?php } ?>
 			<?php if(isset($contentItem['imageQr']) && !empty($contentItem['imageQr']))  { ?>
@@ -185,13 +185,13 @@
 					<div class="modal-overlay">
 						<div class="modal-header">
 							<?= $contentItem['title'] ?>
-							<button class="modal-header__close js-modal-toggle" data-target="<?= generateId($contentItem['imageQr']) ?>">&times;</button>
+							<button class="modal-header__close js-modal-trigger" data-target="<?= generateId($contentItem['imageQr']) ?>">&times;</button>
 						</div>
 						<div class="modal-content modal-content--qr">
 							<img src="<?= $contentItem['imageQr'] ?>" alt="<?= $contentItem['title'] ?>"/>
 						</div><!-- /.modal-content -->
 					</div><!-- /.modal-overlay -->
-					<div class="backdrop js-modal-toggle" data-target="<?= generateId($contentItem['imageQr']) ?>"></div>
+					<div class="backdrop js-modal-trigger" data-target="<?= generateId($contentItem['imageQr']) ?>"></div>
 				</div>
 			<?php } ?>
 		<?php endforeach; ?>
