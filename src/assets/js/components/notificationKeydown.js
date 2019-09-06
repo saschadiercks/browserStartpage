@@ -1,5 +1,5 @@
 // ###### import ######
-import find from "../functions/find.js";
+import findAll from "../functions/findAll.js";
 import addClass from "../functions/addClass.js";
 import removeClass from "../functions/removeClass.js";
 
@@ -11,7 +11,7 @@ const class__isVisible = 'js-visible';
 
 // ###### script ######
 export default function notificationKeyDown(selector) {
-	var targetElement = find(selector);
+	var targetElement = findAll(selector);
 
 	document.addEventListener('keydown', function() {
 		targetElement.forEach( function() {

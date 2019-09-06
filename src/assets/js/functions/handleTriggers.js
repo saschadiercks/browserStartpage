@@ -1,7 +1,6 @@
 // ###### import ######
-import find from "../functions/find.js";
+import findAll from "../functions/findAll.js";
 import toggleClass from "../functions/toggleClass.js";
-import removeClass from "../functions/removeClass.js";
 
 // ####################
 // ##### settings #####
@@ -10,12 +9,12 @@ const class__isActive = 'js-is-active';
 
 // ###### script ######
 export default function handleTriggers(selector, callback) {
-	var targetElements = find(selector);
+	var targetElements = findAll(selector);
 
 	targetElements.forEach(function(element) {
 		element.addEventListener('click', function() {
-			var selectorTarget = find('#' + this.getAttribute('data-target'));
-			toggleClass(selectorTarget, class__isActive);
+			var elementTarget = findAll('#' + this.getAttribute('data-target'));
+			toggleClass(elementTarget, class__isActive);
 		});
 	})
 

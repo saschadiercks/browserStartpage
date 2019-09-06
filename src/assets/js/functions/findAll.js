@@ -5,6 +5,6 @@
 // ####################
 
 // ###### script ######
-export default function find(selector) {
-	return document.querySelector(selector);
+export default function findAll(selector) {
+	return document.querySelectorAll(selector);
 }

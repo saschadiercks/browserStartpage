@@ -1,5 +1,5 @@
 // ###### import ######
-import find from "../functions/find.js";
+import findAll from "../functions/findAll.js";
 import addClass from "../functions/addClass.js";
 import removeClass from "../functions/removeClass.js";
 
@@ -11,7 +11,7 @@ const class__jsIsNotAvailable = 'no-js';
 
 // ###### script ######
 export default function setJsAvailability(selector) {
-	var selector = find(selector);
+	var selector = findAll(selector);
 
 	selector.forEach(function() {
 		addClass(selector, class__jsIsAvailable);

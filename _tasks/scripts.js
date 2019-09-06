@@ -10,9 +10,9 @@ const gulpif = require('gulp-if')
 /* ################# */
 gulp.task('scripts:build', function () {
 	return gulp.src(config.assetSrc + '/js/')
-	.pipe(webpack({
-		config : require('../webpack.config.js')
-	}))
+	.pipe(webpack(
+		require('../webpack.config.js')
+	))
 	.pipe(gulpif(process.env.NODE_ENV === config.envProduction ,
 		terser()
 	))
