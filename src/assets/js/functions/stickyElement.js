@@ -10,7 +10,7 @@ const class__sticky = 'js-sticky';
 // ###### script ######
 export default function stickyElement(selectorSticky, selectorCompensate, propertyCompensate) {
 	var stickyElement = find(selectorSticky);
-	var stickyHeight = stickyElement.clientHeight + 'px';
+	var stickyHeight = document.querySelector(selectorSticky).clientHeight + 'px';
 	addClass(stickyElement, class__sticky);
 
 	document.querySelector(selectorCompensate).style.setProperty(propertyCompensate,stickyHeight);
