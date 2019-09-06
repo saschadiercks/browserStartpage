@@ -236,18 +236,11 @@ nav {
 
 	#header-nav {
 		grid-column: 1 / span 2;
-		max-height: 0;
 		overflow: hidden;
 		transition: max-height .5s ease;
 		&.js-opened { max-height: 100vh; }
 
 		li { display: block; }
-	}
-
-	.collapse-main {
-		max-height: 0;
-		overflow: hidden;
-		transition: max-height .5s ease;
 	}
 }
 
@@ -266,6 +259,12 @@ nav {
 	}
 
 	#bookmarks-toggle { float: right; }
+
+	#application-header {
+		.collapse-main {
+			max-height: none;
+		}
+	}
 
 	.overlay-title {
 		padding-bottom: $base-spacing-size*.75;
