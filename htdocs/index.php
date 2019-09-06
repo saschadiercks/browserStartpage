@@ -89,9 +89,11 @@
 		<?php if(count($header) > 0) { ?>
 			<nav id="header-nav" class="collapse tabs">
 				<ul class="collapse-main tablist">
+					<?php $tabnumber = $counterStartvalue ?>
 					<?php foreach($header as $key): ?>
-						<li class="tablist__item<?php if(count($header) == $counterStartvalue) { echo " tablist__item--last-child"; } ?>">
-							<a href="#tab-<?= $counterStartvalue ?>" class="js-tab-trigger" data-target="tab-<?= $counterStartvalue++ ?>"><?= $key ?></a>
+						<li class="tablist__item<?php if(count($header) == $tabnumber) { echo " tablist__item--last-child"; } ?>">
+							<a href="#tab-<?= $tabnumber ?>" class="js-tab-trigger" data-target="tab-<?= $tabnumber ?>"><?= $key ?></a>
+							<?php $tabnumber++ ?>
 						</li>
 					<?php endforeach; ?>
 				</ul>
@@ -101,8 +103,9 @@
 
 	<!-- content -->
 	<main id="content">
+		<?php $tabnumber = $counterStartvalue ?>
 		<?php foreach($content as $key): ?>
-			<div id="tab-<?= $counterStartvalue++ ?>" class="tabbed-content">
+			<div id="tab-<?= $tabnumber++ ?>" class="tabbed-content">
 				<ul class="list-tiles">
 					<?php foreach($key as $contentItem): ?>
 						<li class="tile-container">
