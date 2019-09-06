@@ -1,5 +1,9 @@
 // ---- modal ----
-.modal {
+.js .modal {
+	display: none;
+}
+
+.modal.js-is-active {
 	display: block;
 	position: fixed;
 	top: 0;

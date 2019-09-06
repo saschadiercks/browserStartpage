@@ -6,7 +6,8 @@
 	require_once($projectConfigUrl);
 
 	function generateId($value) {
-		$result = strtolower(htmlentities(str_replace(' ', '', $value)));
+		$needles = array(' ','/','.','#');
+		$result = strtolower(htmlentities(str_replace($needles, '', $value)));
 		return $result;
 	}
 
@@ -161,7 +162,7 @@
 	<?php foreach($content as $key): ?>
 		<?php foreach($key as $contentItem): ?>
 			<?php if(isset($contentItem['modal']) && count($contentItem['modal']) > 0) { ?>
-				<div id="<?= generateId($contentItem['title']) ?>" class="modal js-hidden">
+				<div id="<?= generateId($contentItem['title']) ?>" class="modal">
 					<div class="modal-overlay">
 						<div class="modal-header">
 							<?= $contentItem['title'] ?>
@@ -181,7 +182,7 @@
 				</div>
 			<?php } ?>
 			<?php if(isset($contentItem['imageQr']) && !empty($contentItem['imageQr']))  { ?>
-				<div id="<?= generateId($contentItem['imageQr']) ?>" class="modal js-hidden">
+				<div id="<?= generateId($contentItem['imageQr']) ?>" class="modal">
 					<div class="modal-overlay">
 						<div class="modal-header">
 							<?= $contentItem['title'] ?>

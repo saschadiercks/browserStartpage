@@ -415,11 +415,7 @@ function find(selector) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = fixScrollPos;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__addClass_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__removeClass_js__ = __webpack_require__(2);
 // ###### import ######
-
-
 
 // ####################
 // ##### settings #####
@@ -430,13 +426,14 @@ const class__elementIsFixed = 'sdi-is-fixed';
 var scrollYSaved;
 
 // ###### script ######
-function fixScrollPos() {
+function fixScrollPos(event) {
 	var scrollY = window.pageYOffset;
+	//console.log(event);
 
 	if(selector__body.classList.contains(class__elementIsFixed)) {
 		selector__body.classList.remove(class__elementIsFixed);
 		selector__body.style.top = '';
-		scrollToTarget(0,scrollYSaved);
+		window.scrollTo(0,scrollYSaved);
 	} else {
 		selector__body.classList.add(class__elementIsFixed);
 		selector__body.style.top = '-' + scrollY + 'px';
@@ -470,14 +467,14 @@ function handleTriggers(selector, callback) {
 		element.addEventListener('click', function() {
 			var elementTarget = Object(__WEBPACK_IMPORTED_MODULE_0__findAll_js__["a" /* default */])(this.getAttribute('data-target'));
 			Object(__WEBPACK_IMPORTED_MODULE_1__toggleClass_js__["a" /* default */])(elementTarget, class__isActive);
+
+			// check if a callback is defined
+			if(typeof callback === "function") {
+				callback();
+			}
+			event.preventDefault();
 		});
 	})
-
-	if(callback === false) {
-		event.preventDefault();
-	} else {
-		callback();
-	}
 }
 
 

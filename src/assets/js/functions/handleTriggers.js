@@ -15,12 +15,12 @@ export default function handleTriggers(selector, callback) {
 		element.addEventListener('click', function() {
 			var elementTarget = findAll(this.getAttribute('data-target'));
 			toggleClass(elementTarget, class__isActive);
+
+			// check if a callback is defined
+			if(typeof callback === "function") {
+				callback();
+			}
+			event.preventDefault();
 		});
 	})
-
-	if(callback === false) {
-		event.preventDefault();
-	} else {
-		callback();
-	}
 }

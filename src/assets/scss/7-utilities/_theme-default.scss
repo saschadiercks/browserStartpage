@@ -2,6 +2,7 @@
 body {
 	background-color: $body-background-color;
 	font-family: $document-font-family;
+	width: 100%;
 }
 
 // ---- Elements ----
@@ -26,7 +27,7 @@ body {
 	width: $modal-content-width;
 }
 
-.js-visible .modal-overlay {
+.js-is-active .modal-overlay {
 	@include align-centered($scale:1,$position:fixed);
 }
 
