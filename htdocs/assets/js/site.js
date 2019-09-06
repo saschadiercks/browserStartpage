@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -143,39 +143,21 @@ function toggleClass(elements, className) {
 
 /***/ }),
 /* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = find;
-// ###### import ######
-
-// ####################
-// ##### settings #####
-// ####################
-
-// ###### script ######
-function find(selector) {
-	return document.querySelector(selector);
-}
+module.exports = __webpack_require__(5);
 
 
 /***/ }),
 /* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(6);
-
-
-/***/ }),
-/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability_js__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_notificationKeydown_js__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_handleTabsLocalStorage_js__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__functions_stickyElement_js__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_notificationKeydown_js__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_handleTabsLocalStorage_js__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__functions_stickyElement_js__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__functions_fixScrollPos_js__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__functions_handleTriggers_js__ = __webpack_require__(12);
 // ###### import ######
@@ -217,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	// handle triggers
 	Object(__WEBPACK_IMPORTED_MODULE_5__functions_handleTriggers_js__["a" /* default */])('.js-flyout-trigger', false);
 	Object(__WEBPACK_IMPORTED_MODULE_5__functions_handleTriggers_js__["a" /* default */])('.js-collapse-trigger', false);
-	Object(__WEBPACK_IMPORTED_MODULE_5__functions_handleTriggers_js__["a" /* default */])('.js-modal-trigger', Object(__WEBPACK_IMPORTED_MODULE_4__functions_fixScrollPos_js__["a" /* default */])());
+	Object(__WEBPACK_IMPORTED_MODULE_5__functions_handleTriggers_js__["a" /* default */])('.js-modal-trigger', __WEBPACK_IMPORTED_MODULE_4__functions_fixScrollPos_js__["a" /* default */]);
 
 	// -- make elements sticky
 	Object(__WEBPACK_IMPORTED_MODULE_3__functions_stickyElement_js__["a" /* default */])('#application-header','#content','padding-top');
@@ -245,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -276,7 +258,7 @@ function setJsAvailability(selector) {
 
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -316,7 +298,7 @@ function notificationKeyDown(selector) {
 
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -381,13 +363,13 @@ function tabHandling(selectorTrigger,selectorContent) {
 
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = stickyElement;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__addClass_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__find_js__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__find_js__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__findAll_js__ = __webpack_require__(0);
 // ###### import ######
 
@@ -410,23 +392,56 @@ function stickyElement(selectorSticky, selectorCompensate, propertyCompensate) {
 
 
 /***/ }),
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = find;
+// ###### import ######
+
+// ####################
+// ##### settings #####
+// ####################
+
+// ###### script ######
+function find(selector) {
+	return document.querySelector(selector);
+}
+
+
+/***/ }),
 /* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = fixScrollPos;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__find_js__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__addClass_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__removeClass_js__ = __webpack_require__(2);
 // ###### import ######
+
 
 
 // ####################
 // ##### settings #####
 // ####################
-const selector__body = Object(__WEBPACK_IMPORTED_MODULE_0__find_js__["a" /* default */])('body');
+const selector__body = document.querySelector('body');
+const class__elementIsFixed = 'sdi-is-fixed';
+
+var scrollYSaved;
 
 // ###### script ######
 function fixScrollPos() {
-	selector__body
+	var scrollY = window.pageYOffset;
+
+	if(selector__body.classList.contains(class__elementIsFixed)) {
+		selector__body.classList.remove(class__elementIsFixed);
+		selector__body.style.top = '';
+		scrollToTarget(0,scrollYSaved);
+	} else {
+		selector__body.classList.add(class__elementIsFixed);
+		selector__body.style.top = '-' + scrollY + 'px';
+		scrollYSaved = scrollY;
+	}
 }
 
 
