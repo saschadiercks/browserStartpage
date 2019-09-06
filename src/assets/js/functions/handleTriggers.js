@@ -13,7 +13,7 @@ export default function handleTriggers(selector, callback) {
 
 	targetElements.forEach(function(element) {
 		element.addEventListener('click', function() {
-			var elementTarget = findAll('#' + this.getAttribute('data-target'));
+			var elementTarget = findAll(this.getAttribute('data-target'));
 			toggleClass(elementTarget, class__isActive);
 		});
 	})

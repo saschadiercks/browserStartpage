@@ -430,7 +430,7 @@ function handleTriggers(selector, callback) {
 
 	targetElements.forEach(function(element) {
 		element.addEventListener('click', function() {
-			var elementTarget = Object(__WEBPACK_IMPORTED_MODULE_0__functions_findAll_js__["a" /* default */])('#' + this.getAttribute('data-target'));
+			var elementTarget = Object(__WEBPACK_IMPORTED_MODULE_0__functions_findAll_js__["a" /* default */])(this.getAttribute('data-target'));
 			Object(__WEBPACK_IMPORTED_MODULE_1__functions_toggleClass_js__["a" /* default */])(elementTarget, class__isActive);
 		});
 	})

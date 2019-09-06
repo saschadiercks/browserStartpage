@@ -12,7 +12,7 @@
 
 	function renderQrModalTrigger($contentItem) {
 		if(isset($contentItem['imageQr']) && !empty($contentItem['imageQr']) > 0) {
-			echo '<button class="tile__button js-modal-trigger" data-target="' . generateId($contentItem['imageQr']) . '">&#9635;</button>';
+			echo '<button class="tile__button js-modal-trigger" data-target="#' . generateId($contentItem['imageQr']) . '">&#9635;</button>';
 		}
 	}
 
@@ -79,11 +79,11 @@
 	<!-- header -->
 	<header id="application-header">
 		<?php if(count($header) > 0) { ?>
-			<button id="header-nav-toggle" class="js-collapse-trigger" data-target="header-nav">&#9776;</button>
+			<button id="header-nav-toggle" class="js-collapse-trigger" data-target="#header-nav">&#9776;</button>
 		<?php } ?>
 
 		<?php if(count($bookmarks) > 0) { ?>
-			<button id="bookmarks-toggle" class="js-flyout-trigger" data-target="bookmarks">&#128278;</button>
+			<button id="bookmarks-toggle" class="js-flyout-trigger" data-target="#bookmarks">&#128278;</button>
 		<?php } ?>
 
 		<?php if(count($header) > 0) { ?>
@@ -110,7 +110,7 @@
 					<?php foreach($key as $contentItem): ?>
 						<li class="tile-container">
 							<?php if(isset($contentItem['modal']) && count($contentItem['modal']) > 0) { ?>
-								<a href="<?= $contentItem['url'] ?>" rel="noopener" class="tile js-modal-trigger" data-target="<?= generateId($contentItem['title']) ?>">
+								<a href="<?= $contentItem['url'] ?>" rel="noopener" class="tile js-modal-trigger" data-target="#<?= generateId($contentItem['title']) ?>">
 									<img src="<?= $contentItem['image'] ?>" alt="<?= $contentItem['title'] ?>" class="tile-image"/>
 									<span class="tile-title"><?= $contentItem['title'] ?></span>
 								</a>
@@ -133,13 +133,13 @@
 	<?php if(count($bookmarks) > 0) { ?>
 		<div id="bookmarks" class="flyout">
 			<div class="flyout-content">
-				<button class="js-flyout-trigger flyout-close" data-target="bookmarks">&times;</button>
+				<button class="js-flyout-trigger flyout-close" data-target="#bookmarks">&times;</button>
 				<h2 class="flyout-title">Bookmarks</h2>
 
 				<?php foreach($bookmarks as $key => $contentItems): ?>
 					<div class="collapse" id="collapse-<?= strtolower(generateId($key)) ?>">
 						<div class="collapse-header">
-							<h3 class="collapse-title"><button class="js-collapse-trigger" data-target="collapse-<?= strtolower(generateId($key)) ?>"><span class="collapse-icon">&times;</span> <?= $key ?></button></h3>
+							<h3 class="collapse-title"><button class="js-collapse-trigger" data-target="#collapse-<?= strtolower(generateId($key)) ?>"><span class="collapse-icon">&times;</span> <?= $key ?></button></h3>
 						</div>
 						<div class="collapse-main">
 							<ul class="list-vertical">
@@ -153,7 +153,7 @@
 					</div>
 				<?php endforeach; ?>
 			</div><!-- /.overlay -->
-			<div class="backdrop flyout-backdrop js-flyout-trigger" data-target="bookmarks"></div>
+			<div class="backdrop flyout-backdrop js-flyout-trigger" data-target="#bookmarks"></div>
 		</div>
 	<?php } ?>
 
@@ -165,7 +165,7 @@
 					<div class="modal-overlay">
 						<div class="modal-header">
 							<?= $contentItem['title'] ?>
-							<button class="modal-header__close js-modal-trigger" data-target="<?= generateId($contentItem['title']) ?>">&times;</button>
+							<button class="modal-header__close js-modal-trigger" data-target="#<?= generateId($contentItem['title']) ?>">&times;</button>
 						</div>
 						<div class="modal-content">
 							<ul class="modal-list">
@@ -177,7 +177,7 @@
 							</ul>
 						</div><!-- /.modal-content -->
 					</div><!-- /.modal-overlay -->
-					<div class="backdrop js-modal-trigger" data-target="<?= generateId($contentItem['title']) ?>"></div>
+					<div class="backdrop js-modal-trigger" data-target="#<?= generateId($contentItem['title']) ?>"></div>
 				</div>
 			<?php } ?>
 			<?php if(isset($contentItem['imageQr']) && !empty($contentItem['imageQr']))  { ?>
@@ -185,13 +185,13 @@
 					<div class="modal-overlay">
 						<div class="modal-header">
 							<?= $contentItem['title'] ?>
-							<button class="modal-header__close js-modal-trigger" data-target="<?= generateId($contentItem['imageQr']) ?>">&times;</button>
+							<button class="modal-header__close js-modal-trigger" data-target="#<?= generateId($contentItem['imageQr']) ?>">&times;</button>
 						</div>
 						<div class="modal-content modal-content--qr">
 							<img src="<?= $contentItem['imageQr'] ?>" alt="<?= $contentItem['title'] ?>"/>
 						</div><!-- /.modal-content -->
 					</div><!-- /.modal-overlay -->
-					<div class="backdrop js-modal-trigger" data-target="<?= generateId($contentItem['imageQr']) ?>"></div>
+					<div class="backdrop js-modal-trigger" data-target="#<?= generateId($contentItem['imageQr']) ?>"></div>
 				</div>
 			<?php } ?>
 		<?php endforeach; ?>
