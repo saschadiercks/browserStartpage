@@ -1,7 +1,7 @@
 // ###### import ######
-import addClass from "../functions/addClass.js";
-import find from "../functions/find.js";
-import findAll from "../functions/findAll.js";
+import addClass from "./addClass.js";
+import find from "./find.js";
+import findAll from "./findAll.js";
 
 // ####################
 // ##### settings #####

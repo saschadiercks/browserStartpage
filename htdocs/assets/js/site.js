@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -143,23 +143,43 @@ function toggleClass(elements, className) {
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = __webpack_require__(5);
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = find;
+// ###### import ######
+
+// ####################
+// ##### settings #####
+// ####################
+
+// ###### script ######
+function find(selector) {
+	return document.querySelector(selector);
+}
 
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(6);
+
+
+/***/ }),
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability_js__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_notificationKeydown_js__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_handleTabsLocalStorage_js__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__functions_stickyElement_js__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__functions_handleTriggers_js__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability_js__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_notificationKeydown_js__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_handleTabsLocalStorage_js__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__functions_stickyElement_js__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__functions_fixScrollPos_js__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__functions_handleTriggers_js__ = __webpack_require__(12);
 // ###### import ######
+
 
 
 
@@ -195,9 +215,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	Object(__WEBPACK_IMPORTED_MODULE_2__components_handleTabsLocalStorage_js__["a" /* default */])('.js-tab-trigger','.tabbed-content');
 
 	// handle triggers
-	Object(__WEBPACK_IMPORTED_MODULE_4__functions_handleTriggers_js__["a" /* default */])('.js-flyout-trigger', false);
-	Object(__WEBPACK_IMPORTED_MODULE_4__functions_handleTriggers_js__["a" /* default */])('.js-collapse-trigger', false);
-	Object(__WEBPACK_IMPORTED_MODULE_4__functions_handleTriggers_js__["a" /* default */])('.js-modal-trigger', false);
+	Object(__WEBPACK_IMPORTED_MODULE_5__functions_handleTriggers_js__["a" /* default */])('.js-flyout-trigger', false);
+	Object(__WEBPACK_IMPORTED_MODULE_5__functions_handleTriggers_js__["a" /* default */])('.js-collapse-trigger', false);
+	Object(__WEBPACK_IMPORTED_MODULE_5__functions_handleTriggers_js__["a" /* default */])('.js-modal-trigger', Object(__WEBPACK_IMPORTED_MODULE_4__functions_fixScrollPos_js__["a" /* default */])());
 
 	// -- make elements sticky
 	Object(__WEBPACK_IMPORTED_MODULE_3__functions_stickyElement_js__["a" /* default */])('#application-header','#content','padding-top');
@@ -225,7 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -256,7 +276,7 @@ function setJsAvailability(selector) {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -296,7 +316,7 @@ function notificationKeyDown(selector) {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -361,14 +381,14 @@ function tabHandling(selectorTrigger,selectorContent) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = stickyElement;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__functions_addClass_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_find_js__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__functions_findAll_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__addClass_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__find_js__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__findAll_js__ = __webpack_require__(0);
 // ###### import ######
 
 
@@ -381,29 +401,11 @@ const class__sticky = 'js-sticky';
 
 // ###### script ######
 function stickyElement(selectorSticky, selectorCompensate, propertyCompensate) {
-	var stickyElement = Object(__WEBPACK_IMPORTED_MODULE_2__functions_findAll_js__["a" /* default */])(selectorSticky);
-	var stickyHeight = Object(__WEBPACK_IMPORTED_MODULE_1__functions_find_js__["a" /* default */])(selectorSticky).clientHeight + 'px';
-	Object(__WEBPACK_IMPORTED_MODULE_0__functions_addClass_js__["a" /* default */])(stickyElement, class__sticky);
+	var stickyElement = Object(__WEBPACK_IMPORTED_MODULE_2__findAll_js__["a" /* default */])(selectorSticky);
+	var stickyHeight = Object(__WEBPACK_IMPORTED_MODULE_1__find_js__["a" /* default */])(selectorSticky).clientHeight + 'px';
+	Object(__WEBPACK_IMPORTED_MODULE_0__addClass_js__["a" /* default */])(stickyElement, class__sticky);
 
-	Object(__WEBPACK_IMPORTED_MODULE_1__functions_find_js__["a" /* default */])(selectorCompensate).style.setProperty(propertyCompensate,stickyHeight);
-}
-
-
-/***/ }),
-/* 10 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = find;
-// ###### import ######
-
-// ####################
-// ##### settings #####
-// ####################
-
-// ###### script ######
-function find(selector) {
-	return document.querySelector(selector);
+	Object(__WEBPACK_IMPORTED_MODULE_1__find_js__["a" /* default */])(selectorCompensate).style.setProperty(propertyCompensate,stickyHeight);
 }
 
 
@@ -412,9 +414,30 @@ function find(selector) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = fixScrollPos;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__find_js__ = __webpack_require__(4);
+// ###### import ######
+
+
+// ####################
+// ##### settings #####
+// ####################
+const selector__body = Object(__WEBPACK_IMPORTED_MODULE_0__find_js__["a" /* default */])('body');
+
+// ###### script ######
+function fixScrollPos() {
+	selector__body
+}
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = handleTriggers;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__functions_findAll_js__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_toggleClass_js__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__findAll_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__toggleClass_js__ = __webpack_require__(3);
 // ###### import ######
 
 
@@ -426,12 +449,12 @@ const class__isActive = 'js-is-active';
 
 // ###### script ######
 function handleTriggers(selector, callback) {
-	var targetElements = Object(__WEBPACK_IMPORTED_MODULE_0__functions_findAll_js__["a" /* default */])(selector);
+	var targetElements = Object(__WEBPACK_IMPORTED_MODULE_0__findAll_js__["a" /* default */])(selector);
 
 	targetElements.forEach(function(element) {
 		element.addEventListener('click', function() {
-			var elementTarget = Object(__WEBPACK_IMPORTED_MODULE_0__functions_findAll_js__["a" /* default */])(this.getAttribute('data-target'));
-			Object(__WEBPACK_IMPORTED_MODULE_1__functions_toggleClass_js__["a" /* default */])(elementTarget, class__isActive);
+			var elementTarget = Object(__WEBPACK_IMPORTED_MODULE_0__findAll_js__["a" /* default */])(this.getAttribute('data-target'));
+			Object(__WEBPACK_IMPORTED_MODULE_1__toggleClass_js__["a" /* default */])(elementTarget, class__isActive);
 		});
 	})
 

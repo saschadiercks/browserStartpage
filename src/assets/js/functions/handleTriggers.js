@@ -1,6 +1,6 @@
 // ###### import ######
-import findAll from "../functions/findAll.js";
-import toggleClass from "../functions/toggleClass.js";
+import findAll from "./findAll.js";
+import toggleClass from "./toggleClass.js";
 
 // ####################
 // ##### settings #####

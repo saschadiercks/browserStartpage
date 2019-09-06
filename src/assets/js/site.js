@@ -4,6 +4,7 @@ import notificationKeydown from "./components/notificationKeydown.js";
 import handleTabs from "./components/handleTabsLocalStorage.js";
 
 import stickyElement from "./functions/stickyElement.js";
+import fixScrollPos from "./functions/fixScrollPos.js";
 import handleTriggers from "./functions/handleTriggers.js";
 
 
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	// handle triggers
 	handleTriggers('.js-flyout-trigger', false);
 	handleTriggers('.js-collapse-trigger', false);
-	handleTriggers('.js-modal-trigger', false);
+	handleTriggers('.js-modal-trigger', fixScrollPos());
 
 	// -- make elements sticky
 	stickyElement('#application-header','#content','padding-top');
