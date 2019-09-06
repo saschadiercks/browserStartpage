@@ -43,8 +43,11 @@ export default function tabHandling(selectorTrigger,selectorContent) {
 			// show clicked button
 			this.classList.add(class__isActive);
 
-			// save to local storage
-			localStorage.setItem(key__localStorage, this.getAttribute('data-target'));
+			// save to local storage, when key is not pressed
+			if(event.altKey !== true) {
+				localStorage.setItem(key__localStorage, this.getAttribute('data-target'));
+			}
+
 		});
 	});
 }
