@@ -156,8 +156,8 @@ module.exports = __webpack_require__(5);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability_js__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_notificationKeydown_js__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__functions_stickyElement_js__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__functions_handleTabs_js__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_handleTabsLocalStorage_js__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__functions_stickyElement_js__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__functions_handleTriggers_js__ = __webpack_require__(11);
 // ###### import ######
 
@@ -191,16 +191,16 @@ document.addEventListener('DOMContentLoaded', function() {
 	// --- Toggle JS Availability
 	Object(__WEBPACK_IMPORTED_MODULE_0__components_setJsAvailability_js__["a" /* default */])("body");
 
-	// -- make elements sticky
-	Object(__WEBPACK_IMPORTED_MODULE_2__functions_stickyElement_js__["a" /* default */])('#application-header','#content','padding-top');
-	Object(__WEBPACK_IMPORTED_MODULE_2__functions_stickyElement_js__["a" /* default */])('#application-footer','#content','padding-bottom');
-
 	// handle tabs
-	Object(__WEBPACK_IMPORTED_MODULE_3__functions_handleTabs_js__["a" /* default */])('.js-tab-trigger','.tabbed-content');
+	Object(__WEBPACK_IMPORTED_MODULE_2__components_handleTabsLocalStorage_js__["a" /* default */])('.js-tab-trigger','.tabbed-content');
 
 	// handle triggers
 	Object(__WEBPACK_IMPORTED_MODULE_4__functions_handleTriggers_js__["a" /* default */])('.js-flyout-trigger', false);
 	Object(__WEBPACK_IMPORTED_MODULE_4__functions_handleTriggers_js__["a" /* default */])('.js-collapse-trigger', false);
+
+	// -- make elements sticky
+	Object(__WEBPACK_IMPORTED_MODULE_3__functions_stickyElement_js__["a" /* default */])('#application-header','#content','padding-top');
+	Object(__WEBPACK_IMPORTED_MODULE_3__functions_stickyElement_js__["a" /* default */])('#application-footer','#content','padding-bottom');
 
 	// --- Show/hide notification
 	Object(__WEBPACK_IMPORTED_MODULE_1__components_notificationKeydown_js__["a" /* default */])(".notification");
@@ -299,9 +299,71 @@ function notificationKeyDown(selector) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = tabHandling;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__functions_findAll_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_toggleClass_js__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__functions_addClass_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__functions_removeClass_js__ = __webpack_require__(2);
+// ###### import ######
+
+
+
+
+
+// ####################
+// ##### settings #####
+// ####################
+const class__isActive = 'sdi-is-active';
+const key__localStorage = 'lastTabID';
+
+// ###### script ######
+function tabHandling(selectorTrigger,selectorContent) {
+	var tabTrigger = Object(__WEBPACK_IMPORTED_MODULE_0__functions_findAll_js__["a" /* default */])(selectorTrigger);
+	var tabContent = Object(__WEBPACK_IMPORTED_MODULE_0__functions_findAll_js__["a" /* default */])(selectorContent)
+
+	// -- check local storage
+	var value__localStorage = localStorage.getItem(key__localStorage);
+	if(value__localStorage !== null) {
+		// open saved tab
+		Object(__WEBPACK_IMPORTED_MODULE_2__functions_addClass_js__["a" /* default */])(Object(__WEBPACK_IMPORTED_MODULE_0__functions_findAll_js__["a" /* default */])(value__localStorage), class__isActive);
+
+		// add active class to button
+		Object(__WEBPACK_IMPORTED_MODULE_2__functions_addClass_js__["a" /* default */])(Object(__WEBPACK_IMPORTED_MODULE_0__functions_findAll_js__["a" /* default */])('a[data-target="' + value__localStorage + '"]'), class__isActive);
+	} else {
+		// wihtout localStorage we'll just show the first tab
+		document.querySelector(selectorTrigger).classList.add(class__isActive);
+		document.querySelector(selectorContent).classList.add(class__isActive);
+	}
+
+	// -- listen for click on triggers and show/hide content
+	tabTrigger.forEach(function(element) {
+		element.addEventListener('click', function() {
+			// hide all tabs and remove active class from button
+			Object(__WEBPACK_IMPORTED_MODULE_3__functions_removeClass_js__["a" /* default */])(tabTrigger, class__isActive);
+			Object(__WEBPACK_IMPORTED_MODULE_3__functions_removeClass_js__["a" /* default */])(tabContent, class__isActive);
+
+			// show selected tab
+			var triggerTarget = Object(__WEBPACK_IMPORTED_MODULE_0__functions_findAll_js__["a" /* default */])(this.getAttribute('data-target'));
+			Object(__WEBPACK_IMPORTED_MODULE_1__functions_toggleClass_js__["a" /* default */])(triggerTarget, class__isActive);
+
+			// show clicked button
+			this.classList.add(class__isActive);
+
+			// save to local storage
+			localStorage.setItem(key__localStorage, this.getAttribute('data-target'));
+		});
+	});
+}
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = stickyElement;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__functions_addClass_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_find_js__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_find_js__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__functions_findAll_js__ = __webpack_require__(0);
 // ###### import ######
 
@@ -324,7 +386,7 @@ function stickyElement(selectorSticky, selectorCompensate, propertyCompensate) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -338,50 +400,6 @@ function stickyElement(selectorSticky, selectorCompensate, propertyCompensate) {
 // ###### script ######
 function find(selector) {
 	return document.querySelector(selector);
-}
-
-
-/***/ }),
-/* 10 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = tabHandling;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__findAll_js__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__toggleClass_js__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addClass_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__removeClass_js__ = __webpack_require__(2);
-// ###### import ######
-
-
-
-
-
-// ####################
-// ##### settings #####
-// ####################
-const class__isActive = 'js-is-active';
-
-// ###### script ######
-function tabHandling(selectorTrigger,selectorContent) {
-	var tabTrigger = Object(__WEBPACK_IMPORTED_MODULE_0__findAll_js__["a" /* default */])(selectorTrigger);
-	var tabContent = Object(__WEBPACK_IMPORTED_MODULE_0__findAll_js__["a" /* default */])(selectorContent)
-
-	// -- hide all tabs
-	function hideAllTabs(elements) {
-		elements.forEach(function() {
-			Object(__WEBPACK_IMPORTED_MODULE_3__removeClass_js__["a" /* default */])(elements,class__isActive);
-		});
-	}
-
-	// -- listen for click on triggers and show/hide content
-	tabTrigger.forEach(function(element) {
-		element.addEventListener('click', function() {
-			hideAllTabs(tabContent);
-			var elementTarget = Object(__WEBPACK_IMPORTED_MODULE_0__findAll_js__["a" /* default */])('#' + this.getAttribute('data-target'));
-			Object(__WEBPACK_IMPORTED_MODULE_1__toggleClass_js__["a" /* default */])(elementTarget, class__isActive);
-		});
-	});
 }
 
 

@@ -1,9 +1,9 @@
 // ###### import ######
 import setJsAvailability from "./components/setJsAvailability.js";
 import notificationKeydown from "./components/notificationKeydown.js";
+import handleTabs from "./components/handleTabsLocalStorage.js";
 
 import stickyElement from "./functions/stickyElement.js";
-import handleTabs from "./functions/handleTabs.js";
 import handleTriggers from "./functions/handleTriggers.js";
 
 
@@ -30,16 +30,16 @@ document.addEventListener('DOMContentLoaded', function() {
 	// --- Toggle JS Availability
 	setJsAvailability("body");
 
-	// -- make elements sticky
-	stickyElement('#application-header','#content','padding-top');
-	stickyElement('#application-footer','#content','padding-bottom');
-
 	// handle tabs
 	handleTabs('.js-tab-trigger','.tabbed-content');
 
 	// handle triggers
 	handleTriggers('.js-flyout-trigger', false);
 	handleTriggers('.js-collapse-trigger', false);
+
+	// -- make elements sticky
+	stickyElement('#application-header','#content','padding-top');
+	stickyElement('#application-footer','#content','padding-bottom');
 
 	// --- Show/hide notification
 	notificationKeydown(".notification");

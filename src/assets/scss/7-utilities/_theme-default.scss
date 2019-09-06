@@ -190,7 +190,7 @@ nav {
 		color: $header-link-color;
 
 		&:hover,
-		&.active {
+		&.sdi-is-active {
 			background-color: $header-link-active-bg;
 			border-radius: 2px;
 			color: $header-link-active-color;
@@ -242,6 +242,12 @@ nav {
 		&.js-opened { max-height: 100vh; }
 
 		li { display: block; }
+	}
+
+	.collapse-main {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height .5s ease;
 	}
 }
 

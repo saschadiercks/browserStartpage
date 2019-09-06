@@ -92,7 +92,7 @@
 					<?php $tabnumber = $counterStartvalue ?>
 					<?php foreach($header as $key): ?>
 						<li class="tablist__item<?php if(count($header) == $tabnumber) { echo " tablist__item--last-child"; } ?>">
-							<a href="#tab-<?= $tabnumber ?>" class="js-tab-trigger" data-target="tab-<?= $tabnumber ?>"><?= $key ?></a>
+							<a href="#tab-<?= $tabnumber ?>" class="js-tab-trigger" data-target="#tab-<?= $tabnumber ?>"><?= $key ?></a>
 							<?php $tabnumber++ ?>
 						</li>
 					<?php endforeach; ?>

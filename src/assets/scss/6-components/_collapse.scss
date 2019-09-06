@@ -28,12 +28,6 @@
 	transition: transform .2s ease;
 }
 
-.collapse-main {
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height .5s ease;
-}
-
 .collapse.js-is-active {
 	.collapse-icon { transform: rotate(0); }
 	.collapse-main { max-height: 100vh; }
