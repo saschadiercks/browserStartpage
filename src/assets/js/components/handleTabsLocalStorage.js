@@ -32,6 +32,8 @@ export default function tabHandling(selectorTrigger,selectorContent) {
 	// -- listen for click on triggers and show/hide content
 	tabTrigger.forEach(function(element) {
 		element.addEventListener('click', function() {
+			event.preventDefault();
+
 			// hide all tabs and remove active class from button
 			removeClass(tabTrigger, class__isActive);
 			removeClass(tabContent, class__isActive);
