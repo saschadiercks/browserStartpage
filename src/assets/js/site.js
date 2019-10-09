@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	handleTriggers('.js-modal-trigger', fixScrollPos);
 
 	// -- make elements sticky
-	stickyElement('#application-header','#content','padding-top');
 	stickyElement('#application-footer','#content','padding-bottom');
 
 	// --- Show/hide notification
