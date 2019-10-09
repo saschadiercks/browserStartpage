@@ -86,7 +86,7 @@
 <body class="no-js">
 
 	<!-- header -->
-	<header id="application-header">
+	<header id="application-header" class="sdi-sticky">
 		<?php if(count($header) > 0) { ?>
 			<button id="header-nav-toggle" class="js-collapse-trigger" data-target="#header-nav">&#9776;</button>
 		<?php } ?>
