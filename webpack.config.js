@@ -12,5 +12,6 @@ module.exports = {
 	},
 	output: {
 		filename: `./${config.assetDist}/js/[name].js`
-	}
+	},
+	mode: process.env.NODE_ENV
 };
