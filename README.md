@@ -1,6 +1,8 @@
 # browserStartpage
-Do you schwitch browser often? Are you tired, that every browser uses it's own speeddial and you can't import that in your new browser?
-Host your own speeddial with this repo!
+Are you switching browsers often?
+Are you tired, that every browser uses it's own speeddial and you can't import that in your new browser?
+The solution: host your own speeddial with this repo!
+This is especially useful if you need/want to share a of bunch links with friends or colleagues.
 
 ## How does it work?
 Just place the folder `/htdocs` on your own webserver. Make sure it supports *php* - this is the only requirement.
@@ -13,14 +15,14 @@ Read more about it here (in german): [https://saschadiercks.de/projekte/browsers
 ![Screenshot](/.screenshots/startpage-macbook-iphone.jpg)
 
 ### Setup your own links
-The browserStartpage comes with a default list of links, to show you how it works. It shows up with a list of popular browser and some development-Ressources. You change that. Just head over to '/htdocs/data/data.json` and play with that file. You can edit the tabs and links to your own liking. Just play with it - it's quite self explanatory. All you need to do is to create images for your links and place them on your server too. Usually here '/htdocs/assets/thumbnails'
+The browserStartpage comes with a default list of links, to show you how it works. It shows up with a list of popular browsers and some development-ressources. You change that. Just head over to '/htdocs/data/data.json` and play with that file. You can edit the tabs and links to your own liking. Just play with it - it's quite self explanatory. All you need to do is to create images for your links and place them on your server too. Usually here '/htdocs/assets/thumbnails'
 
 ## Features
-- easy confiurable Speeddial via json
+- easy configurable Speeddial via json
 - easily add bookmarks via json
 - only requires php on your server
 - uses vanillaJS
-- uses apllicationCache to minimize traffic
+- uses apllicationCache to minimize traffic (it even works offline, after first visit)
 - uses localStorage to store last opened tab
 
 ### Planned Features
