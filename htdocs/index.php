@@ -131,7 +131,7 @@ if (isset($linktarget) && !empty($linktarget)) {
 								<?php renderQrModalTrigger($contentItem); ?>
 							<?php } else { ?>
 								<a href="<?= $contentItem['url'] ?>" target="<?= $linktarget ?>" rel="noopener" class="tile">
-									<img src="<?= $contentItem['image'] ?>" alt="<?= $contentItem['title'] ?>" class="tile-image" loadin="lazy" />
+									<img src="<?= $contentItem['image'] ?>" alt="<?= $contentItem['title'] ?>" class="tile-image" loading="lazy" />
 									<span class="tile-title"><?= $contentItem['title'] ?></span>
 								</a>
 								<?php renderQrModalTrigger($contentItem); ?>
