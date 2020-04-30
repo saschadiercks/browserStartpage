@@ -11,27 +11,30 @@ const class__isActive = 'sdi-is-active';
 const key__localStorage = 'lastTabID';
 
 // ###### script ######
-export default function tabHandling(selectorTrigger,selectorContent) {
+export default function tabHandling(selectorTrigger, selectorContent) {
 	var tabTrigger = findAll(selectorTrigger);
 	var tabContent = findAll(selectorContent)
 
-	// -- check local storage
-	var value__localStorage = localStorage.getItem(key__localStorage);
-	if(value__localStorage !== null) {
-		// open saved tab
-		addClass(findAll(value__localStorage), class__isActive);
-
-		// add active class to button
-		addClass(findAll('a[data-target="' + value__localStorage + '"]'), class__isActive);
+	// -- check for hash and if there is a tab using that hash
+	// to allow linking to tab via hash
+	if (document.location.hash && findAll('a[data-target="' + document.location.hash + '"]').length > 0) {
+		handleTabs(document.location.hash);
 	} else {
-		// wihtout localStorage we'll just show the first tab
-		document.querySelector(selectorTrigger).classList.add(class__isActive);
-		document.querySelector(selectorContent).classList.add(class__isActive);
+
+		// -- check local storage
+		var value__localStorage = localStorage.getItem(key__localStorage);
+		if (value__localStorage !== null) {
+			handleTabs(value__localStorage);
+		} else {
+			// wihtout localStorage we'll just show the first tab
+			document.querySelector(selectorTrigger).classList.add(class__isActive);
+			document.querySelector(selectorContent).classList.add(class__isActive);
+		}
 	}
 
 	// -- listen for click on triggers and show/hide content
-	tabTrigger.forEach(function(element) {
-		element.addEventListener('click', function() {
+	tabTrigger.forEach(function (element) {
+		element.addEventListener('click', function () {
 			event.preventDefault();
 
 			// hide all tabs and remove active class from button
@@ -45,11 +48,29 @@ export default function tabHandling(selectorTrigger,selectorContent) {
 			// show clicked button
 			this.classList.add(class__isActive);
 
-			// save to local storage, when key is not pressed
-			if(event.altKey !== true) {
-				localStorage.setItem(key__localStorage, this.getAttribute('data-target'));
-			}
+			// save to local storage
+			saveToLocalStorage(this.getAttribute('data-target'));
+
+			// update hash in URL to allow easy copy/paste
+			window.location.hash = this.getAttribute('data-target');
 
 		});
 	});
+
+	// -- open tab and mark button as active
+	function handleTabs(selector) {
+		// open saved tab
+		addClass(findAll(selector), class__isActive);
+
+		// add active class to button
+		addClass(findAll('a[data-target="' + selector + '"]'), class__isActive);
+	}
+
+	// -- save to localStorage
+	function saveToLocalStorage(selector) {
+		// save to local storage, when key is not pressed
+		if (event.altKey !== true) {
+			localStorage.setItem(key__localStorage, selector);
+		}
+	}
 }
