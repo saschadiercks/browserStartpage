@@ -18,6 +18,9 @@ export default function tabHandling(selectorTrigger, selectorContent) {
 	// to allow linking to tab via hash
 	if (document.location.hash && findAll('a[data-target="' + document.location.hash + '"]').length > 0) {
 		handleTabs(document.location.hash);
+
+		// overwrite scroll-position of hash
+		window.scrollTo(0, 0);
 	} else {
 
 		// -- check local storage

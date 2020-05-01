@@ -277,6 +277,9 @@ function tabHandling(selectorTrigger, selectorContent) {
 	// to allow linking to tab via hash
 	if (document.location.hash && Object(__WEBPACK_IMPORTED_MODULE_0__functions_findAll_js__["a" /* default */])('a[data-target="' + document.location.hash + '"]').length > 0) {
 		handleTabs(document.location.hash);
+
+		// overwrite scroll-position of hash
+		window.scrollTo(0, 0);
 	} else {
 
 		// -- check local storage
@@ -305,7 +308,6 @@ function tabHandling(selectorTrigger, selectorContent) {
 
 			// update hash in URL to allow easy copy/paste
 			history.pushState(null, null, triggerTarget);
-			// window.location.hash = this.getAttribute('data-target');
 		});
 	});
 
