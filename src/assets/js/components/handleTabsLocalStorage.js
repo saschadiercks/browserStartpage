@@ -1,6 +1,5 @@
 // ###### import ######
 import findAll from "../functions/findAll.js";
-import toggleClass from "../functions/toggleClass.js";
 import addClass from "../functions/addClass.js";
 import removeClass from "../functions/removeClass.js";
 
@@ -19,6 +18,9 @@ export default function tabHandling(selectorTrigger, selectorContent) {
 	// to allow linking to tab via hash
 	if (document.location.hash && findAll('a[data-target="' + document.location.hash + '"]').length > 0) {
 		handleTabs(document.location.hash);
+
+		// overwrite scroll-position of hash
+		window.scrollTo(0, 0);
 	} else {
 
 		// -- check local storage
@@ -34,31 +36,29 @@ export default function tabHandling(selectorTrigger, selectorContent) {
 
 	// -- listen for click on triggers and show/hide content
 	tabTrigger.forEach(function (element) {
-		element.addEventListener('click', function () {
-			// No prevent default to stay on top on tap-switch
+		element.addEventListener('click', function (event) {
+			event.preventDefault();
 
-			// hide all tabs and remove active class from button
-			removeClass(tabTrigger, class__isActive);
-			removeClass(tabContent, class__isActive);
+			var triggerTarget = this.getAttribute('data-target');
 
-			// show selected tab
-			var triggerTarget = findAll(this.getAttribute('data-target'));
-			toggleClass(triggerTarget, class__isActive);
-
-			// show clicked button
-			this.classList.add(class__isActive);
+			// now handle tabs
+			handleTabs(triggerTarget);
 
 			// save to local storage
-			saveToLocalStorage(this.getAttribute('data-target'));
+			saveToLocalStorage(triggerTarget);
 
 			// update hash in URL to allow easy copy/paste
-			window.location.hash = this.getAttribute('data-target');
-
+			history.pushState(null, null, triggerTarget);
 		});
 	});
 
 	// -- open tab and mark button as active
 	function handleTabs(selector) {
+
+		// hide all tabs and remove active class from buttons
+		removeClass(tabTrigger, class__isActive);
+		removeClass(tabContent, class__isActive);
+
 		// open saved tab
 		addClass(findAll(selector), class__isActive);
 
