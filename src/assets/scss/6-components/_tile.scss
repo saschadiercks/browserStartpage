@@ -1,6 +1,6 @@
 .tile {
 	display: block;
-	position: relative;		// allow postioning of child-elements
+	position: relative; // allow postioning of child-elements
 }
 
 // prevent whitespace on images
@@ -8,12 +8,12 @@
 	display: inline-block;
 	max-height: 100%;
 	max-width: 100%;
-	object-fit: contain
+	object-fit: contain;
 }
 
 // Clip text of Description if nessecary
 .tile-title {
 	overflow: hidden;
-	white-space: nowrap;
 	text-overflow: ellipsis;
+	white-space: nowrap;
 }

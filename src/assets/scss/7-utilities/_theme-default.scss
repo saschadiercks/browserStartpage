@@ -12,10 +12,12 @@ body {
 	filter: $wallpaper-filter;
 }
 
-.collapse { border-top: $collapse-border; }
+.collapse {
+	border-top: $collapse-border;
+}
 
 .modal-overlay {
-	@include align-centered($scale:0,$position:fixed);
+	@include align-centered($scale:0, $position:fixed);
 	background-color: $modal-content-background-color;
 	border-radius: $modal-border-radius;
 	box-shadow: $box-shadow-heavy;
@@ -28,7 +30,7 @@ body {
 }
 
 .js-is-active .modal-overlay {
-	@include align-centered($scale:1,$position:fixed);
+	@include align-centered($scale:1, $position:fixed);
 }
 
 .modal-header {
@@ -39,7 +41,9 @@ body {
 	padding: $base-spacing-size-px * 2;
 }
 
-.modal-content { padding: $base-spacing-size-px; }
+.modal-content {
+	padding: $base-spacing-size-px;
+}
 
 .overlay {
 	height: 100vh;
@@ -57,12 +61,20 @@ body {
 		height: 0;
 		opacity: 0;
 	}
-	.overlay-content { transform: translateX(100%);	}
+
+	.overlay-content {
+		transform: translateX(100%);
+	}
 }
 
 .js-visible {
-	.backdrop { opacity: 1; }
-	.overlay-content { transform: translateX(0); }
+	.backdrop {
+		opacity: 1;
+	}
+
+	.overlay-content {
+		transform: translateX(0);
+	}
 }
 
 // ---- header ----
@@ -70,9 +82,13 @@ header {
 	background-color: $header-background-color;
 	box-shadow: $box-shadow-default;
 
-	&.js-sticky { top: 0; }
+	&.js-sticky {
+		top: 0;
+	}
 
-	.collapse { border-width: 0; }
+	.collapse {
+		border-width: 0;
+	}
 }
 
 // ---- Content ----
@@ -85,10 +101,16 @@ header {
 
 .tile-container {
 	display: flex;
-	height: 156px;
-	padding: $base-spacing-size / 2;
+	height: 100px;
+	padding: 0;
 	position: relative;
 	width: 25%;
+}
+
+@media (min-width: 768px) {
+	.tile-container {
+		height: 156px;
+	}
 }
 
 // modern browsers
@@ -96,12 +118,17 @@ header {
 	.list-tiles {
 		display: grid;
 		grid-gap: $base-spacing-size;
-		grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 	}
 
 	.tile-container {
-		padding: 0;
 		width: auto;
+	}
+
+	@media (min-width: 768px) {
+		.list-tiles {
+			grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+		}
 	}
 }
 
@@ -146,7 +173,16 @@ header {
 }
 
 // center images when parent-item has display: flex;
-.tile-image { margin: auto; }
+.tile-image {
+	margin: auto;
+}
+
+@media (max-width: 767px) {
+	.tile-image {
+		max-height: 50%;
+		max-width: 50%;
+	}
+}
 
 // ---- Notification ----
 .notification {
@@ -170,7 +206,9 @@ footer {
 	width: 100%;
 	z-index: 2;
 
-	&.js-sticky { bottom: 0; }
+	&.js-sticky {
+		bottom: 0;
+	}
 
 	a {
 		color: inherit;
@@ -179,13 +217,20 @@ footer {
 		padding-top: $base-spacing-size-px;
 	}
 
-	.description { float: left; }
-	.social-profiles { float: right; }
+	.description {
+		float: left;
+	}
+
+	.social-profiles {
+		float: right;
+	}
 }
 
 // -- navigation
 nav {
-	li { display: inline-block; }
+	li {
+		display: inline-block;
+	}
 
 	a {
 		color: $header-link-color;
@@ -201,21 +246,30 @@ nav {
 
 // ---- fx when overlays are visible ----
 .js-fx {
+
 	header,
 	main,
 	footer,
-	#wallpaper { filter: blur($background-blur-setting); }
+	#wallpaper {
+		filter: blur($background-blur-setting);
+	}
 }
 
 // ---- Responsive ----
 // Mobile view
 @include phone-only {
-	button { padding: $base-spacing-size $base-spacing-size*2; }
+	button {
+		padding: $base-spacing-size $base-spacing-size*2;
+	}
 
 	header,
-	.overlay-content { padding: $base-spacing-size*2 $base-spacing-size*1.5; }
+	.overlay-content {
+		padding: $base-spacing-size*2 $base-spacing-size*1.5;
+	}
 
-	header a { padding: $base-spacing-size $base-spacing-size*2; }
+	header a {
+		padding: $base-spacing-size $base-spacing-size*2;
+	}
 
 	.overlay-title {
 		padding-bottom: $base-spacing-size;
@@ -239,27 +293,42 @@ nav {
 		grid-column: 1 / span 2;
 		overflow: hidden;
 		transition: max-height .5s ease;
-		&.js-opened { max-height: 100vh; }
 
-		li { display: block; }
+		&.js-opened {
+			max-height: 100vh;
+		}
+
+		li {
+			display: block;
+		}
 	}
 }
 
 // Default View
 @include default {
-	button { padding: $base-spacing-size*.75 $base-spacing-size; }
-
-	header,
-	.overlay-content { padding: $base-spacing-size*.75 $base-spacing-size; }
-
-	header {
-		a { padding: $base-spacing-size*.75 $base-spacing-size; }
-
-		// overwrite collapse-styles
-		.collapse-main { overflow: visible; }
+	button {
+		padding: $base-spacing-size*.75 $base-spacing-size;
 	}
 
-	#bookmarks-toggle { float: right; }
+	header,
+	.overlay-content {
+		padding: $base-spacing-size*.75 $base-spacing-size;
+	}
+
+	header {
+		a {
+			padding: $base-spacing-size*.75 $base-spacing-size;
+		}
+
+		// overwrite collapse-styles
+		.collapse-main {
+			overflow: visible;
+		}
+	}
+
+	#bookmarks-toggle {
+		float: right;
+	}
 
 	#application-header {
 		.collapse-main {
@@ -278,10 +347,14 @@ nav {
 	}
 
 	.tile:hover {
-		.tile-title { opacity: 1; }
+		.tile-title {
+			opacity: 1;
+		}
 	}
 
-	button[data-target*="nav"] { display: none; }
+	button[data-target*="nav"] {
+		display: none;
+	}
 }
 
 // ---- Fallbacks / special cases ----
