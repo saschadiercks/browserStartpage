@@ -1,27 +1,30 @@
 // ---- modal ----
 .js .modal {
-	display: none;
+  transition: visibility $base-animation-speed ease-in-out;
+  visibility: hidden;
 }
 
 .modal.js-is-active {
-	display: block;
-	position: fixed;
-	top: 0;
-	z-index: 2;
+  position: fixed;
+  top: 0;
+  visibility: visible;
+  z-index: 2;
 }
 
 .modal-overlay {
-	@include align-centered($scale:0,$position:fixed);
+  @include align-centered($scale: 0, $position: fixed);
 }
 
 .modal-header {
-	font-weight: 600;
-	position: relative;
+  font-weight: 600;
+  position: relative;
 }
 
-.modal-content { overflow-y: auto; }
+.modal-content {
+  overflow-y: auto;
+}
 
 .modal-header__close {
-	@include align-vertical;
-	right: 0;
+  @include align-vertical;
+  right: 0;
 }

@@ -1,56 +1,58 @@
 // ---- flyout ----
 .flyout {
-	left: 0;
-	position: fixed;
-	top: 0;
-	z-index: 3;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 3;
 }
 
 .flyout-backdrop {
-	display: none;
+  display: none;
 }
 
-.flyout-close { float: right; }
+.flyout-close {
+  float: right;
+}
 
 .flyout-title {
-	font-size: 1rem;
-	font-weight: 600;
-	margin-top: 0;
-	padding-top: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0;
+  padding-top: inherit;
 }
 
 .flyout-content {
-	background-color: $overlay-background-color;
-	box-shadow: $box-shadow-heavy;
-	color: $overlay-color;
-	height: 100vh;
-	max-width: $bookmarks-max-width;
-	overflow-y: auto;
-	padding: $base-spacing-size $base-spacing-size*1.5;
-	position: fixed;
-	right: 0;
-	top: 0;
-	transform: translateX(100%);
-	transition: all $base-animation-speed ease;
-	width: 100%;
+  background-color: $overlay-background-color;
+  box-shadow: $box-shadow-heavy;
+  color: $overlay-color;
+  height: 100vh;
+  max-width: $bookmarks-max-width;
+  overflow-y: auto;
+  padding: $base-spacing-size $base-spacing-size * 1.5;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: all $base-animation-speed ease;
+  width: 100%;
 
-	ul {
-		@include ul-reset;
-	}
+  ul {
+    @include ul-reset;
+  }
 
-	a {
-		font-size: .875rem;	/* 14px / 16px */
-		padding: 2px 0;
-	}
+  a {
+    font-size: 0.875rem; /* 14px / 16px */
+    padding: 2px 0;
+  }
 }
 
 // -- show flyout
 .js-is-active {
-	.flyout-content {
-		transform: translateX(0);
-	}
+  .flyout-content {
+    transform: translateX(0);
+  }
 
-	.flyout-backdrop {
-		display: block;
-	}
+  .flyout-backdrop {
+    display: block;
+  }
 }

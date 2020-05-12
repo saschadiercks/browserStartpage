@@ -1,10 +1,12 @@
 .list-vertical {
-	@include ul-reset;
-	padding-bottom: $base-spacing-size *.75;
+  @include ul-reset;
+  padding-bottom: $base-spacing-size * 0.75;
 }
 
 .list-vertical__link {
-	display: block;
-	text-decoration: none;
-	&:hover { text-decoration: underline; }
+  display: block;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
