@@ -139,7 +139,7 @@ header {
   border-radius: 2px;
   box-shadow: $box-shadow-default;
   display: flex;
-  font-size: 0.75rem;
+  font-size: .75rem;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -200,7 +200,7 @@ header {
 footer {
   background-color: $footer-bg;
   color: $footer-color;
-  font-size: 0.75rem;
+  font-size: .75rem;
   padding-left: $base-spacing-size;
   padding-right: $base-spacing-size;
   width: 100%;
@@ -291,7 +291,7 @@ nav {
   #header-nav {
     grid-column: 1 / span 2;
     overflow: hidden;
-    transition: max-height 0.5s ease;
+    transition: max-height .5s ease;
 
     &.js-opened {
       max-height: 100vh;
@@ -306,17 +306,17 @@ nav {
 // Default View
 @include default {
   button {
-    padding: $base-spacing-size * 0.75 $base-spacing-size;
+    padding: $base-spacing-size * .75 $base-spacing-size;
   }
 
   header,
   .overlay-content {
-    padding: $base-spacing-size * 0.75 $base-spacing-size;
+    padding: $base-spacing-size * .75 $base-spacing-size;
   }
 
   header {
     a {
-      padding: $base-spacing-size * 0.75 $base-spacing-size;
+      padding: $base-spacing-size * .75 $base-spacing-size;
     }
 
     // overwrite collapse-styles
@@ -336,8 +336,8 @@ nav {
   }
 
   .overlay-title {
-    padding-bottom: $base-spacing-size * 0.75;
-    padding-top: $base-spacing-size * 0.75;
+    padding-bottom: $base-spacing-size * .75;
+    padding-top: $base-spacing-size * .75;
   }
 
   .tile-title {

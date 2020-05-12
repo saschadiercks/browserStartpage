@@ -1,3 +1,4 @@
 htdocs
 node_modules
 *.md
+src/assets/scss/site.scss

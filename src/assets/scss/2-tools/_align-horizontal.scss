@@ -1,5 +1,5 @@
 @mixin align-horizontal {
-  position: absolute;
   left: 50%;
+  position: absolute;
   transform: translateX(-50%);
 }

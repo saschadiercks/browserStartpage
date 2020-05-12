@@ -13,6 +13,7 @@
     display: grid;
     grid-template-columns: 50% auto;
   }
+
   .modal-list__item {
     width: 100%;
   }
@@ -22,6 +23,7 @@
   display: block;
   padding: $base-spacing-size-px;
   text-decoration: none;
+
   &:hover {
     background-color: $main-link-background-color;
   }

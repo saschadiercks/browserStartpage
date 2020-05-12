@@ -1,9 +1,8 @@
 main {
   // we need to set the width via CSS to avoid jumping, when position:fixed is added
   left: 0;
-  right: 0;
-
   margin: $base-spacing-size;
   position: relative;
+  right: 0;
   z-index: 1;
 }

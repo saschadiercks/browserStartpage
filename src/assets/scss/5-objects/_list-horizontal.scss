@@ -1,5 +1,6 @@
 .list-horizontal {
   @include ul-reset;
+
   li {
     display: inline-block;
   }
