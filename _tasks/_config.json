@@ -1,8 +1,8 @@
 {
-	"src": "src",
-	"dist": "htdocs",
-	"assetSrc": "src/assets",
-	"assetDist": "htdocs/assets",
-	"envProduction": "production",
-	"envDevelopment": "development"
+  "src": "src",
+  "dist": "htdocs",
+  "assetSrc": "src/assets",
+  "assetDist": "htdocs/assets",
+  "envProduction": "production",
+  "envDevelopment": "development"
 }
