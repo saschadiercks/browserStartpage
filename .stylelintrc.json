@@ -1,7 +1,6 @@
 {
-  "plugins": ["stylelint-order", "stylelint-prettier"],
+  "plugins": ["stylelint-order"],
   "rules": {
-    "prettier/prettier": true,
     "order/properties-alphabetical-order": true,
 
     "color-no-invalid-hex": true,

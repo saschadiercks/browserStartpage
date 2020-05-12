@@ -15,6 +15,7 @@
     "gulp-sourcemaps": "^1.9.1",
     "gulp-stylelint": "^8.0.0",
     "gulp-terser": "^1.2.0",
+    "prettier-stylelint": "^0.4.2",
     "require-dir": "^1.2.0",
     "stylelint": "^9.10.1",
     "stylelint-order": "^2.0.0",
