@@ -3,5 +3,9 @@
 	this class uses display:none. To be able to animate the notification via css,
 	we need to overwrite that class
 */
-#notification { display: block !important; }
-.overlay { display: block !important; }
+#notification {
+  display: block !important;
+}
+.overlay {
+  display: block !important;
+}

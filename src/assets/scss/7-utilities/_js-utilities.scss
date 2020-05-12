@@ -1,11 +1,15 @@
 // ---- js-hidden (Elements to be hidden via JS) ----
 .js-hidden {
-	// display: none;
-	// z-index: -1;
+  // display: none;
+  // z-index: -1;
 }
 
 // ---- js-fixed (Element to be fixed via JS) ----
-.sdi-is-fixed { position: fixed; }
+.sdi-is-fixed {
+  position: fixed;
+}
 
 // ---- Js-sticky (Element to be fixed via JS) ----
-.js-sticky { position: fixed; }
+.js-sticky {
+  position: fixed;
+}

@@ -1,360 +1,359 @@
 // ----- Body -----
 body {
-	background-color: $body-background-color;
-	font-family: $document-font-family;
-	width: 100%;
+  background-color: $body-background-color;
+  font-family: $document-font-family;
+  width: 100%;
 }
 
 // ---- Elements ----
 #wallpaper {
-	background-position: center center;
-	background-size: cover;
-	filter: $wallpaper-filter;
+  background-position: center center;
+  background-size: cover;
+  filter: $wallpaper-filter;
 }
 
 .collapse {
-	border-top: $collapse-border;
+  border-top: $collapse-border;
 }
 
 .modal-overlay {
-	@include align-centered($scale:0, $position:fixed);
-	background-color: $modal-content-background-color;
-	border-radius: $modal-border-radius;
-	box-shadow: $box-shadow-heavy;
-	color: $modal-content-color;
-	height: $modal-content-height;
-	max-height: $modal-content-max-height;
-	max-width: $modal-content-max-width;
-	transition: transform $base-animation-speed ease-in-out;
-	width: $modal-content-width;
+  @include align-centered($scale: 0, $position: fixed);
+  background-color: $modal-content-background-color;
+  border-radius: $modal-border-radius;
+  box-shadow: $box-shadow-heavy;
+  color: $modal-content-color;
+  height: $modal-content-height;
+  max-height: $modal-content-max-height;
+  max-width: $modal-content-max-width;
+  transition: transform $base-animation-speed ease-in-out;
+  width: $modal-content-width;
 }
 
 .js-is-active .modal-overlay {
-	@include align-centered($scale:1, $position:fixed);
+  @include align-centered($scale: 1, $position: fixed);
 }
 
 .modal-header {
-	background-color: $modal-header-background-color;
-	border-bottom: $modal-header-border;
-	color: $modal-header-color;
-	margin-bottom: $base-spacing-size-px;
-	padding: $base-spacing-size-px * 2;
+  background-color: $modal-header-background-color;
+  border-bottom: $modal-header-border;
+  color: $modal-header-color;
+  margin-bottom: $base-spacing-size-px;
+  padding: $base-spacing-size-px * 2;
 }
 
 .modal-content {
-	padding: $base-spacing-size-px;
+  padding: $base-spacing-size-px;
 }
 
 .overlay {
-	height: 100vh;
-	width: 100%;
+  height: 100vh;
+  width: 100%;
 }
 
 .overlay-content {
-	background-color: $overlay-background-color;
-	box-shadow: $box-shadow-heavy;
-	color: $overlay-color;
+  background-color: $overlay-background-color;
+  box-shadow: $box-shadow-heavy;
+  color: $overlay-color;
 }
 
 .js-hidden {
-	.backdrop {
-		height: 0;
-		opacity: 0;
-	}
+  .backdrop {
+    height: 0;
+    opacity: 0;
+  }
 
-	.overlay-content {
-		transform: translateX(100%);
-	}
+  .overlay-content {
+    transform: translateX(100%);
+  }
 }
 
 .js-visible {
-	.backdrop {
-		opacity: 1;
-	}
+  .backdrop {
+    opacity: 1;
+  }
 
-	.overlay-content {
-		transform: translateX(0);
-	}
+  .overlay-content {
+    transform: translateX(0);
+  }
 }
 
 // ---- header ----
 header {
-	background-color: $header-background-color;
-	box-shadow: $box-shadow-default;
+  background-color: $header-background-color;
+  box-shadow: $box-shadow-default;
 
-	&.js-sticky {
-		top: 0;
-	}
+  &.js-sticky {
+    top: 0;
+  }
 
-	.collapse {
-		border-width: 0;
-	}
+  .collapse {
+    border-width: 0;
+  }
 }
 
 // ---- Content ----
 // fallback for older browsers
 .list-tiles {
-	align-items: stretch;
-	display: flex;
-	flex-wrap: wrap;
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tile-container {
-	display: flex;
-	height: 100px;
-	padding: 0;
-	position: relative;
-	width: 25%;
+  display: flex;
+  height: 100px;
+  padding: 0;
+  position: relative;
+  width: 25%;
 }
 
 @media (min-width: 768px) {
-	.tile-container {
-		height: 156px;
-	}
+  .tile-container {
+    height: 156px;
+  }
 }
 
 // modern browsers
-@supports (display:grid) {
-	.list-tiles {
-		display: grid;
-		grid-gap: $base-spacing-size;
-		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-	}
+@supports (display: grid) {
+  .list-tiles {
+    display: grid;
+    grid-gap: $base-spacing-size;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
 
-	.tile-container {
-		width: auto;
-	}
+  .tile-container {
+    width: auto;
+  }
 
-	@media (min-width: 768px) {
-		.list-tiles {
-			grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-		}
-	}
+  @media (min-width: 768px) {
+    .list-tiles {
+      grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    }
+  }
 }
 
 .tile {
-	background-clip: padding-box;
-	background-image: $main-link-background-image;
-	border: 1px solid $main-link-border-color;
-	border-radius: 2px;
-	box-shadow: $box-shadow-default;
-	display: flex;
-	font-size: .75rem;
-	position: relative;
-	text-align: center;
-	text-decoration: none;
-	width: 100%;
+  background-clip: padding-box;
+  background-image: $main-link-background-image;
+  border: 1px solid $main-link-border-color;
+  border-radius: 2px;
+  box-shadow: $box-shadow-default;
+  display: flex;
+  font-size: 0.75rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
 
-	&:hover {
-		background-image: $main-link-background-image-hover;
-		border-color: $main-link-active-border-color;
-		z-index: 2;
-	}
+  &:hover {
+    background-image: $main-link-background-image-hover;
+    border-color: $main-link-active-border-color;
+    z-index: 2;
+  }
 }
 
 .tile-title {
-	background-color: $main-link-description-bg;
-	bottom: 0;
-	color: $main-link-description-color;
-	display: block;
-	left: 0;
-	padding: $base-spacing-size/2;
-	position: absolute;
-	right: 0;
+  background-color: $main-link-description-bg;
+  bottom: 0;
+  color: $main-link-description-color;
+  display: block;
+  left: 0;
+  padding: $base-spacing-size/2;
+  position: absolute;
+  right: 0;
 }
 
 .tile__button {
-	color: $tile-button-color;
-	left: 1px;
-	padding: $tile-button-padding;
-	position: absolute;
-	top: 1px;
-	z-index: 2;
+  color: $tile-button-color;
+  left: 1px;
+  padding: $tile-button-padding;
+  position: absolute;
+  top: 1px;
+  z-index: 2;
 }
 
 // center images when parent-item has display: flex;
 .tile-image {
-	margin: auto;
+  margin: auto;
 }
 
 @media (max-width: 767px) {
-	.tile-image {
-		max-height: 50%;
-		max-width: 50%;
-	}
+  .tile-image {
+    max-height: 50%;
+    max-width: 50%;
+  }
 }
 
 // ---- Notification ----
 .notification {
-	background-color: $notification-background-color;
-	bottom: $base-spacing-size*3;
-	box-shadow: $box-shadow-heavy;
-	color: $notification-color;
-	padding: $base-spacing-size;
-	position: fixed;
-	right: 0;
-	z-index: 99;
+  background-color: $notification-background-color;
+  bottom: $base-spacing-size * 3;
+  box-shadow: $box-shadow-heavy;
+  color: $notification-color;
+  padding: $base-spacing-size;
+  position: fixed;
+  right: 0;
+  z-index: 99;
 }
 
 // ---- Footer ----
 footer {
-	background-color: $footer-bg;
-	color: $footer-color;
-	font-size: .75rem;
-	padding-left: $base-spacing-size;
-	padding-right: $base-spacing-size;
-	width: 100%;
-	z-index: 2;
+  background-color: $footer-bg;
+  color: $footer-color;
+  font-size: 0.75rem;
+  padding-left: $base-spacing-size;
+  padding-right: $base-spacing-size;
+  width: 100%;
+  z-index: 2;
 
-	&.js-sticky {
-		bottom: 0;
-	}
+  &.js-sticky {
+    bottom: 0;
+  }
 
-	a {
-		color: inherit;
-		display: inline-block;
-		padding-bottom: $base-spacing-size-px;
-		padding-top: $base-spacing-size-px;
-	}
+  a {
+    color: inherit;
+    display: inline-block;
+    padding-bottom: $base-spacing-size-px;
+    padding-top: $base-spacing-size-px;
+  }
 
-	.description {
-		float: left;
-	}
+  .description {
+    float: left;
+  }
 
-	.social-profiles {
-		float: right;
-	}
+  .social-profiles {
+    float: right;
+  }
 }
 
 // -- navigation
 nav {
-	li {
-		display: inline-block;
-	}
+  li {
+    display: inline-block;
+  }
 
-	a {
-		color: $header-link-color;
+  a {
+    color: $header-link-color;
 
-		&:hover,
-		&.sdi-is-active {
-			background-color: $header-link-active-bg;
-			border-radius: 2px;
-			color: $header-link-active-color;
-		}
-	}
+    &:hover,
+    &.sdi-is-active {
+      background-color: $header-link-active-bg;
+      border-radius: 2px;
+      color: $header-link-active-color;
+    }
+  }
 }
 
 // ---- fx when overlays are visible ----
 .js-fx {
-
-	header,
-	main,
-	footer,
-	#wallpaper {
-		filter: blur($background-blur-setting);
-	}
+  header,
+  main,
+  footer,
+  #wallpaper {
+    filter: blur($background-blur-setting);
+  }
 }
 
 // ---- Responsive ----
 // Mobile view
 @include phone-only {
-	button {
-		padding: $base-spacing-size $base-spacing-size*2;
-	}
+  button {
+    padding: $base-spacing-size $base-spacing-size * 2;
+  }
 
-	header,
-	.overlay-content {
-		padding: $base-spacing-size*2 $base-spacing-size*1.5;
-	}
+  header,
+  .overlay-content {
+    padding: $base-spacing-size * 2 $base-spacing-size * 1.5;
+  }
 
-	header a {
-		padding: $base-spacing-size $base-spacing-size*2;
-	}
+  header a {
+    padding: $base-spacing-size $base-spacing-size * 2;
+  }
 
-	.overlay-title {
-		padding-bottom: $base-spacing-size;
-		padding-top: $base-spacing-size;
-	}
+  .overlay-title {
+    padding-bottom: $base-spacing-size;
+    padding-top: $base-spacing-size;
+  }
 
-	header {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-	}
+  header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-	#bookmarks-toggle {
-		justify-self: end;
-	}
+  #bookmarks-toggle {
+    justify-self: end;
+  }
 
-	#header-nav-toggle {
-		justify-self: start;
-	}
+  #header-nav-toggle {
+    justify-self: start;
+  }
 
-	#header-nav {
-		grid-column: 1 / span 2;
-		overflow: hidden;
-		transition: max-height .5s ease;
+  #header-nav {
+    grid-column: 1 / span 2;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
 
-		&.js-opened {
-			max-height: 100vh;
-		}
+    &.js-opened {
+      max-height: 100vh;
+    }
 
-		li {
-			display: block;
-		}
-	}
+    li {
+      display: block;
+    }
+  }
 }
 
 // Default View
 @include default {
-	button {
-		padding: $base-spacing-size*.75 $base-spacing-size;
-	}
+  button {
+    padding: $base-spacing-size * 0.75 $base-spacing-size;
+  }
 
-	header,
-	.overlay-content {
-		padding: $base-spacing-size*.75 $base-spacing-size;
-	}
+  header,
+  .overlay-content {
+    padding: $base-spacing-size * 0.75 $base-spacing-size;
+  }
 
-	header {
-		a {
-			padding: $base-spacing-size*.75 $base-spacing-size;
-		}
+  header {
+    a {
+      padding: $base-spacing-size * 0.75 $base-spacing-size;
+    }
 
-		// overwrite collapse-styles
-		.collapse-main {
-			overflow: visible;
-		}
-	}
+    // overwrite collapse-styles
+    .collapse-main {
+      overflow: visible;
+    }
+  }
 
-	#bookmarks-toggle {
-		float: right;
-	}
+  #bookmarks-toggle {
+    float: right;
+  }
 
-	#application-header {
-		.collapse-main {
-			max-height: none;
-		}
-	}
+  #application-header {
+    .collapse-main {
+      max-height: none;
+    }
+  }
 
-	.overlay-title {
-		padding-bottom: $base-spacing-size*.75;
-		padding-top: $base-spacing-size*.75;
-	}
+  .overlay-title {
+    padding-bottom: $base-spacing-size * 0.75;
+    padding-top: $base-spacing-size * 0.75;
+  }
 
-	.tile-title {
-		opacity: 0;
-		transition: opacity $base-animation-speed;
-	}
+  .tile-title {
+    opacity: 0;
+    transition: opacity $base-animation-speed;
+  }
 
-	.tile:hover {
-		.tile-title {
-			opacity: 1;
-		}
-	}
+  .tile:hover {
+    .tile-title {
+      opacity: 1;
+    }
+  }
 
-	button[data-target*="nav"] {
-		display: none;
-	}
+  button[data-target*="nav"] {
+    display: none;
+  }
 }
 
 // ---- Fallbacks / special cases ----

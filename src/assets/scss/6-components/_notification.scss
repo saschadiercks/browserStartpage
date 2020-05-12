@@ -1,9 +1,11 @@
 // Animation
 .notification {
-	transition: all .2s;
-	&.js-hidden { transform: translateX(100%); }
-	&.js-visible {
-		right: $base-spacing-size;
-		transform: translateX(0%);
-	}
+  transition: all 0.2s;
+  &.js-hidden {
+    transform: translateX(100%);
+  }
+  &.js-visible {
+    right: $base-spacing-size;
+    transform: translateX(0%);
+  }
 }
