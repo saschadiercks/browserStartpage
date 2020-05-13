@@ -2,14 +2,15 @@
 $document-font-family: -apple-system, sans-serif !default;
 $body-background-color: #fdfdfd !default;
 $body-color: #333 !default;
-$box-shadow-default: 0 1px 1px rgba(0, 0, 0, 0.2) !default;
-$box-shadow-heavy: 0 2px 4px rgba(0, 0, 0, 0.2) !default;
+$box-shadow-default: 0 1px 1px rgba(0, 0, 0, .2) !default;
+$box-shadow-heavy: 0 2px 4px rgba(0, 0, 0, .2) !default;
+$brand-color: #007acc !default;
 
-$wallpaper-filter: blur(0.1px) !default;
+$wallpaper-filter: blur(.1px) !default;
 
 $base-spacing-size: 1vw !default;
 $base-spacing-size-px: 9px !default;
-$base-animation-speed: 0.2s !default;
+$base-animation-speed: .2s !default;
 
 $base-border-color: #f5f5f5 !default;
 $base-border-color-hover: #ddd !default;
@@ -20,23 +21,15 @@ $collapse-border: 1px solid $base-border-color-hover !default;
 
 $header-background-color: $body-background-color !default;
 $header-link-color: $body-color !default;
-$header-link-active-bg: #007acc !default;
+$header-link-active-bg: $brand-color !default;
 $header-link-active-color: #fff !default;
 
 $main-link-border-color: $base-border-color !default;
 $main-link-background-color: #f5f5f5 !default;
-$main-link-background-image: linear-gradient(
-  to bottom,
-  rgba($body-background-color, 0.9),
-  rgba($main-link-background-color, 0.97)
-) !default;
-$main-link-background-image-hover: linear-gradient(
-  to top,
-  rgba($body-background-color, 0.9),
-  rgba($main-link-background-color, 0.97)
-) !default;
+$main-link-background-image: linear-gradient(to bottom,rgba($body-background-color, .9),rgba($main-link-background-color, .97)) !default;
+$main-link-background-image-hover: linear-gradient(to top,rgba($body-background-color, .9),rgba($main-link-background-color, .97)) !default;
 $main-link-active-border-color: $base-border-color-hover !default;
-$main-link-description-bg: rgba($main-link-border-color, 0.3) !default;
+$main-link-description-bg: rgba($main-link-border-color, .3) !default;
 $main-link-description-color: $header-link-color !default;
 $main-link-active-description-bg: $header-link-active-bg !default;
 $main-link-active-description-color: $header-link-active-color !default;
@@ -44,7 +37,7 @@ $main-link-active-description-color: $header-link-active-color !default;
 $tile-button-padding: $base-spacing-size/2 !default;
 $tile-button-color: inherit;
 
-$backdrop-color: rgba(8, 34, 63, 0.6) !default;
+$backdrop-color: rgba(8, 34, 63, .6) !default;
 $background-blur-setting: 1px;
 
 $modal-border: none !default;
@@ -67,7 +60,7 @@ $notification-color: $body-color !default;
 
 $bookmarks-max-width: 400px !default;
 
-$footer-bg: $header-link-active-bg !default;
+$footer-bg: $brand-color !default;
 $footer-color: #fff !default;
 
 $no-js-separator-color: $main-link-border-color !default;

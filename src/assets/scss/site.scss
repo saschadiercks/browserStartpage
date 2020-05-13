@@ -1,22 +1,37 @@
+//----your overwrites: place files with variable overwrites here
+@import "_your-themes/variables";
+
+// ---- Main Theme
+// 1 - Globals
 @import "1-settings/globals";
+
+// 2 - Tools
 @import "2-tools/clearfix";
 @import "2-tools/responsive";
 @import "2-tools/ul-reset";
 @import "2-tools/align-vertical";
 @import "2-tools/align-centered";
+
+// 3 - Generic
 @import "3-generic/box-sizing";
 @import "3-generic/font-smoothing";
 @import "3-generic/reset";
+
+// 4 - Elements
 @import "4-elements/buttons";
 @import "4-elements/header";
 @import "4-elements/links";
 @import "4-elements/main";
 @import "4-elements/footer";
 @import "4-elements/navigation";
+
+// 5 - Objects
 @import "5-objects/list-tiles";
 @import "5-objects/list-vertical";
 @import "5-objects/list-horizontal";
 @import "5-objects/tabbed-content";
+
+// 6 - Components
 @import "6-components/backdrop";
 @import "6-components/collapse";
 @import "6-components/flyout";
@@ -27,12 +42,12 @@
 @import "6-components/overlay";
 @import "6-components/tile";
 @import "6-components/wallpaper";
+
+// 7 - Utilities
 @import "7-utilities/sticky";
 @import "7-utilities/js-utilities";
 @import "7-utilities/shame";
-@import "7-utilities/your-theme";
 @import "7-utilities/theme-default";
 
-/* Add your file here, if you want to make some deeper layout changes */
-
-/* @import '7-utilities/your-layout'; */
+// ---- Apply your own deeper layout changes
+@import "_your-themes/your-theme";
