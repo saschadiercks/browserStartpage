@@ -306,7 +306,7 @@ nav {
 // Default View
 @include default {
   button {
-    padding: $base-spacing-size * .75 $base-spacing-size;
+    padding: $base-spacing-size * .5 $base-spacing-size;
   }
 
   header,
