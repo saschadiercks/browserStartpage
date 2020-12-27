@@ -54,6 +54,13 @@ You can just click on the desired tab and copy the url.
 - `/htdocs/assets/js` compiled js-files (uesd live)
 - `/htdocs/assets/thumbnails` store your link-images here
 
+### Usage of docker (preferred)
+
+1. install docker on your machine (https://docs.docker.com/get-docker/)
+2. head to the local repository and run `docker-compose up`
+3. Wait a while until all components are loaded an the box is running. (The first start can take a while)
+4. visit (http://127.0.0.1:8080/)
+
 ### Usage of Vagrant
 
 1. install vagrant on your machine (https://www.vagrantup.com/)
