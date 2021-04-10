@@ -13,22 +13,26 @@ import handleTriggers from "./functions/handleTriggers.js";
 
 // ###### script ######
 // is the DOM ready for manipulation?
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function() {
+  // --- Toggle JS Availability
+  setJsAvailability("body");
 
-	// --- Toggle JS Availability
-	setJsAvailability("body");
+  // handle tabs
+  handleTabs(".js-tab-trigger", ".tabbed-content");
 
-	// handle tabs
-	handleTabs('.js-tab-trigger','.tabbed-content');
+  // handle triggers
+  handleTriggers(".js-flyout-trigger", fixScrollPos);
+  handleTriggers(".js-collapse-trigger", false);
+  handleTriggers(".js-modal-trigger", fixScrollPos);
 
-	// handle triggers
-	handleTriggers('.js-flyout-trigger', fixScrollPos);
-	handleTriggers('.js-collapse-trigger', false);
-	handleTriggers('.js-modal-trigger', fixScrollPos);
+  // -- make elements sticky
+  stickyElement("#application-footer", "#content", "padding-bottom");
 
-	// -- make elements sticky
-	stickyElement('#application-footer','#content','padding-bottom');
+  // --- Show/hide notification
+  notificationKeydown(".notification");
 
-	// --- Show/hide notification
-	notificationKeydown(".notification");
+  // -- Service worker
+  navigator.serviceWorker.register("service-worker.js", {
+    scope: "/"
+  });
 });
