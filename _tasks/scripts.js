@@ -1,25 +1,15 @@
 /* #### Setting #### */
 const config = require("./_config.json");
 const gulp = require("gulp");
-const webpack = require("webpack-stream");
-const terser = require("gulp-terser");
-const gulpif = require("gulp-if");
+const exec = require("child_process").exec;
 
 /* ################# */
 /* ##### Tasks ##### */
 /* ################# */
-gulp.task("scripts:build", function() {
-  return gulp
-    .src(config.assetSrc + "/js/")
-    .pipe(webpack(require("../webpack.config.js")))
-    .pipe(gulpif(process.env.NODE_ENV === config.envProduction, terser()))
-    .pipe(gulp.dest("."));
-});
-
-gulp.task("serviceworker:build", function() {
-  return gulp
-    .src(config.src + "/service-worker.js")
-    .pipe(webpack(require("../webpack.config.js")))
-    .pipe(gulpif(process.env.NODE_ENV === config.envProduction, terser()))
-    .pipe(gulp.dest("."));
+gulp.task("scripts:build", function(cb) {
+  exec("npx webpack --config webpack.config.js", function(err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
 });

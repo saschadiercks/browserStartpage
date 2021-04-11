@@ -1,4 +1,4 @@
-var CACHE_NAME = "2021-04-11";
+var CACHE_NAME = "[contenthash]";
 var REQUIRED_FILES = [
   "./assets/css/site.css",
   "./assets/js/site.js",

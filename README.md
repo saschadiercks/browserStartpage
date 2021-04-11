@@ -19,7 +19,9 @@ Read more about it here (in german): [https://saschadiercks.de/projekte/browsers
 
 ### Setup your own links
 
-The browserStartpage comes with a default list of links, to show you how it works. It shows up with a list of popular browsers and some development-ressources. You change that. Just head over to '/htdocs/data/data.json` and play with that file. You can edit the tabs and links to your own liking. Just play with it - it's quite self explanatory. All you need to do is to create images for your links and place them on your server too. Usually here '/htdocs/assets/thumbnails'
+The browserStartpage comes with a default list of links, to show you how it works. It shows up with a list of popular browsers and some development-ressources. You change that. Just head over to `/htdocs/data/data.json` and play with that file. You can edit the tabs and links to your own liking. Just play with it - it's quite self explanatory. All you need to do is to create images for your links and place them on your server too. Usually here `/htdocs/assets/thumbnails`.
+
+You can setup the usage of serviceworkers or define your own wallpaper in the json (on the top of the file).
 
 ## New
 
@@ -44,7 +46,7 @@ You can just click on the desired tab and copy the url.
 
 ## Further insights (want to help building this?)
 
-- `/src/manifests` Vagrant is used as a local development-environment
+- `/src/manifests` Docker is used as a local development-environment
 - `/src/scss` the development files to build the CSS (via gulp)
 - `/src/js` the development JS to compile the JS (via gulp)
 - `/src/data` dummy-datafile. Use `/htdocs/data/data.json` for local development
