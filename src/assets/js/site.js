@@ -30,9 +30,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // --- Show/hide notification
   notificationKeydown(".notification");
-
-  // -- Service worker
-  navigator.serviceWorker.register("service-worker.js", {
-    scope: "/"
-  });
 });

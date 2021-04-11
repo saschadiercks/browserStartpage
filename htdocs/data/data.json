@@ -1,560 +1,561 @@
 {
-	"linktarget" : "_self",
-	"wallpaper" : "assets/wallpaper/default.jpg",
-	"content": {
-		"Browser" : [
-			{
-				"url":   "https://github.com/saschadiercks/browserStartpage",
-				"title": "Fork me on github",
-				"image": "assets/thumbnails/forkme.png",
-				"imageQr": "assets/qr-codes/github-project.png"
-			},
-			{
-				"url":   "https://github.com/saschadiercks/browserStartpage",
-				"title": "Links as modal",
-				"image": "assets/thumbnails/modal.png",
-				"modal"	: [
-					{
-						"url":   "https://www.google.de/chrome/browser/desktop/",
-						"title": "Chrome"
-					},
-					{
-						"url":   "https://www.mozilla.org/firefox",
-						"title": "Firefox"
-					},
-					{
-						"url":   "https://www.mozilla.org/de/firefox/developer/",
-						"title": "Firefox (Dev)"
-					},
-					{
-						"url":   "https://developer.apple.com/safari/technology-preview/",
-						"title": "Safari (TP)"
-					},
-					{
-						"url":   "https://vivaldi.com",
-						"title": "Vivaldi"
-					},
-					{
-						"url":   "https://blisk.io/",
-						"title": "Blisk"
-					},
-					{
-						"url":   "https://developer.microsoft.com/en-us/microsoft-edge/tools/",
-						"title": "Modern IE"
-					}
-				]
-			},
-			{
-				"url":   "https://www.google.de/chrome/browser/desktop/",
-				"title": "Chrome",
-				"image": "assets/thumbnails/chrome.png"
-			},
-			{
-				"url":   "https://www.mozilla.org/firefox",
-				"title": "Firefox",
-				"image": "assets/thumbnails/firefox.png"
-			},
-			{
-				"url":   "https://www.mozilla.org/de/firefox/developer/",
-				"title": "Firefox (Dev)",
-				"image": "assets/thumbnails/firefox-dev.png"
-			},
-			{
-				"url":   "https://developer.apple.com/safari/technology-preview/",
-				"title": "Safari (TP)",
-				"image": "assets/thumbnails/safari-tp.png"
-			},
-			{
-				"url":   "https://vivaldi.com",
-				"title": "Vivaldi",
-				"image": "assets/thumbnails/vivaldi.png"
-			},
-			{
-				"url":   "https://blisk.io/",
-				"title": "Blisk",
-				"image": "assets/thumbnails/blisk.png"
-			},
-			{
-				"url":   "https://developer.microsoft.com/en-us/microsoft-edge/tools/",
-				"title": "Modern IE",
-				"image": "assets/thumbnails/modern-ie.png"
-			}
-		],
-		"Dev" : [
-			{
-				"url":   "http://schema.org/docs/schemas.html",
-				"title": "Schema.org",
-				"image": "assets/thumbnails/schema.png"
-			},
-			{
-				"url":   "https://html.spec.whatwg.org/multipage/forms.html#autofill",
-				"title": "Autocomplete",
-				"image": "assets/thumbnails/autocomplete.png"
-			},
-			{
-				"url":   "http://microformats.org/wiki/hcard-input-formats",
-				"title": "Microformats",
-				"image": "assets/thumbnails/microformats.png"
-			},
-			{
-				"url":   "https://github.com/",
-				"title": "Github",
-				"image": "assets/thumbnails/github.png"
-			},
-			{
-				"url":   "https://bitbucket.org/",
-				"title": "Bitbucket",
-				"image": "assets/thumbnails/bitbucket.png"
-			},
-			{
-				"url":   "https://validator.w3.org/nu/",
-				"title": "HTML-Validator",
-				"image": "assets/thumbnails/html-validator.png"
-			},
-			{
-				"url":   "https://developers.google.com/structured-data/testing-tool/",
-				"title": "RichSnippet-Testing",
-				"image": "assets/thumbnails/rich-snippet.png"
-			},
-			{
-				"url":   "https://developers.google.com/speed/pagespeed/insights/?hl=de",
-				"title": "Google Pagespeeds",
-				"image": "assets/thumbnails/pagespeed.png"
-			},
-			{
-				"url":   "https://search.google.com/test/mobile-friendly",
-				"title": "Google Mobiltest",
-				"image": "assets/thumbnails/mobile-friendly.png"
-			},
-			{
-				"url":   "https://www.google.com/webmasters/tools/",
-				"title": "Google Webmaster-Tools",
-				"image": "assets/thumbnails/webmastertools.png"
-			},
-			{
-				"url":   "https://analytics.google.com/",
-				"title": "Analytics",
-				"image": "assets/thumbnails/analytics.png"
-			},
-			{
-				"url":   "https://github.com/dypsilon/frontend-dev-bookmarks",
-				"title": "Frontend Bookmarks",
-				"image": "assets/thumbnails/frontend-bookmarks.png"
-			},
-			{
-				"url":   "https://developer.mozilla.org/de/",
-				"title": "Mozilla (dev)",
-				"image": "assets/thumbnails/mozilla-dev.png"
-			},
-			{
-				"url":   "https://developers.google.com/web/?hl=de",
-				"title": "Google (dev)",
-				"image": "assets/thumbnails/google-dev.png"
-			},
-			{
-				"url":   "http://codepen.io/patterns/",
-				"title": "Codepen patterns",
-				"image": "assets/thumbnails/codepen-patterns.png"
-			},
-			{
-				"url":   "http://browserl.ist/",
-				"title": "Browserlist",
-				"image": "assets/thumbnails/browserlist.png"
-			},
-			{
-				"url":   "https://www.codecademy.com",
-				"title": "Codecademy",
-				"image": "assets/thumbnails/codecademy.png"
-			},
-			{
-				"url":   "http://tools.pingdom.com/fpt/",
-				"title": "Pingdom",
-				"image": "assets/thumbnails/pingdom.png"
-			},
-			{
-				"url":   "https://dequeuniversity.com/library/",
-				"title": "Accessibility Library",
-				"image": "assets/thumbnails/accessibility.png"
-			},
-			{
-				"url":   "https://pixabay.com/de/",
-				"title": "Pixabay",
-				"image": "assets/thumbnails/pixabay.png"
-			},
-			{
-				"url":   "https://npms.io/search?term=hyperterm",
-				"title": "npms.io",
-				"image": "assets/thumbnails/npms-io.png"
-			}
-		],
-		"Design" : [
-			{
-				"url"  : "https://www.microsoft.com/en-us/design",
-				"image": "assets/thumbnails/design-microsoft.png",
-				"title": "Microsoft Design"
-			},
-			{
-				"url"  : "https://design.google/resources/",
-				"image": "assets/thumbnails/design-google.png",
-				"title": "Google Design"
-			},
-			{
-				"url"  : "https://material.io/",
-				"image": "assets/thumbnails/design-material.png",
-				"title": "Material Design"
-			},
-			{
-				"url"  : "https://design.firefox.com/",
-				"image": "assets/thumbnails/design-firefox.png",
-				"title": "Firefox Design"
-			},
-			{
-				"url"  : "http://facebook.design",
-				"image": "assets/thumbnails/design-facebook.png",
-				"title": "Facebook Design"
-			},
-			{
-				"url"  : "https://design.trello.com/",
-				"image": "assets/thumbnails/trello.png",
-				"title": "Trello Design"
-			},
-			{
-				"url"  : "https://github.com/showcases/design-essentials",
-				"image": "assets/thumbnails/github.png",
-				"title": "Github Design Essentials"
-			},
-			{
-				"url"  : "https://www.uber.design",
-				"image": "assets/thumbnails/design-uber.png",
-				"title": "Uber design"
-			},
-			{
-				"url"  : "https://airbnb.design",
-				"image": "assets/thumbnails/design-airbnb.png",
-				"title": "airbnb Design"
-			},
-			{
-				"url"  : "https://atlassian.design",
-				"image": "assets/thumbnails/design-atlassian.png",
-				"title": "Atlassian Design"
-			},
+  "linktarget": "_self",
+  "useServiceWorker": true,
+  "wallpaper": "assets/wallpaper/default.jpg",
+  "content": {
+    "Browser": [
+      {
+        "url": "https://github.com/saschadiercks/browserStartpage",
+        "title": "Fork me on github",
+        "image": "assets/thumbnails/forkme.png",
+        "imageQr": "assets/qr-codes/github-project.png"
+      },
+      {
+        "url": "https://github.com/saschadiercks/browserStartpage",
+        "title": "Links as modal",
+        "image": "assets/thumbnails/modal.png",
+        "modal": [
+          {
+            "url": "https://www.google.de/chrome/browser/desktop/",
+            "title": "Chrome"
+          },
+          {
+            "url": "https://www.mozilla.org/firefox",
+            "title": "Firefox"
+          },
+          {
+            "url": "https://www.mozilla.org/de/firefox/developer/",
+            "title": "Firefox (Dev)"
+          },
+          {
+            "url": "https://developer.apple.com/safari/technology-preview/",
+            "title": "Safari (TP)"
+          },
+          {
+            "url": "https://vivaldi.com",
+            "title": "Vivaldi"
+          },
+          {
+            "url": "https://blisk.io/",
+            "title": "Blisk"
+          },
+          {
+            "url": "https://developer.microsoft.com/en-us/microsoft-edge/tools/",
+            "title": "Modern IE"
+          }
+        ]
+      },
+      {
+        "url": "https://www.google.de/chrome/browser/desktop/",
+        "title": "Chrome",
+        "image": "assets/thumbnails/chrome.png"
+      },
+      {
+        "url": "https://www.mozilla.org/firefox",
+        "title": "Firefox",
+        "image": "assets/thumbnails/firefox.png"
+      },
+      {
+        "url": "https://www.mozilla.org/de/firefox/developer/",
+        "title": "Firefox (Dev)",
+        "image": "assets/thumbnails/firefox-dev.png"
+      },
+      {
+        "url": "https://developer.apple.com/safari/technology-preview/",
+        "title": "Safari (TP)",
+        "image": "assets/thumbnails/safari-tp.png"
+      },
+      {
+        "url": "https://vivaldi.com",
+        "title": "Vivaldi",
+        "image": "assets/thumbnails/vivaldi.png"
+      },
+      {
+        "url": "https://blisk.io/",
+        "title": "Blisk",
+        "image": "assets/thumbnails/blisk.png"
+      },
+      {
+        "url": "https://developer.microsoft.com/en-us/microsoft-edge/tools/",
+        "title": "Modern IE",
+        "image": "assets/thumbnails/modern-ie.png"
+      }
+    ],
+    "Dev": [
+      {
+        "url": "http://schema.org/docs/schemas.html",
+        "title": "Schema.org",
+        "image": "assets/thumbnails/schema.png"
+      },
+      {
+        "url": "https://html.spec.whatwg.org/multipage/forms.html#autofill",
+        "title": "Autocomplete",
+        "image": "assets/thumbnails/autocomplete.png"
+      },
+      {
+        "url": "http://microformats.org/wiki/hcard-input-formats",
+        "title": "Microformats",
+        "image": "assets/thumbnails/microformats.png"
+      },
+      {
+        "url": "https://github.com/",
+        "title": "Github",
+        "image": "assets/thumbnails/github.png"
+      },
+      {
+        "url": "https://bitbucket.org/",
+        "title": "Bitbucket",
+        "image": "assets/thumbnails/bitbucket.png"
+      },
+      {
+        "url": "https://validator.w3.org/nu/",
+        "title": "HTML-Validator",
+        "image": "assets/thumbnails/html-validator.png"
+      },
+      {
+        "url": "https://developers.google.com/structured-data/testing-tool/",
+        "title": "RichSnippet-Testing",
+        "image": "assets/thumbnails/rich-snippet.png"
+      },
+      {
+        "url": "https://developers.google.com/speed/pagespeed/insights/?hl=de",
+        "title": "Google Pagespeeds",
+        "image": "assets/thumbnails/pagespeed.png"
+      },
+      {
+        "url": "https://search.google.com/test/mobile-friendly",
+        "title": "Google Mobiltest",
+        "image": "assets/thumbnails/mobile-friendly.png"
+      },
+      {
+        "url": "https://www.google.com/webmasters/tools/",
+        "title": "Google Webmaster-Tools",
+        "image": "assets/thumbnails/webmastertools.png"
+      },
+      {
+        "url": "https://analytics.google.com/",
+        "title": "Analytics",
+        "image": "assets/thumbnails/analytics.png"
+      },
+      {
+        "url": "https://github.com/dypsilon/frontend-dev-bookmarks",
+        "title": "Frontend Bookmarks",
+        "image": "assets/thumbnails/frontend-bookmarks.png"
+      },
+      {
+        "url": "https://developer.mozilla.org/de/",
+        "title": "Mozilla (dev)",
+        "image": "assets/thumbnails/mozilla-dev.png"
+      },
+      {
+        "url": "https://developers.google.com/web/?hl=de",
+        "title": "Google (dev)",
+        "image": "assets/thumbnails/google-dev.png"
+      },
+      {
+        "url": "http://codepen.io/patterns/",
+        "title": "Codepen patterns",
+        "image": "assets/thumbnails/codepen-patterns.png"
+      },
+      {
+        "url": "http://browserl.ist/",
+        "title": "Browserlist",
+        "image": "assets/thumbnails/browserlist.png"
+      },
+      {
+        "url": "https://www.codecademy.com",
+        "title": "Codecademy",
+        "image": "assets/thumbnails/codecademy.png"
+      },
+      {
+        "url": "http://tools.pingdom.com/fpt/",
+        "title": "Pingdom",
+        "image": "assets/thumbnails/pingdom.png"
+      },
+      {
+        "url": "https://dequeuniversity.com/library/",
+        "title": "Accessibility Library",
+        "image": "assets/thumbnails/accessibility.png"
+      },
+      {
+        "url": "https://pixabay.com/de/",
+        "title": "Pixabay",
+        "image": "assets/thumbnails/pixabay.png"
+      },
+      {
+        "url": "https://npms.io/search?term=hyperterm",
+        "title": "npms.io",
+        "image": "assets/thumbnails/npms-io.png"
+      }
+    ],
+    "Design": [
+      {
+        "url": "https://www.microsoft.com/en-us/design",
+        "image": "assets/thumbnails/design-microsoft.png",
+        "title": "Microsoft Design"
+      },
+      {
+        "url": "https://design.google/resources/",
+        "image": "assets/thumbnails/design-google.png",
+        "title": "Google Design"
+      },
+      {
+        "url": "https://material.io/",
+        "image": "assets/thumbnails/design-material.png",
+        "title": "Material Design"
+      },
+      {
+        "url": "https://design.firefox.com/",
+        "image": "assets/thumbnails/design-firefox.png",
+        "title": "Firefox Design"
+      },
+      {
+        "url": "http://facebook.design",
+        "image": "assets/thumbnails/design-facebook.png",
+        "title": "Facebook Design"
+      },
+      {
+        "url": "https://design.trello.com/",
+        "image": "assets/thumbnails/trello.png",
+        "title": "Trello Design"
+      },
+      {
+        "url": "https://github.com/showcases/design-essentials",
+        "image": "assets/thumbnails/github.png",
+        "title": "Github Design Essentials"
+      },
+      {
+        "url": "https://www.uber.design",
+        "image": "assets/thumbnails/design-uber.png",
+        "title": "Uber design"
+      },
+      {
+        "url": "https://airbnb.design",
+        "image": "assets/thumbnails/design-airbnb.png",
+        "title": "airbnb Design"
+      },
+      {
+        "url": "https://atlassian.design",
+        "image": "assets/thumbnails/design-atlassian.png",
+        "title": "Atlassian Design"
+      },
 
-			{
-				"url"  : "https://unsplash.com/search/photos/macbook",
-				"image": "assets/thumbnails/design-unsplash.png",
-				"title": "Unsplash"
-			},
-			{
-				"url"  : "http://magicmockups.com/",
-				"image": "assets/thumbnails/magic-mockups.png",
-				"title": "Magic Mockups"
-			},
-			{
-				"url"  : "http://smartmockups.com/",
-				"image": "assets/thumbnails/smartmockups.png",
-				"title": "Smart Mockups"
-			},
-			{
-				"url"  : "https://www.designbetter.co",
-				"image": "assets/thumbnails/design-invision.png",
-				"title": "Design better"
-			}
-		],
-		"SDI" : [
-			{
-				"url"  : "https://www.saschadiercks.de/",
-				"image": "assets/thumbnails/sdi-homepage.png",
-				"imageQr": "assets/qr-codes/metafolio-de.png",
-				"title": "About me"
-			},
-			{
-				"url"  : "https://design.saschadiercks.de/",
-				"image": "assets/thumbnails/sdi-blog.png",
-				"imageQr": "assets/qr-codes/design-system.png",
-				"title": "SDI Design System"
-			},
-			{
-				"url"  : "https://demo.saschadiercks.de/personalnews/",
-				"image": "assets/thumbnails/sdi-personalnews.png",
-				"imageQr": "assets/qr-codes/personalnews-landing.png",
-				"title": "personalNews"
-			},
-			{
-				"url"  : "https://demo.saschadiercks.de/little-helpers/",
-				"image": "assets/thumbnails/sdi-little-helpers.png",
-				"imageQr": "assets/qr-codes/little-helpers.png",
-				"title": "Little Helpers"
-			},
-			{
-				"url"  : "https://demo.saschadiercks.de/startpage/",
-				"image": "assets/thumbnails/sdi-startpage.png",
-				"imageQr": "assets/qr-codes/startpage-demo.png",
-				"title": "Browser Startpage (this)"
-			}
-		]
-	},
-	"bookmarks" : {
-		"Frontend" : [
-			{
-				"url":   "https://github.com/dypsilon/frontend-dev-bookmarks",
-				"title": "Frontend Dev Bookmarks"
-			},
-			{
-				"url":   "https://github.com/thedaviddias/Front-End-Checklist",
-				"title": "Frontend Checklist"
-			},
-			{
-				"url":   "https://github.com/bendc/frontend-guidelines",
-				"title": "Frontend Guidelines"
-			},
-			{
-				"url":   "http://codeguide.co/",
-				"title": "Codeguide by @mdo"
-			},
-			{
-				"url":   "https://cssreference.io",
-				"title": "CSS Reference"
-			},
-			{
-				"url":   "https://cssguidelin.es/",
-				"title": "CSS Guidelines"
-			},
-			{
-				"url":   "https://bundlephobia.com/",
-				"title": "Bundlephobia"
-			},
-			{
-				"url":   "https://ausi.github.io/respimagelint/",
-				"title": "ImageLint for responsive Images"
-			},
-			{
-				"url":   "https://uitest.com/de/",
-				"title": "UI-Test"
-			},
-			{
-				"url":   "https://whatdoesmysitecost.com/",
-				"title": "What does my site cost"
-			},
-			{
-				"url":   "https://www.campaignmonitor.com/css/",
-				"title": "CSS in eMails"
-			},
-			{
-				"url":   "https://webfieldmanual.com/",
-				"title": "Webfield manual"
-			},
-			{
-				"url":   "https://docs.google.com/spreadsheets/d/1tZYPnzLG0y51QinLxrV97Xflzr2MbTqwWNvaHYN04BE/edit#gid=0",
-				"title": "Styleguide/Boilerplate patterns"
-			},
-			{
-				"url":   "https://www.filamentgroup.com/lab/font-events.html",
-				"title": "Font Loading via API"
-			},
-			{
-				"url" : "https://developer.apple.com",
-				"title" : "Developer @Apple"
-			},
-			{
-				"url" : "https://www.interaction-design.org",
-				"title" : "Interaction Design"
-			},
-			{
-				"url" : "https://www.barrierefreies-webdesign.de/knowhow/",
-				"title" : "Barrierefreies Webdesign"
-			},
-			{
-				"url" : "http://webkrauts.de/",
-				"title" : "Webkrauts"
-			},
-			{
-				"url" : "https://a11yproject.com/",
-				"title" : "A11Y"
-			},
-			{
-				"url" : "https://www.w3.org/WAI/beta/",
-				"title" : "WAI"
-			}
-		],
-		"Frameworks" : [
-			{
-				"url" : "https://bulma.io/",
-				"title": "Bulma"
-			},
-			{
-				"url" : "https://getbootstrap.com/",
-				"title": "Bootstrap"
-			},
-			{
-				"url" : "https://foundation.zurb.com",
-				"title": "Foundation"
-			},
-			{
-				"url" : "https://jquery.com/",
-				"title": "jQuery"
-			}
-		],
-		"Design Systems" : [
-			{
-				"url" : "https://www.designsystems.com/",
-				"title" : "Design Systems (by figma)"
-			},
-			{
-				"url" : "https://designsystemsrepo.com/",
-				"title" : "Design Systems Repo"
-			},
-			{
-				"url" : "https://www.lightningdesignsystem.com/",
-				"title" : "Lightning Design System"
-			},
-			{
-				"url" : "http://ux.mailchimp.com/patterns",
-				"title" : "Mailchimp UX"
-			},
-			{
-				"url" : "https://www.otto.de/pattern-library/",
-				"title" : "Otto Pattern Library"
-			},
-			{
-				"url" : "http://patternlab.io/",
-				"title" : "Patternlab"
-			}
-		],
-		"Patterns" : [
-			{
-				"url" : "http://codepen.io/patterns/",
-				"title" : "Patterns @codepen"
-			},
-			{
-				"url" : "https://inclusive-components.design/",
-				"title" : "Inclusive components"
-			},
-			{
-				"url" : "http://patterntap.com/patterntap",
-				"title" : "Patterns by Zurb"
-			},
-			{
-				"url" : "http://ui-patterns.com/",
-				"title" : "UI-Patterns"
-			},
-			{
-				"url" : "http://www.goodui.org/",
-				"title" : "Good UI"
-			},
-			{
-				"url" : "http://ui-patterns.com/blog/How-to-get-better-at-UI-design",
-				"title" : "Get better at UI"
-			}
-		],
-		"Styleguides" : [
-			{
-				"url" : "https://www.designtagebuch.de/wiki/corporate-design-manuals/",
-				"title" : "Corporate Design manuals"
-			},
-			{
-				"url" : "https://www.designtagebuch.de/wiki/",
-				"title" : "Designtagebuch Wiki"
-			},
-			{
-				"url" : "https://saijogeorge.com/brand-style-guide-examples/",
-				"title" : "Styleguide Examples"
-			},
-			{
-				"url" : "http://www.theuxbookmark.com/2010/08/interaction-design/a-monster-list-of-ui-guidelines-style-guides",
-				"title" : "UX-Bookmark: Styleguides"
-			}
-		],
-		"Design" : [
-			{
-				"url":   "http://makersandfounders.com/DIETER-RAMS",
-				"title": "Dieter Rams"
-			},
-			{
-				"url" : "https://www.customspaces.com/",
-				"title": "Custom spaces"
-			},
-			{
-				"url" : "https://startupsthisishowdesignworks.com/",
-				"title": "this is how design works"
-			}
-		],
-		"Helpers" : [
-			{
-				"url":   "http://scrumguides.org/",
-				"title": "Scrum Guides"
-			},
-			{
-				"url":   "https://support.apple.com/de-de/HT205655",
-				"title": "Ergonomie @Apple"
-			},
-			{
-				"url":   "http://makerbook.net/",
-				"title": "Makerbook"
-			},
-			{
-				"url":   "https://www.paypalobjects.com/en_AU/vhelp/paypalmanager_help/credit_card_numbers.htm",
-				"title": "Test Creditcard Numbers"
-			},
-			{
-				"url":   "https://sizecalc.com",
-				"title": "Size Calculator"
-			},
-			{
-				"url":   "https://www.flickr.com/photos/jasontravis/sets/72157603258446753/",
-				"title": "Persona (Flickr)"
-			},
-			{
-				"url":   "https://randomuser.me/",
-				"title": "Random User Generator"
-			},
-			{
-				"url":   "http://sneakpeekit.com",
-				"title": "Sketch Sheets for Webdesingers"
-			},
-			{
-				"url":   "http://ctamagazine.unbounce.com/",
-				"title": "Call to Action Magazine"
-			}
-		],
-		"eBooks" : [
-			{
-				"url":   "https://adaptivewebdesign.info/1st-edition/read/",
-				"title": "Adaptive Webdesign"
-			},
-			{
-				"url":   "http://eloquentjavascript.net/",
-				"title": "eloquent Javascipt"
-			},
-			{
-				"url":   "https://resilientwebdesign.com/",
-				"title": "resilient webdesign"
-			},
-			{
-				"url":   "http://www.thebookoflife.org/",
-				"title": "The book of life"
-			}
-		]
-	},
-	"footer" : {
-		"description" : [
-			{
-				"url":   "https://github.com/saschadiercks/browserStartpage",
-				"title": "Fork me on Github"
-			}
-		],
-		"links" : [
-			{
-				"url":   "https://saschadiercks.de",
-				"title": "home"
-			},
-			{
-				"url":   "https://github.com/saschadiercks",
-				"title": "github"
-			},
-			{
-				"url":   "https://m.twitter.com/saschadiercks",
-				"title": "twitter"
-			}
-		]
-	}
+      {
+        "url": "https://unsplash.com/search/photos/macbook",
+        "image": "assets/thumbnails/design-unsplash.png",
+        "title": "Unsplash"
+      },
+      {
+        "url": "http://magicmockups.com/",
+        "image": "assets/thumbnails/magic-mockups.png",
+        "title": "Magic Mockups"
+      },
+      {
+        "url": "http://smartmockups.com/",
+        "image": "assets/thumbnails/smartmockups.png",
+        "title": "Smart Mockups"
+      },
+      {
+        "url": "https://www.designbetter.co",
+        "image": "assets/thumbnails/design-invision.png",
+        "title": "Design better"
+      }
+    ],
+    "SDI": [
+      {
+        "url": "https://www.saschadiercks.de/",
+        "image": "assets/thumbnails/sdi-homepage.png",
+        "imageQr": "assets/qr-codes/metafolio-de.png",
+        "title": "About me"
+      },
+      {
+        "url": "https://design.saschadiercks.de/",
+        "image": "assets/thumbnails/sdi-blog.png",
+        "imageQr": "assets/qr-codes/design-system.png",
+        "title": "SDI Design System"
+      },
+      {
+        "url": "https://demo.saschadiercks.de/personalnews/",
+        "image": "assets/thumbnails/sdi-personalnews.png",
+        "imageQr": "assets/qr-codes/personalnews-landing.png",
+        "title": "personalNews"
+      },
+      {
+        "url": "https://demo.saschadiercks.de/little-helpers/",
+        "image": "assets/thumbnails/sdi-little-helpers.png",
+        "imageQr": "assets/qr-codes/little-helpers.png",
+        "title": "Little Helpers"
+      },
+      {
+        "url": "https://demo.saschadiercks.de/startpage/",
+        "image": "assets/thumbnails/sdi-startpage.png",
+        "imageQr": "assets/qr-codes/startpage-demo.png",
+        "title": "Browser Startpage (this)"
+      }
+    ]
+  },
+  "bookmarks": {
+    "Frontend": [
+      {
+        "url": "https://github.com/dypsilon/frontend-dev-bookmarks",
+        "title": "Frontend Dev Bookmarks"
+      },
+      {
+        "url": "https://github.com/thedaviddias/Front-End-Checklist",
+        "title": "Frontend Checklist"
+      },
+      {
+        "url": "https://github.com/bendc/frontend-guidelines",
+        "title": "Frontend Guidelines"
+      },
+      {
+        "url": "http://codeguide.co/",
+        "title": "Codeguide by @mdo"
+      },
+      {
+        "url": "https://cssreference.io",
+        "title": "CSS Reference"
+      },
+      {
+        "url": "https://cssguidelin.es/",
+        "title": "CSS Guidelines"
+      },
+      {
+        "url": "https://bundlephobia.com/",
+        "title": "Bundlephobia"
+      },
+      {
+        "url": "https://ausi.github.io/respimagelint/",
+        "title": "ImageLint for responsive Images"
+      },
+      {
+        "url": "https://uitest.com/de/",
+        "title": "UI-Test"
+      },
+      {
+        "url": "https://whatdoesmysitecost.com/",
+        "title": "What does my site cost"
+      },
+      {
+        "url": "https://www.campaignmonitor.com/css/",
+        "title": "CSS in eMails"
+      },
+      {
+        "url": "https://webfieldmanual.com/",
+        "title": "Webfield manual"
+      },
+      {
+        "url": "https://docs.google.com/spreadsheets/d/1tZYPnzLG0y51QinLxrV97Xflzr2MbTqwWNvaHYN04BE/edit#gid=0",
+        "title": "Styleguide/Boilerplate patterns"
+      },
+      {
+        "url": "https://www.filamentgroup.com/lab/font-events.html",
+        "title": "Font Loading via API"
+      },
+      {
+        "url": "https://developer.apple.com",
+        "title": "Developer @Apple"
+      },
+      {
+        "url": "https://www.interaction-design.org",
+        "title": "Interaction Design"
+      },
+      {
+        "url": "https://www.barrierefreies-webdesign.de/knowhow/",
+        "title": "Barrierefreies Webdesign"
+      },
+      {
+        "url": "http://webkrauts.de/",
+        "title": "Webkrauts"
+      },
+      {
+        "url": "https://a11yproject.com/",
+        "title": "A11Y"
+      },
+      {
+        "url": "https://www.w3.org/WAI/beta/",
+        "title": "WAI"
+      }
+    ],
+    "Frameworks": [
+      {
+        "url": "https://bulma.io/",
+        "title": "Bulma"
+      },
+      {
+        "url": "https://getbootstrap.com/",
+        "title": "Bootstrap"
+      },
+      {
+        "url": "https://foundation.zurb.com",
+        "title": "Foundation"
+      },
+      {
+        "url": "https://jquery.com/",
+        "title": "jQuery"
+      }
+    ],
+    "Design Systems": [
+      {
+        "url": "https://www.designsystems.com/",
+        "title": "Design Systems (by figma)"
+      },
+      {
+        "url": "https://designsystemsrepo.com/",
+        "title": "Design Systems Repo"
+      },
+      {
+        "url": "https://www.lightningdesignsystem.com/",
+        "title": "Lightning Design System"
+      },
+      {
+        "url": "http://ux.mailchimp.com/patterns",
+        "title": "Mailchimp UX"
+      },
+      {
+        "url": "https://www.otto.de/pattern-library/",
+        "title": "Otto Pattern Library"
+      },
+      {
+        "url": "http://patternlab.io/",
+        "title": "Patternlab"
+      }
+    ],
+    "Patterns": [
+      {
+        "url": "http://codepen.io/patterns/",
+        "title": "Patterns @codepen"
+      },
+      {
+        "url": "https://inclusive-components.design/",
+        "title": "Inclusive components"
+      },
+      {
+        "url": "http://patterntap.com/patterntap",
+        "title": "Patterns by Zurb"
+      },
+      {
+        "url": "http://ui-patterns.com/",
+        "title": "UI-Patterns"
+      },
+      {
+        "url": "http://www.goodui.org/",
+        "title": "Good UI"
+      },
+      {
+        "url": "http://ui-patterns.com/blog/How-to-get-better-at-UI-design",
+        "title": "Get better at UI"
+      }
+    ],
+    "Styleguides": [
+      {
+        "url": "https://www.designtagebuch.de/wiki/corporate-design-manuals/",
+        "title": "Corporate Design manuals"
+      },
+      {
+        "url": "https://www.designtagebuch.de/wiki/",
+        "title": "Designtagebuch Wiki"
+      },
+      {
+        "url": "https://saijogeorge.com/brand-style-guide-examples/",
+        "title": "Styleguide Examples"
+      },
+      {
+        "url": "http://www.theuxbookmark.com/2010/08/interaction-design/a-monster-list-of-ui-guidelines-style-guides",
+        "title": "UX-Bookmark: Styleguides"
+      }
+    ],
+    "Design": [
+      {
+        "url": "http://makersandfounders.com/DIETER-RAMS",
+        "title": "Dieter Rams"
+      },
+      {
+        "url": "https://www.customspaces.com/",
+        "title": "Custom spaces"
+      },
+      {
+        "url": "https://startupsthisishowdesignworks.com/",
+        "title": "this is how design works"
+      }
+    ],
+    "Helpers": [
+      {
+        "url": "http://scrumguides.org/",
+        "title": "Scrum Guides"
+      },
+      {
+        "url": "https://support.apple.com/de-de/HT205655",
+        "title": "Ergonomie @Apple"
+      },
+      {
+        "url": "http://makerbook.net/",
+        "title": "Makerbook"
+      },
+      {
+        "url": "https://www.paypalobjects.com/en_AU/vhelp/paypalmanager_help/credit_card_numbers.htm",
+        "title": "Test Creditcard Numbers"
+      },
+      {
+        "url": "https://sizecalc.com",
+        "title": "Size Calculator"
+      },
+      {
+        "url": "https://www.flickr.com/photos/jasontravis/sets/72157603258446753/",
+        "title": "Persona (Flickr)"
+      },
+      {
+        "url": "https://randomuser.me/",
+        "title": "Random User Generator"
+      },
+      {
+        "url": "http://sneakpeekit.com",
+        "title": "Sketch Sheets for Webdesingers"
+      },
+      {
+        "url": "http://ctamagazine.unbounce.com/",
+        "title": "Call to Action Magazine"
+      }
+    ],
+    "eBooks": [
+      {
+        "url": "https://adaptivewebdesign.info/1st-edition/read/",
+        "title": "Adaptive Webdesign"
+      },
+      {
+        "url": "http://eloquentjavascript.net/",
+        "title": "eloquent Javascipt"
+      },
+      {
+        "url": "https://resilientwebdesign.com/",
+        "title": "resilient webdesign"
+      },
+      {
+        "url": "http://www.thebookoflife.org/",
+        "title": "The book of life"
+      }
+    ]
+  },
+  "footer": {
+    "description": [
+      {
+        "url": "https://github.com/saschadiercks/browserStartpage",
+        "title": "Fork me on Github"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://saschadiercks.de",
+        "title": "home"
+      },
+      {
+        "url": "https://github.com/saschadiercks",
+        "title": "github"
+      },
+      {
+        "url": "https://m.twitter.com/saschadiercks",
+        "title": "twitter"
+      }
+    ]
+  }
 }

@@ -23,6 +23,5 @@ gulp.task(
 );
 
 // --- run application ----
-gulp.task("serve", gulp.series("build", "vagrant:up"));
-gulp.task("reboot", gulp.series("build", "vagrant:reload"));
-gulp.task("stop", gulp.series("vagrant:halt"));
+gulp.task("serve", gulp.series("build", "docker:up"));
+gulp.task("stop", gulp.series("docker:down"));

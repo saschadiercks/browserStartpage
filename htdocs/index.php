@@ -244,6 +244,14 @@ if (isset($linktarget) && !empty($linktarget)) {
   <!-- JS -->
   <script>
     <?php require_once($jsUrl); ?>
+
+    <?php if (isset($useServiceWorker) && !empty($useServiceWorker) && ($useServiceWorker == true)) { ?>
+      // serviceworker
+      navigator.serviceWorker.register("./serviceworker.js", {
+        scope: "/"
+      });
+    <?php } ?>
+
   </script>
 </body>
 
