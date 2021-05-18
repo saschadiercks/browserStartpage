@@ -1,10 +1,28 @@
 // ###### switches #####
 
 // ###### Settings #####
+$main-link-border-color: var(--border-color) !default;
+$main-link-background-color: var(--bg) !default;
+$main-link-background-image: linear-gradient(
+  to bottom,
+  rgba(var(--bg), 0.9),
+  rgba(var(--border-color), 0.97)
+) !default;
+$main-link-background-image-hover: linear-gradient(
+  to top,
+  rgba(var(--bg), 0.9),
+  rgba(var(--border-color), 0.97)
+) !default;
+$main-link-active-border-color: var(--border-color-hover) !default;
+$main-link-description-bg: rgba($main-link-border-color, 0.3) !default;
+$main-link-description-color: var(--color) !default;
+$main-link-active-description-bg: var(--brand-color) !default;
+$main-link-active-description-color: var(--color-light) !default;
 
 //---------------------
 // ###### Layout ######
 //---------------------
+
 .tile {
   display: block;
   position: relative; // allow postioning of child-elements

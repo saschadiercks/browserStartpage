@@ -1,7 +1,9 @@
 // ###### switches #####
 
 // ###### Settings #####
-
+$flyout-background-color: var(--bg) !default;
+$flyout-box-shadow: var(--box-shadow-heavy) !default;
+$flyout-color: var(--color) !default;
 //---------------------
 // ###### Layout ######
 //---------------------
@@ -28,9 +30,9 @@
 }
 
 .flyout-content {
-  background-color: $overlay-background-color;
-  box-shadow: $box-shadow-heavy;
-  color: $overlay-color;
+  background-color: $flyout-background-color;
+  box-shadow: $flyout-box-shadow;
+  color: $flyout-color;
   height: 100vh;
   max-width: $bookmarks-max-width;
   overflow-y: auto;

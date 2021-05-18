@@ -1,12 +1,47 @@
 // ###### switches #####
 
 // ###### Settings #####
+$header-background-color: var(--bg) !default;
+$header-link-color: var(--color) !default;
+$header-link-active-bg: var(--brand-color) !default;
+$header-link-active-color: var(--color-light) !default;
 
 //---------------------
 // ###### Layout ######
 //---------------------
 header {
+  background-color: $header-background-color;
+  box-shadow: $box-shadow-default;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   position: relative;
   width: 100%;
   z-index: 2;
+
+  &.js-sticky {
+    top: 0;
+  }
+
+  .collapse {
+    border-width: 0;
+  }
+
+  // overwrite collapse-styles
+  .collapse-main {
+    overflow: visible;
+  }
+
+  @include default {
+    padding: $base-spacing-size * 0.75 $base-spacing-size;
+    a {
+      padding: $base-spacing-size * 0.75 $base-spacing-size;
+    }
+  }
+
+  @include phone-only {
+    padding: $base-spacing-size * 2 $base-spacing-size * 1.5;
+    a {
+      padding: $base-spacing-size $base-spacing-size * 2;
+    }
+  }
 }

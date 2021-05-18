@@ -1,12 +1,14 @@
 // ###### switches #####
 
 // ###### Settings #####
+$collapse-border-top: 1px solid var(--border-color-hover) !default;
 
 //---------------------
 // ###### Layout ######
 //---------------------
 .collapse {
   display: block;
+  border-top-width: $collapse-border-top;
 }
 
 .collapse-title {
