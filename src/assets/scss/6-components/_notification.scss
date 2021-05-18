@@ -1,6 +1,12 @@
-// Animation
+// ###### switches #####
+
+// ###### Settings #####
+
+//---------------------
+// ###### Layout ######
+//---------------------
 .notification {
-  transition: all .2s;
+  transition: all 0.2s;
 
   &.js-hidden {
     transform: translateX(100%);

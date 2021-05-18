@@ -1,0 +1,19 @@
+// ###### switches #####
+
+// ###### Settings #####
+
+//---------------------
+// ###### Layout ######
+//---------------------
+
+// ---- theme: auto
+// the default is light
+html {
+  @include theme-light;
+}
+
+// @media (prefers-color-scheme: light) {
+//   html {
+//     @include theme-light;
+//   }
+// }
