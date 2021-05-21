@@ -1,17 +1,4 @@
-// ----- Body -----
-body {
-  background-color: $body-background-color;
-  font-family: $document-font-family;
-  width: 100%;
-}
-
 // ---- Elements ----
-#wallpaper {
-  background-position: center center;
-  background-size: cover;
-  filter: $wallpaper-filter;
-}
-
 .modal-overlay {
   @include align-centered($scale: 0, $position: fixed);
   background-color: $modal-content-background-color;
@@ -212,8 +199,7 @@ nav {
 .js-fx {
   header,
   main,
-  footer,
-  #wallpaper {
+  footer {
     filter: blur($background-blur-setting);
   }
 }

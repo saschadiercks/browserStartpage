@@ -5,16 +5,16 @@ $main-link-border-color: var(--border-color) !default;
 $main-link-background-color: var(--bg) !default;
 $main-link-background-image: linear-gradient(
   to bottom,
-  rgba(var(--bg), 0.9),
-  rgba(var(--border-color), 0.97)
+  var(--bg),
+  var(--border-color)
 ) !default;
 $main-link-background-image-hover: linear-gradient(
   to top,
-  rgba(var(--bg), 0.9),
-  rgba(var(--border-color), 0.97)
+  var(--bg),
+  var(--border-color)
 ) !default;
 $main-link-active-border-color: var(--border-color-hover) !default;
-$main-link-description-bg: rgba($main-link-border-color, 0.3) !default;
+$main-link-description-bg: var(--border-color) !default;
 $main-link-description-color: var(--color) !default;
 $main-link-active-description-bg: var(--brand-color) !default;
 $main-link-active-description-color: var(--color-light) !default;
@@ -25,12 +25,14 @@ $main-link-active-description-color: var(--color-light) !default;
 
 .tile {
   display: block;
+  opacity: 0.97;
   position: relative; // allow postioning of child-elements
 }
 
 // prevent whitespace on images
 .tile-image {
   display: inline-block;
+  filter: var(--tile-filter);
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;

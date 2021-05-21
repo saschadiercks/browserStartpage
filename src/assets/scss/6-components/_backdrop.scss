@@ -1,12 +1,13 @@
 // ###### switches #####
 
 // ###### Settings #####
+$backdrop-color__this: var(--backdrop-color) !default;
 
 //---------------------
 // ###### Layout ######
 //---------------------
 .backdrop {
-  background-color: $backdrop-color;
+  background-color: $backdrop-color__this;
   height: 100vh;
   position: absolute;
   top: 0;

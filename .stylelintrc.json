@@ -22,7 +22,6 @@
     "selector-pseudo-class-no-unknown": true,
     "selector-pseudo-element-no-unknown": true,
     "selector-type-no-unknown": true,
-    "media-feature-name-no-unknown": true,
     "at-rule-no-unknown": [
       true,
       { "ignoreAtRules": ["mixin", "each", "include", "if", "extend", "else"] }
@@ -93,7 +92,12 @@
     "media-feature-name-blacklist": null,
     "media-feature-name-no-vendor-prefix": true,
     "media-feature-name-value-whitelist": null,
-    "media-feature-name-whitelist": ["min-width", "max-width", "orientation"],
+    "media-feature-name-whitelist": [
+      "min-width",
+      "max-width",
+      "orientation",
+      "prefers-color-scheme"
+    ],
     "custom-media-pattern": null,
     "at-rule-blacklist": null,
     "at-rule-no-vendor-prefix": true,

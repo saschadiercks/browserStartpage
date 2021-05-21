@@ -12,8 +12,14 @@ html {
   @include theme-light;
 }
 
-// @media (prefers-color-scheme: light) {
-//   html {
-//     @include theme-light;
-//   }
-// }
+@media (prefers-color-scheme: dark) {
+  html {
+    @include theme-dark;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  font-family: $document-font-family;
+  width: 100%;
+}

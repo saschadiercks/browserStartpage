@@ -8,8 +8,21 @@ $box-shadow-heavy: 0 2px 4px rgba(0, 0, 0, 0.2) !default;
 $brand-color: #007acc !default;
 $base-border-color: #f5f5f5 !default;
 $base-border-color-hover: #ddd !default;
+$tile-filter: none !default;
+$wallpaper-filter: none !default;
 
 // ---- dark
+$body-background-color--dark: #18191d !default;
+$body-color--dark: #d2d0cc !default;
+$color-light--dark: #fff !default;
+$backdrop-color--dark: rgba(0, 0, 0, 0.6) !default;
+$box-shadow-default--dark: 0 1px 1px rgba(0, 0, 0, 0.2) !default;
+$box-shadow-heavy--dark: 0 2px 4px rgba(0, 0, 0, 0.2) !default;
+$brand-color--dark: #ff1448 !default;
+$base-border-color--dark: #313131 !default;
+$base-border-color-hover--dark: #333 !default;
+$tile-filter--dark: grayscale(1) contrast(1.5) !default;
+$wallpaper-filter--dark: grayscale(1) opacity(0.1) !default;
 
 // ---- prepare themes as custom properties
 // our default color-scheme is light
@@ -23,20 +36,20 @@ $base-border-color-hover: #ddd !default;
   --brand-color: #{$brand-color};
   --border-color: #{$base-border-color};
   --border-color-hover: #{$base-border-color-hover};
+  --tile-filter: #{$tile-filter};
+  --wallpaper-filter: #{$wallpaper-filter};
 }
 
-// @mixin theme-dark {
-//   // colors
-//   --bg: #{$bg--dark};
-//   --bg--inverted: #{$bg-inverted--dark};
-//   --color: #{$color--dark};
-//   --color--inverted: #{$color-inverted--dark};
-//   --color-light: #{$color-light--dark};
-//   --link-hover-bg: #{$bg-light--dark};
-//   --link-active-color: #{color-secondary--dark};
-//   --link-visited-color: #{color-tertiary--dark};
-
-//   // elements
-//   --drop-shadow: 0 2px 4px #{$drop-shadow-color--dark};
-//   --border-color: #{$border-color--dark};
-// }
+@mixin theme-dark {
+  --bg: #{$body-background-color--dark};
+  --color: #{$body-color--dark};
+  --color-light: #{$color-light--dark};
+  --backdrop-color: #{$backdrop-color--dark};
+  --box-shadow: #{$box-shadow-default--dark};
+  --box-shadow-heavy: #{$box-shadow-heavy--dark};
+  --brand-color: #{$brand-color--dark};
+  --border-color: #{$base-border-color--dark};
+  --border-color-hover: #{$base-border-color-hover--dark};
+  --tile-filter: #{$tile-filter--dark};
+  --wallpaper-filter: #{$wallpaper-filter--dark};
+}
