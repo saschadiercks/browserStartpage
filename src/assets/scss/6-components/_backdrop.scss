@@ -8,6 +8,7 @@ $backdrop-color__this: var(--backdrop-color) !default;
 //---------------------
 .backdrop {
   background-color: $backdrop-color__this;
+  backdrop-filter: blur(2px);
   height: 100vh;
   position: absolute;
   top: 0;

@@ -9,4 +9,30 @@ $footer-color: var(--color-light) !default;
 //---------------------
 footer {
   @include clearfix;
+  background-color: $footer-bg;
+  color: $footer-color;
+  font-size: 0.75rem;
+  padding-left: $base-spacing-size;
+  padding-right: $base-spacing-size;
+  width: 100%;
+  z-index: 1;
+
+  &.js-sticky {
+    bottom: 0;
+  }
+
+  a {
+    color: inherit;
+    display: inline-block;
+    padding-bottom: $base-spacing-size-px;
+    padding-top: $base-spacing-size-px;
+  }
+
+  .description {
+    float: left;
+  }
+
+  .social-profiles {
+    float: right;
+  }
 }
