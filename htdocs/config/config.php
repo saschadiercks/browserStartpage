@@ -5,7 +5,7 @@
 	$projectTitleSub = 'Your unified startpage to use in every browser';
 	$projectDescription = $projectTitle . ' | ' . $projectTitleSub;
 	$projectKeywords = 'Bookmark, Speeddial, Startpage, Tiles, Launchpad';
-	$projectLanguage = 'de';					// langugage of your content (see: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
+	$projectLanguage = 'de';					// langugage of your content (see: https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
 	$projectDirection = 'ltr';					// Reading direction ltr || rtl
 
 	// Application-Settings (mobile)
@@ -37,4 +37,3 @@
 	$footer = $json['footer'];					// Get footer-array
 	$linktarget = $json['linktarget'];			// Set linkTarget
 	$wallpaper = $json['wallpaper'];			// Set Wallpaper
-?>

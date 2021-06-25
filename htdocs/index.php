@@ -11,13 +11,12 @@ $localhost = array(
 );
 if (in_array($_SERVER['REMOTE_ADDR'], $localhost)) {
   $isLocalHost = true;
-};
+}
 
 function generateId($value)
 {
   $needles = array(' ', '/', '.', '#');
-  $result = strtolower(htmlentities(str_replace($needles, '', $value)));
-  return $result;
+  return strtolower(htmlentities(str_replace($needles, '', $value)));
 }
 
 function renderQrModalTrigger($contentItem)
@@ -34,9 +33,7 @@ function returnImage($url, $alt, $class)
 }
 
 // define linktarget if isset and filled otherwise use default
-if (isset($linktarget) && !empty($linktarget)) {
-  $linktarget = $linktarget;
-} else {
+if (empty($linktarget)) {
   $linktarget = "_self";
 }
 ?>

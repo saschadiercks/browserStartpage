@@ -61,7 +61,7 @@ You can just click on the desired tab and copy the url.
 1. install docker on your machine (https://docs.docker.com/get-docker/)
 2. head to the local repository and run `docker-compose up`
 3. Wait a while until all components are loaded an the box is running. (The first start can take a while)
-4. visit (http://127.0.0.1:8080/)
+4. visit (https://127.0.0.1:8080/)
 
 ### Usage of Vagrant
 
@@ -69,7 +69,7 @@ You can just click on the desired tab and copy the url.
 2. install Virtualbox (https://www.virtualbox.org/wiki/Downloads)
 3. head to your local repository an enter `vagrant up`
 4. Wait a while until all components are loaded an the box is running. (The first start can take a while)
-5. visit (http://127.0.0.1:8080/)
+5. visit (https://127.0.0.1:8080/)
 
 ### Usage of gulp
 
