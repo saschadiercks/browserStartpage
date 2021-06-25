@@ -4,12 +4,12 @@
 $main-link-border-color: var(--border-color) !default;
 $main-link-background-color: var(--bg) !default;
 $main-link-background-image: linear-gradient(
-  to bottom,
+  to top,
   var(--bg),
   var(--border-color)
 ) !default;
 $main-link-background-image-hover: linear-gradient(
-  to top,
+  to bottom,
   var(--bg),
   var(--border-color)
 ) !default;
