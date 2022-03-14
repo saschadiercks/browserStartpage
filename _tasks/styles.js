@@ -1,7 +1,7 @@
 /* #### Setting #### */
 const config = require("./_config.json");
 const gulp = require("gulp");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require('sass'));
 const gulpStylelint = require("gulp-stylelint");
 const autoprefixer = require("gulp-autoprefixer");
 
