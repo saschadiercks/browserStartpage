@@ -6,5 +6,6 @@
 
 // ###### script ######
 export default function findAll(selector) {
-	return document.querySelectorAll(selector);
+  var elements = document.querySelectorAll(selector);
+	return Array.prototype.slice.call(elements)
 }
