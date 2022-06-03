@@ -28,7 +28,9 @@
     "webpack-cli": "^4.6.0",
     "webpack-stream": "^4.0.3"
   },
-  "scripts": {},
+  "scripts": {
+
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/saschadiercks/browserStartpage.git"
