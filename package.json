@@ -4,6 +4,7 @@
   "description": "Crossbrowser Speeddial and bookmarks",
   "main": "gulpfile.js",
   "devDependencies": {
+    "@playwright/test": "^1.22.2",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^3.1.1",
@@ -28,7 +29,9 @@
     "webpack-stream": "^4.0.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:record": "npx playwright codegen localhost:8080",
+    "test": "npx playwright test",
+    "report": "npx playwright show-report"
   },
   "repository": {
     "type": "git",
