@@ -5,7 +5,7 @@ const modalSelector = "#linksasmodal";
 
 test("modal", async ({ page }) => {
   // Go to http://localhost:8080/
-  await page.goto("http://localhost:8080/");
+  await page.goto("/");
 
   // find modal link
   await page.locator(`a[data-target="${modalSelector}"]`).click();
