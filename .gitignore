@@ -5,6 +5,6 @@ node_modules
 .idea
 .vscode
 .DS_Store
-/test-results/
+/__test-results__/
 /playwright-report/
 /playwright/.cache/

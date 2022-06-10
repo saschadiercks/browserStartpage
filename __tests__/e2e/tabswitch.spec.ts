@@ -16,7 +16,7 @@ test("test", async ({ page, browserName }) => {
   await page.locator(".tablist .tablist__item:nth-child(2) a").click();
 
   // is the url updated
-  await expect(page).toHaveURL("http://localhost:8080/#tab-2");
+  await expect(page).toHaveURL("/#tab-2");
 
   // do the rtabs react in a correct manner?
   await expect(page.locator("#tab-1")).toBeHidden;
