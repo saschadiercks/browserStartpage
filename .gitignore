@@ -4,7 +4,7 @@ node_modules
 .nova
 .idea
 .vscode
+.DS_Store
 /test-results/
 /playwright-report/
 /playwright/.cache/
-/tests/*.ts-snapshots/
