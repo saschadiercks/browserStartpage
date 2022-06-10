@@ -5,9 +5,9 @@ const collapseSelector = "#collapse-frontend";
 
 test("Sidebar", async ({ page }) => {
   // Go to http://localhost:8080/
-  await page.goto("http://localhost:8080/");
+  await page.goto("/");
 
-  // Click text=🔖
+  // Sidebar
   await page
     .locator(`#application-header button[data-target="${sidebarSelector}"]`)
     .click();
