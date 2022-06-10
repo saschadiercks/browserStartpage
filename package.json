@@ -29,9 +29,10 @@
     "webpack-stream": "^4.0.3"
   },
   "scripts": {
-    "test:record": "echo 'Test name' && read testname && npx playwright $testname localhost:8080",
     "test": "npx playwright test",
-    "report": "npx playwright show-report"
+    "test:record": "echo 'Test name' && read testname && npx playwright $testname localhost:8080",
+    "test:report": "npx playwright show-report",
+    "test:updateSnapshots": "npx playwright test --update-snapshots"
   },
   "repository": {
     "type": "git",

@@ -17,6 +17,7 @@ test("modal", async ({ page }) => {
   await page.locator(`${modalSelector} .modal-header`).click();
 
   // take a screenshot
+  test.slow(); // give time to fetch
   expect(await page.screenshot()).toMatchSnapshot("open.png", {
     threshold: 0.3
   });

@@ -5,6 +5,7 @@ test("Render", async ({ page }) => {
   await page.goto("/");
 
   // take a screenshot
+  test.slow(); // give time to fetch
   expect(await page.screenshot()).toMatchSnapshot("render.png", {
     threshold: 0.3
   });
