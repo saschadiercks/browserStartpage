@@ -61,10 +61,6 @@ if (isset($linktarget) && !empty($linktarget)) {
   <!-- mobile scaling -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- IE-Stuff -->
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <meta name="MSSmartTagsPreventParsing" content="TRUE" />
-
   <?php if ($serveAsApplication === TRUE) { ?>
     <!-- Website as app -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -88,8 +84,9 @@ if (isset($linktarget) && !empty($linktarget)) {
   </style>
 
   <!-- Icons -->
-  <link rel="apple-touch-icon" href="apple-touch-icon-foto-228x228-precomposed.png" sizes="228x228" />
-  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="mask-icon" href="maskIcon.svg" color="#007ACC" />
+  <link rel="shortcut icon" href="favicon.ico" sizes="any" />
 </head>
 
 <body class="no-js">
