@@ -37,4 +37,5 @@
 	$footer = $json['footer'];					// Get footer-array
 	$linktarget = $json['linktarget'];			// Set linkTarget
 	$wallpaper = $json['wallpaper'];			// Set Wallpaper
+  $wallpaperPreload = $json['wallpaperPreload'];			// Preload Wallpaper
 ?>

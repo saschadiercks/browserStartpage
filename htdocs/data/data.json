@@ -2,6 +2,7 @@
   "linktarget": "_self",
   "useServiceWorker": true,
   "wallpaper": "assets/wallpaper/default.jpg",
+  "wallpaperPreload": false,
   "content": {
     "Browser": [
       {

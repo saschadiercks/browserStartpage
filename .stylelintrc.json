@@ -11,7 +11,7 @@
     "function-linear-gradient-no-nonstandard-direction": true,
     "string-no-newline": true,
     "unit-no-unknown": true,
-    "property-no-unknown": true,
+    "property-no-unknown": null,
     "keyframe-declaration-no-important": true,
     "declaration-block-no-duplicate-properties": [
       true,

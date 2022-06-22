@@ -74,7 +74,7 @@ if (isset($linktarget) && !empty($linktarget)) {
     <link rel="manifest" href="manifest.json" />
   <?php } ?>
 
-  <?php if (isset($wallpaper) && !empty($wallpaper)) { ?>
+  <?php if (isset($wallpaper) && !empty($wallpaper) && isset($wallpaperPreload) && $wallpaperPreload === true) { ?>
     <link rel="preload" href="<?= $wallpaper ?>" as="image" />
   <?php } ?>
 
