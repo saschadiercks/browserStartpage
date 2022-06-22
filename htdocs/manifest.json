@@ -3,9 +3,9 @@
   "name": "Browser Startpage",
   "icons": [
     {
-      "src": "apple-touch-icon-foto-220x220-precomposed",
-      "type": "image/png",
-      "sizes": "114x114"
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
     }
   ],
   "start_url": "./?utm_source=homescreen"

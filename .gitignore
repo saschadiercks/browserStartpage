@@ -1,4 +1,9 @@
 _private
 _private_m
 node_modules
-/.idea/
+.idea
+.vscode
+.DS_Store
+/__test-results__/
+/playwright-report/
+/playwright/.cache/

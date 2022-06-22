@@ -4,18 +4,24 @@
   "description": "Crossbrowser Speeddial and bookmarks",
   "main": "gulpfile.js",
   "devDependencies": {
+    "@playwright/test": "^1.22.2",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^4.1.0",
-    "gulp-sass": "^3.0.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^1.9.1",
     "gulp-stylelint": "^8.0.0",
     "gulp-terser": "^1.2.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
     "prettier-stylelint": "^0.4.2",
     "replace-hash-in-file-webpack-plugin": "^1.0.8",
     "require-dir": "^1.2.0",
+    "sass": "^1.49.7",
     "stylelint": "^9.10.1",
     "stylelint-order": "^2.0.0",
     "webpack": "^4.39.3",
@@ -23,7 +29,10 @@
     "webpack-stream": "^4.0.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx playwright test",
+    "test:record": "echo 'Test name' && read testname && npx playwright $testname localhost:8080",
+    "test:report": "npx playwright show-report",
+    "test:updateSnapshots": "npx playwright test --update-snapshots"
   },
   "repository": {
     "type": "git",

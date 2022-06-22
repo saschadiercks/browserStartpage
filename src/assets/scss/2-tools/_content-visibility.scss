@@ -1,0 +1,4 @@
+@mixin content-visibility {
+	contain-intrinsic-size: 1px 2000px;
+	content-visibility: auto;
+}

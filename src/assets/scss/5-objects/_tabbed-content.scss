@@ -5,6 +5,10 @@
 //---------------------
 // ###### Layout ######
 //---------------------
+.tabbed-content {
+  @include content-visibility;
+}
+
 // Hide Tabs if JS is available, otherwise show all content
 .js .tabbed-content:not(.sdi-is-active) {
   display: none;

@@ -221,10 +221,6 @@ press [alt] to open a tab and prevent remembering it
   <!-- mobile scaling -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- IE-Stuff -->
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <meta name="MSSmartTagsPreventParsing" content="TRUE" />
-
   <?php if ($serveAsApplication === TRUE) { ?>
     <!-- Website as app -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -238,7 +234,7 @@ press [alt] to open a tab and prevent remembering it
     <link rel="manifest" href="manifest.json" />
   <?php } ?>
 
-  <?php if (isset($wallpaper) && !empty($wallpaper)) { ?>
+  <?php if (isset($wallpaper) && !empty($wallpaper) && isset($wallpaperPreload) && $wallpaperPreload === true) { ?>
     <link rel="preload" href="<?= $wallpaper ?>" as="image" />
   <?php } ?>
 
@@ -248,8 +244,9 @@ press [alt] to open a tab and prevent remembering it
   </style>
 
   <!-- Icons -->
-  <link rel="apple-touch-icon" href="apple-touch-icon-foto-228x228-precomposed.png" sizes="228x228" />
-  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="mask-icon" href="maskIcon.svg" color="#007ACC" />
+  <link rel="shortcut icon" href="favicon.ico" sizes="any" />
 </head>
 
 </html>
