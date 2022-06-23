@@ -1,5 +1,29 @@
+// ###### switches #####
+
+// ###### Settings #####
+
+//---------------------
+// ###### Layout ######
+//---------------------
 .list-tiles {
   @include ul-reset;
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
+}
+
+@supports (display: grid) {
+  .list-tiles {
+    display: grid;
+    grid-gap: $base-spacing-size;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  @media (min-width: 768px) {
+    .list-tiles {
+      grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    }
+  }
 }

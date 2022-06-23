@@ -1,4 +1,12 @@
-// ---- flyout ----
+// ###### switches #####
+
+// ###### Settings #####
+$flyout-background-color: var(--bg) !default;
+$flyout-box-shadow: var(--box-shadow-heavy) !default;
+$flyout-color: var(--color) !default;
+//---------------------
+// ###### Layout ######
+//---------------------
 .flyout {
   left: 0;
   position: fixed;
@@ -22,9 +30,9 @@
 }
 
 .flyout-content {
-  background-color: $overlay-background-color;
-  box-shadow: $box-shadow-heavy;
-  color: $overlay-color;
+  background-color: $flyout-background-color;
+  box-shadow: $flyout-box-shadow;
+  color: $flyout-color;
   height: 100vh;
   max-width: $bookmarks-max-width;
   overflow-y: auto;
@@ -41,7 +49,7 @@
   }
 
   a {
-    font-size: .875rem; /* 14px / 16px */
+    font-size: 0.875rem; /* 14px / 16px */
     padding: 2px 0;
   }
 }

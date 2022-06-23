@@ -1,21 +1,4 @@
-// ----- Body -----
-body {
-  background-color: $body-background-color;
-  font-family: $document-font-family;
-  width: 100%;
-}
-
 // ---- Elements ----
-#wallpaper {
-  background-position: center center;
-  background-size: cover;
-  filter: $wallpaper-filter;
-}
-
-.collapse {
-  border-top: $collapse-border;
-}
-
 .modal-overlay {
   @include align-centered($scale: 0, $position: fixed);
   background-color: $modal-content-background-color;
@@ -77,28 +60,8 @@ body {
   }
 }
 
-// ---- header ----
-header {
-  background-color: $header-background-color;
-  box-shadow: $box-shadow-default;
-
-  &.js-sticky {
-    top: 0;
-  }
-
-  .collapse {
-    border-width: 0;
-  }
-}
-
 // ---- Content ----
 // fallback for older browsers
-.list-tiles {
-  align-items: stretch;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .tile-container {
   display: flex;
   height: 100px;
@@ -115,20 +78,8 @@ header {
 
 // modern browsers
 @supports (display: grid) {
-  .list-tiles {
-    display: grid;
-    grid-gap: $base-spacing-size;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  }
-
   .tile-container {
     width: auto;
-  }
-
-  @media (min-width: 768px) {
-    .list-tiles {
-      grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-    }
   }
 }
 
@@ -139,7 +90,7 @@ header {
   border-radius: 2px;
   box-shadow: $box-shadow-default;
   display: flex;
-  font-size: .75rem;
+  font-size: 0.75rem;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -196,36 +147,6 @@ header {
   z-index: 99;
 }
 
-// ---- Footer ----
-footer {
-  background-color: $footer-bg;
-  color: $footer-color;
-  font-size: .75rem;
-  padding-left: $base-spacing-size;
-  padding-right: $base-spacing-size;
-  width: 100%;
-  z-index: 2;
-
-  &.js-sticky {
-    bottom: 0;
-  }
-
-  a {
-    color: inherit;
-    display: inline-block;
-    padding-bottom: $base-spacing-size-px;
-    padding-top: $base-spacing-size-px;
-  }
-
-  .description {
-    float: left;
-  }
-
-  .social-profiles {
-    float: right;
-  }
-}
-
 // -- navigation
 nav {
   li {
@@ -248,8 +169,7 @@ nav {
 .js-fx {
   header,
   main,
-  footer,
-  #wallpaper {
+  footer {
     filter: blur($background-blur-setting);
   }
 }
@@ -261,23 +181,13 @@ nav {
     padding: $base-spacing-size $base-spacing-size * 2;
   }
 
-  header,
   .overlay-content {
     padding: $base-spacing-size * 2 $base-spacing-size * 1.5;
-  }
-
-  header a {
-    padding: $base-spacing-size $base-spacing-size * 2;
   }
 
   .overlay-title {
     padding-bottom: $base-spacing-size;
     padding-top: $base-spacing-size;
-  }
-
-  header {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
   }
 
   #bookmarks-toggle {
@@ -291,7 +201,7 @@ nav {
   #header-nav {
     grid-column: 1 / span 2;
     overflow: hidden;
-    transition: max-height .5s ease;
+    transition: max-height 0.5s ease;
 
     &.js-opened {
       max-height: 100vh;
@@ -306,23 +216,11 @@ nav {
 // Default View
 @include default {
   button {
-    padding: $base-spacing-size * .5 $base-spacing-size;
+    padding: $base-spacing-size * 0.5 $base-spacing-size;
   }
 
-  header,
   .overlay-content {
-    padding: $base-spacing-size * .75 $base-spacing-size;
-  }
-
-  header {
-    a {
-      padding: $base-spacing-size * .75 $base-spacing-size;
-    }
-
-    // overwrite collapse-styles
-    .collapse-main {
-      overflow: visible;
-    }
+    padding: $base-spacing-size * 0.75 $base-spacing-size;
   }
 
   #bookmarks-toggle {
@@ -336,8 +234,8 @@ nav {
   }
 
   .overlay-title {
-    padding-bottom: $base-spacing-size * .75;
-    padding-top: $base-spacing-size * .75;
+    padding-bottom: $base-spacing-size * 0.75;
+    padding-top: $base-spacing-size * 0.75;
   }
 
   .tile-title {
@@ -357,6 +255,7 @@ nav {
 }
 
 // ---- Fallbacks / special cases ----
+// $no-js-separator-color: var(--border-color) !default;
 // separation of content if JS is disabled / not loaded
 // body.no-js main nav:not(:last-child) {
 // 	border-bottom: 1px dotted $no-js-separator-color;

@@ -42,4 +42,3 @@ create_manifest(".");
 
 // Write the $hashes string
 echo "# Hash: " . md5($hashes) . "\n";
-?>

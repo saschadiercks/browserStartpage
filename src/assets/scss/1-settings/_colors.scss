@@ -1,0 +1,55 @@
+// ---- light
+$body-background-color: #fdfdfd !default;
+$body-color: #333 !default;
+$color-light: #fff !default;
+$backdrop-color: rgba(8, 34, 63, 0.9) !default;
+$box-shadow-default: 0 1px 1px rgba(0, 0, 0, 0.2) !default;
+$box-shadow-heavy: 0 2px 4px rgba(0, 0, 0, 0.2) !default;
+$brand-color: #007acc !default;
+$base-border-color: #f5f5f5 !default;
+$base-border-color-hover: #ddd !default;
+$tile-image-filter: none !default;
+$wallpaper-filter: none !default;
+
+// ---- dark
+$body-background-color--dark: #18191d !default;
+$body-color--dark: #d2d0cc !default;
+$color-light--dark: #fff !default;
+$backdrop-color--dark: rgba(0, 0, 0, 0.9) !default;
+$box-shadow-default--dark: 0 1px 1px rgba(0, 0, 0, 0.2) !default;
+$box-shadow-heavy--dark: 0 2px 4px rgba(0, 0, 0, 0.2) !default;
+$brand-color--dark: #ff1448 !default;
+$base-border-color--dark: #313131 !default;
+$base-border-color-hover--dark: #333 !default;
+$tile-image-filter--dark: grayscale(1) contrast(1.5) !default;
+$wallpaper-filter--dark: grayscale(1) opacity(0.1) !default;
+
+// ---- prepare themes as custom properties
+// our default color-scheme is light
+@mixin theme-light {
+  --bg: #{$body-background-color};
+  --color: #{$body-color};
+  --color-light: #{$color-light};
+  --backdrop-color: #{$backdrop-color};
+  --box-shadow: #{$box-shadow-default};
+  --box-shadow-heavy: #{$box-shadow-heavy};
+  --brand-color: #{$brand-color};
+  --border-color: #{$base-border-color};
+  --border-color-hover: #{$base-border-color-hover};
+  --tile-filter: #{$tile-image-filter};
+  --wallpaper-filter: #{$wallpaper-filter};
+}
+
+@mixin theme-dark {
+  --bg: #{$body-background-color--dark};
+  --color: #{$body-color--dark};
+  --color-light: #{$color-light--dark};
+  --backdrop-color: #{$backdrop-color--dark};
+  --box-shadow: #{$box-shadow-default--dark};
+  --box-shadow-heavy: #{$box-shadow-heavy--dark};
+  --brand-color: #{$brand-color--dark};
+  --border-color: #{$base-border-color--dark};
+  --border-color-hover: #{$base-border-color-hover--dark};
+  --tile-filter: #{$tile-image-filter--dark};
+  --wallpaper-filter: #{$wallpaper-filter--dark};
+}

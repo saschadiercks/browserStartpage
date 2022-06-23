@@ -1,4 +1,15 @@
-// ---- modal ----
+// ###### switches #####
+
+// ###### Settings #####
+$modal-header-background-color: transparent !default;
+$modal-header-color: var(--color) !default;
+$modal-header-border: 2px solid var(--brand-color) !default;
+$modal-content-background-color: var(--bg) !default;
+$modal-content-color: var(--color) !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
 .js .modal {
   transition: visibility $base-animation-speed ease-in-out;
   visibility: hidden;

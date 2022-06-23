@@ -1,4 +1,11 @@
-// ---- modal-list ----
+// ###### switches #####
+
+// ###### Settings #####
+$modal-list-link-color-hover: var(--border-color) !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
 .modal-list {
   @include ul-reset;
 }
@@ -25,6 +32,6 @@
   text-decoration: none;
 
   &:hover {
-    background-color: $main-link-background-color;
+    background-color: $modal-list-link-color-hover;
   }
 }

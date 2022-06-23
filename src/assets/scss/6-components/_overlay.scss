@@ -1,4 +1,12 @@
-// ---- overlay ----
+// ###### switches #####
+
+// ###### Settings #####
+$overlay-background-color: var(--bg) !default;
+$overlay-color: var(--color) !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
 .overlay {
   display: block;
   position: fixed;

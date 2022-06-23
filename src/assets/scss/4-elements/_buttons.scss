@@ -1,6 +1,15 @@
+// ###### switches #####
+
+// ###### Settings #####
+$button-background-color: transparent !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
 button {
   background-color: $button-background-color;
   border-width: 0;
+  color: inherit;
   cursor: pointer;
   font-size: inherit;
 }

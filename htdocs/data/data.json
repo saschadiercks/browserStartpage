@@ -2,6 +2,7 @@
   "linktarget": "_self",
   "useServiceWorker": true,
   "wallpaper": "assets/wallpaper/default.jpg",
+  "wallpaperPreload": false,
   "content": {
     "Browser": [
       {
@@ -83,7 +84,7 @@
     ],
     "Dev": [
       {
-        "url": "http://schema.org/docs/schemas.html",
+        "url": "https://schema.org/docs/schemas.html",
         "title": "Schema.org",
         "image": "assets/thumbnails/schema.png"
       },
@@ -93,7 +94,7 @@
         "image": "assets/thumbnails/autocomplete.png"
       },
       {
-        "url": "http://microformats.org/wiki/hcard-input-formats",
+        "url": "https://microformats.org/wiki/hcard-input-formats",
         "title": "Microformats",
         "image": "assets/thumbnails/microformats.png"
       },
@@ -153,12 +154,12 @@
         "image": "assets/thumbnails/google-dev.png"
       },
       {
-        "url": "http://codepen.io/patterns/",
+        "url": "https://codepen.io/patterns/",
         "title": "Codepen patterns",
         "image": "assets/thumbnails/codepen-patterns.png"
       },
       {
-        "url": "http://browserl.ist/",
+        "url": "https://browserl.ist/",
         "title": "Browserlist",
         "image": "assets/thumbnails/browserlist.png"
       },
@@ -168,7 +169,7 @@
         "image": "assets/thumbnails/codecademy.png"
       },
       {
-        "url": "http://tools.pingdom.com/fpt/",
+        "url": "https://tools.pingdom.com/fpt/",
         "title": "Pingdom",
         "image": "assets/thumbnails/pingdom.png"
       },
@@ -210,7 +211,7 @@
         "title": "Firefox Design"
       },
       {
-        "url": "http://facebook.design",
+        "url": "https://facebook.design",
         "image": "assets/thumbnails/design-facebook.png",
         "title": "Facebook Design"
       },
@@ -246,12 +247,12 @@
         "title": "Unsplash"
       },
       {
-        "url": "http://magicmockups.com/",
+        "url": "https://magicmockups.com/",
         "image": "assets/thumbnails/magic-mockups.png",
         "title": "Magic Mockups"
       },
       {
-        "url": "http://smartmockups.com/",
+        "url": "https://smartmockups.com/",
         "image": "assets/thumbnails/smartmockups.png",
         "title": "Smart Mockups"
       },
@@ -309,7 +310,7 @@
         "title": "Frontend Guidelines"
       },
       {
-        "url": "http://codeguide.co/",
+        "url": "https://codeguide.co/",
         "title": "Codeguide by @mdo"
       },
       {
@@ -365,7 +366,7 @@
         "title": "Barrierefreies Webdesign"
       },
       {
-        "url": "http://webkrauts.de/",
+        "url": "https://webkrauts.de/",
         "title": "Webkrauts"
       },
       {
@@ -409,7 +410,7 @@
         "title": "Lightning Design System"
       },
       {
-        "url": "http://ux.mailchimp.com/patterns",
+        "url": "https://ux.mailchimp.com/patterns",
         "title": "Mailchimp UX"
       },
       {
@@ -417,13 +418,13 @@
         "title": "Otto Pattern Library"
       },
       {
-        "url": "http://patternlab.io/",
+        "url": "https://patternlab.io/",
         "title": "Patternlab"
       }
     ],
     "Patterns": [
       {
-        "url": "http://codepen.io/patterns/",
+        "url": "https://codepen.io/patterns/",
         "title": "Patterns @codepen"
       },
       {
@@ -431,19 +432,19 @@
         "title": "Inclusive components"
       },
       {
-        "url": "http://patterntap.com/patterntap",
+        "url": "https://patterntap.com/patterntap",
         "title": "Patterns by Zurb"
       },
       {
-        "url": "http://ui-patterns.com/",
+        "url": "https://ui-patterns.com/",
         "title": "UI-Patterns"
       },
       {
-        "url": "http://www.goodui.org/",
+        "url": "https://www.goodui.org/",
         "title": "Good UI"
       },
       {
-        "url": "http://ui-patterns.com/blog/How-to-get-better-at-UI-design",
+        "url": "https://ui-patterns.com/blog/How-to-get-better-at-UI-design",
         "title": "Get better at UI"
       }
     ],
@@ -461,13 +462,13 @@
         "title": "Styleguide Examples"
       },
       {
-        "url": "http://www.theuxbookmark.com/2010/08/interaction-design/a-monster-list-of-ui-guidelines-style-guides",
+        "url": "https://www.theuxbookmark.com/2010/08/interaction-design/a-monster-list-of-ui-guidelines-style-guides",
         "title": "UX-Bookmark: Styleguides"
       }
     ],
     "Design": [
       {
-        "url": "http://makersandfounders.com/DIETER-RAMS",
+        "url": "https://makersandfounders.com/DIETER-RAMS",
         "title": "Dieter Rams"
       },
       {
@@ -481,7 +482,7 @@
     ],
     "Helpers": [
       {
-        "url": "http://scrumguides.org/",
+        "url": "https://scrumguides.org/",
         "title": "Scrum Guides"
       },
       {
@@ -489,7 +490,7 @@
         "title": "Ergonomie @Apple"
       },
       {
-        "url": "http://makerbook.net/",
+        "url": "https://makerbook.net/",
         "title": "Makerbook"
       },
       {
@@ -509,11 +510,11 @@
         "title": "Random User Generator"
       },
       {
-        "url": "http://sneakpeekit.com",
+        "url": "https://sneakpeekit.com",
         "title": "Sketch Sheets for Webdesingers"
       },
       {
-        "url": "http://ctamagazine.unbounce.com/",
+        "url": "https://ctamagazine.unbounce.com/",
         "title": "Call to Action Magazine"
       }
     ],
@@ -523,7 +524,7 @@
         "title": "Adaptive Webdesign"
       },
       {
-        "url": "http://eloquentjavascript.net/",
+        "url": "https://eloquentjavascript.net/",
         "title": "eloquent Javascipt"
       },
       {
@@ -531,7 +532,7 @@
         "title": "resilient webdesign"
       },
       {
-        "url": "http://www.thebookoflife.org/",
+        "url": "https://www.thebookoflife.org/",
         "title": "The book of life"
       }
     ]

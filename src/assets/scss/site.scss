@@ -3,6 +3,7 @@
 
 // ---- Main Theme
 // 1 - Globals
+@import "1-settings/colors";
 @import "1-settings/globals";
 
 // 2 - Tools
@@ -11,10 +12,12 @@
 @import "2-tools/ul-reset";
 @import "2-tools/align-vertical";
 @import "2-tools/align-centered";
+@import "2-tools/content-visibility";
 
 // 3 - Generic
 @import "3-generic/box-sizing";
 @import "3-generic/font-smoothing";
+@import "3-generic/page";
 @import "3-generic/reset";
 
 // 4 - Elements
@@ -46,8 +49,10 @@
 // 7 - Utilities
 @import "7-utilities/sticky";
 @import "7-utilities/js-utilities";
-@import "7-utilities/shame";
 @import "7-utilities/theme-default";
+
+// shame
+@import "shame";
 
 // ---- Apply your own deeper layout changes
 @import "_your-themes/your-theme";

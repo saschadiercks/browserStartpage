@@ -1,6 +1,13 @@
+// ###### switches #####
+
+// ###### Settings #####
+
+//---------------------
+// ###### Layout ######
+//---------------------
 .list-vertical {
   @include ul-reset;
-  padding-bottom: $base-spacing-size * .75;
+  padding-bottom: $base-spacing-size * 0.75;
 }
 
 .list-vertical__link {

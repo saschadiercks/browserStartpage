@@ -1,6 +1,14 @@
-// Animation
+// ###### switches #####
+
+// ###### Settings #####
+$notification-background-color: var(--bg) !default;
+$notification-color: var(--color) !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
 .notification {
-  transition: all .2s;
+  transition: all 0.2s;
 
   &.js-hidden {
     transform: translateX(100%);
