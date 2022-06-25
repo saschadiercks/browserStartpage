@@ -1,0 +1,50 @@
+@use "sass:math";
+
+// ###### switches #####
+
+// ###### Settings #####
+$details-border: 1px solid var(--border-color-hover) !default;
+$summary-marker: '+' !default;
+$summary-marker-size: 1.188em !default; /*-- 19px / 16px --*/
+$summary-padding: math.div($base-spacing-size, 2) $summary-marker-size math.div($base-spacing-size, 2) 0 !default;
+
+//---------------------
+// ###### Layout ######
+//---------------------
+details {
+  border-top: $details-border;
+  border-bottom: $details-border;
+
+  & + details {
+  border-top-width: 0;
+  }
+}
+
+summary {
+  cursor: pointer;
+  display: block;
+  font-size: inherit;
+  margin: 0;
+  padding: $summary-padding;
+  position: relative;
+  opacity: 1;
+
+  &::before {
+    content: $summary-marker;
+    position: absolute;
+    right: $summary-marker-size;
+    display: inline-block;
+    transition: .3s transform linear;
+  }
+
+  &::-webkit-details-marker { display: none }
+}
+
+// -- animate icon
+details[open] {
+  summary {
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+}

@@ -82,7 +82,7 @@ You can just click on the desired tab and copy the url.
 7. use `gulp stop` stop the server
 8. use `gulp reboot` restart the server and build assets
 
-Aöways run `gulp build`before deploying assets
+Always run `gulp build`before deploying assets
 
 ### Hints & Tips
 

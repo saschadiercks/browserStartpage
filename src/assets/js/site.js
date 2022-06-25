@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // handle triggers
   handleTriggers(".js-flyout-trigger", fixScrollPos);
-  handleTriggers(".js-collapse-trigger", false);
   handleTriggers(".js-modal-trigger", fixScrollPos);
 
   // -- make elements sticky
