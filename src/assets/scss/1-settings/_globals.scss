@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // ----- Setup -----
 $document-font-family: -apple-system, sans-serif !default;
 $wallpaper-filter: blur(0.1px) !default;
@@ -6,7 +8,7 @@ $base-spacing-size: 1vw !default;
 $base-spacing-size-px: 9px !default;
 $base-animation-speed: 0.2s !default;
 
-$tile-button-padding: $base-spacing-size/2 !default;
+$tile-button-padding: math.div($base-spacing-size, 2) !default;
 $tile-button-color: inherit;
 
 $background-blur-setting: 1px;

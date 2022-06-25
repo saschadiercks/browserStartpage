@@ -46,6 +46,46 @@ if (empty($linktarget)) {
       echo isset($theme) ? 'class="' . $theme . '" ' : FALSE;
       ?>>
 
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <?php
+  echo isset($projectTitle) ? '<title>' . $projectTitle . '</title>' : FALSE;
+  echo isset($projectDescription) ? '<meta name="description" content="' . $projectDescription . '"/>' : FALSE;
+  echo isset($projectKeywords) ? '<meta name="keywords" content="' . $projectKeywords . '"/>' : FALSE;
+  echo isset($projectLanguage) ? '<meta name="language" content="' . $projectLanguage . '"/>' : FALSE;
+  ?>
+
+  <!-- mobile scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <?php if ($serveAsApplication === TRUE) { ?>
+    <!-- Website as app -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <!-- Short Names -->
+    <meta name="apple-mobile-web-app-title" content="<?php echo ($applicationName); ?>" />
+    <meta name="application-name" content="<?php echo ($applicationNameShort); ?>" />
+
+    <!-- Mobile Manifest -->
+    <link rel="manifest" href="manifest.json" />
+  <?php } ?>
+
+  <?php if (isset($wallpaper) && !empty($wallpaper) && isset($wallpaperPreload) && $wallpaperPreload === true) { ?>
+    <link rel="preload" href="<?= $wallpaper ?>" as="image" />
+  <?php } ?>
+
+  <!-- CSS -->
+  <style>
+    <?php require_once($cssUrl); ?>
+  </style>
+
+  <!-- Icons -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="mask-icon" href="maskIcon.svg" color="#007ACC" />
+  <link rel="shortcut icon" href="favicon.ico" sizes="any" />
+</head>
+
 <body class="no-js">
 
 <!-- header -->
@@ -109,22 +149,17 @@ if (empty($linktarget)) {
     <div class="flyout-content">
       <button class="js-flyout-trigger flyout-close" data-target="#bookmarks">&times;</button>
       <h2 class="flyout-title">Bookmarks</h2>
-
       <?php foreach ($bookmarks as $key => $contentItems) : ?>
-        <div class="collapse" id="collapse-<?= strtolower(generateId($key)) ?>">
-          <div class="collapse-header">
-            <h3 class="collapse-title"><button class="js-collapse-trigger" data-target="#collapse-<?= strtolower(generateId($key)) ?>"><span class="collapse-icon">&times;</span> <?= $key ?></button></h3>
-          </div>
-          <div class="collapse-main">
-            <ul class="list-vertical">
-              <?php foreach ($contentItems as $contentItem) : ?>
-                <li class="list-vertical__item">
-                  <a href="<?= $contentItem['url'] ?>" target="<?= $linktarget ?>" class="list-vertical__link"><?= $contentItem['title'] ?></a>
-                </li>
-              <?php endforeach; ?>
-            </ul>
-          </div>
-        </div>
+        <details>
+          <summary><?= $key ?></summary>
+          <ul class="list-vertical">
+            <?php foreach ($contentItems as $contentItem) : ?>
+              <li class="list-vertical__item">
+                <a href="<?= $contentItem['url'] ?>" target="<?= $linktarget ?>" class="list-vertical__link"><?= $contentItem['title'] ?></a>
+              </li>
+            <?php endforeach; ?>
+          </ul>
+        </details>
       <?php endforeach; ?>
     </div><!-- /.overlay -->
     <div class="backdrop flyout-backdrop js-flyout-trigger" data-target="#bookmarks"></div>
@@ -208,45 +243,4 @@ press [alt] to open a tab and prevent remembering it
 
 </script>
 </body>
-
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <?php
-  echo isset($projectTitle) ? '<title>' . $projectTitle . '</title>' : FALSE;
-  echo isset($projectDescription) ? '<meta name="description" content="' . $projectDescription . '"/>' : FALSE;
-  echo isset($projectKeywords) ? '<meta name="keywords" content="' . $projectKeywords . '"/>' : FALSE;
-  echo isset($projectLanguage) ? '<meta name="language" content="' . $projectLanguage . '"/>' : FALSE;
-  ?>
-
-  <!-- mobile scaling -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <?php if ($serveAsApplication === TRUE) { ?>
-    <!-- Website as app -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-
-    <!-- Short Names -->
-    <meta name="apple-mobile-web-app-title" content="<?php echo ($applicationName); ?>" />
-    <meta name="application-name" content="<?php echo ($applicationNameShort); ?>" />
-
-    <!-- Mobile Manifest -->
-    <link rel="manifest" href="manifest.json" />
-  <?php } ?>
-
-  <?php if (isset($wallpaper) && !empty($wallpaper) && isset($wallpaperPreload) && $wallpaperPreload === true) { ?>
-    <link rel="preload" href="<?= $wallpaper ?>" as="image" />
-  <?php } ?>
-
-  <!-- CSS -->
-  <style>
-    <?php require_once($cssUrl); ?>
-  </style>
-
-  <!-- Icons -->
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="mask-icon" href="maskIcon.svg" color="#007ACC" />
-  <link rel="shortcut icon" href="favicon.ico" sizes="any" />
-</head>
-
 </html>
