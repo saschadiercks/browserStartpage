@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 const sidebarSelector = "#bookmarks";
-const collapseSelector = "#collapse-frontend";
+const collapseSelector = "#bookmarks details:first-of-type";
 
 test("Sidebar", async ({ page }) => {
   // Go to http://localhost:8080/
@@ -18,16 +18,16 @@ test("Sidebar", async ({ page }) => {
   // take a screenshot
   test.slow(); // give time to fetch
   expect(await page.screenshot()).toMatchSnapshot("sidebar.png", {
-    threshold: 0.3
+    maxDiffPixels: 10
   });
 
   // Open collapse
-  await page.locator(`${collapseSelector} .js-collapse-trigger`).click();
-  expect(page.locator(`${collapseSelector} .collapse-main`)).toBeVisible;
+  await page.locator(`${collapseSelector}`).click();
+  expect(page.locator(`${collapseSelector} .list-vertical`)).toBeVisible;
 
   // close collapse
-  await page.locator(`${collapseSelector} .js-collapse-trigger`).click();
-  expect(page.locator(`${collapseSelector} .collapse-main`)).toBeHidden;
+  await page.locator(`${collapseSelector} summary`).click();
+  expect(page.locator(`${collapseSelector} .list-vertical`)).toBeHidden;
 
   // close sidebar
   await page.locator(`${sidebarSelector} .flyout-close`).click();
